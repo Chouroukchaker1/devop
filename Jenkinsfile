@@ -2,23 +2,21 @@ pipeline {
   agent any
 
   environment {
-    IMAGE_NAME = "tonutilisateurdocker/devop-frontend"
-    BACKEND_IMAGE = "tonutilisateurdocker/devop-backend"
+    IMAGE_NAME_FRONT = "chouroukchaker/devop-frontend"
+    IMAGE_NAME_BACK = "chouroukchaker/devop-backend"
   }
 
   stages {
     stage('Checkout') {
       steps {
-        git 'https://github.com/Chouroukchaker1/devop.git'
-
-'
+        git url: 'https://github.com/Chouroukchaker1/devop.git', branch: 'main'
       }
     }
 
     stage('Build Frontend') {
       steps {
         dir('react') {
-          sh 'docker build -t $IMAGE_NAME .'
+          sh 'docker build -t $IMAGE_NAME_FRONT .'
         }
       }
     }
@@ -26,7 +24,7 @@ pipeline {
     stage('Build Backend') {
       steps {
         dir('PFE') {
-          sh 'docker build -t $BACKEND_IMAGE .'
+          sh 'docker build -t $IMAGE_NAME_BACK .'
         }
       }
     }
@@ -35,8 +33,8 @@ pipeline {
       steps {
         withCredentials([usernamePassword(credentialsId: 'dockerhub-creds', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
           sh 'echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin'
-          sh 'docker push $IMAGE_NAME'
-          sh 'docker push $BACKEND_IMAGE'
+          sh 'docker push $IMAGE_NAME_FRONT'
+          sh 'docker push $IMAGE_NAME_BACK'
         }
       }
     }
