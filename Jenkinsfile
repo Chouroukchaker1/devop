@@ -5,15 +5,7 @@ pipeline {
     IMAGE_NAME_FRONT = "chouroukchaker/devop-frontend"
     IMAGE_NAME_BACK = "chouroukchaker/devop-backend"
   }
-
-  stages {
-    stage('Checkout') {
-      steps {
-        git url: 'https://github.com/Chouroukchaker1/devop.git', branch: 'main'
-      }
-    }
-
-    stage('Build Frontend') {
+ stage('Build Frontend') {
       steps {
         dir('react') {
           sh 'docker build -t $IMAGE_NAME_FRONT .'
