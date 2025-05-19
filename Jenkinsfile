@@ -5,7 +5,9 @@ pipeline {
     IMAGE_NAME_FRONT = "chouroukchaker/devop-frontend"
     IMAGE_NAME_BACK = "chouroukchaker/devop-backend"
   }
- stage('Build Frontend') {
+
+  stages {
+    stage('Build Frontend') {
       steps {
         dir('react') {
           sh 'docker build -t $IMAGE_NAME_FRONT .'
