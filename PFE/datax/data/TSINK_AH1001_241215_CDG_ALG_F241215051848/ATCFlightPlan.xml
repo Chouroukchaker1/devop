@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP5" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-12-15T05:18:40" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-12-15" scheduledTimeOfDeparture="2024-12-15T13:30:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>DAH1001</FlightIdentifier>
+				<FlightNumber airlineIATACode="AH" number="1001">
+					<CommercialFlightNumber>AH1001</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>LFPG</AirportICAOCode>
+				<AirportIATACode>CDG</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>DAAG</AirportICAOCode>
+				<AirportIATACode>ALG</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSINK">
+			<AircraftModel>
+				<AircraftICAOType>A320</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF EUCHZMFP EUCBZMFP</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>AD DAAAZQZX DAAAZQZR DAAGZTZX DAAGZAZX</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>(FPL-DAH1001-IS</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-A320/M-SDFGHIJ1LORVWY/LB1</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-LFPG1330</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>-N0445F350 ERIXU6H ERIXU DCT ETAMO DCT ADEKA DCT MOKDI DCT MEN DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>BADAM DCT KANIG DCT KENAS DCT POS DCT TALEN DCT XESPA DCT GENIO</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>DCT BUYAH UA27 ALR DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="10">
+			<Text>-DAAG0139 DAOO</Text>
+		</Paragraph>
+		<Paragraph sequence="11">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/241215 REG/TSINK EET/LECB0056 DAAA0128</Text>
+		</Paragraph>
+		<Paragraph sequence="12">
+			<Text>SEL/KRCQ CODE/02A1AA OPR/LBT PER/C)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="EUCHZMFP EUCBZMFP" />
+		<Originator address="DTMBLBTO" />
+		<AdditionalAddressees addresses="DAAAZQZX DAAAZQZR DAAGZTZX DAAGZAZX" />
+		<Items>
+			<Item7 aTCCallsign="DAH1001" />
+			<Item8 flightRules="I" typeOfFlight="S" />
+			<Item9 typeOfAircraft="A320" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDFGHIJ1LORVWY/LB1" />
+			<Item13 departureAirport="LFPG" departureTime="1330" />
+			<Item15 cruisingSpeed="N0445" cruisingLevel="F350" route="ERIXU6H ERIXU DCT ETAMO DCT ADEKA DCT MOKDI DCT MEN DCT BADAM DCT KANIG DCT KENAS DCT POS DCT TALEN DCT XESPA DCT GENIO DCT BUYAH UA27 ALR DCT" />
+			<Item16 arrivalAirport="DAAG" estimatedFlightTime="0139" alternateAirport="DAOO" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/241215 REG/TSINK EET/LECB0056 DAAA0128 SEL/KRCQ CODE/02A1AA OPR/LBT PER/C">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>241215</DOF>
+				<REG>TSINK</REG>
+				<EET>LECB0056 DAAA0128</EET>
+				<SEL>KRCQ</SEL>
+				<CODE>02A1AA</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

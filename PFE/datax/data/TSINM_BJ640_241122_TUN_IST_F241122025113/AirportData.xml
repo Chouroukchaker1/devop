@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AirportData creationTime="2024-11-22T02:51:09" flightPlanId="OFP8" fullPackage="true" xsi:schemaLocation="http://aeec.aviation-ia.net/633 AirportData.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<M633Header timestamp="2024-11-22T02:51:08Z" versionNumber="3"/> 
+<M633SupplementaryHeader>
+    <Flight flightOriginDate="2024-11-22Z" scheduledTimeOfDeparture="2024-11-22T06:00:00Z">
+        <FlightIdentification>
+            <FlightIdentifier>LBT640</FlightIdentifier>
+                <FlightNumber airlineIATACode="BJ" number="640" >
+                    <CommercialFlightNumber>BJ640</CommercialFlightNumber>
+                </FlightNumber>
+             </FlightIdentification>
+        <DepartureAirport airportFunction="DepartureAirport" airportName="TUNIS/CARTHAGE">
+            <AirportICAOCode>DTTA</AirportICAOCode>
+            <AirportIATACode>TUN</AirportIATACode>
+        </DepartureAirport>
+        <ArrivalAirport airportFunction="ArrivalAirport" airportName="ISTANBUL AIRPORT">
+            <AirportICAOCode>LTFM</AirportICAOCode>
+            <AirportIATACode>IST</AirportIATACode>
+        </ArrivalAirport>
+    </Flight>
+    <Aircraft aircraftRegistration="TSINM" >
+        <AircraftModel airlineSpecificSubType="1.11">
+            <AircraftICAOType>A20N</AircraftICAOType>
+        </AircraftModel>
+    </Aircraft>
+</M633SupplementaryHeader>
+    <Airport>
+        <AirportIdentification airportFunction="DepartureAirport" airportName="TUNIS/CARTHAGE">
+            <AirportICAOCode>DTTA</AirportICAOCode>
+            <AirportIATACode>TUN</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="01"> 
+            <Approach procedureName="TKOF">
+                <RequiredHorizontalVisibility unit="m">200</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">0</RequiredVerticalVisibility>  
+            </Approach>
+            <Elevation unit="ft">13</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">21</Elevation>
+        <AirportReferencePoint><Coordinates latitude="132664" longitude="36817">N3651.1 E01013.6</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT01H</LocalTimeOffsetToUTC>
+    </Airport>
+    <Airport>
+        <AirportIdentification airportFunction="ArrivalAirport" airportName="ISTANBUL AIRPORT">
+            <AirportICAOCode>LTFM</AirportICAOCode>
+            <AirportIATACode>IST</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="17L">
+            <Approach procedureName="RNAV GPS LNAV/VNAV">
+                <RequiredHorizontalVisibility unit="m">1600</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">518</RequiredVerticalVisibility>
+            </Approach>
+            <Elevation unit="ft">202</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">325</Elevation>
+        <AirportReferencePoint><Coordinates latitude="148591" longitude="103507">N4116.5 E02845.1</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT03H</LocalTimeOffsetToUTC>
+    </Airport>
+    <Airport>
+        <AirportIdentification airportFunction="PrimaryArrivalAlternateAirport" airportName="TEKIRDAG/CORLU ATATURK INTL">
+            <AirportICAOCode>LTBU</AirportICAOCode>
+            <AirportIATACode>TEQ</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="22">
+            <Approach procedureName="VORDME">
+                <RequiredHorizontalVisibility unit="m">2600</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">630</RequiredVerticalVisibility>
+            </Approach>
+            <Elevation unit="ft">570</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">570</Elevation>
+        <AirportReferencePoint><Coordinates latitude="148066" longitude="100463">N4107.8 E02754.4</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT03H</LocalTimeOffsetToUTC>
+    </Airport>
+    <Airport>
+        <AirportIdentification airportFunction="ArrivalAlternateAirport" airportName="IZMIR/ADNAN MENDERES INTL">
+            <AirportICAOCode>LTBJ</AirportICAOCode>
+            <AirportIATACode>ADB</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="16L">
+            <Approach procedureName="LOC+DME">
+                <RequiredHorizontalVisibility unit="m">1500</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">492</RequiredVerticalVisibility>
+            </Approach>
+            <Elevation unit="ft">410</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">410</Elevation>
+        <AirportReferencePoint><Coordinates latitude="137841" longitude="97758">N3817.4 E02709.3</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT03H</LocalTimeOffsetToUTC>
+    </Airport>
+    <Airport>
+        <AirportIdentification airportFunction="ArrivalAlternateAirport" airportName="ANKARA/ESENBOGA INTL">
+            <AirportICAOCode>LTAC</AirportICAOCode>
+            <AirportIATACode>ESB</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="21L">
+            <Approach procedureName="LOC+VORDME">
+                <RequiredHorizontalVisibility unit="m">2500</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">674</RequiredVerticalVisibility>
+            </Approach>
+            <Elevation unit="ft">3126</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">3127</Elevation>
+        <AirportReferencePoint><Coordinates latitude="144462" longitude="118783">N4007.7 E03259.7</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT03H</LocalTimeOffsetToUTC>
+    </Airport>
+    <Airport>
+        <AirportIdentification airportFunction="ArrivalAlternateAirport" airportName="ANTALYA INTL">
+            <AirportICAOCode>LTAI</AirportICAOCode>
+            <AirportIATACode>AYT</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="36R">
+            <Approach procedureName="CAT1+NDB">
+                <RequiredHorizontalVisibility unit="m">550</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">0</RequiredVerticalVisibility>
+            </Approach>
+            <Elevation unit="ft">159</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">177</Elevation>
+        <AirportReferencePoint><Coordinates latitude="132841" longitude="110855">N3654.0 E03047.6</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT03H</LocalTimeOffsetToUTC>
+    </Airport>
+</AirportData>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP7" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-11-08T04:56:07" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-11-08" scheduledTimeOfDeparture="2024-11-08T08:15:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>LBT776</FlightIdentifier>
+				<FlightNumber airlineIATACode="BJ" number=" 776">
+					<CommercialFlightNumber>BJ776</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>DTTA</AirportICAOCode>
+				<AirportIATACode>TUN</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>LFST</AirportICAOCode>
+				<AirportIATACode>SXB</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSINC">
+			<AircraftModel>
+				<AircraftICAOType>A320</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF DTTAZAZX DTTAZPZX DTTAZTZX DTTCZQZX DTTCZRZX EUCHZMFP EUCBZMFP</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>(FPL-LBT776-IS</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>-A320/M-SDFGHIJ1LORVWY/LB1</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-DTTA0815</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-N0447F360 TOBIB2A TOBIB A725 TANIT UM739 DOPEL DCT DEC DCT UPDUT</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>DCT CORSI DCT OKROK DCT AKUTI DCT TORTU DCT ERTEV DCT SRN DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>ABESI DCT UTAVO DCT ELMUR/N0404F180 T718 TRA Z652 MOPAN T711 DENEL</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>Y126 LUPEN LUPEN6V</Text>
+		</Paragraph>
+		<Paragraph sequence="10">
+			<Text>-LFST0144 EDDS</Text>
+		</Paragraph>
+		<Paragraph sequence="11">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/241108 REG/TSINC EET/LIRR0020 LFFF0042</Text>
+		</Paragraph>
+		<Paragraph sequence="12">
+			<Text>LIMM0058 LSAS0120 EDGG0133 LFEE0141 SEL/KSEF CODE/02A1A2 OPR/LBT</Text>
+		</Paragraph>
+		<Paragraph sequence="13">
+			<Text>PER/C)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="DTTAZAZX DTTAZPZX DTTAZTZX EUCHZMFP EUCBZMFP DTTCZQZX DTTCZRZX" />
+		<Originator address="DTMBLBTO" />
+		<Items>
+			<Item7 aTCCallsign="LBT776" />
+			<Item8 flightRules="I" typeOfFlight="S" />
+			<Item9 typeOfAircraft="A320" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDFGHIJ1LORVWY/LB1" />
+			<Item13 departureAirport="DTTA" departureTime="0815" />
+			<Item15 cruisingSpeed="N0447" cruisingLevel="F360" route="TOBIB2A TOBIB A725 TANIT UM739 DOPEL DCT DEC DCT UPDUT DCT CORSI DCT OKROK DCT AKUTI DCT TORTU DCT ERTEV DCT SRN DCT ABESI DCT UTAVO DCT ELMUR/N0404F180 T718 TRA Z652 MOPAN T711 DENEL Y126 LUPEN LUPEN6V" />
+			<Item16 arrivalAirport="LFST" estimatedFlightTime="0144" alternateAirport="EDDS" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/241108 REG/TSINC EET/LIRR0020 LFFF0042 LIMM0058 LSAS0120 EDGG0133 LFEE0141 SEL/KSEF CODE/02A1A2 OPR/LBT PER/C">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>241108</DOF>
+				<REG>TSINC</REG>
+				<EET>LIRR0020 LFFF0042 LIMM0058 LSAS0120 EDGG0133 LFEE0141</EET>
+				<SEL>KSEF</SEL>
+				<CODE>02A1A2</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

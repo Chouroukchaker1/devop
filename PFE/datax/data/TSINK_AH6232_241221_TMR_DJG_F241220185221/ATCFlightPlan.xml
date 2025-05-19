@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP1" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-12-20T18:52:14" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-12-21" scheduledTimeOfDeparture="2024-12-21T01:25:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>DAH6232</FlightIdentifier>
+				<FlightNumber airlineIATACode="AH" number="6232">
+					<CommercialFlightNumber>AH6232</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>DAAT</AirportICAOCode>
+				<AirportIATACode>TMR</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>DAAJ</AirportICAOCode>
+				<AirportIATACode>DJG</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSINK">
+			<AircraftModel>
+				<AircraftICAOType>A320</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF DAATZPZX DAATZTZX DAAAZQZX DAAAZQZR DAAJZTZX DAAJZPZX</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>(FPL-DAH6232-IS</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>-A320/M-SDFGHIJ1LORVWY/LB1</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-DAAT0125</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-N0448F330 DCT TMS UJ60 DJA DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>-DAAJ0035 DAAT</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/241221 REG/TSINK SEL/KRCQ CODE/02A1AA</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>OPR/LBT PER/C)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="DAATZPZX DAATZTZX DAAJZTZX DAAJZPZX DAAAZQZX DAAAZQZR" />
+		<Originator address="DTMBLBTO" />
+		<Items>
+			<Item7 aTCCallsign="DAH6232" />
+			<Item8 flightRules="I" typeOfFlight="S" />
+			<Item9 typeOfAircraft="A320" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDFGHIJ1LORVWY/LB1" />
+			<Item13 departureAirport="DAAT" departureTime="0125" />
+			<Item15 cruisingSpeed="N0448" cruisingLevel="F330" route="DCT TMS UJ60 DJA DCT" />
+			<Item16 arrivalAirport="DAAJ" estimatedFlightTime="0035" alternateAirport="DAAT" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/241221 REG/TSINK SEL/KRCQ CODE/02A1AA OPR/LBT PER/C">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>241221</DOF>
+				<REG>TSINK</REG>
+				<SEL>KRCQ</SEL>
+				<CODE>02A1AA</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

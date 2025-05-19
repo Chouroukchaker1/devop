@@ -1,0 +1,140 @@
+.settings-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.notification-card, .scheduler-card {
+  border-radius: 10px;
+  transition: transform 0.2s;
+}
+
+.notification-card:hover, .scheduler-card:hover {
+  transform: translateY(-5px);
+}
+
+.bg-gradient-primary {
+  background: linear-gradient(45deg, #007bff, #00b7eb);
+}
+
+.date-picker-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 300px;
+}
+
+.date-picker {
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  padding: 8px;
+  transition: border-color 0.2s;
+}
+
+.date-picker:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0,123,255,0.3);
+}
+
+.clear-date-btn {
+  width: fit-content;
+  border-radius: 5px;
+  transition: background-color 0.2s;
+}
+
+.clear-date-btn:hover {
+  background-color: #f8f9fa;
+}
+
+.card-header {
+  font-weight: 500;
+  padding: 15px;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.btn-primary {
+  background: linear-gradient(45deg, #007bff, #00b7eb);
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  transition: transform 0.2s;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+}
+
+.form-check-switch {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+/* Card body */
+.app .notification-card .card-body{
+  padding-bottom:371px;
+  height:391px;
+ }
+ 
+ /* Card body */
+ .app .scheduler-card .card-body{
+  padding-bottom:282px;
+  min-height:320px;
+  height:320px;
+ }
+ 
+ /* Settings container */
+ .app .settings-container{
+  transform:translatex(0px) translatey(0px);
+ }
+ 
+/* Settings container */
+.app .settings-container{
+  margin-bottom:0px !important;
+  position:relative;
+  top:-200px;
+  transform:translatex(0px) translatey(0px);
+ }
+ 
+ @media (min-width:769px){
+ 
+  /* Settings container */
+  .app .settings-container{
+   padding-bottom:0px;
+  }
+  
+ }
+ /* Card body */
+.app .card .card-body{
+  position:relative;
+  bottom:9px;
+  left:1px;
+  top:-3px;
+  z-index:15;
+  transform:translatex(0px) translatey(0px);
+ }
+ 
+ /* Card body */
+ #root .app .page-container .settings-container .card .card-body{
+  height:131px !important;
+ }
+ 
+/* Card body */
+.app .notification-card .card-body{
+  top:23px;
+ }
+ 
+ /* Settings container */
+ .app .settings-container{
+  transform:translatex(0px) translatey(200px);
+ }
+ 
+/* Card body */
+.app .notification-card .card-body{
+  margin-top:0px;
+  padding-bottom:130px;
+ }
+ 
+    

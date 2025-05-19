@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RegionWeatherBriefing creationTime="2024-12-24T02:45:19" fullPackage="true" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://aeec.aviation-ia.net/633 RegionWeatherBriefing.xsd">
+    <M633Header timestamp="2024-12-24T02:45:19" versionNumber="3"/>
+    <M633SupplementaryHeader>
+        <Flight flightOriginDate="2024-12-24" scheduledTimeOfDeparture="2024-12-24T07:00:00Z">
+            <FlightIdentification>
+                <FlightIdentifier>LBT762</FlightIdentifier>
+                <FlightNumber airlineIATACode="BJ" number="762">
+                    <CommercialFlightNumber>BJ762</CommercialFlightNumber>
+                </FlightNumber>
+            </FlightIdentification>
+            <DepartureAirport>
+                <AirportICAOCode>DTTJ</AirportICAOCode>
+                <AirportIATACode>DJE</AirportIATACode>
+            </DepartureAirport>
+            <ArrivalAirport>
+                <AirportICAOCode>LFQQ</AirportICAOCode>
+                <AirportIATACode>LIL</AirportIATACode>
+            </ArrivalAirport>
+        </Flight>
+        <Aircraft aircraftRegistration="TSINP">
+            <AircraftModel>
+                <AircraftICAOType>A320</AircraftICAOType>
+            </AircraftModel>
+        </Aircraft>
+    </M633SupplementaryHeader>
+    <RegionWeathers>
+        <RegionWeather issuer="LMMM" type="SIGMET" startValidTime="2024-12-24T02:29:00" endValidTime="2024-12-24T06:29:00" observationTime="2024-12-24T02:34:00" sequence="1">
+            <RegionWeatherText>
+                <Paragraph sequence="1">
+                    <Text>SIGMET T01 VALID 240229/240629 LMML- LMMM MALTA FIR</Text>
+                </Paragraph>
+                <Paragraph sequence="2">
+                    <Text>FRQ TS OBS N3620 E01300 - N3620 E01600 - N3420 E01600</Text>
+                </Paragraph>
+                <Paragraph sequence="3">
+                    <Text>- N3420 E01300 - N3620 E01300 TOP FL320 MOV ESE NC=</Text>
+                </Paragraph>
+            </RegionWeatherText>
+            <Location>
+                <Airspaces>
+                    <Airspace airspaceICAOCode="LMMM">
+                        <AirspaceName>MALTA FIR</AirspaceName>
+                    </Airspace>
+                </Airspaces>
+            </Location>
+        </RegionWeather>
+    </RegionWeathers>
+</RegionWeatherBriefing>

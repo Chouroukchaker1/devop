@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RegionWeatherBriefing creationTime="2024-12-24T11:04:18" fullPackage="true" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://aeec.aviation-ia.net/633 RegionWeatherBriefing.xsd">
+    <M633Header timestamp="2024-12-24T11:04:18" versionNumber="3"/>
+    <M633SupplementaryHeader>
+        <Flight flightOriginDate="2024-12-24" scheduledTimeOfDeparture="2024-12-24T14:00:00Z">
+            <FlightIdentification>
+                <FlightIdentifier>LBT598</FlightIdentifier>
+                <FlightNumber airlineIATACode="BJ" number="598">
+                    <CommercialFlightNumber>BJ598</CommercialFlightNumber>
+                </FlightNumber>
+            </FlightIdentification>
+            <DepartureAirport>
+                <AirportICAOCode>DTTA</AirportICAOCode>
+                <AirportIATACode>TUN</AirportIATACode>
+            </DepartureAirport>
+            <ArrivalAirport>
+                <AirportICAOCode>LFLL</AirportICAOCode>
+                <AirportIATACode>LYS</AirportIATACode>
+            </ArrivalAirport>
+        </Flight>
+        <Aircraft aircraftRegistration="TSINO">
+            <AircraftModel>
+                <AircraftICAOType>A320</AircraftICAOType>
+            </AircraftModel>
+        </Aircraft>
+    </M633SupplementaryHeader>
+    <RegionWeathers>
+        <RegionWeather issuer="DTTC" type="AIRMET" startValidTime="2024-12-24T10:37:00" endValidTime="2024-12-24T14:00:00" observationTime="2024-12-24T10:37:00" sequence="1">
+            <RegionWeatherText>
+                <Paragraph sequence="1">
+                    <Text>AIRMET 09 VALID 241037/241400 DTTA- DTTC TUNIS FIR</Text>
+                </Paragraph>
+                <Paragraph sequence="2">
+                    <Text>SFC VIS 3000 SA OBS S OF N3450 STNR NC=</Text>
+                </Paragraph>
+            </RegionWeatherText>
+            <Location>
+                <Airspaces>
+                    <Airspace airspaceICAOCode="DTTC">
+                        <AirspaceName>TUNIS FIR</AirspaceName>
+                    </Airspace>
+                </Airspaces>
+            </Location>
+        </RegionWeather>
+        <RegionWeather issuer="DTTC" type="SIGMET" startValidTime="2024-12-24T10:00:00" endValidTime="2024-12-24T13:00:00" observationTime="2024-12-24T09:47:00" sequence="2">
+            <RegionWeatherText>
+                <Paragraph sequence="1">
+                    <Text>SIGMET 06 VALID 241000/241300 DTTA- DTTC TUNIS FIR</Text>
+                </Paragraph>
+                <Paragraph sequence="2">
+                    <Text>EMBD TS FCST W OF LINE N3750 E00955 - N3605 E00945</Text>
+                </Paragraph>
+                <Paragraph sequence="3">
+                    <Text>TOP FL300 MOV E INTSF=</Text>
+                </Paragraph>
+            </RegionWeatherText>
+            <Location>
+                <Airspaces>
+                    <Airspace airspaceICAOCode="DTTC">
+                        <AirspaceName>TUNIS FIR</AirspaceName>
+                    </Airspace>
+                </Airspaces>
+            </Location>
+        </RegionWeather>
+        <RegionWeather issuer="LFMM" type="SIGMET" startValidTime="2024-12-24T11:00:00" endValidTime="2024-12-24T14:00:00" observationTime="2024-12-24T10:51:00" sequence="3">
+            <RegionWeatherText>
+                <Paragraph sequence="1">
+                    <Text>SIGMET M07 VALID 241100/241400 LFPW- LFMM MARSEILLE</Text>
+                </Paragraph>
+                <Paragraph sequence="2">
+                    <Text>FIR/UIR SEV MTW FCST WI N4300 E00245 - N4315 E00230 -</Text>
+                </Paragraph>
+                <Paragraph sequence="3">
+                    <Text>N4345 E00245 - N4430 E00315 - N4500 E00445 - N4400</Text>
+                </Paragraph>
+                <Paragraph sequence="4">
+                    <Text>E00430 - N4300 E00245 SFC/FL250 STNR NC=</Text>
+                </Paragraph>
+            </RegionWeatherText>
+            <Location>
+                <Airspaces>
+                    <Airspace airspaceICAOCode="LFMM">
+                        <AirspaceName>MARSEILLE FIR/UIR</AirspaceName>
+                    </Airspace>
+                </Airspaces>
+            </Location>
+        </RegionWeather>
+    </RegionWeathers>
+</RegionWeatherBriefing>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP1" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-06-30T12:09:27" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-06-30" scheduledTimeOfDeparture="2024-06-30T12:45:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>LBT071F</FlightIdentifier>
+				<FlightNumber airlineIATACode="BJ" number=" 071" operationalSuffix="F">
+					<CommercialFlightNumber>BJ071F</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>DTMB</AirportICAOCode>
+				<AirportIATACode>MIR</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>DTTA</AirportICAOCode>
+				<AirportIATACode>TUN</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSINH">
+			<AircraftModel>
+				<AircraftICAOType>A320</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF DTMBZPZX DTMBZTZX DTTCZQZX DTTCZRZX DTTAZAZX DTTAZPZX DTTAZTZX</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>(FPL-LBT071F-IN</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>-A320/M-SDFGHIJ1LORVWY/LB1</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-DTMB1245</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-N0360F100 LARBI1B LARBI A411 VAXAL DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>-DTTA0011 DTNH</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/240630 REG/TSINH SEL/CHKP CODE/02A1A7</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>OPR/LBT PER/C)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="DTMBZPZX DTMBZTZX DTTAZAZX DTTAZPZX DTTAZTZX DTTCZQZX DTTCZRZX" />
+		<Originator address="DTMBLBTO" />
+		<Items>
+			<Item7 aTCCallsign="LBT071F" />
+			<Item8 flightRules="I" typeOfFlight="N" />
+			<Item9 typeOfAircraft="A320" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDFGHIJ1LORVWY/LB1" />
+			<Item13 departureAirport="DTMB" departureTime="1245" />
+			<Item15 cruisingSpeed="N0360" cruisingLevel="F100" route="LARBI1B LARBI A411 VAXAL DCT" />
+			<Item16 arrivalAirport="DTTA" estimatedFlightTime="0011" alternateAirport="DTNH" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/240630 REG/TSINH SEL/CHKP CODE/02A1A7 OPR/LBT PER/C">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>240630</DOF>
+				<REG>TSINH</REG>
+				<SEL>CHKP</SEL>
+				<CODE>02A1A7</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

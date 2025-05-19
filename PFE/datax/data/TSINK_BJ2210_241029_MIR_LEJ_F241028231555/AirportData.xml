@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AirportData creationTime="2024-10-28T23:15:50" flightPlanId="OFP7" fullPackage="true" xsi:schemaLocation="http://aeec.aviation-ia.net/633 AirportData.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<M633Header timestamp="2024-10-28T23:15:50Z" versionNumber="3"/> 
+<M633SupplementaryHeader>
+    <Flight flightOriginDate="2024-10-29Z" scheduledTimeOfDeparture="2024-10-29T02:30:00Z">
+        <FlightIdentification>
+            <FlightIdentifier>LBT2210</FlightIdentifier>
+                <FlightNumber airlineIATACode="BJ" number="2210" >
+                    <CommercialFlightNumber>BJ2210</CommercialFlightNumber>
+                </FlightNumber>
+             </FlightIdentification>
+        <DepartureAirport airportFunction="DepartureAirport" airportName="MONASTIR/HABIB BOURGUIBA">
+            <AirportICAOCode>DTMB</AirportICAOCode>
+            <AirportIATACode>MIR</AirportIATACode>
+        </DepartureAirport>
+        <ArrivalAirport airportFunction="ArrivalAirport" airportName="LEIPZIG/HALLE">
+            <AirportICAOCode>EDDP</AirportICAOCode>
+            <AirportIATACode>LEJ</AirportIATACode>
+        </ArrivalAirport>
+    </Flight>
+    <Aircraft aircraftRegistration="TSINK" >
+        <AircraftModel airlineSpecificSubType="1.07">
+            <AircraftICAOType>A320</AircraftICAOType>
+        </AircraftModel>
+    </Aircraft>
+</M633SupplementaryHeader>
+    <Airport>
+        <AirportIdentification airportFunction="DepartureAirport" airportName="MONASTIR/HABIB BOURGUIBA">
+            <AirportICAOCode>DTMB</AirportICAOCode>
+            <AirportIATACode>MIR</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="07"> 
+            <Approach procedureName="TKOF">
+                <RequiredHorizontalVisibility unit="m">250</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">0</RequiredVerticalVisibility>  
+            </Approach>
+            <Elevation unit="ft">8</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">9</Elevation>
+        <AirportReferencePoint><Coordinates latitude="128729" longitude="38717">N3545.5 E01045.3</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT01H</LocalTimeOffsetToUTC>
+    </Airport>
+    <Airport>
+        <AirportIdentification airportFunction="ArrivalAirport" airportName="LEIPZIG/HALLE">
+            <AirportICAOCode>EDDP</AirportICAOCode>
+            <AirportIATACode>LEJ</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="26L">
+            <Approach procedureName="CAT2">
+                <RequiredHorizontalVisibility unit="m">300</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">0</RequiredVerticalVisibility>
+            </Approach>
+            <Elevation unit="ft">470</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">470</Elevation>
+        <AirportReferencePoint><Coordinates latitude="185126" longitude="44051">N5125.4 E01214.2</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT01H</LocalTimeOffsetToUTC>
+    </Airport>
+    <Airport>
+        <AirportIdentification airportFunction="PrimaryArrivalAlternateAirport" airportName="BERLIN/BRANDENBURG">
+            <AirportICAOCode>EDDB</AirportICAOCode>
+            <AirportIATACode>BER</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="24L">
+            <Approach procedureName="CAT1DME">
+                <RequiredHorizontalVisibility unit="m">550</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">0</RequiredVerticalVisibility>
+            </Approach>
+            <Elevation unit="ft">149</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">156</Elevation>
+        <AirportReferencePoint><Coordinates latitude="188504" longitude="48602">N5221.7 E01330.0</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT01H</LocalTimeOffsetToUTC>
+    </Airport>
+    <Airport>
+        <AirportIdentification airportFunction="ArrivalAlternateAirport" airportName="HANNOVER">
+            <AirportICAOCode>EDDV</AirportICAOCode>
+            <AirportIATACode>HAJ</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="27R">
+            <Approach procedureName="LOC+DME">
+                <RequiredHorizontalVisibility unit="m">1100</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">390</RequiredVerticalVisibility>
+            </Approach>
+            <Elevation unit="ft">169</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">183</Elevation>
+        <AirportReferencePoint><Coordinates latitude="188857" longitude="34861">N5227.6 E00941.0</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT01H</LocalTimeOffsetToUTC>
+    </Airport>
+</AirportData>

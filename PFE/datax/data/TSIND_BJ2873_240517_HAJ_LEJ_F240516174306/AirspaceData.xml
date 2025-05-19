@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AirspaceData flightPlanId="OFP2" xsi:schemaLocation="http://aeec.aviation-ia.net/633 AirspaceData.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<M633Header timestamp="2024-05-16T17:43:00Z" versionNumber="3"/> 
+<M633SupplementaryHeader>
+    <Flight flightOriginDate="2024-05-17Z" scheduledTimeOfDeparture="2024-05-17T09:10:00Z">
+        <FlightIdentification>
+            <FlightIdentifier>LBT2873</FlightIdentifier>
+                <FlightNumber airlineIATACode="BJ" number="2873" >
+                    <CommercialFlightNumber>BJ2873</CommercialFlightNumber>
+                </FlightNumber>
+             </FlightIdentification>
+        <DepartureAirport airportFunction="DepartureAirport" airportName="HANNOVER">
+            <AirportICAOCode>EDDV</AirportICAOCode>
+            <AirportIATACode>HAJ</AirportIATACode>
+        </DepartureAirport>
+        <ArrivalAirport airportFunction="ArrivalAirport" airportName="LEIPZIG/HALLE">
+            <AirportICAOCode>EDDP</AirportICAOCode>
+            <AirportIATACode>LEJ</AirportIATACode>
+        </ArrivalAirport>
+    </Flight>
+    <Aircraft aircraftRegistration="TSIND" >
+        <AircraftModel airlineSpecificSubType="5.91">
+            <AircraftICAOType>A320</AircraftICAOType>
+        </AircraftModel>
+    </Aircraft>
+</M633SupplementaryHeader>
+    <Airspace airspaceName="BREMEN_FIR" airspaceType="FIR" airspaceICAOCode="EDWW">
+        <Entry cumulatedFlightTime="PT0H0M00S">
+            <Coordinates latitude="+188857" longitude="+34861">N5227.6 E00941.0</Coordinates>
+            <CumulatedGroundDistance unit="NM">0</CumulatedGroundDistance>
+        </Entry>
+        <Exit cumulatedFlightTime="PT0H12M50S">
+            <Coordinates  latitude="+186452" longitude="+40022">N5147.5 E01107.0</Coordinates>
+            <CumulatedGroundDistance unit="NM">70</CumulatedGroundDistance>
+        </Exit>
+        <GroundDistance unit="NM">0</GroundDistance>
+    </Airspace>
+    <Airspace airspaceName="MUNICH_FIR" airspaceType="FIR" airspaceICAOCode="EDMM">
+        <Entry cumulatedFlightTime="PT0H12M50S">
+            <Coordinates latitude="+186452" longitude="+40022">N5147.5 E01107.0</Coordinates>
+            <CumulatedGroundDistance unit="NM">70</CumulatedGroundDistance>
+        </Entry>
+        <Exit cumulatedFlightTime="PT0H28M46S">
+            <Coordinates  latitude="+185126" longitude="+44051">N5125.4 E01214.2</Coordinates>
+            <CumulatedGroundDistance unit="NM">135</CumulatedGroundDistance>
+        </Exit>
+        <GreatCircleDistance unit="NM">67</GreatCircleDistance>
+        <GroundDistance unit="NM">70</GroundDistance>
+    </Airspace>
+</AirspaceData>

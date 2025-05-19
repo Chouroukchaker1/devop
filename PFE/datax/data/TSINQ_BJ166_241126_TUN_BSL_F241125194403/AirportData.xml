@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AirportData creationTime="2024-11-25T19:43:59" flightPlanId="OFP5" fullPackage="true" xsi:schemaLocation="http://aeec.aviation-ia.net/633 AirportData.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<M633Header timestamp="2024-11-25T19:43:59Z" versionNumber="3"/> 
+<M633SupplementaryHeader>
+    <Flight flightOriginDate="2024-11-26Z" scheduledTimeOfDeparture="2024-11-26T07:00:00Z">
+        <FlightIdentification>
+            <FlightIdentifier>LBT166</FlightIdentifier>
+                <FlightNumber airlineIATACode="BJ" number="166" >
+                    <CommercialFlightNumber>BJ166</CommercialFlightNumber>
+                </FlightNumber>
+             </FlightIdentification>
+        <DepartureAirport airportFunction="DepartureAirport" airportName="TUNIS/CARTHAGE">
+            <AirportICAOCode>DTTA</AirportICAOCode>
+            <AirportIATACode>TUN</AirportIATACode>
+        </DepartureAirport>
+        <ArrivalAirport airportFunction="ArrivalAirport" airportName="BASLE/MULHOUSE">
+            <AirportICAOCode>LFSB</AirportICAOCode>
+            <AirportIATACode>BSL</AirportIATACode>
+        </ArrivalAirport>
+    </Flight>
+    <Aircraft aircraftRegistration="TSINQ" >
+        <AircraftModel airlineSpecificSubType="1.12">
+            <AircraftICAOType>A320</AircraftICAOType>
+        </AircraftModel>
+    </Aircraft>
+</M633SupplementaryHeader>
+    <Airport>
+        <AirportIdentification airportFunction="DepartureAirport" airportName="TUNIS/CARTHAGE">
+            <AirportICAOCode>DTTA</AirportICAOCode>
+            <AirportIATACode>TUN</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="01"> 
+            <Approach procedureName="TKOF">
+                <RequiredHorizontalVisibility unit="m">200</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">0</RequiredVerticalVisibility>  
+            </Approach>
+            <Elevation unit="ft">13</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">21</Elevation>
+        <AirportReferencePoint><Coordinates latitude="132664" longitude="36817">N3651.1 E01013.6</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT01H</LocalTimeOffsetToUTC>
+    </Airport>
+    <Airport>
+        <AirportIdentification airportFunction="ArrivalAirport" airportName="BASLE/MULHOUSE">
+            <AirportICAOCode>LFSB</AirportICAOCode>
+            <AirportIATACode>BSL</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="15"> 
+            <Approach procedureName="CAT2">
+                <RequiredHorizontalVisibility unit="m">450</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">0</RequiredVerticalVisibility>
+            </Approach>
+            <Elevation unit="ft">864</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">885</Elevation>
+        <AirportReferencePoint><Coordinates latitude="171324" longitude="27105">N4735.4 E00731.8</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT01H</LocalTimeOffsetToUTC>
+    </Airport>
+    <Airport>
+        <AirportIdentification airportFunction="PrimaryArrivalAlternateAirport" airportName="ZURICH">
+            <AirportICAOCode>LSZH</AirportICAOCode>
+            <AirportIATACode>ZRH</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="16">
+            <Approach procedureName="CAT1">
+                <RequiredHorizontalVisibility unit="m">1300</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">0</RequiredVerticalVisibility>
+            </Approach>
+            <Elevation unit="ft">1390</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">1417</Elevation>
+        <AirportReferencePoint><Coordinates latitude="170849" longitude="30773">N4727.5 E00832.9</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT01H</LocalTimeOffsetToUTC>
+    </Airport>
+    <Airport>
+        <AirportIdentification airportFunction="ArrivalAlternateAirport" airportName="STRASBOURG/ENTZHEIM">
+            <AirportICAOCode>LFST</AirportICAOCode>
+            <AirportIATACode>SXB</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="23">
+            <Approach procedureName="CAT1DME">
+                <RequiredHorizontalVisibility unit="m">550</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">0</RequiredVerticalVisibility>
+            </Approach>
+            <Elevation unit="ft">491</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">505</Elevation>
+        <AirportReferencePoint><Coordinates latitude="174751" longitude="27484">N4832.5 E00738.1</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT01H</LocalTimeOffsetToUTC>
+    </Airport>
+    <Airport>
+        <AirportIdentification airportFunction="ArrivalAlternateAirport" airportName="GENEVA">
+            <AirportICAOCode>LSGG</AirportICAOCode>
+            <AirportIATACode>GVA</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="22">
+            <Approach procedureName="CAT1DME">
+                <RequiredHorizontalVisibility unit="m">2400</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">0</RequiredVerticalVisibility>
+            </Approach>
+            <Elevation unit="ft">1365</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">1411</Elevation>
+        <AirportReferencePoint><Coordinates latitude="166458" longitude="21994">N4614.3 E00606.6</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT01H</LocalTimeOffsetToUTC>
+    </Airport>
+    <Airport>
+        <AirportIdentification airportFunction="ArrivalAlternateAirport" airportName="LYON/SAINT EXUPERY">
+            <AirportICAOCode>LFLL</AirportICAOCode>
+            <AirportIATACode>LYS</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="35R">
+            <Approach procedureName="VORDME">
+                <RequiredHorizontalVisibility unit="m">1300</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">440</RequiredVerticalVisibility>
+            </Approach>
+            <Elevation unit="ft">821</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">821</Elevation>
+        <AirportReferencePoint><Coordinates latitude="164612" longitude="18292">N4543.5 E00504.9</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT01H</LocalTimeOffsetToUTC>
+    </Airport>
+</AirportData>

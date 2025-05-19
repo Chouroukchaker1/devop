@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AirportData creationTime="2024-08-17T13:57:57" flightPlanId="OFP2" fullPackage="true" xsi:schemaLocation="http://aeec.aviation-ia.net/633 AirportData.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<M633Header timestamp="2024-08-17T13:57:57Z" versionNumber="3"/> 
+<M633SupplementaryHeader>
+    <Flight flightOriginDate="2024-08-17Z" scheduledTimeOfDeparture="2024-08-17T17:40:00Z">
+        <FlightIdentification>
+            <FlightIdentifier>LBT6148</FlightIdentifier>
+                <FlightNumber airlineIATACode="BJ" number="6148" >
+                    <CommercialFlightNumber>BJ6148</CommercialFlightNumber>
+                </FlightNumber>
+             </FlightIdentification>
+        <DepartureAirport airportFunction="DepartureAirport" airportName="DJERBA/ZARZIS">
+            <AirportICAOCode>DTTJ</AirportICAOCode>
+            <AirportIATACode>DJE</AirportIATACode>
+        </DepartureAirport>
+        <ArrivalAirport airportFunction="ArrivalAirport" airportName="LISBON/HUMBERTO DELGADO">
+            <AirportICAOCode>LPPT</AirportICAOCode>
+            <AirportIATACode>LIS</AirportIATACode>
+        </ArrivalAirport>
+    </Flight>
+    <Aircraft aircraftRegistration="TSINE" >
+        <AircraftModel airlineSpecificSubType="5.93">
+            <AircraftICAOType>A320</AircraftICAOType>
+        </AircraftModel>
+    </Aircraft>
+</M633SupplementaryHeader>
+    <Airport>
+        <AirportIdentification airportFunction="DepartureAirport" airportName="DJERBA/ZARZIS">
+            <AirportICAOCode>DTTJ</AirportICAOCode>
+            <AirportIATACode>DJE</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="09"> 
+            <Approach procedureName="TKOF">
+                <RequiredHorizontalVisibility unit="m">250</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">0</RequiredVerticalVisibility>  
+            </Approach>
+            <Elevation unit="ft">9</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">20</Elevation>
+        <AirportReferencePoint><Coordinates latitude="121952" longitude="38798">N3352.5 E01046.6</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT01H</LocalTimeOffsetToUTC>
+    </Airport>
+    <Airport>
+        <AirportIdentification airportFunction="ArrivalAirport" airportName="LISBON/HUMBERTO DELGADO">
+            <AirportICAOCode>LPPT</AirportICAOCode>
+            <AirportIATACode>LIS</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="02"> 
+            <Approach procedureName="CAT2">
+                <RequiredHorizontalVisibility unit="m">300</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">0</RequiredVerticalVisibility>
+            </Approach>
+            <Elevation unit="ft">330</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">355</Elevation>
+        <AirportReferencePoint><Coordinates latitude="139587" longitude="-32883">N3846.5 W00908.1</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT01H</LocalTimeOffsetToUTC>
+    </Airport>
+    <Airport>
+        <AirportIdentification airportFunction="PrimaryArrivalAlternateAirport" airportName="FARO/GAGO COUTINHO">
+            <AirportICAOCode>LPFR</AirportICAOCode>
+            <AirportIATACode>FAO</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="28">
+            <Approach procedureName="CAT1+DME">
+                <RequiredHorizontalVisibility unit="m">550</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">0</RequiredVerticalVisibility>
+            </Approach>
+            <Elevation unit="ft">18</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">24</Elevation>
+        <AirportReferencePoint><Coordinates latitude="133252" longitude="-28677">N3700.9 W00758.0</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT01H</LocalTimeOffsetToUTC>
+    </Airport>
+    <Airport>
+        <AirportIdentification airportFunction="ArrivalAlternateAirport" airportName="SANTIAGO/ROSALIA DE CASTRO">
+            <AirportICAOCode>LEST</AirportICAOCode>
+            <AirportIATACode>SCQ</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="17">
+            <Approach procedureName="CAT1DME+NDB">
+                <RequiredHorizontalVisibility unit="m">600</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">0</RequiredVerticalVisibility>
+            </Approach>
+            <Elevation unit="ft">1169</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">1211</Elevation>
+        <AirportReferencePoint><Coordinates latitude="154427" longitude="-30295">N4253.8 W00824.9</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT02H</LocalTimeOffsetToUTC>
+    </Airport>
+    <Airport>
+        <AirportIdentification airportFunction="ArrivalAlternateAirport" airportName="MADRID ADOLFO SUAREZ/BARAJAS">
+            <AirportICAOCode>LEMD</AirportICAOCode>
+            <AirportIATACode>MAD</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="18R">
+            <Approach procedureName="CAT1">
+                <RequiredHorizontalVisibility unit="m">550</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">0</RequiredVerticalVisibility>
+            </Approach>
+            <Elevation unit="ft">1991</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">1998</Elevation>
+        <AirportReferencePoint><Coordinates latitude="145700" longitude="-12819">N4028.3 W00333.7</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT02H</LocalTimeOffsetToUTC>
+    </Airport>
+</AirportData>

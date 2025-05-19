@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP21" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-12-15T12:34:50" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-12-15" scheduledTimeOfDeparture="2024-12-15T16:00:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>LBT588</FlightIdentifier>
+				<FlightNumber airlineIATACode="BJ" number=" 588">
+					<CommercialFlightNumber>BJ588</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>DTTJ</AirportICAOCode>
+				<AirportIATACode>DJE</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>LFML</AirportICAOCode>
+				<AirportIATACode>MRS</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSINO">
+			<AircraftModel>
+				<AircraftICAOType>A320</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF DTTJZAZX DTTJZPZX DTTJZTZX EUCHZMFP EUCBZMFP DTTCZQZX DTTCZRZX</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DAAAZQZX DAAAZQZR</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>(FPL-LBT588-IS</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-A320/M-SDFGHIJ1LORVWY/LB1</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-DTTJ1600</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>-N0454F360 TINAP1B TINAP A856 KIRAS UZ147 DIMAO/N0453F360 UG6</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>SALMA/N0449F360 DCT BAVON DCT OLNUL DCT RASPA UN854 TINOT TINOT1L</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>-LFML0136 LFMN</Text>
+		</Paragraph>
+		<Paragraph sequence="10">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/241215 REG/TSINO EET/DAAA0032 LFFF0057</Text>
+		</Paragraph>
+		<Paragraph sequence="11">
+			<Text>LFMM0127 SEL/LQHJ CODE/02A1AE OPR/LBT PER/C)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="DTTJZAZX DTTJZPZX DTTJZTZX EUCHZMFP EUCBZMFP DTTCZQZX DTTCZRZX DAAAZQZX DAAAZQZR" />
+		<Originator address="DTMBLBTO" />
+		<Items>
+			<Item7 aTCCallsign="LBT588" />
+			<Item8 flightRules="I" typeOfFlight="S" />
+			<Item9 typeOfAircraft="A320" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDFGHIJ1LORVWY/LB1" />
+			<Item13 departureAirport="DTTJ" departureTime="1600" />
+			<Item15 cruisingSpeed="N0454" cruisingLevel="F360" route="TINAP1B TINAP A856 KIRAS UZ147 DIMAO/N0453F360 UG6 SALMA/N0449F360 DCT BAVON DCT OLNUL DCT RASPA UN854 TINOT TINOT1L" />
+			<Item16 arrivalAirport="LFML" estimatedFlightTime="0136" alternateAirport="LFMN" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/241215 REG/TSINO EET/DAAA0032 LFFF0057 LFMM0127 SEL/LQHJ CODE/02A1AE OPR/LBT PER/C">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>241215</DOF>
+				<REG>TSINO</REG>
+				<EET>DAAA0032 LFFF0057 LFMM0127</EET>
+				<SEL>LQHJ</SEL>
+				<CODE>02A1AE</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

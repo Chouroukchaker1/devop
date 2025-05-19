@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP7" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-12-17T06:03:16" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-12-17" scheduledTimeOfDeparture="2024-12-17T07:40:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>LBT844</FlightIdentifier>
+				<FlightNumber airlineIATACode="BJ" number=" 844">
+					<CommercialFlightNumber>BJ844</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>DTTA</AirportICAOCode>
+				<AirportIATACode>TUN</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>EGKK</AirportICAOCode>
+				<AirportIATACode>LGW</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSINF">
+			<AircraftModel>
+				<AircraftICAOType>A320</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF DTTAZAZX DTTAZPZX DTTAZTZX DTTCZQZX DTTCZRZX EUCHZMFP EUCBZMFP</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>(FPL-LBT844-IS</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>-A320/M-SDFGIJ1LORVWY/LB1</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-DTTA0740</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-N0445F380 TOBIB2A TOBIB UA725 OSMAR DCT PIRIX DCT CAR DCT KOVAS</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>DCT RUGOX DCT MADKA DCT AJO DCT OMEDA DCT MERLU DCT PIGOS UM733</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>IDAVO DCT BAGBI DCT SIZZA UM733 PIREG UT421 KUNAV KUNAV1G</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>-EGKK0224 EGSS</Text>
+		</Paragraph>
+		<Paragraph sequence="10">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/241217 REG/TSINF EET/LIRR0015 LFFF0042</Text>
+		</Paragraph>
+		<Paragraph sequence="11">
+			<Text>EGTT0217 SEL/GRFM CODE/02A1A5 OPR/LBT PER/C)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="DTTAZAZX DTTAZPZX DTTAZTZX EUCHZMFP EUCBZMFP DTTCZQZX DTTCZRZX" />
+		<Originator address="DTMBLBTO" />
+		<Items>
+			<Item7 aTCCallsign="LBT844" />
+			<Item8 flightRules="I" typeOfFlight="S" />
+			<Item9 typeOfAircraft="A320" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDFGIJ1LORVWY/LB1" />
+			<Item13 departureAirport="DTTA" departureTime="0740" />
+			<Item15 cruisingSpeed="N0445" cruisingLevel="F380" route="TOBIB2A TOBIB UA725 OSMAR DCT PIRIX DCT CAR DCT KOVAS DCT RUGOX DCT MADKA DCT AJO DCT OMEDA DCT MERLU DCT PIGOS UM733 IDAVO DCT BAGBI DCT SIZZA UM733 PIREG UT421 KUNAV KUNAV1G" />
+			<Item16 arrivalAirport="EGKK" estimatedFlightTime="0224" alternateAirport="EGSS" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/241217 REG/TSINF EET/LIRR0015 LFFF0042 EGTT0217 SEL/GRFM CODE/02A1A5 OPR/LBT PER/C">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>241217</DOF>
+				<REG>TSINF</REG>
+				<EET>LIRR0015 LFFF0042 EGTT0217</EET>
+				<SEL>GRFM</SEL>
+				<CODE>02A1A5</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

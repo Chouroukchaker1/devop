@@ -1,0 +1,296 @@
+/* Navbar.css */
+.navbar {
+    background-color: #f3f4f7;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+    padding: 3px 0;
+    height: 50px;
+}
+
+/* Style pour les icônes */
+.nav-icon {
+    font-size: 18px; /* Taille des icônes */
+    margin: 0;
+    vertical-align: middle;
+}
+
+/* Espacement et taille des liens */
+.navbar-nav .nav-link {
+    color: rgb(0, 72, 153) !important;
+    margin-right: 15px;
+    font-size: 14px;
+    padding: 0 12px; /* Augmenté légèrement pour que les icônes aient plus d'espace */
+    display: flex;
+    align-items: center;
+    height: 44px;
+}
+
+/* Ajout d'un effet au survol pour montrer l'interactivité */
+.navbar-nav .nav-link:hover {
+    color: rgb(0, 72, 153) !important;
+    background-color: rgba(0, 72, 153, 0.05);
+    border-radius: 4px;
+}
+
+/* Container fluid pour occuper toute la largeur */
+.navbar .container-fluid {
+    width: 100%;
+    padding: 0 10px;
+    margin: 0;
+}
+
+/* Style du bouton hamburger */
+.navbar-toggler {
+    border-color: rgb(0, 72, 153);
+    padding: 6px;
+}
+/* Container fluid */
+.app .navbar .container-fluid{
+    transform:translatex(0px) translatey(0px);
+    height:89px;
+   }
+   
+   /* Container fluid */
+   .app .signin-container .container-fluid{
+    position:relative;
+    top:-20px;
+    left:-3px;
+   }
+   
+/* Container fluid */
+.app .navbar .container-fluid{
+    position:relative;
+    top:-3px;
+   }
+   
+   /* Container fluid */
+   .app .page-container .container-fluid{
+    padding-left:16px;
+    padding-right:16px;
+    padding-top:185px;
+    padding-bottom:0px;
+   }
+   
+/* Container fluid */
+.app .navbar .container-fluid{
+    position:relative;
+    top:-3px;
+   }
+   
+   /* Container fluid */
+   .app .page-container .container-fluid{
+    padding-left:16px;
+    padding-right:16px;
+    padding-top:185px;
+    padding-bottom:0px;
+    transform:translatex(0px) translatey(0px);
+    position:relative;
+    top:-21px;
+   }
+   
+/* Signin container */
+.app .signin-container{
+    border-top-left-radius:0px;
+    border-top-right-radius:0px;
+    position:absolute;
+    top:69px;
+    left:5px;
+   }
+   
+  /* Card container */
+.app .card-container{
+    top:-113px;
+   }
+   
+/* Card body */
+.app .card-body{
+    padding-right:19px;
+    transform:translatex(0px) translatey(98px);
+   }
+   
+/* Card body */
+.app .card-body{
+    padding-right:19px;
+    transform:translatex(0px) translatey(7px);
+    height:650px;
+   }
+   
+/* Card body */
+.app .card-body{
+    padding-right:19px;
+    transform:translatex(0px) translatey(7px);
+    height:650px;
+   }
+   
+   /* Form Division */
+   .app .card-body form{
+    position:relative;
+    top:-20px;
+    transform:translatex(0px) translatey(7px);
+    height:586px;
+   }
+   
+/* Card body */
+.app .card-body{
+    padding-right:19px;
+    transform:translatex(0px) translatey(7px);
+    height:650px;
+   }
+   
+   /* Form Division */
+   .app .card-body form{
+    position:relative;
+    top:-20px;
+    transform:translatex(0px) translatey(7px);
+    height:586px;
+   }
+   
+   /* Division */
+   .card-body form .mb-3{
+    position:relative;
+    top:-9px;
+    left:1px;
+    transform:translatex(0px) translatey(-37px);
+   }
+   
+   /* Button */
+   .card-body form .btn-primary{
+    position:relative;
+    top:-23px;
+   }
+   
+   /* Container fluid */
+   .app .page-container .container-fluid{
+    transform:translatex(0px) translatey(-20px);
+   }
+   
+   /* Division */
+   #root .app .page-container .container-fluid .justify-content-center .col-lg-5 .card-container .card-body form .mb-3 > div{
+    transform:translatex(0px) translatey(-20px) !important;
+   }
+   
+   /* Division */
+   .card-body form .mb-3 > div{
+    position:relative;
+    left:100px;
+   }
+   
+/* Input */
+.card-body form input[type=text]{
+    transform:translatex(-6px) translatey(18px);
+   }
+   
+   /* Form label */
+   .card-body form .form-label{
+    position:relative;
+    left:0px;
+    top:24px;
+   }
+   
+   /* Input */
+   .card-body form input[type=email]{
+    position:relative;
+    top:22px;
+   }
+   
+   /* Input */
+   .card-body form input[type=password]{
+    position:relative;
+    left:-1px;
+    top:26px;
+   }
+   
+   /* Input */
+   .card-body form input[type=file]{
+    position:relative;
+    top:22px;
+   }
+   
+   /* Division */
+   #root .app .page-container .container-fluid .justify-content-center .col-lg-5 .card-container .card-body form .mb-3 > div{
+    transform:translatex(-57px) translatey(21px) !important;
+   }
+   
+   /* Division */
+   .card-body form .mb-3 > div{
+    transform:translatex(-157px) translatey(24px) !important;
+   }
+   
+   /* Division */
+   .card-body form .mb-3{
+    min-height:82px;
+   }
+   
+   /* Button */
+   .card-body form .btn-primary{
+    top:-30px;
+    transform:translatex(4px) translatey(-9px);
+   }
+   
+   /* Card container */
+   .app .card-container{
+    top:-66px;
+    height:698px;
+    transform:translatex(0px) translatey(-16px) !important;
+   }
+   
+/* Contact container */
+.app .contact-container{
+    background-position-x:50%;
+    background-position-y:44%;
+    position:relative;
+    top:-18px;
+    padding-bottom:27px;
+   }
+   
+ /* Button */
+.app form button{
+     
+    left:121px;
+   }
+   
+/* Button */
+.app form .btn-primary {
+    position: relative; /* ou relative, selon vos besoins */
+    left: 40px;
+    top: 28px;
+}
+   /* Button */
+   #root .app .page-container .signin-container .container-fluid .justify-content-center .col-lg-4 .card-container form .d-grid .btn-primary{
+    width:63% !important;
+   }
+   
+/* Button */
+.card-body form .btn-primary{
+    transform:translatex(-16px) translatey(-52px);
+   }
+   
+   /* Button */
+   #root .app .page-container .container-fluid .justify-content-center .col-lg-5 .card-container .card-body form .d-grid .btn-primary{
+    width:84% !important;
+   }
+   /* Grid */
+.card-body form .d-grid{
+    transform:translatex(0px) translatey(0px);
+   }
+   
+   /* Button */
+   .card-body form .btn-primary{
+    position:absolute;
+    left:29px;
+    z-index:99;
+    box-shadow:-50px -50px 0px -49px #ffffff;
+   }
+   
+/* Grid */
+.app form .d-grid{
+ position:relative;
+ top:-20px;
+}
+
+   
+                          

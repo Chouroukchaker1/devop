@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP7" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-09-08T03:22:01" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-09-08" scheduledTimeOfDeparture="2024-09-08T06:00:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>LBT396</FlightIdentifier>
+				<FlightNumber airlineIATACode="BJ" number=" 396">
+					<CommercialFlightNumber>BJ396</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>DTTA</AirportICAOCode>
+				<AirportIATACode>TUN</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>EBBR</AirportICAOCode>
+				<AirportIATACode>BRU</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSINQ">
+			<AircraftModel>
+				<AircraftICAOType>A320</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF DTTAZAZX DTTAZPZX DTTAZTZX DTTCZQZX DTTCZRZX EUCHZMFP EUCBZMFP</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>(FPL-LBT396-IS</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>-A320/M-SDFGHIJ1LORVWY/LB1</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-DTTA0600</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-N0463F340 TOBIB2A TOBIB A725 TANIT UA725 OSMAR DCT PIRIX DCT CAR</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>DCT GIGGI DCT UPDUT DCT CORSI DCT OMEDA/N0463F320 DCT MERLU DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>PIGOS UM733 BARSO/N0457F340 UM622 IRMAR DCT KINES DCT VANAS DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>MOBLO DCT UBIMA DCT GILIR DCT PENDU DCT IXILU DCT GIVOR/N0448F320</Text>
+		</Paragraph>
+		<Paragraph sequence="10">
+			<Text>DCT SORAL DCT IBERA DCT DIK/N0416F240 Y37 BATTY BATTY6A</Text>
+		</Paragraph>
+		<Paragraph sequence="11">
+			<Text>-EBBR0205 LFQQ</Text>
+		</Paragraph>
+		<Paragraph sequence="12">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/240908 REG/TSINQ EET/LIRR0015 LFFF0041</Text>
+		</Paragraph>
+		<Paragraph sequence="13">
+			<Text>LIMM0113 LFFF0115 LSAS0124 LFFF0127 EBUR0147 SEL/JMLQ CODE/02A1B0</Text>
+		</Paragraph>
+		<Paragraph sequence="14">
+			<Text>OPR/LBT PER/C)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="DTTAZAZX DTTAZPZX DTTAZTZX EUCHZMFP EUCBZMFP DTTCZQZX DTTCZRZX" />
+		<Originator address="DTMBLBTO" />
+		<Items>
+			<Item7 aTCCallsign="LBT396" />
+			<Item8 flightRules="I" typeOfFlight="S" />
+			<Item9 typeOfAircraft="A320" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDFGHIJ1LORVWY/LB1" />
+			<Item13 departureAirport="DTTA" departureTime="0600" />
+			<Item15 cruisingSpeed="N0463" cruisingLevel="F340" route="TOBIB2A TOBIB A725 TANIT UA725 OSMAR DCT PIRIX DCT CAR DCT GIGGI DCT UPDUT DCT CORSI DCT OMEDA/N0463F320 DCT MERLU DCT PIGOS UM733 BARSO/N0457F340 UM622 IRMAR DCT KINES DCT VANAS DCT MOBLO DCT UBIMA DCT GILIR DCT PENDU DCT IXILU DCT GIVOR/N0448F320 DCT SORAL DCT IBERA DCT DIK/N0416F240 Y37 BATTY BATTY6A" />
+			<Item16 arrivalAirport="EBBR" estimatedFlightTime="0205" alternateAirport="LFQQ" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/240908 REG/TSINQ EET/LIRR0015 LFFF0041 LIMM0113 LFFF0115 LSAS0124 LFFF0127 EBUR0147 SEL/JMLQ CODE/02A1B0 OPR/LBT PER/C">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>240908</DOF>
+				<REG>TSINQ</REG>
+				<EET>LIRR0015 LFFF0041 LIMM0113 LFFF0115 LSAS0124 LFFF0127 EBUR0147</EET>
+				<SEL>JMLQ</SEL>
+				<CODE>02A1B0</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

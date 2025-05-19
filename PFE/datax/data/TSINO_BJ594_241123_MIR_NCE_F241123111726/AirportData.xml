@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AirportData creationTime="2024-11-23T11:17:23" flightPlanId="OFP5" fullPackage="true" xsi:schemaLocation="http://aeec.aviation-ia.net/633 AirportData.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<M633Header timestamp="2024-11-23T11:17:22Z" versionNumber="3"/> 
+<M633SupplementaryHeader>
+    <Flight flightOriginDate="2024-11-23Z" scheduledTimeOfDeparture="2024-11-23T14:30:00Z">
+        <FlightIdentification>
+            <FlightIdentifier>LBT594</FlightIdentifier>
+                <FlightNumber airlineIATACode="BJ" number="594" >
+                    <CommercialFlightNumber>BJ594</CommercialFlightNumber>
+                </FlightNumber>
+             </FlightIdentification>
+        <DepartureAirport airportFunction="DepartureAirport" airportName="MONASTIR/HABIB BOURGUIBA">
+            <AirportICAOCode>DTMB</AirportICAOCode>
+            <AirportIATACode>MIR</AirportIATACode>
+        </DepartureAirport>
+        <ArrivalAirport airportFunction="ArrivalAirport" airportName="NICE/COTE D AZUR">
+            <AirportICAOCode>LFMN</AirportICAOCode>
+            <AirportIATACode>NCE</AirportIATACode>
+        </ArrivalAirport>
+    </Flight>
+    <Aircraft aircraftRegistration="TSINO" >
+        <AircraftModel airlineSpecificSubType="1.11">
+            <AircraftICAOType>A320</AircraftICAOType>
+        </AircraftModel>
+    </Aircraft>
+</M633SupplementaryHeader>
+    <Airport>
+        <AirportIdentification airportFunction="DepartureAirport" airportName="MONASTIR/HABIB BOURGUIBA">
+            <AirportICAOCode>DTMB</AirportICAOCode>
+            <AirportIATACode>MIR</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="25"> 
+            <Approach procedureName="TKOF">
+                <RequiredHorizontalVisibility unit="m">250</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">0</RequiredVerticalVisibility>  
+            </Approach>
+            <Elevation unit="ft">8</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">9</Elevation>
+        <AirportReferencePoint><Coordinates latitude="128729" longitude="38717">N3545.5 E01045.3</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT01H</LocalTimeOffsetToUTC>
+    </Airport>
+    <Airport>
+        <AirportIdentification airportFunction="ArrivalAirport" airportName="NICE/COTE D AZUR">
+            <AirportICAOCode>LFMN</AirportICAOCode>
+            <AirportIATACode>NCE</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="04L">
+            <Approach procedureName="CAT1+DME">
+                <RequiredHorizontalVisibility unit="m">1700</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">0</RequiredVerticalVisibility>
+            </Approach>
+            <Elevation unit="ft">10</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">12</Elevation> 
+        <AirportReferencePoint><Coordinates latitude="157195" longitude="25974">N4339.9 E00712.9</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT01H</LocalTimeOffsetToUTC>
+    </Airport>
+    <Airport>
+        <AirportIdentification airportFunction="PrimaryArrivalAlternateAirport" airportName="MARSEILLE/PROVENCE">
+            <AirportICAOCode>LFML</AirportICAOCode>
+            <AirportIATACode>MRS</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="13L">
+            <Approach procedureName="LOCDME">
+                <RequiredHorizontalVisibility unit="m">1300</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">370</RequiredVerticalVisibility>
+            </Approach>
+            <Elevation unit="ft">9</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">70</Elevation>
+        <AirportReferencePoint><Coordinates latitude="156372" longitude="18774">N4326.2 E00512.9</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT01H</LocalTimeOffsetToUTC>
+    </Airport>
+    <Airport>
+        <AirportIdentification airportFunction="ArrivalAlternateAirport" airportName="LYON/SAINT EXUPERY">
+            <AirportICAOCode>LFLL</AirportICAOCode>
+            <AirportIATACode>LYS</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="17L">
+            <Approach procedureName="LOC+VORDME">
+                <RequiredHorizontalVisibility unit="m">1200</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">420</RequiredVerticalVisibility>
+            </Approach>
+            <Elevation unit="ft">780</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">821</Elevation>
+        <AirportReferencePoint><Coordinates latitude="164612" longitude="18292">N4543.5 E00504.9</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT01H</LocalTimeOffsetToUTC>
+    </Airport>
+</AirportData>

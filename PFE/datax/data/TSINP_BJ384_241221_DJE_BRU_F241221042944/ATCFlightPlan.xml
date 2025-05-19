@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP8" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-12-21T04:29:35" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-12-21" scheduledTimeOfDeparture="2024-12-21T07:00:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>LBT384</FlightIdentifier>
+				<FlightNumber airlineIATACode="BJ" number=" 384">
+					<CommercialFlightNumber>BJ384</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>DTTJ</AirportICAOCode>
+				<AirportIATACode>DJE</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>EBBR</AirportICAOCode>
+				<AirportIATACode>BRU</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSINP">
+			<AircraftModel>
+				<AircraftICAOType>A320</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF DTTJZAZX DTTJZPZX DTTJZTZX EUCHZMFP EUCBZMFP DTTCZQZX DTTCZRZX</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>(FPL-LBT384-IS</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>-A320/M-SDFGHIJ1LORVWY/LB1</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-DTTJ0700</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-N0451F380 KBIRA1B KBIRA V334 NEDOS UV334 TBK UM858 DOPEL UM739</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>NIVAB M739 TABOT DCT KUPIM DCT NIVDA DCT PADKO UN854 ETREK UM976</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>MOPEM DCT CACHI DCT AVLON UM976 OKRIX/N0445F360 UM976 KOPOR UN874</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>CMB UZ373 ARVOL ARVOL8A</Text>
+		</Paragraph>
+		<Paragraph sequence="10">
+			<Text>-EBBR0248 EHBK</Text>
+		</Paragraph>
+		<Paragraph sequence="11">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/241221 REG/TSINP EET/LIRR0050 LFFF0054</Text>
+		</Paragraph>
+		<Paragraph sequence="12">
+			<Text>EBBU0245 SEL/PRKM CODE/02A1AF OPR/LBT PER/C)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="DTTJZAZX DTTJZPZX DTTJZTZX EUCHZMFP EUCBZMFP DTTCZQZX DTTCZRZX" />
+		<Originator address="DTMBLBTO" />
+		<Items>
+			<Item7 aTCCallsign="LBT384" />
+			<Item8 flightRules="I" typeOfFlight="S" />
+			<Item9 typeOfAircraft="A320" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDFGHIJ1LORVWY/LB1" />
+			<Item13 departureAirport="DTTJ" departureTime="0700" />
+			<Item15 cruisingSpeed="N0451" cruisingLevel="F380" route="KBIRA1B KBIRA V334 NEDOS UV334 TBK UM858 DOPEL UM739 NIVAB M739 TABOT DCT KUPIM DCT NIVDA DCT PADKO UN854 ETREK UM976 MOPEM DCT CACHI DCT AVLON UM976 OKRIX/N0445F360 UM976 KOPOR UN874 CMB UZ373 ARVOL ARVOL8A" />
+			<Item16 arrivalAirport="EBBR" estimatedFlightTime="0248" alternateAirport="EHBK" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/241221 REG/TSINP EET/LIRR0050 LFFF0054 EBBU0245 SEL/PRKM CODE/02A1AF OPR/LBT PER/C">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>241221</DOF>
+				<REG>TSINP</REG>
+				<EET>LIRR0050 LFFF0054 EBBU0245</EET>
+				<SEL>PRKM</SEL>
+				<CODE>02A1AF</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

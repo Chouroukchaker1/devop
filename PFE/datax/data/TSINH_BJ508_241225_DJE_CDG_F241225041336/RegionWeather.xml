@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RegionWeatherBriefing creationTime="2024-12-25T04:13:36" fullPackage="true" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://aeec.aviation-ia.net/633 RegionWeatherBriefing.xsd">
+    <M633Header timestamp="2024-12-25T04:13:36" versionNumber="3"/>
+    <M633SupplementaryHeader>
+        <Flight flightOriginDate="2024-12-25" scheduledTimeOfDeparture="2024-12-25T08:05:00Z">
+            <FlightIdentification>
+                <FlightIdentifier>LBT508</FlightIdentifier>
+                <FlightNumber airlineIATACode="BJ" number="508">
+                    <CommercialFlightNumber>BJ508</CommercialFlightNumber>
+                </FlightNumber>
+            </FlightIdentification>
+            <DepartureAirport>
+                <AirportICAOCode>DTTJ</AirportICAOCode>
+                <AirportIATACode>DJE</AirportIATACode>
+            </DepartureAirport>
+            <ArrivalAirport>
+                <AirportICAOCode>LFPG</AirportICAOCode>
+                <AirportIATACode>CDG</AirportIATACode>
+            </ArrivalAirport>
+        </Flight>
+        <Aircraft aircraftRegistration="TSINH">
+            <AircraftModel>
+                <AircraftICAOType>A320</AircraftICAOType>
+            </AircraftModel>
+        </Aircraft>
+    </M633SupplementaryHeader>
+    <RegionWeathers>
+        <RegionWeather issuer="DTTC" type="AIRMET" startValidTime="2024-12-25T05:00:00" endValidTime="2024-12-25T09:00:00" observationTime="2024-12-25T04:00:00" sequence="1">
+            <RegionWeatherText>
+                <Paragraph sequence="1">
+                    <Text>AIRMET 01 VALID 250500/250900 DTTA- DTTC TUNIS FIR</Text>
+                </Paragraph>
+                <Paragraph sequence="2">
+                    <Text>MOD ICE FCST ENTIRE FIR FL050/140 STNR NC=</Text>
+                </Paragraph>
+            </RegionWeatherText>
+            <Location>
+                <Airspaces>
+                    <Airspace airspaceICAOCode="DTTC">
+                        <AirspaceName>TUNIS FIR</AirspaceName>
+                    </Airspace>
+                </Airspaces>
+            </Location>
+        </RegionWeather>
+    </RegionWeathers>
+</RegionWeatherBriefing>

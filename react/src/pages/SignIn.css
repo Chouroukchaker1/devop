@@ -1,0 +1,392 @@
+.signin-container {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    font-family: 'Poppins', sans-serif; /* Modern font for better typography */
+}
+
+.signin-layout {
+    height: 100vh;
+    padding: 0;
+    overflow: hidden; /* Prevent scrolling issues */
+}
+
+.signin-row {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: stretch;
+}
+
+/* Left column with image and animated border */
+.image-column {
+    padding: 0;
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Animated border effect */
+.image-column::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../assets/mo.jpg') no-repeat center center;
+    background-size: cover;
+    border: 12px solid transparent; /* Vous pouvez ajuster l'épaisseur de la bordure ici */
+    border-image: linear-gradient(45deg, #174765, #eaedf1, #d4dcde, #87CEFA) 1;
+    animation: borderAnimation 8s linear infinite;
+    z-index: 1;
+}
+
+/* Animation modifiée avec des couleurs plus contrastées */
+@keyframes borderAnimation {
+    0% { border-image: linear-gradient(45deg, #174765, #eaedf1, #d4dcde, #87CEFA) 1; }
+    25% { border-image: linear-gradient(135deg, #132e4a, #87CEFA, #d4dcde, #1E90FF) 1; }
+    50% { border-image: linear-gradient(225deg, #1E90FF, #d4dcde, #eaedf1, #174765) 1; }
+    75% { border-image: linear-gradient(315deg, #87CEFA, #132e4a, #1E90FF, #d4dcde) 1; }
+    100% { border-image: linear-gradient(45deg, #174765, #eaedf1, #d4dcde, #87CEFA) 1; }
+}
+/* Right column with login form - closer to image */
+.form-column {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align to the left to be closer to image */
+    padding: 2rem 0 2rem 2rem; /* Remove right padding */
+    background-color: #f8f9fa;
+}
+
+.card-container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
+    width: 394px;
+    height: auto;
+    text-align: left;
+    margin-left: -50px; /* Move the card closer to the image */
+    position: relative;
+    z-index: 2;
+    animation: slideIn 0.7s ease-out forwards;
+}
+
+@keyframes slideIn {
+    0% { transform: translateX(-50px); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+.signin-title {
+    background: linear-gradient(45deg, #007bff, #2e3339);
+    padding: 15px;
+    border-radius: 12px 12px 0 0;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    font-size: 1.6rem;
+    margin: -2rem -2rem 1.5rem -2rem; /* Extend to edges */
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    box-shadow: 0 3px 10px rgba(0, 123, 255, 0.2);
+}
+
+.form-label {
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    letter-spacing: 0.3px;
+}
+
+.form-control {
+    height: 48px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    transition: all 0.3s ease;
+    padding-left: 15px;
+    margin-bottom: 1.2rem;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+.d-grid button {
+    font-size: 1.1rem;
+    padding: 12px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.d-grid button:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 86, 179, 0.3);
+}
+
+.btn-signin {
+    font-weight: 600;
+    background-color: #007bff;
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-signin::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: 0.5s;
+}
+
+.btn-signin:hover::after {
+    left: 100%;
+}
+
+.text-left {
+    display: block;
+    font-weight: 600;
+    color: #333;
+    font-size: 0.95rem;
+}
+
+p.text-center {
+    margin-top: 15px;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+p.text-center a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #007bff;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+p.text-center a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #007bff;
+    transition: width 0.3s ease;
+}
+
+p.text-center a:hover::after {
+    width: 100%;
+}
+
+/* Popup styles */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(3px);
+}
+
+.popup-content {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    width: 400px;
+    max-width: 90%;
+    z-index: 1001;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    animation: popIn 0.4s ease-out forwards;
+}
+
+@keyframes popIn {
+    0% { transform: scale(0.9); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .card-container {
+        margin-left: -40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .image-column {
+        display: none; /* Hide image on smaller screens */
+    }
+    
+    .form-column {
+        width: 100%;
+        padding: 2rem;
+        justify-content: center;
+    }
+    
+    .card-container {
+        width: 100%;
+        max-width: 394px;
+        margin-left: 0;
+    }
+}
+/* Heading */
+.app .welcome-section h2{
+    color:#ffffff;
+   }
+/* Navigation */
+#root .app nav{
+    position:fixed;
+   }
+   
+   #root, .app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  #root .app main {
+    flex: 1;
+  }
+  
+  #root .app footer {
+    margin-top: 100px;
+  }
+  
+   
+   /* Theme toggle button */
+   #root .app .theme-toggle-button{
+    display:none;
+   }
+   
+/* Th */
+.table-striped tr th{
+    color:#ffffff;
+   }
+   
+/* Span Tag */
+.admin-users div .ant-btn-variant-solid > span{
+    color:#ffffff;
+   }
+   
+/* Card */
+.welcome-section .mb-3 .card{
+    width:312px;
+    overflow:visible;
+    height:182px !important;
+   }
+   
+   /* Row */
+   .app .welcome-section .justify-content-center{
+    overflow:visible;
+   }
+   
+   /* Column 4/12 */
+   .welcome-section .justify-content-center > .mb-3{
+    height:190px;
+   }
+   
+   @media (min-width:768px){
+   
+    /* Column 4/12 */
+    .welcome-section .justify-content-center > .mb-3{
+     width:338px;
+    }
+    
+   }
+   /* Span Tag */
+.ant-btn-variant-outlined > span{
+    font-weight:600;
+   }
+   
+/* Notification badge */
+#navbarNav .nav-item .notification-badge{
+    left:17px;
+    right:17px;
+    top:0px;
+   }
+   
+/* Profile edit */
+.profile-card .profile-view .profile-btn-edit{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+   }
+   
+   /* Profile view */
+   .app .profile-card .profile-view{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+   }
+   
+   /* Profile card */
+   .app .profile-card{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:normal;
+   }
+   
+   .signin-layout {
+    background-image: url('../assets/mo.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .card-container {
+    background: rgba(255, 255, 255, 0.95); /* Optional: adds a white background with slight transparency */
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }            
+  /* styles.css or your component's CSS */
+.signin-layout {
+    background-color: #f8f9fa; /* Optional: light background */
+  }
+  
+  .card-container {
+    padding: 2rem;
+    background: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px; /* Optional: control max width */
+    text-align: center;
+  }
+  
+  .signin-title {
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+  }
+  /* Styles for the verification icon */
+.verification-icon {
+    width: 40px; /* Increased from 24px */
+    height: 36px; /* Increased from 24px */
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .verification-icon:hover {
+    transform: scale(1.1); /* Slight hover effect for better UX */
+  }

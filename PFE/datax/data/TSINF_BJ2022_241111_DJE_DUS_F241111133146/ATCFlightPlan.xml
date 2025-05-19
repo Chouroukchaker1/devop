@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP6" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-11-11T13:31:39" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-11-11" scheduledTimeOfDeparture="2024-11-11T12:45:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>LBT2022</FlightIdentifier>
+				<FlightNumber airlineIATACode="BJ" number="2022">
+					<CommercialFlightNumber>BJ2022</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>DTTJ</AirportICAOCode>
+				<AirportIATACode>DJE</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>EDDL</AirportICAOCode>
+				<AirportIATACode>DUS</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSINF">
+			<AircraftModel>
+				<AircraftICAOType>A320</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF DTTJZAZX DTTJZPZX DTTJZTZX EUCHZMFP EUCBZMFP DTTCZQZX DTTCZRZX</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>(FPL-LBT2022-IS</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>-A320/M-SDFGIJ1LORVWY/LB1</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-DTTJ1245</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-N0451F340 KBIRA1B KBIRA V334 NEDOS UV334 NATLA UV334 TBK/N0449F360</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>UM858 DOPEL DCT DEC DCT UPDUT DCT CORSI DCT OMEDA DCT MERLU DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>PIGOS UM733 BARSO UM622 IRMAR DCT KINES DCT VANAS DCT MOBLO DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>UBIMA DCT GILIR DCT PENDU DCT IXILU DCT EPL/N0454F320 DCT ROUSY</Text>
+		</Paragraph>
+		<Paragraph sequence="10">
+			<Text>DCT DIK/N0457F310 N853 ARCKY T853 NVO T857 BIKMU BIKMU1X</Text>
+		</Paragraph>
+		<Paragraph sequence="11">
+			<Text>-EDDL0238 EDDK</Text>
+		</Paragraph>
+		<Paragraph sequence="12">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/241111 REG/TSINF EET/LIRR0045 LFFF0107</Text>
+		</Paragraph>
+		<Paragraph sequence="13">
+			<Text>LIMM0140 LFFF0142 LSAS0153 LFFF0156 EBUR0221 EDUU0226 EBUR0227</Text>
+		</Paragraph>
+		<Paragraph sequence="14">
+			<Text>EDGG0230 SEL/GRFM CODE/02A1A5 OPR/LBT PER/C)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="DTTJZAZX DTTJZPZX DTTJZTZX EUCHZMFP EUCBZMFP DTTCZQZX DTTCZRZX" />
+		<Originator address="DTMBLBTO" />
+		<Items>
+			<Item7 aTCCallsign="LBT2022" />
+			<Item8 flightRules="I" typeOfFlight="S" />
+			<Item9 typeOfAircraft="A320" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDFGIJ1LORVWY/LB1" />
+			<Item13 departureAirport="DTTJ" departureTime="1245" />
+			<Item15 cruisingSpeed="N0451" cruisingLevel="F340" route="KBIRA1B KBIRA V334 NEDOS UV334 NATLA UV334 TBK/N0449F360 UM858 DOPEL DCT DEC DCT UPDUT DCT CORSI DCT OMEDA DCT MERLU DCT PIGOS UM733 BARSO UM622 IRMAR DCT KINES DCT VANAS DCT MOBLO DCT UBIMA DCT GILIR DCT PENDU DCT IXILU DCT EPL/N0454F320 DCT ROUSY DCT DIK/N0457F310 N853 ARCKY T853 NVO T857 BIKMU BIKMU1X" />
+			<Item16 arrivalAirport="EDDL" estimatedFlightTime="0238" alternateAirport="EDDK" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/241111 REG/TSINF EET/LIRR0045 LFFF0107 LIMM0140 LFFF0142 LSAS0153 LFFF0156 EBUR0221 EDUU0226 EBUR0227 EDGG0230 SEL/GRFM CODE/02A1A5 OPR/LBT PER/C">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>241111</DOF>
+				<REG>TSINF</REG>
+				<EET>LIRR0045 LFFF0107 LIMM0140 LFFF0142 LSAS0153 LFFF0156 EBUR0221 EDUU0226 EBUR0227 EDGG0230</EET>
+				<SEL>GRFM</SEL>
+				<CODE>02A1A5</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

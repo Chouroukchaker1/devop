@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RegionWeatherBriefing creationTime="2024-12-28T03:58:55" fullPackage="true" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://aeec.aviation-ia.net/633 RegionWeatherBriefing.xsd">
+    <M633Header timestamp="2024-12-28T03:58:55" versionNumber="3"/>
+    <M633SupplementaryHeader>
+        <Flight flightOriginDate="2024-12-28" scheduledTimeOfDeparture="2024-12-28T07:00:00Z">
+            <FlightIdentification>
+                <FlightIdentifier>LBT214</FlightIdentifier>
+                <FlightNumber airlineIATACode="BJ" number="214">
+                    <CommercialFlightNumber>BJ214</CommercialFlightNumber>
+                </FlightNumber>
+            </FlightIdentification>
+            <DepartureAirport>
+                <AirportICAOCode>DTMB</AirportICAOCode>
+                <AirportIATACode>MIR</AirportIATACode>
+            </DepartureAirport>
+            <ArrivalAirport>
+                <AirportICAOCode>EDDL</AirportICAOCode>
+                <AirportIATACode>DUS</AirportIATACode>
+            </ArrivalAirport>
+        </Flight>
+        <Aircraft aircraftRegistration="TSINQ">
+            <AircraftModel>
+                <AircraftICAOType>A320</AircraftICAOType>
+            </AircraftModel>
+        </Aircraft>
+    </M633SupplementaryHeader>
+    <RegionWeathers>
+        <RegionWeather issuer="DTTC" type="AIRMET" startValidTime="2024-12-28T04:00:00" endValidTime="2024-12-28T08:00:00" observationTime="2024-12-28T03:54:00" sequence="1">
+            <RegionWeatherText>
+                <Paragraph sequence="1">
+                    <Text>AIRMET 02 VALID 280400/280800 DTTA- DTTC TUNIS FIR</Text>
+                </Paragraph>
+                <Paragraph sequence="2">
+                    <Text>MOD ICE FCST N OF N3300 FL060/150 MOV E NC=</Text>
+                </Paragraph>
+            </RegionWeatherText>
+            <Location>
+                <Airspaces>
+                    <Airspace airspaceICAOCode="DTTC">
+                        <AirspaceName>TUNIS FIR</AirspaceName>
+                    </Airspace>
+                </Airspaces>
+            </Location>
+        </RegionWeather>
+        <RegionWeather issuer="DTTC" type="AIRMET" startValidTime="2024-12-28T04:00:00" endValidTime="2024-12-28T07:00:00" observationTime="2024-12-28T03:53:00" sequence="2">
+            <RegionWeatherText>
+                <Paragraph sequence="1">
+                    <Text>AIRMET 01 VALID 280400/280700 DTTA- DTTC TUNIS FIR</Text>
+                </Paragraph>
+                <Paragraph sequence="2">
+                    <Text>ISOL TCU OBS N OF N3700 TOP FL200 MOV E NC=</Text>
+                </Paragraph>
+            </RegionWeatherText>
+            <Location>
+                <Airspaces>
+                    <Airspace airspaceICAOCode="DTTC">
+                        <AirspaceName>TUNIS FIR</AirspaceName>
+                    </Airspace>
+                </Airspaces>
+            </Location>
+        </RegionWeather>
+        <RegionWeather issuer="DTTC" type="SIGMET" startValidTime="2024-12-28T04:00:00" endValidTime="2024-12-28T06:00:00" observationTime="2024-12-28T03:51:00" sequence="3">
+            <RegionWeatherText>
+                <Paragraph sequence="1">
+                    <Text>SIGMET 01 VALID 280400/280600 DTTA- DTTC TUNIS FIR</Text>
+                </Paragraph>
+                <Paragraph sequence="2">
+                    <Text>EMBD TS OBS E OF LINE N3413 E01000 - N3231 E01006 TOP</Text>
+                </Paragraph>
+                <Paragraph sequence="3">
+                    <Text>FL300 MOV E NC=</Text>
+                </Paragraph>
+            </RegionWeatherText>
+            <Location>
+                <Airspaces>
+                    <Airspace airspaceICAOCode="DTTC">
+                        <AirspaceName>TUNIS FIR</AirspaceName>
+                    </Airspace>
+                </Airspaces>
+            </Location>
+        </RegionWeather>
+    </RegionWeathers>
+</RegionWeatherBriefing>

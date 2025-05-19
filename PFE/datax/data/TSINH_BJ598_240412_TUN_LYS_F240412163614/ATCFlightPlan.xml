@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP1" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-04-12T16:36:08" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-04-12" scheduledTimeOfDeparture="2024-04-12T18:45:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>LBT598</FlightIdentifier>
+				<FlightNumber airlineIATACode="BJ" number=" 598">
+					<CommercialFlightNumber>BJ598</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>DTTA</AirportICAOCode>
+				<AirportIATACode>TUN</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>LFLL</AirportICAOCode>
+				<AirportIATACode>LYS</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSINH">
+			<AircraftModel>
+				<AircraftICAOType>A320</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF DTTAZAZX DTTAZPZX DTTAZTZX DTTCZQZX DTTCZRZX EUCHZMFP EUCBZMFP</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>(FPL-LBT598-IS</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>-A320/M-SDFGHIJ1LORVWY/LB1</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-DTTA1945</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-N0446F380 TOBIB2A TOBIB A725 TANIT UA725 OSMAR DCT PIRIX DCT CAR</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>DCT GIGGI DCT UPDUT DCT CORSI DCT OMEDA DCT MERLU DCT PIGOS UM616</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>KOTIT Y42 LASUR Z42 PINED PINED7N</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>-LFLL0122 LFML</Text>
+		</Paragraph>
+		<Paragraph sequence="10">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/240412 REG/TSINH EET/LIRR0014 LFFF0040</Text>
+		</Paragraph>
+		<Paragraph sequence="11">
+			<Text>LFMM0117 SEL/CHKP CODE/02A1A7 OPR/LBT PER/C)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="DTTAZAZX DTTAZPZX DTTAZTZX EUCHZMFP EUCBZMFP DTTCZQZX DTTCZRZX" />
+		<Originator address="DTMBLBTO" />
+		<Items>
+			<Item7 aTCCallsign="LBT598" />
+			<Item8 flightRules="I" typeOfFlight="S" />
+			<Item9 typeOfAircraft="A320" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDFGHIJ1LORVWY/LB1" />
+			<Item13 departureAirport="DTTA" departureTime="1945" />
+			<Item15 cruisingSpeed="N0446" cruisingLevel="F380" route="TOBIB2A TOBIB A725 TANIT UA725 OSMAR DCT PIRIX DCT CAR DCT GIGGI DCT UPDUT DCT CORSI DCT OMEDA DCT MERLU DCT PIGOS UM616 KOTIT Y42 LASUR Z42 PINED PINED7N" />
+			<Item16 arrivalAirport="LFLL" estimatedFlightTime="0122" alternateAirport="LFML" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/240412 REG/TSINH EET/LIRR0014 LFFF0040 LFMM0117 SEL/CHKP CODE/02A1A7 OPR/LBT PER/C">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>240412</DOF>
+				<REG>TSINH</REG>
+				<EET>LIRR0014 LFFF0040 LFMM0117</EET>
+				<SEL>CHKP</SEL>
+				<CODE>02A1A7</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

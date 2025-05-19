@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP2" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-08-17T13:57:56" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-08-17" scheduledTimeOfDeparture="2024-08-17T17:40:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>LBT6148</FlightIdentifier>
+				<FlightNumber airlineIATACode="BJ" number="6148">
+					<CommercialFlightNumber>BJ6148</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>DTTJ</AirportICAOCode>
+				<AirportIATACode>DJE</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>LPPT</AirportICAOCode>
+				<AirportIATACode>LIS</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSINE">
+			<AircraftModel>
+				<AircraftICAOType>A320</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF DTTJZAZX DTTJZPZX DTTJZTZX EUCHZMFP EUCBZMFP DTTCZQZX DTTCZRZX</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DAAAZQZX DAAAZQZR</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>(FPL-LBT6148-IN</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-A320/M-SDFGHIJ1LORVWY/LB1</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-DTTJ1810</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>-N0463F340 TINAP1A TINAP A856 KIRAS UA856 TBS/N0462F340 UA31 CHE</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>UA411 DAHRA/N0457F360 UA411 MOS UM744 CARBO/N0457F360 DCT GOLFO</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>DCT OBAKA DCT ULPEP DCT MGA DCT MAR DCT SVL/N0455F370 DCT PIMUR</Text>
+		</Paragraph>
+		<Paragraph sequence="10">
+			<Text>DCT ONUBA DCT NAPES DCT OSLEP DCT MINTA DCT VATZI VATZI1A</Text>
+		</Paragraph>
+		<Paragraph sequence="11">
+			<Text>-LPPT0239 LPFR</Text>
+		</Paragraph>
+		<Paragraph sequence="12">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/240817 REG/TSINE EET/DAAA0025 LECB0135</Text>
+		</Paragraph>
+		<Paragraph sequence="13">
+			<Text>LECM0138 LPPC0215 SEL/KQEJ CODE/02A1A4 OPR/LBT PER/C)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="DTTJZAZX DTTJZPZX DTTJZTZX EUCHZMFP EUCBZMFP DTTCZQZX DTTCZRZX DAAAZQZX DAAAZQZR" />
+		<Originator address="DTMBLBTO" />
+		<Items>
+			<Item7 aTCCallsign="LBT6148" />
+			<Item8 flightRules="I" typeOfFlight="N" />
+			<Item9 typeOfAircraft="A320" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDFGHIJ1LORVWY/LB1" />
+			<Item13 departureAirport="DTTJ" departureTime="1810" />
+			<Item15 cruisingSpeed="N0463" cruisingLevel="F340" route="TINAP1A TINAP A856 KIRAS UA856 TBS/N0462F340 UA31 CHE UA411 DAHRA/N0457F360 UA411 MOS UM744 CARBO/N0457F360 DCT GOLFO DCT OBAKA DCT ULPEP DCT MGA DCT MAR DCT SVL/N0455F370 DCT PIMUR DCT ONUBA DCT NAPES DCT OSLEP DCT MINTA DCT VATZI VATZI1A" />
+			<Item16 arrivalAirport="LPPT" estimatedFlightTime="0239" alternateAirport="LPFR" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/240817 REG/TSINE EET/DAAA0025 LECB0135 LECM0138 LPPC0215 SEL/KQEJ CODE/02A1A4 OPR/LBT PER/C">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>240817</DOF>
+				<REG>TSINE</REG>
+				<EET>DAAA0025 LECB0135 LECM0138 LPPC0215</EET>
+				<SEL>KQEJ</SEL>
+				<CODE>02A1A4</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP10" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-10-12T13:53:30" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-10-12" scheduledTimeOfDeparture="2024-10-12T20:40:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>LBT779</FlightIdentifier>
+				<FlightNumber airlineIATACode="BJ" number=" 779">
+					<CommercialFlightNumber>BJ779</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>LFQQ</AirportICAOCode>
+				<AirportIATACode>LIL</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>DTMB</AirportICAOCode>
+				<AirportIATACode>MIR</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSINH">
+			<AircraftModel>
+				<AircraftICAOType>A320</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF EUCHZMFP EUCBZMFP</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>AD DTTCZQZX DTTCZRZX DTMBZPZX DTMBZTZX</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>(FPL-LBT779-IS</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-A320/M-SDFGHIJ1LORVWY/LB1</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-LFQQ2040</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>-N0447F350 CIV6S CIV UM617 BUPAL UL607 SPI DCT LIRSU/N0451F360 DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>LIMGO/N0449F370 DCT SUTAL DCT GTQ DCT DEVDI DCT ODINA/N0447F390</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>DCT IDONA DCT TOBGA DCT SUNEV DCT SUKUN/N0449F380 DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="10">
+			<Text>OSMAR/N0451F370 UA725 TANIT UM731 TUC UA411 MON DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="11">
+			<Text>-DTMB0216 DTNH</Text>
+		</Paragraph>
+		<Paragraph sequence="12">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/241012 REG/TSINH EET/EBBU0003 EBUR0008</Text>
+		</Paragraph>
+		<Paragraph sequence="13">
+			<Text>EDUU0018 EBUR0022 EDUU0039 LSAS0039 LIMM0051 LIRR0115 DTTC0155</Text>
+		</Paragraph>
+		<Paragraph sequence="14">
+			<Text>SEL/CHKP CODE/02A1A7 OPR/LBT PER/C)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="EUCHZMFP EUCBZMFP" />
+		<Originator address="DTMBLBTO" />
+		<AdditionalAddressees addresses="DTTCZQZX DTTCZRZX DTMBZPZX DTMBZTZX" />
+		<Items>
+			<Item7 aTCCallsign="LBT779" />
+			<Item8 flightRules="I" typeOfFlight="S" />
+			<Item9 typeOfAircraft="A320" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDFGHIJ1LORVWY/LB1" />
+			<Item13 departureAirport="LFQQ" departureTime="2040" />
+			<Item15 cruisingSpeed="N0447" cruisingLevel="F350" route="CIV6S CIV UM617 BUPAL UL607 SPI DCT LIRSU/N0451F360 DCT LIMGO/N0449F370 DCT SUTAL DCT GTQ DCT DEVDI DCT ODINA/N0447F390 DCT IDONA DCT TOBGA DCT SUNEV DCT SUKUN/N0449F380 DCT OSMAR/N0451F370 UA725 TANIT UM731 TUC UA411 MON DCT" />
+			<Item16 arrivalAirport="DTMB" estimatedFlightTime="0216" alternateAirport="DTNH" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/241012 REG/TSINH EET/EBBU0003 EBUR0008 EDUU0018 EBUR0022 EDUU0039 LSAS0039 LIMM0051 LIRR0115 DTTC0155 SEL/CHKP CODE/02A1A7 OPR/LBT PER/C">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>241012</DOF>
+				<REG>TSINH</REG>
+				<EET>EBBU0003 EBUR0008 EDUU0018 EBUR0022 EDUU0039 LSAS0039 LIMM0051 LIRR0115 DTTC0155</EET>
+				<SEL>CHKP</SEL>
+				<CODE>02A1A7</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

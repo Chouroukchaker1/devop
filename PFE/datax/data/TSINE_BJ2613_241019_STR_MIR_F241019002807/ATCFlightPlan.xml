@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP10" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-10-19T00:27:59" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-10-19" scheduledTimeOfDeparture="2024-10-19T08:30:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>LBT2613</FlightIdentifier>
+				<FlightNumber airlineIATACode="BJ" number="2613">
+					<CommercialFlightNumber>BJ2613</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>EDDS</AirportICAOCode>
+				<AirportIATACode>STR</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>DTMB</AirportICAOCode>
+				<AirportIATACode>MIR</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSINE">
+			<AircraftModel>
+				<AircraftICAOType>A320</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF EUCHZMFP EUCBZMFP</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>AD DTTCZQZX DTTCZRZX DTMBZPZX DTMBZTZX</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>(FPL-LBT2613-IN</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-A320/M-SDFGHIJ1LORVWY/LB1</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-EDDS0830</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>-N0447F370 ROTWE5B ROTWE Y126 TUBLO N850 NATOR DCT TRA DCT RIPUS</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>DCT GERSA DCT SOSON DCT ODINA DCT SPEZI/N0450F370 DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>TOBGA/N0448F390 DCT SUNEV DCT ROMPO DCT PIRIX DCT OSMAR UA725 TUC</Text>
+		</Paragraph>
+		<Paragraph sequence="10">
+			<Text>A411 VAXAL UA411 MON DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="11">
+			<Text>-DTMB0159 DTNH</Text>
+		</Paragraph>
+		<Paragraph sequence="12">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/241019 REG/TSINE EET/EDUU0011 LSAS0014</Text>
+		</Paragraph>
+		<Paragraph sequence="13">
+			<Text>LIMM0029 LIRR0056 DTTC0137 SEL/KQEJ CODE/02A1A4 OPR/LBT PER/C)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="EUCHZMFP EUCBZMFP" />
+		<Originator address="DTMBLBTO" />
+		<AdditionalAddressees addresses="DTTCZQZX DTTCZRZX DTMBZPZX DTMBZTZX" />
+		<Items>
+			<Item7 aTCCallsign="LBT2613" />
+			<Item8 flightRules="I" typeOfFlight="N" />
+			<Item9 typeOfAircraft="A320" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDFGHIJ1LORVWY/LB1" />
+			<Item13 departureAirport="EDDS" departureTime="0830" />
+			<Item15 cruisingSpeed="N0447" cruisingLevel="F370" route="ROTWE5B ROTWE Y126 TUBLO N850 NATOR DCT TRA DCT RIPUS DCT GERSA DCT SOSON DCT ODINA DCT SPEZI/N0450F370 DCT TOBGA/N0448F390 DCT SUNEV DCT ROMPO DCT PIRIX DCT OSMAR UA725 TUC A411 VAXAL UA411 MON DCT" />
+			<Item16 arrivalAirport="DTMB" estimatedFlightTime="0159" alternateAirport="DTNH" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/241019 REG/TSINE EET/EDUU0011 LSAS0014 LIMM0029 LIRR0056 DTTC0137 SEL/KQEJ CODE/02A1A4 OPR/LBT PER/C">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>241019</DOF>
+				<REG>TSINE</REG>
+				<EET>EDUU0011 LSAS0014 LIMM0029 LIRR0056 DTTC0137</EET>
+				<SEL>KQEJ</SEL>
+				<CODE>02A1A4</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

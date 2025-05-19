@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AirportData creationTime="2024-09-27T20:10:13" flightPlanId="OFP2" fullPackage="true" xsi:schemaLocation="http://aeec.aviation-ia.net/633 AirportData.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<M633Header timestamp="2024-09-27T20:10:13Z" versionNumber="3"/> 
+<M633SupplementaryHeader>
+    <Flight flightOriginDate="2024-09-28Z" scheduledTimeOfDeparture="2024-09-28T03:05:00Z">
+        <FlightIdentification>
+            <FlightIdentifier>LBT2402</FlightIdentifier>
+                <FlightNumber airlineIATACode="BJ" number="2402" >
+                    <CommercialFlightNumber>BJ2402</CommercialFlightNumber>
+                </FlightNumber>
+             </FlightIdentification>
+        <DepartureAirport airportFunction="DepartureAirport" airportName="MONASTIR/HABIB BOURGUIBA">
+            <AirportICAOCode>DTMB</AirportICAOCode>
+            <AirportIATACode>MIR</AirportIATACode>
+        </DepartureAirport>
+        <ArrivalAirport airportFunction="ArrivalAirport" airportName="MUNICH">
+            <AirportICAOCode>EDDM</AirportICAOCode>
+            <AirportIATACode>MUC</AirportIATACode>
+        </ArrivalAirport>
+    </Flight>
+    <Aircraft aircraftRegistration="TSINF" >
+        <AircraftModel airlineSpecificSubType="5.95">
+            <AircraftICAOType>A320</AircraftICAOType>
+        </AircraftModel>
+    </Aircraft>
+</M633SupplementaryHeader>
+    <Airport>
+        <AirportIdentification airportFunction="DepartureAirport" airportName="MONASTIR/HABIB BOURGUIBA">
+            <AirportICAOCode>DTMB</AirportICAOCode>
+            <AirportIATACode>MIR</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="25"> 
+            <Approach procedureName="TKOF">
+                <RequiredHorizontalVisibility unit="m">250</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">0</RequiredVerticalVisibility>  
+            </Approach>
+            <Elevation unit="ft">8</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">9</Elevation>
+        <AirportReferencePoint><Coordinates latitude="128729" longitude="38717">N3545.5 E01045.3</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT01H</LocalTimeOffsetToUTC>
+    </Airport>
+    <Airport>
+        <AirportIdentification airportFunction="ArrivalAirport" airportName="MUNICH">
+            <AirportICAOCode>EDDM</AirportICAOCode>
+            <AirportIATACode>MUC</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="26R">
+            <Approach procedureName="CAT2">
+                <RequiredHorizontalVisibility unit="m">300</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">0</RequiredVerticalVisibility>
+            </Approach>
+            <Elevation unit="ft">1449</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">1487</Elevation>
+        <AirportReferencePoint><Coordinates latitude="174074" longitude="42430">N4821.2 E01147.2</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT02H</LocalTimeOffsetToUTC>
+    </Airport>
+    <Airport>
+        <AirportIdentification airportFunction="PrimaryArrivalAlternateAirport" airportName="STUTTGART">
+            <AirportICAOCode>EDDS</AirportICAOCode>
+            <AirportIATACode>STR</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="25">
+            <Approach procedureName="CAT1+DME">
+                <RequiredHorizontalVisibility unit="m">550</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">0</RequiredVerticalVisibility>
+            </Approach>
+            <Elevation unit="ft">1181</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">1276</Elevation>
+        <AirportReferencePoint><Coordinates latitude="175284" longitude="33199">N4841.4 E00913.3</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT02H</LocalTimeOffsetToUTC>
+    </Airport>
+    <Airport>
+        <AirportIdentification airportFunction="ArrivalAlternateAirport" airportName="ZURICH">
+            <AirportICAOCode>LSZH</AirportICAOCode>
+            <AirportIATACode>ZRH</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="34">
+            <Approach procedureName="LOC">
+                <RequiredHorizontalVisibility unit="m">2400</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">730</RequiredVerticalVisibility>
+            </Approach>
+            <Elevation unit="ft">1388</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">1417</Elevation>
+        <AirportReferencePoint><Coordinates latitude="170849" longitude="30773">N4727.5 E00832.9</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT02H</LocalTimeOffsetToUTC>
+    </Airport>
+    <Airport>
+        <AirportIdentification airportFunction="ArrivalAlternateAirport" airportName="FRANKFURT/MAIN">
+            <AirportICAOCode>EDDF</AirportICAOCode>
+            <AirportIATACode>FRA</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="25C">
+            <Approach procedureName="CAT1DME">
+                <RequiredHorizontalVisibility unit="m">550</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">0</RequiredVerticalVisibility>
+            </Approach>
+            <Elevation unit="ft">363</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">363</Elevation>
+        <AirportReferencePoint><Coordinates latitude="180120" longitude="30854">N5002.0 E00834.2</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT02H</LocalTimeOffsetToUTC>
+    </Airport>
+</AirportData>

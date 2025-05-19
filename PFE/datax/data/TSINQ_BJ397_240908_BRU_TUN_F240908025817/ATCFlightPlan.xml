@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP9" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-09-08T02:58:10" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-09-08" scheduledTimeOfDeparture="2024-09-08T09:30:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>LBT397</FlightIdentifier>
+				<FlightNumber airlineIATACode="BJ" number=" 397">
+					<CommercialFlightNumber>BJ397</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>EBBR</AirportICAOCode>
+				<AirportIATACode>BRU</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>DTTA</AirportICAOCode>
+				<AirportIATACode>TUN</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSINQ">
+			<AircraftModel>
+				<AircraftICAOType>A320</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF EUCHZMFP EUCBZMFP</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>AD DTTCZQZX DTTCZRZX DTTAZAZX DTTAZPZX DTTAZTZX</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>(FPL-LBT397-IS</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-A320/M-SDFGHIJ1LORVWY/LB1</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-EBBR0930</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>-N0455F370 ROUSY3G ROUSY DCT GTQ DCT DEVDI DCT ODINA DCT MONEB DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>EVROG DCT QUENN DCT NOLSI UA868 MEDAR DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>-DTTA0207 DTNH</Text>
+		</Paragraph>
+		<Paragraph sequence="10">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/240908 REG/TSINQ EET/EBUR0009 LFFF0019</Text>
+		</Paragraph>
+		<Paragraph sequence="11">
+			<Text>LSAS0037 EDUU0037 LIMM0050 LIRR0115 DTTC0157 SEL/JMLQ CODE/02A1B0</Text>
+		</Paragraph>
+		<Paragraph sequence="12">
+			<Text>OPR/LBT PER/C)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="EUCHZMFP EUCBZMFP" />
+		<Originator address="DTMBLBTO" />
+		<AdditionalAddressees addresses="DTTCZQZX DTTCZRZX DTTAZAZX DTTAZPZX DTTAZTZX" />
+		<Items>
+			<Item7 aTCCallsign="LBT397" />
+			<Item8 flightRules="I" typeOfFlight="S" />
+			<Item9 typeOfAircraft="A320" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDFGHIJ1LORVWY/LB1" />
+			<Item13 departureAirport="EBBR" departureTime="0930" />
+			<Item15 cruisingSpeed="N0455" cruisingLevel="F370" route="ROUSY3G ROUSY DCT GTQ DCT DEVDI DCT ODINA DCT MONEB DCT EVROG DCT QUENN DCT NOLSI UA868 MEDAR DCT" />
+			<Item16 arrivalAirport="DTTA" estimatedFlightTime="0207" alternateAirport="DTNH" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/240908 REG/TSINQ EET/EBUR0009 LFFF0019 LSAS0037 EDUU0037 LIMM0050 LIRR0115 DTTC0157 SEL/JMLQ CODE/02A1B0 OPR/LBT PER/C">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>240908</DOF>
+				<REG>TSINQ</REG>
+				<EET>EBUR0009 LFFF0019 LSAS0037 EDUU0037 LIMM0050 LIRR0115 DTTC0157</EET>
+				<SEL>JMLQ</SEL>
+				<CODE>02A1B0</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

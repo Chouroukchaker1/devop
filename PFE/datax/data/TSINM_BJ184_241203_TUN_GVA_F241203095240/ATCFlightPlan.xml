@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP7" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-12-03T09:52:34" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-12-03" scheduledTimeOfDeparture="2024-12-03T14:15:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>LBT184</FlightIdentifier>
+				<FlightNumber airlineIATACode="BJ" number=" 184">
+					<CommercialFlightNumber>BJ184</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>DTTA</AirportICAOCode>
+				<AirportIATACode>TUN</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>LSGG</AirportICAOCode>
+				<AirportIATACode>GVA</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSINM">
+			<AircraftModel>
+				<AircraftICAOType>A20N</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF DTTAZAZX DTTAZPZX DTTAZTZX DTTCZQZX DTTCZRZX EUCHZMFP EUCBZMFP</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>(FPL-LBT184-IS</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>-A20N/M-SDFGHIJ1LORVWY/LB1G1</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-DTTA1415</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-N0447F380 TOBIB2A TOBIB UA725 OSMAR DCT PIRIX DCT UPDUT DCT CORSI</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>DCT OMEDA DCT MERLU DCT PIGOS UM733 BARSO/N0454F300 UM622 IRMAR</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>DCT KINES</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>-LSGG0133 LFLL</Text>
+		</Paragraph>
+		<Paragraph sequence="10">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/241203 REG/TSINM EET/LIRR0015 LFFF0042</Text>
+		</Paragraph>
+		<Paragraph sequence="11">
+			<Text>LIMM0118 LFFF0120 LFMM0131 SEL/KSAD CODE/02A1AC OPR/LBT PER/C)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="DTTAZAZX DTTAZPZX DTTAZTZX EUCHZMFP EUCBZMFP DTTCZQZX DTTCZRZX" />
+		<Originator address="DTMBLBTO" />
+		<Items>
+			<Item7 aTCCallsign="LBT184" />
+			<Item8 flightRules="I" typeOfFlight="S" />
+			<Item9 typeOfAircraft="A20N" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDFGHIJ1LORVWY/LB1G1" />
+			<Item13 departureAirport="DTTA" departureTime="1415" />
+			<Item15 cruisingSpeed="N0447" cruisingLevel="F380" route="TOBIB2A TOBIB UA725 OSMAR DCT PIRIX DCT UPDUT DCT CORSI DCT OMEDA DCT MERLU DCT PIGOS UM733 BARSO/N0454F300 UM622 IRMAR DCT KINES" />
+			<Item16 arrivalAirport="LSGG" estimatedFlightTime="0133" alternateAirport="LFLL" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/241203 REG/TSINM EET/LIRR0015 LFFF0042 LIMM0118 LFFF0120 LFMM0131 SEL/KSAD CODE/02A1AC OPR/LBT PER/C">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>241203</DOF>
+				<REG>TSINM</REG>
+				<EET>LIRR0015 LFFF0042 LIMM0118 LFFF0120 LFMM0131</EET>
+				<SEL>KSAD</SEL>
+				<CODE>02A1AC</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

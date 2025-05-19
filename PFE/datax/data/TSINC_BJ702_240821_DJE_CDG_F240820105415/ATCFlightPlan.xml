@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP9" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-08-20T10:54:09" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-08-21" scheduledTimeOfDeparture="2024-08-21T02:30:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>LBT702</FlightIdentifier>
+				<FlightNumber airlineIATACode="BJ" number=" 702">
+					<CommercialFlightNumber>BJ702</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>DTTJ</AirportICAOCode>
+				<AirportIATACode>DJE</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>LFPG</AirportICAOCode>
+				<AirportIATACode>CDG</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSINC">
+			<AircraftModel>
+				<AircraftICAOType>A320</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF DTTJZAZX DTTJZPZX DTTJZTZX EUCHZMFP EUCBZMFP DTTCZQZX DTTCZRZX</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DAAAZQZX DAAAZQZR</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>(FPL-LBT702-IS</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-A320/M-SDFGHIJ1LORVWY/LB1</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-DTTJ0230</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>-N0462F340 TINAP1B TINAP A856 KIRAS UZ147 DIMAO/N0462F340 UG6</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>SALMA/N0459F340 DCT NOLVI/N0456F360 DCT SURJU DCT PADKO UN854</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>ETREK/N0448F380 UN854 LOGNI DCT MOKIP DCT ARFOZ UN854 TINIL</Text>
+		</Paragraph>
+		<Paragraph sequence="10">
+			<Text>TINIL9E</Text>
+		</Paragraph>
+		<Paragraph sequence="11">
+			<Text>-LFPG0230 LFPO</Text>
+		</Paragraph>
+		<Paragraph sequence="12">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/240821 REG/TSINC EET/DAAA0030 LFFF0054</Text>
+		</Paragraph>
+		<Paragraph sequence="13">
+			<Text>SEL/KSEF CODE/02A1A2 OPR/LBT PER/C)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="DTTJZAZX DTTJZPZX DTTJZTZX EUCHZMFP EUCBZMFP DTTCZQZX DTTCZRZX DAAAZQZX DAAAZQZR" />
+		<Originator address="DTMBLBTO" />
+		<Items>
+			<Item7 aTCCallsign="LBT702" />
+			<Item8 flightRules="I" typeOfFlight="S" />
+			<Item9 typeOfAircraft="A320" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDFGHIJ1LORVWY/LB1" />
+			<Item13 departureAirport="DTTJ" departureTime="0230" />
+			<Item15 cruisingSpeed="N0462" cruisingLevel="F340" route="TINAP1B TINAP A856 KIRAS UZ147 DIMAO/N0462F340 UG6 SALMA/N0459F340 DCT NOLVI/N0456F360 DCT SURJU DCT PADKO UN854 ETREK/N0448F380 UN854 LOGNI DCT MOKIP DCT ARFOZ UN854 TINIL TINIL9E" />
+			<Item16 arrivalAirport="LFPG" estimatedFlightTime="0230" alternateAirport="LFPO" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/240821 REG/TSINC EET/DAAA0030 LFFF0054 SEL/KSEF CODE/02A1A2 OPR/LBT PER/C">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>240821</DOF>
+				<REG>TSINC</REG>
+				<EET>DAAA0030 LFFF0054</EET>
+				<SEL>KSEF</SEL>
+				<CODE>02A1A2</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP3" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-05-14T13:13:48" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-05-14" scheduledTimeOfDeparture="2024-05-14T16:15:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>LBT104E</FlightIdentifier>
+				<FlightNumber airlineIATACode="BJ" number=" 104" operationalSuffix="E">
+					<CommercialFlightNumber>BJ104E</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>DTMB</AirportICAOCode>
+				<AirportIATACode>MIR</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>DTMB</AirportICAOCode>
+				<AirportIATACode>MIR</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSINC">
+			<AircraftModel>
+				<AircraftICAOType>A320</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF DTMBZPZX DTMBZTZX DTTCZQZX DTTCZRZX</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>(FPL-LBT104E-IX</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>-A320/M-SDFGHIJ1LORVWY/LB1</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-DTMB1615</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-N0272F040 DCT MON DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>-DTMB0100 DTNH</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/240514 REG/TSINC SEL/KSEF CODE/02A1A2</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>OPR/LBT PER/C)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="DTMBZPZX DTMBZTZX DTTCZQZX DTTCZRZX" />
+		<Originator address="DTMBLBTO" />
+		<Items>
+			<Item7 aTCCallsign="LBT104E" />
+			<Item8 flightRules="I" typeOfFlight="S" />
+			<Item9 typeOfAircraft="A320" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDFGHIJ1LORVWY/LB1" />
+			<Item13 departureAirport="DTMB" departureTime="1615" />
+			<Item15 cruisingSpeed="N0272" cruisingLevel="F040" route="DCT MON DCT" />
+			<Item16 arrivalAirport="DTMB" estimatedFlightTime="0100" alternateAirport="DTNH" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/240514 REG/TSINC SEL/KSEF CODE/02A1A2 OPR/LBT PER/C">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>240514</DOF>
+				<REG>TSINC</REG>
+				<SEL>KSEF</SEL>
+				<CODE>02A1A2</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

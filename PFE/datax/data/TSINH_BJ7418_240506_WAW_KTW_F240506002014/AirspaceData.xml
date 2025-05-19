@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AirspaceData flightPlanId="OFP9" xsi:schemaLocation="http://aeec.aviation-ia.net/633 AirspaceData.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<M633Header timestamp="2024-05-06T00:20:11Z" versionNumber="3"/> 
+<M633SupplementaryHeader>
+    <Flight flightOriginDate="2024-05-06Z" scheduledTimeOfDeparture="2024-05-06T07:20:00Z">
+        <FlightIdentification>
+            <FlightIdentifier>LBT7418</FlightIdentifier>
+                <FlightNumber airlineIATACode="BJ" number="7418" >
+                    <CommercialFlightNumber>BJ7418</CommercialFlightNumber>
+                </FlightNumber>
+             </FlightIdentification>
+        <DepartureAirport airportFunction="DepartureAirport" airportName="WARSAW/CHOPIN">
+            <AirportICAOCode>EPWA</AirportICAOCode>
+            <AirportIATACode>WAW</AirportIATACode>
+        </DepartureAirport>
+        <ArrivalAirport airportFunction="ArrivalAirport" airportName="KATOWICE/PYRZOWICE">
+            <AirportICAOCode>EPKT</AirportICAOCode>
+            <AirportIATACode>KTW</AirportIATACode>
+        </ArrivalAirport>
+    </Flight>
+    <Aircraft aircraftRegistration="TSINH" >
+        <AircraftModel airlineSpecificSubType="5.90">
+            <AircraftICAOType>A320</AircraftICAOType>
+        </AircraftModel>
+    </Aircraft>
+</M633SupplementaryHeader>
+    <Airspace airspaceName="WARSAW_FIR" airspaceType="FIR" airspaceICAOCode="EPWW">
+        <Entry cumulatedFlightTime="PT0H0M00S">
+            <Coordinates latitude="+187797" longitude="+75482">N5210.0 E02058.0</Coordinates>
+            <CumulatedGroundDistance unit="NM">0</CumulatedGroundDistance>
+        </Entry>
+        <Exit cumulatedFlightTime="PT0H37M06S">
+            <Coordinates  latitude="+181707" longitude="+68688">N5028.5 E01904.8</Coordinates>
+            <CumulatedGroundDistance unit="NM">192</CumulatedGroundDistance>
+        </Exit>
+        <GroundDistance unit="NM">0</GroundDistance>
+    </Airspace>
+</AirspaceData>

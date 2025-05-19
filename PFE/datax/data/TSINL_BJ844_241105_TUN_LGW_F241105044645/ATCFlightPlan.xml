@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP11" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-11-05T04:46:40" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-11-05" scheduledTimeOfDeparture="2024-11-05T07:40:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>LBT844</FlightIdentifier>
+				<FlightNumber airlineIATACode="BJ" number=" 844">
+					<CommercialFlightNumber>BJ844</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>DTTA</AirportICAOCode>
+				<AirportIATACode>TUN</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>EGKK</AirportICAOCode>
+				<AirportIATACode>LGW</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSINL">
+			<AircraftModel>
+				<AircraftICAOType>A20N</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF DTTAZAZX DTTAZPZX DTTAZTZX DTTCZQZX DTTCZRZX EUCHZMFP EUCBZMFP</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>(FPL-LBT844-IS</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>-A20N/M-SDE2FGHIJ1LORVWY/LB1G1</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-DTTA0740</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-N0440F240 TOBIB2A TOBIB A725 TANIT/N0447F380 DCT SAMEK UM739 DOPEL</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>DCT DEC DCT UPDUT DCT CORSI DCT OMEDA DCT MERLU DCT PIGOS UM733</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>IDAVO DCT BAGBI DCT SIZZA UM733 PIREG UT421 KUNAV KUNAV1G</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>-EGKK0212 EGSS</Text>
+		</Paragraph>
+		<Paragraph sequence="10">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/241105 REG/TSINL EET/LIRR0021 LFFF0042</Text>
+		</Paragraph>
+		<Paragraph sequence="11">
+			<Text>EGTT0206 SEL/MPER CODE/02A1AB OPR/LBT PER/C TALT/DTNH)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="DTTAZAZX DTTAZPZX DTTAZTZX EUCHZMFP EUCBZMFP DTTCZQZX DTTCZRZX" />
+		<Originator address="DTMBLBTO" />
+		<Items>
+			<Item7 aTCCallsign="LBT844" />
+			<Item8 flightRules="I" typeOfFlight="S" />
+			<Item9 typeOfAircraft="A20N" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDE2FGHIJ1LORVWY/LB1G1" />
+			<Item13 departureAirport="DTTA" departureTime="0740" />
+			<Item15 cruisingSpeed="N0440" cruisingLevel="F240" route="TOBIB2A TOBIB A725 TANIT/N0447F380 DCT SAMEK UM739 DOPEL DCT DEC DCT UPDUT DCT CORSI DCT OMEDA DCT MERLU DCT PIGOS UM733 IDAVO DCT BAGBI DCT SIZZA UM733 PIREG UT421 KUNAV KUNAV1G" />
+			<Item16 arrivalAirport="EGKK" estimatedFlightTime="0212" alternateAirport="EGSS" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/241105 REG/TSINL EET/LIRR0021 LFFF0042 EGTT0206 SEL/MPER CODE/02A1AB OPR/LBT PER/C TALT/DTNH">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>241105</DOF>
+				<REG>TSINL</REG>
+				<EET>LIRR0021 LFFF0042 EGTT0206</EET>
+				<SEL>MPER</SEL>
+				<CODE>02A1AB</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+				<TALT>DTNH</TALT>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

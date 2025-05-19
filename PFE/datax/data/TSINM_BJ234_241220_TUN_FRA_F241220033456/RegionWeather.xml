@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RegionWeatherBriefing creationTime="2024-12-20T03:34:56" fullPackage="true" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://aeec.aviation-ia.net/633 RegionWeatherBriefing.xsd">
+    <M633Header timestamp="2024-12-20T03:34:56" versionNumber="3"/>
+    <M633SupplementaryHeader>
+        <Flight flightOriginDate="2024-12-20" scheduledTimeOfDeparture="2024-12-20T06:55:00Z">
+            <FlightIdentification>
+                <FlightIdentifier>LBT234</FlightIdentifier>
+                <FlightNumber airlineIATACode="BJ" number="234">
+                    <CommercialFlightNumber>BJ234</CommercialFlightNumber>
+                </FlightNumber>
+            </FlightIdentification>
+            <DepartureAirport>
+                <AirportICAOCode>DTTA</AirportICAOCode>
+                <AirportIATACode>TUN</AirportIATACode>
+            </DepartureAirport>
+            <ArrivalAirport>
+                <AirportICAOCode>EDDF</AirportICAOCode>
+                <AirportIATACode>FRA</AirportIATACode>
+            </ArrivalAirport>
+        </Flight>
+        <Aircraft aircraftRegistration="TSINM">
+            <AircraftModel>
+                <AircraftICAOType>A20N</AircraftICAOType>
+            </AircraftModel>
+        </Aircraft>
+    </M633SupplementaryHeader>
+    <RegionWeathers>
+        <RegionWeather issuer="DTTC" type="AIRMET" startValidTime="2024-12-20T04:00:00" endValidTime="2024-12-20T08:00:00" observationTime="2024-12-20T03:30:00" sequence="1">
+            <RegionWeatherText>
+                <Paragraph sequence="1">
+                    <Text>AIRMET 04 VALID 200400/200800 DTTA- DTTC TUNIS FIR</Text>
+                </Paragraph>
+                <Paragraph sequence="2">
+                    <Text>MOD TURB FCST N OF N3650 BTN SFC/FL070 STNR NC=</Text>
+                </Paragraph>
+            </RegionWeatherText>
+            <Location>
+                <Airspaces>
+                    <Airspace airspaceICAOCode="DTTC">
+                        <AirspaceName>TUNIS FIR</AirspaceName>
+                    </Airspace>
+                </Airspaces>
+            </Location>
+        </RegionWeather>
+        <RegionWeather issuer="DTTC" type="AIRMET" startValidTime="2024-12-20T04:00:00" endValidTime="2024-12-20T08:00:00" observationTime="2024-12-20T03:27:00" sequence="2">
+            <RegionWeatherText>
+                <Paragraph sequence="1">
+                    <Text>AIRMET 03 VALID 200400/200800 DTTA- DTTC TUNIS FIR</Text>
+                </Paragraph>
+                <Paragraph sequence="2">
+                    <Text>MOD TURB FCST N OF N3650 BTN SFC/FL070 STNR NC=</Text>
+                </Paragraph>
+            </RegionWeatherText>
+            <Location>
+                <Airspaces>
+                    <Airspace airspaceICAOCode="DTTC">
+                        <AirspaceName>TUNIS FIR</AirspaceName>
+                    </Airspace>
+                </Airspaces>
+            </Location>
+        </RegionWeather>
+    </RegionWeathers>
+</RegionWeatherBriefing>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RegionWeatherBriefing creationTime="2024-12-23T04:19:45" fullPackage="true" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://aeec.aviation-ia.net/633 RegionWeatherBriefing.xsd">
+    <M633Header timestamp="2024-12-23T04:19:45" versionNumber="3"/>
+    <M633SupplementaryHeader>
+        <Flight flightOriginDate="2024-12-23" scheduledTimeOfDeparture="2024-12-23T07:30:00Z">
+            <FlightIdentification>
+                <FlightIdentifier>LBT232</FlightIdentifier>
+                <FlightNumber airlineIATACode="BJ" number="232">
+                    <CommercialFlightNumber>BJ232</CommercialFlightNumber>
+                </FlightNumber>
+            </FlightIdentification>
+            <DepartureAirport>
+                <AirportICAOCode>DTTA</AirportICAOCode>
+                <AirportIATACode>TUN</AirportIATACode>
+            </DepartureAirport>
+            <ArrivalAirport>
+                <AirportICAOCode>EDDB</AirportICAOCode>
+                <AirportIATACode>BER</AirportIATACode>
+            </ArrivalAirport>
+        </Flight>
+        <Aircraft aircraftRegistration="TSINL">
+            <AircraftModel>
+                <AircraftICAOType>A20N</AircraftICAOType>
+            </AircraftModel>
+        </Aircraft>
+    </M633SupplementaryHeader>
+    <RegionWeathers>
+        <RegionWeather issuer="DTTC" type="SIGMET" startValidTime="2024-12-23T05:00:00" endValidTime="2024-12-23T09:00:00" observationTime="2024-12-23T04:09:00" sequence="1">
+            <RegionWeatherText>
+                <Paragraph sequence="1">
+                    <Text>SIGMET 01 VALID 230500/230900 DTTA- DTTC TUNIS FIR</Text>
+                </Paragraph>
+                <Paragraph sequence="2">
+                    <Text>SEV TURB FCST N OF N3600 SFC/FL100 STNR NC=</Text>
+                </Paragraph>
+            </RegionWeatherText>
+            <Location>
+                <Airspaces>
+                    <Airspace airspaceICAOCode="DTTC">
+                        <AirspaceName>TUNIS FIR</AirspaceName>
+                    </Airspace>
+                </Airspaces>
+            </Location>
+        </RegionWeather>
+        <RegionWeather issuer="LDZO" type="SIGMET" startValidTime="2024-12-23T04:00:00" endValidTime="2024-12-23T08:00:00" observationTime="2024-12-23T03:49:00" sequence="2">
+            <RegionWeatherText>
+                <Paragraph sequence="1">
+                    <Text>SIGMET U02 VALID 230400/230800 LDZA- LDZO ZAGREB FIR</Text>
+                </Paragraph>
+                <Paragraph sequence="2">
+                    <Text>SEV TURB FCST AT 0400Z WI N4513 E01502 - N4439 E01517</Text>
+                </Paragraph>
+                <Paragraph sequence="3">
+                    <Text>- N4411 E01556 - N4410 E01455 - N4447 E01421 - N4529</Text>
+                </Paragraph>
+                <Paragraph sequence="4">
+                    <Text>E01355 - N4537 E01426 - N4513 E01502 SFC/6000FT STNR</Text>
+                </Paragraph>
+                <Paragraph sequence="5">
+                    <Text>NC=</Text>
+                </Paragraph>
+            </RegionWeatherText>
+            <Location>
+                <Airspaces>
+                    <Airspace airspaceICAOCode="LDZO">
+                        <AirspaceName>ZAGREB FIR</AirspaceName>
+                    </Airspace>
+                </Airspaces>
+            </Location>
+        </RegionWeather>
+        <RegionWeather issuer="LJLA" type="SIGMET" startValidTime="2024-12-23T04:00:00" endValidTime="2024-12-23T08:00:00" observationTime="2024-12-23T03:56:00" sequence="3">
+            <RegionWeatherText>
+                <Paragraph sequence="1">
+                    <Text>SIGMET U02 VALID 230400/230800 LJLJ- LJLA LJUBLJANA</Text>
+                </Paragraph>
+                <Paragraph sequence="2">
+                    <Text>FIR SEV TURB FCST WI N4530 E01434 - N4524 E01359 -</Text>
+                </Paragraph>
+                <Paragraph sequence="3">
+                    <Text>N4551 E01338 - N4558 E01358 - N4530 E01434 SFC/6000FT</Text>
+                </Paragraph>
+                <Paragraph sequence="4">
+                    <Text>STNR NC=</Text>
+                </Paragraph>
+            </RegionWeatherText>
+            <Location>
+                <Airspaces>
+                    <Airspace airspaceICAOCode="LJLA">
+                        <AirspaceName>LJUBLJANA FIR</AirspaceName>
+                    </Airspace>
+                </Airspaces>
+            </Location>
+        </RegionWeather>
+    </RegionWeathers>
+</RegionWeatherBriefing>

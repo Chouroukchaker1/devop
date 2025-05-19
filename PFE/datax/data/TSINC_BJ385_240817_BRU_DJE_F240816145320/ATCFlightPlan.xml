@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP5" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-08-16T14:53:10" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-08-17" scheduledTimeOfDeparture="2024-08-17T18:25:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>LBT385</FlightIdentifier>
+				<FlightNumber airlineIATACode="BJ" number=" 385">
+					<CommercialFlightNumber>BJ385</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>EBBR</AirportICAOCode>
+				<AirportIATACode>BRU</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>DTTJ</AirportICAOCode>
+				<AirportIATACode>DJE</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSINC">
+			<AircraftModel>
+				<AircraftICAOType>A320</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF EUCHZMFP EUCBZMFP</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>AD DTTCZQZX DTTCZRZX DTTJZAZX DTTJZPZX DTTJZTZX</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>(FPL-LBT385-IS</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-A320/M-SDFGHIJ1LORVWY/LB1</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-EBBR1825</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>-N0451F390 ROUSY3G ROUSY DCT GTQ DCT DEVDI DCT ODINA DCT BAKRO DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>PININ DCT TUNEX UG737 CBN UG727 SFX A411 BISKO DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>-DTTJ0225 DTNH DTMB</Text>
+		</Paragraph>
+		<Paragraph sequence="10">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/240817 REG/TSINC EET/EBUR0008 LFFF0017</Text>
+		</Paragraph>
+		<Paragraph sequence="11">
+			<Text>LSAS0035 EDUU0035 LIMM0048 LIRR0112 DTTC0156 SEL/KSEF CODE/02A1A2</Text>
+		</Paragraph>
+		<Paragraph sequence="12">
+			<Text>OPR/LBT PER/C)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="EUCHZMFP EUCBZMFP" />
+		<Originator address="DTMBLBTO" />
+		<AdditionalAddressees addresses="DTTCZQZX DTTCZRZX DTTJZAZX DTTJZPZX DTTJZTZX" />
+		<Items>
+			<Item7 aTCCallsign="LBT385" />
+			<Item8 flightRules="I" typeOfFlight="S" />
+			<Item9 typeOfAircraft="A320" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDFGHIJ1LORVWY/LB1" />
+			<Item13 departureAirport="EBBR" departureTime="1825" />
+			<Item15 cruisingSpeed="N0451" cruisingLevel="F390" route="ROUSY3G ROUSY DCT GTQ DCT DEVDI DCT ODINA DCT BAKRO DCT PININ DCT TUNEX UG737 CBN UG727 SFX A411 BISKO DCT" />
+			<Item16 arrivalAirport="DTTJ" estimatedFlightTime="0225" alternateAirport="DTNH" secondAlternateAirport="DTMB" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/240817 REG/TSINC EET/EBUR0008 LFFF0017 LSAS0035 EDUU0035 LIMM0048 LIRR0112 DTTC0156 SEL/KSEF CODE/02A1A2 OPR/LBT PER/C">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>240817</DOF>
+				<REG>TSINC</REG>
+				<EET>EBUR0008 LFFF0017 LSAS0035 EDUU0035 LIMM0048 LIRR0112 DTTC0156</EET>
+				<SEL>KSEF</SEL>
+				<CODE>02A1A2</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

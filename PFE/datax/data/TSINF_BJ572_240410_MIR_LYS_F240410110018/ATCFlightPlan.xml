@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP6" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-04-10T11:00:08" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-04-10" scheduledTimeOfDeparture="2024-04-10T13:15:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>LBT572</FlightIdentifier>
+				<FlightNumber airlineIATACode="BJ" number=" 572">
+					<CommercialFlightNumber>BJ572</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>DTMB</AirportICAOCode>
+				<AirportIATACode>MIR</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>LFLL</AirportICAOCode>
+				<AirportIATACode>LYS</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSINF">
+			<AircraftModel>
+				<AircraftICAOType>A320</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF DTMBZPZX DTMBZTZX DTTCZQZX DTTCZRZX EUCHZMFP EUCBZMFP</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>(FPL-LBT572-IS</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>-A320/M-SDFGIJ1LORVWY/LB1</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-DTMB1315</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-N0453F360 LARBI1B LARBI A411 VAXAL UA411 TUC UM733 OSMAR DCT PIRIX</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>DCT UPDUT DCT CORSI/N0458F380 DCT OMEDA DCT MERLU DCT PIGOS UM616</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>KOTIT Y42 LASUR Z42 PINED PINED7N</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>-LFLL0131 LSGG</Text>
+		</Paragraph>
+		<Paragraph sequence="10">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/240410 REG/TSINF EET/LIRR0024 LFFF0049</Text>
+		</Paragraph>
+		<Paragraph sequence="11">
+			<Text>LFMM0125 SEL/GRFM CODE/02A1A5 OPR/LBT PER/C)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="DTMBZPZX DTMBZTZX EUCHZMFP EUCBZMFP DTTCZQZX DTTCZRZX" />
+		<Originator address="DTMBLBTO" />
+		<Items>
+			<Item7 aTCCallsign="LBT572" />
+			<Item8 flightRules="I" typeOfFlight="S" />
+			<Item9 typeOfAircraft="A320" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDFGIJ1LORVWY/LB1" />
+			<Item13 departureAirport="DTMB" departureTime="1315" />
+			<Item15 cruisingSpeed="N0453" cruisingLevel="F360" route="LARBI1B LARBI A411 VAXAL UA411 TUC UM733 OSMAR DCT PIRIX DCT UPDUT DCT CORSI/N0458F380 DCT OMEDA DCT MERLU DCT PIGOS UM616 KOTIT Y42 LASUR Z42 PINED PINED7N" />
+			<Item16 arrivalAirport="LFLL" estimatedFlightTime="0131" alternateAirport="LSGG" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/240410 REG/TSINF EET/LIRR0024 LFFF0049 LFMM0125 SEL/GRFM CODE/02A1A5 OPR/LBT PER/C">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>240410</DOF>
+				<REG>TSINF</REG>
+				<EET>LIRR0024 LFFF0049 LFMM0125</EET>
+				<SEL>GRFM</SEL>
+				<CODE>02A1A5</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

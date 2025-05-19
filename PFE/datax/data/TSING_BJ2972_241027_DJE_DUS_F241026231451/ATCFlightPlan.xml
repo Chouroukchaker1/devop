@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP12" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-10-26T23:14:41" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-10-27" scheduledTimeOfDeparture="2024-10-27T02:15:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>LBT2972</FlightIdentifier>
+				<FlightNumber airlineIATACode="BJ" number="2972">
+					<CommercialFlightNumber>BJ2972</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>DTTJ</AirportICAOCode>
+				<AirportIATACode>DJE</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>EDDL</AirportICAOCode>
+				<AirportIATACode>DUS</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSING">
+			<AircraftModel>
+				<AircraftICAOType>A320</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF DTTJZAZX DTTJZPZX DTTJZTZX EUCHZMFP EUCBZMFP DTTCZQZX DTTCZRZX</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>(FPL-LBT2972-IN</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>-A320/M-SDFGIJ1LORVWY/LB1</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-DTTJ0215</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-N0451F360 KBIRA1A KBIRA V334 NEDOS UV334 NATLA UV334 TBK UM858</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>DOPEL DCT DEC DCT LUNAM DCT UPDUT DCT CORSI DCT OKROK DCT AKUTI</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>DCT TORTU DCT ANAKI DCT CERVI DCT VADEM/N0448F340 DCT GILIR DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>PENDU DCT IXILU/N0446F320 DCT EPL DCT ROUSY DCT DIK/N0436F290 N853</Text>
+		</Paragraph>
+		<Paragraph sequence="10">
+			<Text>ARCKY T853 NVO T857 BIKMU BIKMU1X</Text>
+		</Paragraph>
+		<Paragraph sequence="11">
+			<Text>-EDDL0224 EDDK</Text>
+		</Paragraph>
+		<Paragraph sequence="12">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/241027 REG/TSING EET/LIRR0043 LFFF0104</Text>
+		</Paragraph>
+		<Paragraph sequence="13">
+			<Text>LIMM0120 LSAS0141 LFFF0150 EBUR0210 EDGG0218 SEL/HPAE CODE/02A1A6</Text>
+		</Paragraph>
+		<Paragraph sequence="14">
+			<Text>OPR/LBT PER/C)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="DTTJZAZX DTTJZPZX DTTJZTZX EUCHZMFP EUCBZMFP DTTCZQZX DTTCZRZX" />
+		<Originator address="DTMBLBTO" />
+		<Items>
+			<Item7 aTCCallsign="LBT2972" />
+			<Item8 flightRules="I" typeOfFlight="N" />
+			<Item9 typeOfAircraft="A320" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDFGIJ1LORVWY/LB1" />
+			<Item13 departureAirport="DTTJ" departureTime="0215" />
+			<Item15 cruisingSpeed="N0451" cruisingLevel="F360" route="KBIRA1A KBIRA V334 NEDOS UV334 NATLA UV334 TBK UM858 DOPEL DCT DEC DCT LUNAM DCT UPDUT DCT CORSI DCT OKROK DCT AKUTI DCT TORTU DCT ANAKI DCT CERVI DCT VADEM/N0448F340 DCT GILIR DCT PENDU DCT IXILU/N0446F320 DCT EPL DCT ROUSY DCT DIK/N0436F290 N853 ARCKY T853 NVO T857 BIKMU BIKMU1X" />
+			<Item16 arrivalAirport="EDDL" estimatedFlightTime="0224" alternateAirport="EDDK" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/241027 REG/TSING EET/LIRR0043 LFFF0104 LIMM0120 LSAS0141 LFFF0150 EBUR0210 EDGG0218 SEL/HPAE CODE/02A1A6 OPR/LBT PER/C">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>241027</DOF>
+				<REG>TSING</REG>
+				<EET>LIRR0043 LFFF0104 LIMM0120 LSAS0141 LFFF0150 EBUR0210 EDGG0218</EET>
+				<SEL>HPAE</SEL>
+				<CODE>02A1A6</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

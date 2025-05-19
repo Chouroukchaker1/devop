@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RegionWeatherBriefing creationTime="2024-09-08T01:19:29" fullPackage="true" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://aeec.aviation-ia.net/633 RegionWeatherBriefing.xsd">
+    <M633Header timestamp="2024-09-08T01:19:29" versionNumber="3"/>
+    <M633SupplementaryHeader>
+        <Flight flightOriginDate="2024-09-08" scheduledTimeOfDeparture="2024-09-08T04:00:00Z">
+            <FlightIdentification>
+                <FlightIdentifier>LBT2636</FlightIdentifier>
+                <FlightNumber airlineIATACode="BJ" number="2636">
+                    <CommercialFlightNumber>BJ2636</CommercialFlightNumber>
+                </FlightNumber>
+            </FlightIdentification>
+            <DepartureAirport>
+                <AirportICAOCode>DTMB</AirportICAOCode>
+                <AirportIATACode>MIR</AirportIATACode>
+            </DepartureAirport>
+            <ArrivalAirport>
+                <AirportICAOCode>EDDV</AirportICAOCode>
+                <AirportIATACode>HAJ</AirportIATACode>
+            </ArrivalAirport>
+        </Flight>
+        <Aircraft aircraftRegistration="TSINC">
+            <AircraftModel>
+                <AircraftICAOType>A320</AircraftICAOType>
+            </AircraftModel>
+        </Aircraft>
+    </M633SupplementaryHeader>
+    <RegionWeathers>
+        <RegionWeather issuer="LIRR" type="AIRMET" startValidTime="2024-09-07T23:00:00" endValidTime="2024-09-08T03:00:00" observationTime="2024-09-07T22:46:00" sequence="1">
+            <RegionWeatherText>
+                <Paragraph sequence="1">
+                    <Text>AIRMET 16 VALID 072300/080300 LIIB- LIRR ROMA FIR</Text>
+                </Paragraph>
+                <Paragraph sequence="2">
+                    <Text>ISOL TS FCST WI N4151 E00945 - N4227 E01118 - N4340</Text>
+                </Paragraph>
+                <Paragraph sequence="3">
+                    <Text>E01100 - N4334 E01018 - N4310 E00946 - N4151 E00945</Text>
+                </Paragraph>
+                <Paragraph sequence="4">
+                    <Text>TOP ABV FL150 STNR NC=</Text>
+                </Paragraph>
+            </RegionWeatherText>
+            <Location>
+                <Airspaces>
+                    <Airspace airspaceICAOCode="LIRR">
+                        <AirspaceName>ROMA FIR</AirspaceName>
+                    </Airspace>
+                </Airspaces>
+            </Location>
+        </RegionWeather>
+    </RegionWeathers>
+</RegionWeatherBriefing>

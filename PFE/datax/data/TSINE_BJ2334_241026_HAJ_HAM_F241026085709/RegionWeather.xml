@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RegionWeatherBriefing creationTime="2024-10-26T08:57:09" fullPackage="true" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://aeec.aviation-ia.net/633 RegionWeatherBriefing.xsd">
+    <M633Header timestamp="2024-10-26T08:57:09" versionNumber="3"/>
+    <M633SupplementaryHeader>
+        <Flight flightOriginDate="2024-10-26" scheduledTimeOfDeparture="2024-10-26T09:15:00Z">
+            <FlightIdentification>
+                <FlightIdentifier>LBT2334</FlightIdentifier>
+                <FlightNumber airlineIATACode="BJ" number="2334">
+                    <CommercialFlightNumber>BJ2334</CommercialFlightNumber>
+                </FlightNumber>
+            </FlightIdentification>
+            <DepartureAirport>
+                <AirportICAOCode>EDDV</AirportICAOCode>
+                <AirportIATACode>HAJ</AirportIATACode>
+            </DepartureAirport>
+            <ArrivalAirport>
+                <AirportICAOCode>EDDH</AirportICAOCode>
+                <AirportIATACode>HAM</AirportIATACode>
+            </ArrivalAirport>
+        </Flight>
+        <Aircraft aircraftRegistration="TSINE">
+            <AircraftModel>
+                <AircraftICAOType>A320</AircraftICAOType>
+            </AircraftModel>
+        </Aircraft>
+    </M633SupplementaryHeader>
+    <RegionWeathers>
+        <RegionWeather issuer="EPWW" type="AIRMET" startValidTime="2024-10-26T07:55:00" endValidTime="2024-10-26T09:00:00" observationTime="2024-10-26T07:54:00" sequence="1">
+            <RegionWeatherText>
+                <Paragraph sequence="1">
+                    <Text>AIRMET 1 VALID 260755/260900 EPWA- EPWW WARSZAWA FIR</Text>
+                </Paragraph>
+                <Paragraph sequence="2">
+                    <Text>SFC VIS 0200M FG OBS LCA A1 AND W PART OF A2 STNR WKN=</Text>
+                </Paragraph>
+            </RegionWeatherText>
+            <Location>
+                <Airspaces>
+                    <Airspace airspaceICAOCode="EPWW">
+                        <AirspaceName>WARSZAWA FIR</AirspaceName>
+                    </Airspace>
+                </Airspaces>
+            </Location>
+        </RegionWeather>
+    </RegionWeathers>
+</RegionWeatherBriefing>

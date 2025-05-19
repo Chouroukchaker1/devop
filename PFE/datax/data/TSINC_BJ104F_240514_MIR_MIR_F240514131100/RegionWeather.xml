@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RegionWeatherBriefing creationTime="2024-05-14T13:11:00" fullPackage="true" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://aeec.aviation-ia.net/633 RegionWeatherBriefing.xsd">
+    <M633Header timestamp="2024-05-14T13:11:00" versionNumber="3"/>
+    <M633SupplementaryHeader>
+        <Flight flightOriginDate="2024-05-14" scheduledTimeOfDeparture="2024-05-14T16:15:00Z">
+            <FlightIdentification>
+                <FlightIdentifier>LBT104F</FlightIdentifier>
+                <FlightNumber airlineIATACode="BJ" number="104" operationalSuffix="F">
+                    <CommercialFlightNumber>BJ104F</CommercialFlightNumber>
+                </FlightNumber>
+            </FlightIdentification>
+            <DepartureAirport>
+                <AirportICAOCode>DTMB</AirportICAOCode>
+                <AirportIATACode>MIR</AirportIATACode>
+            </DepartureAirport>
+            <ArrivalAirport>
+                <AirportICAOCode>DTMB</AirportICAOCode>
+                <AirportIATACode>MIR</AirportIATACode>
+            </ArrivalAirport>
+        </Flight>
+        <Aircraft aircraftRegistration="TSINC">
+            <AircraftModel>
+                <AircraftICAOType>A320</AircraftICAOType>
+            </AircraftModel>
+        </Aircraft>
+    </M633SupplementaryHeader>
+    <RegionWeathers>
+        <RegionWeather issuer="LIRR" type="AIRMET" startValidTime="2024-05-14T13:00:00" endValidTime="2024-05-14T16:30:00" observationTime="2024-05-14T12:58:00" sequence="1">
+            <RegionWeatherText>
+                <Paragraph sequence="1">
+                    <Text>AIRMET 18 VALID 141300/141630 LIIB- LIRR ROMA FIR</Text>
+                </Paragraph>
+                <Paragraph sequence="2">
+                    <Text>ISOL TS FCST WI N4337 E01158 - N4228 E01201 - N4120</Text>
+                </Paragraph>
+                <Paragraph sequence="3">
+                    <Text>E01311 - N4119 E01431 - N4251 E01303 - N4334 E01313 -</Text>
+                </Paragraph>
+                <Paragraph sequence="4">
+                    <Text>N4337 E01158 TOP ABV FL150 STNR NC=</Text>
+                </Paragraph>
+            </RegionWeatherText>
+            <Location>
+                <Airspaces>
+                    <Airspace airspaceICAOCode="LIRR">
+                        <AirspaceName>ROMA FIR</AirspaceName>
+                    </Airspace>
+                </Airspaces>
+            </Location>
+        </RegionWeather>
+        <RegionWeather issuer="LIRR" type="AIRMET" startValidTime="2024-05-14T12:30:00" endValidTime="2024-05-14T16:30:00" observationTime="2024-05-14T12:19:00" sequence="2">
+            <RegionWeatherText>
+                <Paragraph sequence="1">
+                    <Text>AIRMET 17 VALID 141230/141630 LIIB- LIRR ROMA FIR MOD</Text>
+                </Paragraph>
+                <Paragraph sequence="2">
+                    <Text>TURB FCST S OF LINE N3616 E01207 - N3850 E01918</Text>
+                </Paragraph>
+                <Paragraph sequence="3">
+                    <Text>FL020/050 STNR NC=</Text>
+                </Paragraph>
+            </RegionWeatherText>
+            <Location>
+                <Airspaces>
+                    <Airspace airspaceICAOCode="LIRR">
+                        <AirspaceName>ROMA FIR</AirspaceName>
+                    </Airspace>
+                </Airspaces>
+            </Location>
+        </RegionWeather>
+        <RegionWeather issuer="DTTC" type="AIRMET" startValidTime="2024-05-14T11:00:00" endValidTime="2024-05-14T15:00:00" observationTime="2024-05-14T10:32:00" sequence="3">
+            <RegionWeatherText>
+                <Paragraph sequence="1">
+                    <Text>AIRMET 03 VALID 141100/141500 DTTA- DTTC TUNIS FIR</Text>
+                </Paragraph>
+                <Paragraph sequence="2">
+                    <Text>MOD TURB FCST BTN N3530 AND N3320 SFC/FL080 STNR NC=</Text>
+                </Paragraph>
+            </RegionWeatherText>
+            <Location>
+                <Airspaces>
+                    <Airspace airspaceICAOCode="DTTC">
+                        <AirspaceName>TUNIS FIR</AirspaceName>
+                    </Airspace>
+                </Airspaces>
+            </Location>
+        </RegionWeather>
+        <RegionWeather issuer="DTTC" type="AIRMET" startValidTime="2024-05-14T11:00:00" endValidTime="2024-05-14T15:00:00" observationTime="2024-05-14T10:31:00" sequence="4">
+            <RegionWeatherText>
+                <Paragraph sequence="1">
+                    <Text>AIRMET 02 VALID 141100/141500 DTTA- DTTC TUNIS FIR</Text>
+                </Paragraph>
+                <Paragraph sequence="2">
+                    <Text>SFC VIS 4000 SA OBS LCA S OF N3440 STNR NC=</Text>
+                </Paragraph>
+            </RegionWeatherText>
+            <Location>
+                <Airspaces>
+                    <Airspace airspaceICAOCode="DTTC">
+                        <AirspaceName>TUNIS FIR</AirspaceName>
+                    </Airspace>
+                </Airspaces>
+            </Location>
+        </RegionWeather>
+    </RegionWeathers>
+</RegionWeatherBriefing>

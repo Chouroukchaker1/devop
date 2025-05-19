@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP1" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-10-17T07:55:13" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-10-17" scheduledTimeOfDeparture="2024-10-17T14:25:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>LBT543</FlightIdentifier>
+				<FlightNumber airlineIATACode="BJ" number=" 543">
+					<CommercialFlightNumber>BJ543</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>LFPG</AirportICAOCode>
+				<AirportIATACode>CDG</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>DTMB</AirportICAOCode>
+				<AirportIATACode>MIR</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSINC">
+			<AircraftModel>
+				<AircraftICAOType>A320</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF EUCHZMFP EUCBZMFP</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>AD DTTCZQZX DTTCZRZX DTMBZPZX DTMBZTZX</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>(FPL-LBT543-IS</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-A320/M-SDFGHIJ1LORVWY/LB1</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-LFPG1425</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>-N0454F330 BUBLI5H BUBLI UG42 LUVAL DCT SHARA/N0453F370 DCT DEVDI</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>DCT ODINA/N0455F350 DCT MONEB DCT UPDIN/N0456F370 DCT ELB DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>PININ DCT TUNEX UG737 CBN UG727 MON DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="10">
+			<Text>-DTMB0217 DTNH</Text>
+		</Paragraph>
+		<Paragraph sequence="11">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/241017 REG/TSINC EET/LSAS0033 EDUU0033</Text>
+		</Paragraph>
+		<Paragraph sequence="12">
+			<Text>LIMM0047 LIRR0112 DTTC0200 SEL/KSEF CODE/02A1A2 OPR/LBT PER/C)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="EUCHZMFP EUCBZMFP" />
+		<Originator address="DTMBLBTO" />
+		<AdditionalAddressees addresses="DTTCZQZX DTTCZRZX DTMBZPZX DTMBZTZX" />
+		<Items>
+			<Item7 aTCCallsign="LBT543" />
+			<Item8 flightRules="I" typeOfFlight="S" />
+			<Item9 typeOfAircraft="A320" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDFGHIJ1LORVWY/LB1" />
+			<Item13 departureAirport="LFPG" departureTime="1425" />
+			<Item15 cruisingSpeed="N0454" cruisingLevel="F330" route="BUBLI5H BUBLI UG42 LUVAL DCT SHARA/N0453F370 DCT DEVDI DCT ODINA/N0455F350 DCT MONEB DCT UPDIN/N0456F370 DCT ELB DCT PININ DCT TUNEX UG737 CBN UG727 MON DCT" />
+			<Item16 arrivalAirport="DTMB" estimatedFlightTime="0217" alternateAirport="DTNH" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/241017 REG/TSINC EET/LSAS0033 EDUU0033 LIMM0047 LIRR0112 DTTC0200 SEL/KSEF CODE/02A1A2 OPR/LBT PER/C">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>241017</DOF>
+				<REG>TSINC</REG>
+				<EET>LSAS0033 EDUU0033 LIMM0047 LIRR0112 DTTC0200</EET>
+				<SEL>KSEF</SEL>
+				<CODE>02A1A2</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

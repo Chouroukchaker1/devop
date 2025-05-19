@@ -1,0 +1,2823 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlightPlan flightPlanId="OFP1" category="normal" computedTime="2024-12-20T17:55:51" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlan.xsd http://www.lido.net/lsya Lido.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:lsya="http://www.lido.net/lsya" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<M633Header timestamp="2024-12-20T18:52:15Z" versionNumber="3"/> 
+<M633SupplementaryHeader>
+    <Flight flightOriginDate="2024-12-21Z" scheduledTimeOfDeparture="2024-12-21T01:25:00Z">
+        <FlightIdentification>
+            <FlightIdentifier>DAH6232</FlightIdentifier>
+            <FlightNumber airlineIATACode="AH" number="6232" >
+                <CommercialFlightNumber>AH6232</CommercialFlightNumber>
+            </FlightNumber>
+        </FlightIdentification>
+        <DepartureAirport airportFunction="DepartureAirport" airportName="TAMENGHASSET/AGUENAR-HADJ BEY">
+            <AirportICAOCode>DAAT</AirportICAOCode>
+            <AirportIATACode>TMR</AirportIATACode>
+        </DepartureAirport>
+        <ArrivalAirport airportFunction="ArrivalAirport" airportName="DJANET/TISKA">
+            <AirportICAOCode>DAAJ</AirportICAOCode>
+            <AirportIATACode>DJG</AirportIATACode>
+        </ArrivalAirport>
+    </Flight>
+    <Aircraft aircraftRegistration="TSINK" >
+        <AircraftModel airlineSpecificSubType="1.15">
+            <AircraftICAOType>A320</AircraftICAOType>
+        </AircraftModel>
+    </Aircraft>
+</M633SupplementaryHeader>
+<FlightInfo aTCCallsign="DAH6232" captain="-"/>
+<Remarks>
+    <Remark remarkType="Total Passenger Number">
+        <Paragraph sequence="1">
+            <Text>180</Text>
+        </Paragraph>
+    </Remark>
+</Remarks>
+<FlightPlanHeader>
+    <AuthorInformation>
+        <AuthorName authorType="Dispatcher">AMEUR AZAIEZ</AuthorName>
+        <AuthorContact>
+            <PhoneNumber>MIR +216 73 520 675</PhoneNumber>
+            <TelexAddress>MIROOBJ</TelexAddress>
+            <DispatchOffice>MIR</DispatchOffice>
+        </AuthorContact>
+    </AuthorInformation>
+    <PerformanceFactor>1.040</PerformanceFactor>
+    <FuelFlowInformation>
+        <AverageFuelFlow>
+            <Value unit="kg/h">2855</Value>
+        </AverageFuelFlow>
+        <TaxiFuelFlow>
+            <Value unit="kg/h">754</Value>
+        </TaxiFuelFlow>
+        <HoldingFuelFlow>
+            <Value unit="kg/h">2352</Value>
+        </HoldingFuelFlow>
+    </FuelFlowInformation>
+    <RouteInformation routeName="MCT/R" optimization="MinimumCostTrack">
+        <AverageWind>
+            <Direction>
+                <Value type="true" unit="deg">257</Value>
+            </Direction>
+            <Speed>
+                <Value unit="kt">14</Value>
+            </Speed>
+        </AverageWind>
+        <AverageWindComponent>
+            <Value unit="kt">16</Value>
+        </AverageWindComponent>
+        <AverageTemperature>
+            <Value unit="C">-44</Value>
+        </AverageTemperature>
+        <AverageISADeviation>
+            <Value unit="C">+8</Value>
+        </AverageISADeviation>
+        <InitialAltitude>
+            <Value unit="ft/100">330</Value>
+        </InitialAltitude>
+        <ClimbProcedure procedure="SPEED">
+            <MachNumber>
+                <Value>0.780</Value>
+            </MachNumber>
+            <IndicatedAirSpeed>
+                <Value unit="kt">300</Value>
+            </IndicatedAirSpeed>
+        </ClimbProcedure>
+        <CruiseProcedure procedure="ECON"> 
+            <CostIndex>
+                <Value>21</Value>
+            </CostIndex>
+        </CruiseProcedure>
+        <DescentProcedure procedure="SPEED">
+            <MachNumber>
+                <Value>0.780</Value>
+            </MachNumber>
+            <IndicatedAirSpeed>
+                <Value unit="kt">300</Value>
+            </IndicatedAirSpeed>
+        </DescentProcedure>
+        <RouteDescription>DAAT/20 F330 DCT TMS UJ60 DJA DCT DAAJ/30</RouteDescription> 
+        <GroundDistance>
+            <Value unit="NM">281</Value>
+        </GroundDistance>
+        <AirDistance>
+            <Value unit="NM">270</Value>
+        </AirDistance>
+        <GreatCircleDistance>
+            <Value unit="NM">238</Value>
+        </GreatCircleDistance>
+    </RouteInformation>
+</FlightPlanHeader>
+<FuelHeader>
+    <TripFuel>
+        <EstimatedWeight>
+            <Value unit="kg">2123</Value>
+        </EstimatedWeight>
+        <Duration>
+            <Value>PT0H44M37S</Value>
+        </Duration>
+    </TripFuel>
+    <ContingencyFuel>
+        <EstimatedWeight>
+            <Value unit="kg">200</Value>
+        </EstimatedWeight>
+        <Duration>
+            <Value>PT0H4M12S</Value>
+        </Duration>
+        <ContingencyPolicy policyName="AircraftMinimumContFuel">        </ContingencyPolicy>
+    </ContingencyFuel>
+    <AlternateFuels>
+        <AlternateFuel>
+            <EstimatedWeight>
+                <Value unit="kg">2398</Value>
+            </EstimatedWeight>
+            <Duration>
+                <Value>PT0H51M36S</Value>
+            </Duration>
+            <Airport airportFunction="PrimaryArrivalAlternateAirport" airportName="TAMENGHASSET/AGUENAR-HADJ BEY">
+                <AirportICAOCode>DAAT</AirportICAOCode>
+                <AirportIATACode>TMR</AirportIATACode>
+            </Airport>
+            <FinalReserve>
+                <EstimatedWeight>
+                    <Value unit="kg">1200</Value>
+                </EstimatedWeight>
+                <Duration>
+                    <Value>PT0H30M00S</Value>
+                </Duration>
+            </FinalReserve>
+            <Sequence>1</Sequence>
+        </AlternateFuel>
+        <AlternateFuel>
+            <EstimatedWeight>
+                <Value unit="kg">2192</Value>
+            </EstimatedWeight>
+            <Duration>
+                <Value>PT0H48M30S</Value>
+            </Duration>
+            <Airport airportFunction="ArrivalAlternateAirport" airportName="ZARZAITINE/IN AMENAS">
+                <AirportICAOCode>DAUZ</AirportICAOCode>
+                <AirportIATACode>IAM</AirportIATACode>
+            </Airport>
+            <FinalReserve>
+                <EstimatedWeight>
+                    <Value unit="kg">1200</Value>
+                </EstimatedWeight>
+                <Duration>
+                    <Value>PT0H30M00S</Value>
+                </Duration>
+            </FinalReserve>
+            <Sequence>2</Sequence>
+        </AlternateFuel>
+    </AlternateFuels>
+    <PossibleExtraFuel reason="MaxLandingWeightReached">
+        <PossibleExtra>
+            <Value unit="kg">567</Value>
+        </PossibleExtra>
+        <MaximumFuelWeight>
+            <Weight>
+                <Value unit="kg">19100</Value>
+            </Weight>
+            <Density>
+                <Value unit="kg/l">0.79</Value>
+            </Density>
+        </MaximumFuelWeight>
+        <TankVolume>
+            <Value unit="l">24177</Value> 
+        </TankVolume>
+    </PossibleExtraFuel>
+    <TakeOffFuel>
+        <EstimatedWeight>
+            <Value unit="kg">5921</Value>
+        </EstimatedWeight>
+        <Duration>
+            <Value>PT2H10M25S</Value>
+        </Duration>
+    </TakeOffFuel>
+    <TaxiFuel>
+        <EstimatedWeight>
+            <Value unit="kg">126</Value>
+        </EstimatedWeight>
+        <Duration>
+            <Value>PT0H10M00S</Value>
+        </Duration>
+    </TaxiFuel>
+    <BlockFuel>
+        <EstimatedWeight>
+            <Value unit="kg">6047</Value>
+        </EstimatedWeight>
+        <Duration>
+            <Value>PT2H20M25S</Value>
+        </Duration>
+    </BlockFuel>
+    <LandingFuel>
+        <EstimatedWeight>
+            <Value unit="kg">3798</Value>
+        </EstimatedWeight>
+    </LandingFuel>
+    <ArrivalFuel>
+        <EstimatedWeight>
+            <Value unit="kg">3672</Value>
+        </EstimatedWeight>
+    </ArrivalFuel>
+    <Adjustments deviationReason="ZeroFuelWeight">
+        <AffectedItems unit="kg" deviationReasonChange="+1000">
+            <Adjustment unit="kg" affectedItem="TripFuel">+40</Adjustment>
+        </AffectedItems>
+    </Adjustments>
+    <Adjustments deviationReason="ZeroFuelWeight">
+        <AffectedItems unit="kg" deviationReasonChange="-1000">
+            <Adjustment unit="kg" affectedItem="TripFuel">-41</Adjustment>
+        </AffectedItems>
+    </Adjustments>
+    <Adjustments deviationReason="FL">
+        <AffectedItems deviationReasonChange="-1">
+            <Adjustment unit="kg" affectedItem="TripFuel">+3</Adjustment>
+            <Adjustment unit="min" affectedItem="TripTime">-0</Adjustment>
+        </AffectedItems>
+    </Adjustments>
+    <TransportCoefficientInfo>
+        <IncreaseTransportCoefficient>1.04</IncreaseTransportCoefficient>
+        <DecreaseTransportCoefficient>1.041</DecreaseTransportCoefficient>
+    </TransportCoefficientInfo>
+</FuelHeader>
+<WeightHeader>
+    <DryOperatingWeight>
+        <EstimatedWeight>
+            <Value unit="kg">43635</Value>
+        </EstimatedWeight>
+    </DryOperatingWeight>
+    <Load>
+        <EstimatedWeight>
+            <Value unit="kg">18000</Value>
+        </EstimatedWeight>
+    </Load>
+    <ZeroFuelWeight>
+        <EstimatedWeight>
+            <Value unit="kg">61635</Value>
+        </EstimatedWeight>
+        <StructuralLimit>
+            <Value unit="kg">62500</Value>
+        </StructuralLimit>
+    </ZeroFuelWeight>
+    <TakeoffWeight>
+        <EstimatedWeight>
+            <Value unit="kg">67556</Value>
+        </EstimatedWeight>
+        <OperationalLimit>
+            <Value unit="kg">77000</Value>
+        </OperationalLimit>
+        <StructuralLimit>
+            <Value unit="kg">77000</Value>
+        </StructuralLimit>
+
+    </TakeoffWeight>
+    <LandingWeight>
+        <EstimatedWeight>
+            <Value unit="kg">65433</Value>
+        </EstimatedWeight>
+        <OperationalLimit>
+            <Value unit="kg">66000</Value>
+        </OperationalLimit>
+        <StructuralLimit>
+            <Value unit="kg">66000</Value>
+        </StructuralLimit>
+                                     
+    </LandingWeight>
+<lsya:WeightHeaderExtension>
+    <lsya:LCBTaxiWeightExtension>
+        <lsya:StructuralLimit>
+            <Value unit="kg">77400</Value>
+        </lsya:StructuralLimit>
+    </lsya:LCBTaxiWeightExtension>
+</lsya:WeightHeaderExtension>
+</WeightHeader>
+<Waypoints>
+    <Waypoint sequenceId="1" waypointId="DAAT" waypointName="DAAT" waypointLongName="TAMENGHASSET/AGUENAR-HADJ BEY" countryICAOCode="DA">
+        <Coordinates latitude="+82120" longitude="+19623">N2248.7 E00527.1</Coordinates>
+        <Airway type="Direct">DCT</Airway>
+        <SegmentWind>
+            <Direction>
+                <Value type="true" unit="deg">77</Value>
+            </Direction>
+            <Speed>
+                <Value unit="kt">12</Value>
+            </Speed>
+        </SegmentWind>
+        <Tropopause>
+            <Value unit="ft/100">557</Value>
+        </Tropopause>
+        <Tracks>
+            <OutboundTrack>
+                <Value type="true" unit="deg">230</Value>
+            </OutboundTrack>
+            <OutboundTrack>
+                <Value type="magnetic" unit="deg">229</Value>
+            </OutboundTrack>
+            <SegmentTrack>
+                <Value type="true" unit="deg">230</Value>
+            </SegmentTrack>
+            <SegmentTrack>
+                <Value type="magnetic" unit="deg">229</Value>
+            </SegmentTrack>
+        </Tracks>
+        <RemainingGroundDistance>
+            <Value unit="NM">281</Value>
+        </RemainingGroundDistance>
+        <RemainingAirDistance>
+            <Value unit="NM">270</Value>
+        </RemainingAirDistance>
+        <CumulatedFlightTime>
+            <EstimatedTime>
+                <Value>PT0H0M00S</Value>
+            </EstimatedTime>
+        </CumulatedFlightTime>
+        <RemainingFlightTime>
+            <EstimatedTime>
+                <Value>PT0H44M37S</Value>
+            </EstimatedTime>
+        </RemainingFlightTime>
+        <CumulatedBurnOff>
+            <EstimatedWeight>
+                <Value unit="kg">326</Value>
+            </EstimatedWeight>
+        </CumulatedBurnOff>
+        <FuelOnBoard>
+            <EstimatedWeight>
+                <Value unit="kg">5721</Value>
+            </EstimatedWeight>
+        </FuelOnBoard>
+        <AircraftWeight>
+            <EstimatedWeight>
+                <Value unit="kg">67356</Value>
+            </EstimatedWeight>
+        </AircraftWeight>
+        <MinimumFuelOnBoard>
+            <Value unit="kg">5721</Value>
+        </MinimumFuelOnBoard>
+        <Function>DepartureAirport</Function>                                                                                                                                                                       
+    </Waypoint>
+    <Waypoint sequenceId="2" waypointId="TMS" waypointName="TMS" waypointLongName="TAMENGHASSET VORDME" countryICAOCode="DA">
+        <Coordinates latitude="+82107" longitude="+19608">N2248.5 E00526.8</Coordinates>
+        <Airway type="Direct">DCT</Airway>
+        <Altitude>
+            <EstimatedAltitude>
+                <Value unit="ft/100">67</Value>
+            </EstimatedAltitude>
+        </Altitude>
+        <MinimumSafeAltitude>
+            <Value unit="ft/100">85</Value>
+        </MinimumSafeAltitude>
+        <SegmentWind>
+            <Direction>
+                <Value type="true" unit="deg">77</Value>
+            </Direction>
+            <Speed>
+                <Value unit="kt">12</Value>
+            </Speed>
+        </SegmentWind>
+        <SegmentWindComponent>
+            <Value unit="kt" >11</Value>
+        </SegmentWindComponent>
+        <SegmentTemperature>
+            <Value unit="C">10</Value>
+        </SegmentTemperature>
+        <SegmentISADeviation>
+            <Value unit="C">6</Value>  
+        </SegmentISADeviation>
+        <Tropopause>
+            <Value unit="ft/100">557</Value>
+        </Tropopause>
+        <TrueAirSpeed>
+            <EstimatedSpeed>
+                <Value unit="kt">449</Value> 
+            </EstimatedSpeed>
+        </TrueAirSpeed>
+        <MachNumber>
+            <EstimatedMachNumber>
+                <Value>0.78</Value>
+            </EstimatedMachNumber>
+        </MachNumber>
+        <IndicatedAirSpeed>
+            <EstimatedSpeed>
+                <Value unit="kt">300</Value>
+            </EstimatedSpeed>
+        </IndicatedAirSpeed>
+        <GroundSpeed>
+            <EstimatedSpeed>
+                <Value unit="kt">148</Value>
+            </EstimatedSpeed>
+        </GroundSpeed>
+        <Tracks>
+            <OutboundTrack>
+                <Value type="true" unit="deg">68</Value>
+            </OutboundTrack>
+            <OutboundTrack>
+                <Value type="magnetic" unit="deg">66</Value>
+            </OutboundTrack>
+            <SegmentTrack>
+                <Value type="true" unit="deg">230</Value>
+            </SegmentTrack>
+            <SegmentTrack>
+                <Value type="magnetic" unit="deg">229</Value>
+            </SegmentTrack>
+        </Tracks>
+        <GroundDistance>
+            <Value unit="NM">6</Value>
+        </GroundDistance>
+        <RemainingGroundDistance>
+            <Value unit="NM">275</Value>
+        </RemainingGroundDistance>
+        <AirDistance>
+            <Value unit="NM">6</Value>
+        </AirDistance>
+        <RemainingAirDistance>
+            <Value unit="NM">264</Value>
+        </RemainingAirDistance>
+        <TimeFromPreviousWaypoint>
+            <EstimatedTime>
+                <Value>PT0H2M26S</Value>
+            </EstimatedTime>
+        </TimeFromPreviousWaypoint>
+        <CumulatedFlightTime>
+            <EstimatedTime>
+                <Value>PT0H2M26S</Value>
+            </EstimatedTime>
+        </CumulatedFlightTime>
+        <RemainingFlightTime>
+            <EstimatedTime>
+                <Value>PT0H42M11S</Value>
+            </EstimatedTime>
+        </RemainingFlightTime>
+        <BurnOff>
+            <EstimatedWeight>
+                <Value unit="kg">245</Value>
+            </EstimatedWeight>
+        </BurnOff>
+        <CumulatedBurnOff>
+            <EstimatedWeight>
+                <Value unit="kg">571</Value>
+            </EstimatedWeight>
+        </CumulatedBurnOff>
+        <FuelOnBoard>
+            <EstimatedWeight>
+                <Value unit="kg">5476</Value>
+            </EstimatedWeight>
+        </FuelOnBoard>
+        <AircraftWeight>
+            <EstimatedWeight>
+                <Value unit="kg">67111</Value>
+            </EstimatedWeight>
+        </AircraftWeight>
+        <MinimumFuelOnBoard>
+            <Value unit="kg">5476</Value>
+        </MinimumFuelOnBoard>
+        <Remarks>
+            <Remark remarkType="NavigationFrequency">
+                <Paragraph sequence="1">
+                    <Text>112.50</Text>
+                </Paragraph>
+            </Remark>
+        </Remarks>
+        <Function>AtsItem15</Function>
+        <Function>Vhf</Function>                                                                                                                                                                                    
+        <Function>Compulsory</Function>
+    </Waypoint>
+    <Waypoint sequenceId="3" waypointId="MELOG" waypointName="MELOG" waypointLongName="MELOG" countryICAOCode="DA">
+        <Coordinates latitude="+84632" longitude="+26420">N2330.5 E00720.3</Coordinates>
+        <Airway type="Airway">UJ60</Airway>
+        <Altitude>
+            <EstimatedAltitude>
+                <Value unit="ft/100">315</Value>
+            </EstimatedAltitude>
+        </Altitude>
+        <MinimumSafeAltitude>
+            <Value unit="ft/100">96</Value>
+        </MinimumSafeAltitude>
+        <SegmentWind>
+            <Direction>
+                <Value type="true" unit="deg">251</Value>
+            </Direction>
+            <Speed>
+                <Value unit="kt">18</Value>
+            </Speed>
+        </SegmentWind>
+        <SegmentWindComponent>
+            <Value unit="kt" >18</Value>
+        </SegmentWindComponent>
+        <SegmentTemperature>
+            <Value unit="C">-20</Value>
+        </SegmentTemperature>
+        <SegmentISADeviation>
+            <Value unit="C">9</Value>  
+        </SegmentISADeviation>
+        <Tropopause>
+            <Value unit="ft/100">553</Value>
+        </Tropopause>
+        <TrueAirSpeed>
+            <EstimatedSpeed>
+                <Value unit="kt">449</Value> 
+            </EstimatedSpeed>
+        </TrueAirSpeed>
+        <MachNumber>
+            <EstimatedMachNumber>
+                <Value>0.78</Value>
+            </EstimatedMachNumber>
+        </MachNumber>
+        <IndicatedAirSpeed>
+            <EstimatedSpeed>
+                <Value unit="kt">300</Value>
+            </EstimatedSpeed>
+        </IndicatedAirSpeed>
+        <GroundSpeed>
+            <EstimatedSpeed>
+                <Value unit="kt">428</Value>
+            </EstimatedSpeed>
+        </GroundSpeed>
+        <Tracks>
+            <OutboundTrack>
+                <Value type="true" unit="deg">68</Value>
+            </OutboundTrack>
+            <OutboundTrack>
+                <Value type="magnetic" unit="deg">66</Value>
+            </OutboundTrack>
+            <SegmentTrack>
+                <Value type="true" unit="deg">68</Value>
+            </SegmentTrack>
+            <SegmentTrack>
+                <Value type="magnetic" unit="deg">66</Value>
+            </SegmentTrack>
+        </Tracks>
+        <GroundDistance>
+            <Value unit="NM">113</Value>
+        </GroundDistance>
+        <RemainingGroundDistance>
+            <Value unit="NM">162</Value>
+        </RemainingGroundDistance>
+        <AirDistance>
+            <Value unit="NM">109</Value>
+        </AirDistance>
+        <RemainingAirDistance>
+            <Value unit="NM">155</Value>
+        </RemainingAirDistance>
+        <TimeFromPreviousWaypoint>
+            <EstimatedTime>
+                <Value>PT0H15M49S</Value>
+            </EstimatedTime>
+        </TimeFromPreviousWaypoint>
+        <CumulatedFlightTime>
+            <EstimatedTime>
+                <Value>PT0H18M15S</Value>
+            </EstimatedTime>
+        </CumulatedFlightTime>
+        <RemainingFlightTime>
+            <EstimatedTime>
+                <Value>PT0H26M22S</Value>
+            </EstimatedTime>
+        </RemainingFlightTime>
+        <BurnOff>
+            <EstimatedWeight>
+                <Value unit="kg">1268</Value>
+            </EstimatedWeight>
+        </BurnOff>
+        <CumulatedBurnOff>
+            <EstimatedWeight>
+                <Value unit="kg">1839</Value>
+            </EstimatedWeight>
+        </CumulatedBurnOff>
+        <FuelOnBoard>
+            <EstimatedWeight>
+                <Value unit="kg">4208</Value>
+            </EstimatedWeight>
+        </FuelOnBoard>
+        <AircraftWeight>
+            <EstimatedWeight>
+                <Value unit="kg">65843</Value>
+            </EstimatedWeight>
+        </AircraftWeight>
+        <MinimumFuelOnBoard>
+            <Value unit="kg">4208</Value>
+        </MinimumFuelOnBoard>
+        <Function>Enroute</Function>                                                                                                                                                                                
+        <Function>Compulsory</Function>
+    </Waypoint>
+    <Waypoint sequenceId="4" waypointId="T_O_C" waypointName="T_O_C"  >
+        <Coordinates latitude="+84902" longitude="+27138">N2335.0 E00732.3</Coordinates>
+        <Airway type="Airway">UJ60</Airway>
+        <Altitude>
+            <EstimatedAltitude>
+                <Value unit="ft/100">330</Value>
+            </EstimatedAltitude>
+        </Altitude>
+        <MinimumSafeAltitude>
+            <Value unit="ft/100">68</Value>
+        </MinimumSafeAltitude>
+        <SegmentWind>
+            <Direction>
+                <Value type="true" unit="deg">251</Value>
+            </Direction>
+            <Speed>
+                <Value unit="kt">42</Value>
+            </Speed>
+        </SegmentWind>
+        <SegmentWindComponent>
+            <Value unit="kt" >42</Value>
+        </SegmentWindComponent>
+        <SegmentTemperature>
+            <Value unit="C">-44</Value>
+        </SegmentTemperature>
+        <SegmentISADeviation>
+            <Value unit="C">5</Value>  
+        </SegmentISADeviation>
+        <Tropopause>
+            <Value unit="ft/100">553</Value>
+        </Tropopause>
+        <TrueAirSpeed>
+            <EstimatedSpeed>
+                <Value unit="kt">449</Value> 
+            </EstimatedSpeed>
+        </TrueAirSpeed>
+        <MachNumber>
+            <EstimatedMachNumber>
+                <Value>0.78</Value>
+            </EstimatedMachNumber>
+        </MachNumber>
+        <IndicatedAirSpeed>
+            <EstimatedSpeed>
+                <Value unit="kt">300</Value>
+            </EstimatedSpeed>
+        </IndicatedAirSpeed>
+        <GroundSpeed>
+            <EstimatedSpeed>
+                <Value unit="kt">504</Value>
+            </EstimatedSpeed>
+        </GroundSpeed>
+        <Tracks>
+            <OutboundTrack>
+                <Value type="true" unit="deg">68</Value>
+            </OutboundTrack>
+            <OutboundTrack>
+                <Value type="magnetic" unit="deg">66</Value>
+            </OutboundTrack>
+            <SegmentTrack>
+                <Value type="true" unit="deg">68</Value>
+            </SegmentTrack>
+            <SegmentTrack>
+                <Value type="magnetic" unit="deg">66</Value>
+            </SegmentTrack>
+        </Tracks>
+        <GroundDistance>
+            <Value unit="NM">12</Value>
+        </GroundDistance>
+        <RemainingGroundDistance>
+            <Value unit="NM">150</Value>
+        </RemainingGroundDistance>
+        <AirDistance>
+            <Value unit="NM">11</Value>
+        </AirDistance>
+        <RemainingAirDistance>
+            <Value unit="NM">144</Value>
+        </RemainingAirDistance>
+        <TimeFromPreviousWaypoint>
+            <EstimatedTime>
+                <Value>PT0H1M25S</Value>
+            </EstimatedTime>
+        </TimeFromPreviousWaypoint>
+        <CumulatedFlightTime>
+            <EstimatedTime>
+                <Value>PT0H19M40S</Value>
+            </EstimatedTime>
+        </CumulatedFlightTime>
+        <RemainingFlightTime>
+            <EstimatedTime>
+                <Value>PT0H24M57S</Value>
+            </EstimatedTime>
+        </RemainingFlightTime>
+        <BurnOff>
+            <EstimatedWeight>
+                <Value unit="kg">84</Value>
+            </EstimatedWeight>
+        </BurnOff>
+        <CumulatedBurnOff>
+            <EstimatedWeight>
+                <Value unit="kg">1923</Value>
+            </EstimatedWeight>
+        </CumulatedBurnOff>
+        <FuelOnBoard>
+            <EstimatedWeight>
+                <Value unit="kg">4124</Value>
+            </EstimatedWeight>
+        </FuelOnBoard>
+        <AircraftWeight>
+            <EstimatedWeight>
+                <Value unit="kg">65759</Value>
+            </EstimatedWeight>
+        </AircraftWeight>
+        <MinimumFuelOnBoard>
+            <Value unit="kg">4124</Value>
+        </MinimumFuelOnBoard>
+        <Function>TopOfClimb</Function>                                                                                                                                                                             
+        <Function>Compulsory</Function>
+    </Waypoint>
+    <Waypoint sequenceId="5" waypointId="T_O_D" waypointName="T_O_D"  >
+        <Coordinates latitude="+86008" longitude="+30108">N2353.5 E00821.8</Coordinates>
+        <Airway type="Airway">UJ60</Airway>
+        <Altitude>
+            <EstimatedAltitude>
+                <Value unit="ft/100">330</Value>
+            </EstimatedAltitude>
+        </Altitude>
+        <MinimumSafeAltitude>
+            <Value unit="ft/100">68</Value>
+        </MinimumSafeAltitude>
+        <SegmentWind>
+            <Direction>
+                <Value type="true" unit="deg">251</Value>
+            </Direction>
+            <Speed>
+                <Value unit="kt">43</Value>
+            </Speed>
+        </SegmentWind>
+        <SegmentWindComponent>
+            <Value unit="kt" >43</Value>
+        </SegmentWindComponent>
+        <SegmentTemperature>
+            <Value unit="C">-46</Value>
+        </SegmentTemperature>
+        <SegmentISADeviation>
+            <Value unit="C">4</Value>  
+        </SegmentISADeviation>
+        <Tropopause>
+            <Value unit="ft/100">551</Value>
+        </Tropopause>
+        <TrueAirSpeed>
+            <EstimatedSpeed>
+                <Value unit="kt">449</Value> 
+            </EstimatedSpeed>
+        </TrueAirSpeed>
+        <MachNumber>
+            <EstimatedMachNumber>
+                <Value>0.764</Value>
+            </EstimatedMachNumber>
+        </MachNumber>
+        <IndicatedAirSpeed>
+            <EstimatedSpeed>
+                <Value unit="kt">271</Value>
+            </EstimatedSpeed>
+        </IndicatedAirSpeed>
+        <GroundSpeed>
+            <EstimatedSpeed>
+                <Value unit="kt">492</Value>
+            </EstimatedSpeed>
+        </GroundSpeed>
+        <Tracks>
+            <OutboundTrack>
+                <Value type="true" unit="deg">68</Value>
+            </OutboundTrack>
+            <OutboundTrack>
+                <Value type="magnetic" unit="deg">66</Value>
+            </OutboundTrack>
+            <SegmentTrack>
+                <Value type="true" unit="deg">68</Value>
+            </SegmentTrack>
+            <SegmentTrack>
+                <Value type="magnetic" unit="deg">66</Value>
+            </SegmentTrack>
+        </Tracks>
+        <GroundDistance>
+            <Value unit="NM">49</Value>
+        </GroundDistance>
+        <RemainingGroundDistance>
+            <Value unit="NM">101</Value>
+        </RemainingGroundDistance>
+        <AirDistance>
+            <Value unit="NM">45</Value>
+        </AirDistance>
+        <RemainingAirDistance>
+            <Value unit="NM">100</Value>
+        </RemainingAirDistance>
+        <TimeFromPreviousWaypoint>
+            <EstimatedTime>
+                <Value>PT0H5M59S</Value>
+            </EstimatedTime>
+        </TimeFromPreviousWaypoint>
+        <CumulatedFlightTime>
+            <EstimatedTime>
+                <Value>PT0H25M39S</Value>
+            </EstimatedTime>
+        </CumulatedFlightTime>
+        <RemainingFlightTime>
+            <EstimatedTime>
+                <Value>PT0H18M58S</Value>
+            </EstimatedTime>
+        </RemainingFlightTime>
+        <BurnOff>
+            <EstimatedWeight>
+                <Value unit="kg">249</Value>
+            </EstimatedWeight>
+        </BurnOff>
+        <CumulatedBurnOff>
+            <EstimatedWeight>
+                <Value unit="kg">2172</Value>
+            </EstimatedWeight>
+        </CumulatedBurnOff>
+        <FuelOnBoard>
+            <EstimatedWeight>
+                <Value unit="kg">3875</Value>
+            </EstimatedWeight>
+        </FuelOnBoard>
+        <AircraftWeight>
+            <EstimatedWeight>
+                <Value unit="kg">65510</Value>
+            </EstimatedWeight>
+        </AircraftWeight>
+        <MinimumFuelOnBoard>
+            <Value unit="kg">3875</Value>
+        </MinimumFuelOnBoard>
+        <Function>TopOfDescent</Function>                                                                                                                                                                           
+        <Function>Compulsory</Function>
+    </Waypoint>
+    <Waypoint sequenceId="6" waypointId="DJA" waypointName="DJA" waypointLongName="DJANET" countryICAOCode="DA">
+        <Coordinates latitude="+87436" longitude="+34032">N2417.3 E00927.2</Coordinates>
+        <Airway type="Airway">UJ60</Airway>
+        <Altitude>
+            <EstimatedAltitude>
+                <Value unit="ft/100">108</Value>
+            </EstimatedAltitude>
+        </Altitude>
+        <MinimumSafeAltitude>
+            <Value unit="ft/100">68</Value>
+        </MinimumSafeAltitude>
+        <SegmentWind>
+            <Direction>
+                <Value type="true" unit="deg">258</Value>
+            </Direction>
+            <Speed>
+                <Value unit="kt">17</Value>
+            </Speed>
+        </SegmentWind>
+        <SegmentWindComponent>
+            <Value unit="kt" >17</Value>
+        </SegmentWindComponent>
+        <SegmentTemperature>
+            <Value unit="C">-17</Value>
+        </SegmentTemperature>
+        <SegmentISADeviation>
+            <Value unit="C">12</Value> 
+        </SegmentISADeviation>
+        <Tropopause>
+            <Value unit="ft/100">552</Value>
+        </Tropopause>
+        <TrueAirSpeed>
+            <EstimatedSpeed>
+                <Value unit="kt">449</Value> 
+            </EstimatedSpeed>
+        </TrueAirSpeed>
+        <MachNumber>
+            <EstimatedMachNumber>
+                <Value>0.78</Value>
+            </EstimatedMachNumber>
+        </MachNumber>
+        <IndicatedAirSpeed>
+            <EstimatedSpeed>
+                <Value unit="kt">300</Value>
+            </EstimatedSpeed>
+        </IndicatedAirSpeed>
+        <GroundSpeed>
+            <EstimatedSpeed>
+                <Value unit="kt">420</Value>
+            </EstimatedSpeed>
+        </GroundSpeed>
+        <Tracks>
+            <OutboundTrack>
+                <Value type="true" unit="deg">347</Value>
+            </OutboundTrack>
+            <OutboundTrack>
+                <Value type="magnetic" unit="deg">345</Value>
+            </OutboundTrack>
+            <SegmentTrack>
+                <Value type="true" unit="deg">68</Value>
+            </SegmentTrack>
+            <SegmentTrack>
+                <Value type="magnetic" unit="deg">66</Value>
+            </SegmentTrack>
+        </Tracks>
+        <GroundDistance>
+            <Value unit="NM">64</Value>
+        </GroundDistance>
+        <RemainingGroundDistance>
+            <Value unit="NM">37</Value>
+        </RemainingGroundDistance>
+        <AirDistance>
+            <Value unit="NM">62</Value>
+        </AirDistance>
+        <RemainingAirDistance>
+            <Value unit="NM">38</Value>
+        </RemainingAirDistance>
+        <TimeFromPreviousWaypoint>
+            <EstimatedTime>
+                <Value>PT0H9M12S</Value>
+            </EstimatedTime>
+        </TimeFromPreviousWaypoint>
+        <CumulatedFlightTime>
+            <EstimatedTime>
+                <Value>PT0H34M51S</Value>
+            </EstimatedTime>
+        </CumulatedFlightTime>
+        <RemainingFlightTime>
+            <EstimatedTime>
+                <Value>PT0H9M46S</Value>
+            </EstimatedTime>
+        </RemainingFlightTime>
+        <BurnOff>
+            <EstimatedWeight>
+                <Value unit="kg">104</Value>
+            </EstimatedWeight>
+        </BurnOff>
+        <CumulatedBurnOff>
+            <EstimatedWeight>
+                <Value unit="kg">2276</Value>
+            </EstimatedWeight>
+        </CumulatedBurnOff>
+        <FuelOnBoard>
+            <EstimatedWeight>
+                <Value unit="kg">3771</Value>
+            </EstimatedWeight>
+        </FuelOnBoard>
+        <AircraftWeight>
+            <EstimatedWeight>
+                <Value unit="kg">65406</Value>
+            </EstimatedWeight>
+        </AircraftWeight>
+        <MinimumFuelOnBoard>
+            <Value unit="kg">3771</Value>
+        </MinimumFuelOnBoard>
+        <Remarks>
+            <Remark remarkType="NavigationFrequency">
+                <Paragraph sequence="1">
+                    <Text>114.10</Text>
+                </Paragraph>
+            </Remark>
+        </Remarks>
+        <Function>AtsItem15</Function>
+        <Function>Vhf</Function>                                                                                                                                                                                    
+        <Function>Compulsory</Function>
+    </Waypoint>
+    <Waypoint sequenceId="7" waypointId="DAAJ" waypointName="DAAJ" waypointLongName="DJANET/TISKA" countryICAOCode="DA">
+        <Coordinates latitude="+87455" longitude="+34027">N2417.6 E00927.1</Coordinates>
+        <Airway type="Direct">DCT</Airway>
+        <Altitude>
+            <EstimatedAltitude>
+                <Value unit="ft/100">32</Value>
+            </EstimatedAltitude>
+        </Altitude>
+        <MinimumSafeAltitude>
+            <Value unit="ft/100">61</Value>
+        </MinimumSafeAltitude>
+        <SegmentWind>
+            <Direction>
+                <Value type="true" unit="deg">40</Value>
+            </Direction>
+            <Speed>
+                <Value unit="kt">9</Value>
+            </Speed>
+        </SegmentWind>
+        <SegmentWindComponent>
+            <Value unit="kt" >-5</Value>
+        </SegmentWindComponent>
+        <SegmentTemperature>
+            <Value unit="C">8</Value> 
+        </SegmentTemperature>
+        <SegmentISADeviation>
+            <Value unit="C">5</Value>  
+        </SegmentISADeviation>
+        <Tropopause>
+            <Value unit="ft/100">552</Value>
+        </Tropopause>
+        <TrueAirSpeed>
+            <EstimatedSpeed>
+                <Value unit="kt">449</Value> 
+            </EstimatedSpeed>
+        </TrueAirSpeed>
+        <MachNumber>
+            <EstimatedMachNumber>
+                <Value>0.78</Value>
+            </EstimatedMachNumber>
+        </MachNumber>
+        <IndicatedAirSpeed>
+            <EstimatedSpeed>
+                <Value unit="kt">300</Value>
+            </EstimatedSpeed>
+        </IndicatedAirSpeed>
+        <GroundSpeed>
+            <EstimatedSpeed>
+                <Value unit="kt">227</Value>
+            </EstimatedSpeed>
+        </GroundSpeed>
+        <Tracks>
+            <OutboundTrack>
+                <Value type="true" unit="deg">347</Value>
+            </OutboundTrack>
+            <OutboundTrack>
+                <Value type="magnetic" unit="deg">345</Value>
+            </OutboundTrack>
+            <SegmentTrack>
+                <Value type="true" unit="deg">347</Value>
+            </SegmentTrack>
+            <SegmentTrack>
+                <Value type="magnetic" unit="deg">345</Value>
+            </SegmentTrack>
+        </Tracks>
+        <GroundDistance>
+            <Value unit="NM">37</Value>
+        </GroundDistance>
+        <RemainingGroundDistance>
+            <Value unit="NM">0</Value>
+        </RemainingGroundDistance>
+        <AirDistance>
+            <Value unit="NM">38</Value>
+        </AirDistance>
+        <RemainingAirDistance>
+            <Value unit="NM">0</Value>
+        </RemainingAirDistance>
+        <TimeFromPreviousWaypoint>
+            <EstimatedTime>
+                <Value>PT0H9M46S</Value>
+            </EstimatedTime>
+        </TimeFromPreviousWaypoint>
+        <CumulatedFlightTime>
+            <EstimatedTime>
+                <Value>PT0H44M37S</Value>
+            </EstimatedTime>
+        </CumulatedFlightTime>
+        <RemainingFlightTime>
+            <EstimatedTime>
+                <Value>PT0H0M00S</Value>
+            </EstimatedTime>
+        </RemainingFlightTime>
+        <BurnOff>
+            <EstimatedWeight>
+                <Value unit="kg">173</Value>
+            </EstimatedWeight>
+        </BurnOff>
+        <CumulatedBurnOff>
+            <EstimatedWeight>
+                <Value unit="kg">2449</Value>
+            </EstimatedWeight>
+        </CumulatedBurnOff>
+        <FuelOnBoard>
+            <EstimatedWeight>
+                <Value unit="kg">3598</Value>
+            </EstimatedWeight>
+        </FuelOnBoard>
+        <AircraftWeight>
+            <EstimatedWeight>
+                <Value unit="kg">65233</Value>
+            </EstimatedWeight>
+        </AircraftWeight>
+        <MinimumFuelOnBoard>
+            <Value unit="kg">3598</Value>
+        </MinimumFuelOnBoard>
+        <Function>ArrivalAirport</Function>                                                                                                                                                                         
+    </Waypoint>
+    <lsya:LCBNATIdentifierExtension>
+        <lsya:MNPSAirspaceCrossed value="false"/>
+    </lsya:LCBNATIdentifierExtension>
+</Waypoints>
+<FlightPlanSummary>
+    <ScheduledTimeOfArrival>2024-12-21T02:15:00Z</ScheduledTimeOfArrival>
+    <OutTime>
+        <EstimatedTime>
+            <Value>2024-12-21T01:25:00Z</Value>
+        </EstimatedTime>
+    </OutTime>
+    <OffTime>
+        <EstimatedTime>
+            <Value>2024-12-21T01:35:00Z</Value>
+        </EstimatedTime>
+    </OffTime>
+    <OnTime>
+        <EstimatedTime>
+            <Value>2024-12-21T02:19:37Z</Value>
+        </EstimatedTime>
+    </OnTime>
+    <InTime>
+        <EstimatedTime>
+            <Value>2024-12-21T02:29:37Z</Value>
+        </EstimatedTime>
+    </InTime>
+    <BlockTime>
+        <EstimatedTime>
+            <Value>PT1H4M37S</Value>
+        </EstimatedTime>
+    </BlockTime>
+    <TaxiOutTime>
+        <EstimatedTime>
+            <Value>PT0H10M00S</Value>
+        </EstimatedTime>
+    </TaxiOutTime>
+    <FlightTime>
+        <EstimatedTime>
+            <Value>PT0H44M37S</Value>
+        </EstimatedTime>
+    </FlightTime>
+    <TaxiInTime>
+        <EstimatedTime>
+            <Value>PT0H10M00S</Value>
+        </EstimatedTime>
+    </TaxiInTime>
+</FlightPlanSummary>
+    <AlternateRoutes>
+        <AlternateRoute>
+            <Waypoints>
+                <Waypoint sequenceId="1" waypointId="DAAJ" waypointName="DAAJ" waypointLongName="DJANET/TISKA" countryICAOCode="DA">
+                    <Coordinates latitude="+87455" longitude="+34027">N2417.6 E00927.1</Coordinates>
+                    <Airway type="Direct">DCT</Airway>
+                    <Tropopause>
+                        <Value unit="ft/100">552</Value>
+                    </Tropopause>
+                    <Tracks>
+                        <OutboundTrack>
+                            <Value type="true" unit="deg">167</Value>
+                        </OutboundTrack>
+                        <OutboundTrack>
+                            <Value type="magnetic" unit="deg">165</Value>
+                        </OutboundTrack>
+                    </Tracks>
+                    <RemainingGroundDistance>
+                        <Value unit="NM">295</Value>
+                    </RemainingGroundDistance>
+                    <RemainingAirDistance>
+                        <Value unit="NM">309</Value>
+                    </RemainingAirDistance>
+                    <CumulatedFlightTime>
+                        <EstimatedTime>
+                            <Value>PT0H0M00S</Value>
+                        </EstimatedTime>
+                    </CumulatedFlightTime>
+                    <RemainingFlightTime>
+                        <EstimatedTime>
+                            <Value>PT0H51M36S</Value>
+                        </EstimatedTime>
+                    </RemainingFlightTime>
+                    <CumulatedBurnOff>
+                        <EstimatedWeight>
+                            <Value unit="kg">0</Value>
+                        </EstimatedWeight>
+                    </CumulatedBurnOff>
+                    <FuelOnBoard>
+                        <EstimatedWeight>
+                            <Value unit="kg">3598</Value>
+                        </EstimatedWeight>
+                    </FuelOnBoard>
+                    <MinimumFuelOnBoard>
+                        <Value unit="kg">3598</Value>
+                    </MinimumFuelOnBoard>
+                    <Function>ArrivalAirport</Function>
+                </Waypoint>
+                <Waypoint sequenceId="2" waypointId="DJA" waypointName="DJA" waypointLongName="DJANET" countryICAOCode="DA">
+                    <Coordinates latitude="+87436" longitude="+34032">N2417.3 E00927.2</Coordinates>
+                    <Airway type="Direct">DCT</Airway>
+                    <Altitude>
+                        <EstimatedAltitude>
+                            <Value unit="ft/100">94</Value>
+                        </EstimatedAltitude>
+                    </Altitude>
+                    <MinimumSafeAltitude>
+                        <Value unit="ft/100">61</Value> 
+                    </MinimumSafeAltitude>
+                    <SegmentWind>
+                        <Direction>
+                            <Value type="true" unit="deg">41</Value>
+                        </Direction>
+                        <Speed>
+                            <Value unit="kt">9</Value> 
+                        </Speed>
+                    </SegmentWind>
+                    <SegmentWindComponent>
+                        <Value unit="kt">5</Value> 
+                    </SegmentWindComponent>
+                    <SegmentTemperature>
+                        <Value unit="C">7</Value>  
+                    </SegmentTemperature>
+                    <SegmentISADeviation>
+                        <Value unit="C">5</Value>
+                    </SegmentISADeviation>
+                    <Tropopause>
+                        <Value unit="ft/100">553</Value>
+                    </Tropopause>
+                    <TrueAirSpeed>
+                        <EstimatedSpeed>
+                            <Value unit="kt">410</Value>
+                        </EstimatedSpeed>
+                    </TrueAirSpeed>
+                    <MachNumber>
+                        <EstimatedMachNumber>
+                            <Value>0.78</Value>
+                        </EstimatedMachNumber>
+                    </MachNumber>
+                    <IndicatedAirSpeed>
+                        <EstimatedSpeed>
+                            <Value unit="kt">300</Value>
+                        </EstimatedSpeed>
+                    </IndicatedAirSpeed>
+                    <GroundSpeed>
+                        <EstimatedSpeed>
+                            <Value unit="kt">205</Value>
+                        </EstimatedSpeed>
+                    </GroundSpeed>
+                    <Tracks>
+                        <OutboundTrack>
+                            <Value type="true" unit="deg">249</Value>
+                        </OutboundTrack>
+                        <OutboundTrack>
+                            <Value type="magnetic" unit="deg">246</Value>
+                        </OutboundTrack>
+                        <SegmentTrack>
+                            <Value type="true" unit="deg">167</Value>
+                        </SegmentTrack>
+                        <SegmentTrack>
+                            <Value type="magnetic" unit="deg">165</Value>
+                        </SegmentTrack>
+                    </Tracks>
+                    <GroundDistance>
+                        <Value unit="NM">12</Value>
+                    </GroundDistance>
+                    <RemainingGroundDistance>
+                        <Value unit="NM">283</Value>
+                    </RemainingGroundDistance>
+                    <AirDistance>
+                        <Value unit="NM">12</Value> 
+                    </AirDistance>
+                    <RemainingAirDistance>
+                        <Value unit="NM">297</Value>
+                    </RemainingAirDistance>
+                    <TimeFromPreviousWaypoint>
+                        <EstimatedTime>
+                            <Value>PT0H3M31S</Value>
+                        </EstimatedTime>
+                    </TimeFromPreviousWaypoint>
+                    <CumulatedFlightTime>
+                        <EstimatedTime>
+                            <Value>PT0H3M31S</Value>
+                        </EstimatedTime>
+                    </CumulatedFlightTime>
+                    <RemainingFlightTime>
+                        <EstimatedTime>
+                            <Value>PT0H48M05S</Value>
+                        </EstimatedTime>
+                    </RemainingFlightTime>
+                    <BurnOff>
+                        <EstimatedWeight>
+                            <Value unit="kg">375</Value>
+                        </EstimatedWeight>
+                    </BurnOff>
+                    <CumulatedBurnOff>
+                        <EstimatedWeight>
+                            <Value unit="kg">375</Value>
+                        </EstimatedWeight>
+                    </CumulatedBurnOff>
+                    <FuelOnBoard>
+                        <EstimatedWeight>
+                            <Value unit="kg">3223</Value>
+                        </EstimatedWeight>
+                    </FuelOnBoard>
+                    <MinimumFuelOnBoard>
+                        <Value unit="kg">3223</Value>
+                    </MinimumFuelOnBoard>
+                    <Function>Enroute</Function>
+                </Waypoint>
+                <Waypoint sequenceId="3" waypointId="T_O_C" waypointName="T_O_C"    >
+                    <Coordinates latitude="+86381" longitude="+31123">N2359.7 E00838.7</Coordinates>
+                    <Airway type="Airway">J60</Airway>
+                    <Altitude>
+                        <EstimatedAltitude>
+                            <Value unit="ft/100">240</Value>
+                        </EstimatedAltitude>
+                    </Altitude>
+                    <MinimumSafeAltitude>
+                        <Value unit="ft/100">68</Value> 
+                    </MinimumSafeAltitude>
+                    <SegmentWind>
+                        <Direction>
+                            <Value type="true" unit="deg">284</Value>
+                        </Direction>
+                        <Speed>
+                            <Value unit="kt">9</Value> 
+                        </Speed>
+                    </SegmentWind>
+                    <SegmentWindComponent>
+                        <Value unit="kt">-7</Value>
+                    </SegmentWindComponent>
+                    <SegmentTemperature>
+                        <Value unit="C">-9</Value> 
+                    </SegmentTemperature>
+                    <SegmentISADeviation>
+                        <Value unit="C">11</Value>
+                    </SegmentISADeviation>
+                    <Tropopause>
+                        <Value unit="ft/100">552</Value>
+                    </Tropopause>
+                    <TrueAirSpeed>
+                        <EstimatedSpeed>
+                            <Value unit="kt">410</Value>
+                        </EstimatedSpeed>
+                    </TrueAirSpeed>
+                    <MachNumber>
+                        <EstimatedMachNumber>
+                            <Value>0.78</Value>
+                        </EstimatedMachNumber>
+                    </MachNumber>
+                    <IndicatedAirSpeed>
+                        <EstimatedSpeed>
+                            <Value unit="kt">300</Value>
+                        </EstimatedSpeed>
+                    </IndicatedAirSpeed>
+                    <GroundSpeed>
+                        <EstimatedSpeed>
+                            <Value unit="kt">384</Value>
+                        </EstimatedSpeed>
+                    </GroundSpeed>
+                    <Tracks>
+                        <OutboundTrack>
+                            <Value type="true" unit="deg">249</Value>
+                        </OutboundTrack>
+                        <OutboundTrack>
+                            <Value type="magnetic" unit="deg">246</Value>
+                        </OutboundTrack>
+                        <SegmentTrack>
+                            <Value type="true" unit="deg">246</Value>
+                        </SegmentTrack>
+                        <SegmentTrack>
+                            <Value type="magnetic" unit="deg">244</Value>
+                        </SegmentTrack>
+                    </Tracks>
+                    <GroundDistance>
+                        <Value unit="NM">48</Value>
+                    </GroundDistance>
+                    <RemainingGroundDistance>
+                        <Value unit="NM">236</Value>
+                    </RemainingGroundDistance>
+                    <AirDistance>
+                        <Value unit="NM">49</Value> 
+                    </AirDistance>
+                    <RemainingAirDistance>
+                        <Value unit="NM">248</Value>
+                    </RemainingAirDistance>
+                    <TimeFromPreviousWaypoint>
+                        <EstimatedTime>
+                            <Value>PT0H7M28S</Value>
+                        </EstimatedTime>
+                    </TimeFromPreviousWaypoint>
+                    <CumulatedFlightTime>
+                        <EstimatedTime>
+                            <Value>PT0H10M59S</Value>
+                        </EstimatedTime>
+                    </CumulatedFlightTime>
+                    <RemainingFlightTime>
+                        <EstimatedTime>
+                            <Value>PT0H40M37S</Value>
+                        </EstimatedTime>
+                    </RemainingFlightTime>
+                    <BurnOff>
+                        <EstimatedWeight>
+                            <Value unit="kg">650</Value>
+                        </EstimatedWeight>
+                    </BurnOff>
+                    <CumulatedBurnOff>
+                        <EstimatedWeight>
+                            <Value unit="kg">1025</Value>
+                        </EstimatedWeight>
+                    </CumulatedBurnOff>
+                    <FuelOnBoard>
+                        <EstimatedWeight>
+                            <Value unit="kg">2573</Value>
+                        </EstimatedWeight>
+                    </FuelOnBoard>
+                    <MinimumFuelOnBoard>
+                        <Value unit="kg">2573</Value>
+                    </MinimumFuelOnBoard>
+                    <Function>TopOfClimb</Function>
+                </Waypoint>
+                <Waypoint sequenceId="4" waypointId="MELOG" waypointName="MELOG" waypointLongName="MELOG" countryICAOCode="DA">
+                    <Coordinates latitude="+84632" longitude="+26420">N2330.5 E00720.3</Coordinates>
+                    <Airway type="Airway">J60</Airway>
+                    <Altitude>
+                        <EstimatedAltitude>
+                            <Value unit="ft/100">240</Value>
+                        </EstimatedAltitude>
+                    </Altitude>
+                    <MinimumSafeAltitude>
+                        <Value unit="ft/100">68</Value> 
+                    </MinimumSafeAltitude>
+                    <SegmentWind>
+                        <Direction>
+                            <Value type="true" unit="deg">253</Value>
+                        </Direction>
+                        <Speed>
+                            <Value unit="kt">23</Value>
+                        </Speed>
+                    </SegmentWind>
+                    <SegmentWindComponent>
+                        <Value unit="kt">-23</Value>
+                    </SegmentWindComponent>
+                    <SegmentTemperature>
+                        <Value unit="C">-21</Value>
+                    </SegmentTemperature>
+                    <SegmentISADeviation>
+                        <Value unit="C">11</Value>
+                    </SegmentISADeviation>
+                    <Tropopause>
+                        <Value unit="ft/100">554</Value>
+                    </Tropopause>
+                    <TrueAirSpeed>
+                        <EstimatedSpeed>
+                            <Value unit="kt">410</Value>
+                        </EstimatedSpeed>
+                    </TrueAirSpeed>
+                    <MachNumber>
+                        <EstimatedMachNumber>
+                            <Value>0.664</Value>
+                        </EstimatedMachNumber>
+                    </MachNumber>
+                    <IndicatedAirSpeed>
+                        <EstimatedSpeed>
+                            <Value unit="kt">282</Value>
+                        </EstimatedSpeed>
+                    </IndicatedAirSpeed>
+                    <GroundSpeed>
+                        <EstimatedSpeed>
+                            <Value unit="kt">388</Value>
+                        </EstimatedSpeed>
+                    </GroundSpeed>
+                    <Tracks>
+                        <OutboundTrack>
+                            <Value type="true" unit="deg">248</Value>
+                        </OutboundTrack>
+                        <OutboundTrack>
+                            <Value type="magnetic" unit="deg">247</Value>
+                        </OutboundTrack>
+                        <SegmentTrack>
+                            <Value type="true" unit="deg">249</Value>
+                        </SegmentTrack>
+                        <SegmentTrack>
+                            <Value type="magnetic" unit="deg">247</Value>
+                        </SegmentTrack>
+                    </Tracks>
+                    <GroundDistance>
+                        <Value unit="NM">78</Value>
+                    </GroundDistance>
+                    <RemainingGroundDistance>
+                        <Value unit="NM">158</Value>
+                    </RemainingGroundDistance>
+                    <AirDistance>
+                        <Value unit="NM">82</Value> 
+                    </AirDistance>
+                    <RemainingAirDistance>
+                        <Value unit="NM">166</Value>
+                    </RemainingAirDistance>
+                    <TimeFromPreviousWaypoint>
+                        <EstimatedTime>
+                            <Value>PT0H12M00S</Value>
+                        </EstimatedTime>
+                    </TimeFromPreviousWaypoint>
+                    <CumulatedFlightTime>
+                        <EstimatedTime>
+                            <Value>PT0H22M59S</Value>
+                        </EstimatedTime>
+                    </CumulatedFlightTime>
+                    <RemainingFlightTime>
+                        <EstimatedTime>
+                            <Value>PT0H28M37S</Value>
+                        </EstimatedTime>
+                    </RemainingFlightTime>
+                    <BurnOff>
+                        <EstimatedWeight>
+                            <Value unit="kg">517</Value>
+                        </EstimatedWeight>
+                    </BurnOff>
+                    <CumulatedBurnOff>
+                        <EstimatedWeight>
+                            <Value unit="kg">1542</Value>
+                        </EstimatedWeight>
+                    </CumulatedBurnOff>
+                    <FuelOnBoard>
+                        <EstimatedWeight>
+                            <Value unit="kg">2056</Value>
+                        </EstimatedWeight>
+                    </FuelOnBoard>
+                    <MinimumFuelOnBoard>
+                        <Value unit="kg">2056</Value>
+                    </MinimumFuelOnBoard>
+                    <Function>Enroute</Function>
+                </Waypoint>
+                <Waypoint sequenceId="5" waypointId="T_O_D" waypointName="T_O_D"    >
+                    <Coordinates latitude="+82659" longitude="+21073">N2257.7 E00551.2</Coordinates>
+                    <Airway type="Airway">J60</Airway>
+                    <Altitude>
+                        <EstimatedAltitude>
+                            <Value unit="ft/100">240</Value>
+                        </EstimatedAltitude>
+                    </Altitude>
+                    <MinimumSafeAltitude>
+                        <Value unit="ft/100">96</Value> 
+                    </MinimumSafeAltitude>
+                    <SegmentWind>
+                        <Direction>
+                            <Value type="true" unit="deg">245</Value>
+                        </Direction>
+                        <Speed>
+                            <Value unit="kt">25</Value>
+                        </Speed>
+                    </SegmentWind>
+                    <SegmentWindComponent>
+                        <Value unit="kt">-24</Value>
+                    </SegmentWindComponent>
+                    <SegmentTemperature>
+                        <Value unit="C">-21</Value>
+                    </SegmentTemperature>
+                    <SegmentISADeviation>
+                        <Value unit="C">11</Value>
+                    </SegmentISADeviation>
+                    <Tropopause>
+                        <Value unit="ft/100">567</Value>
+                    </Tropopause>
+                    <TrueAirSpeed>
+                        <EstimatedSpeed>
+                            <Value unit="kt">410</Value>
+                        </EstimatedSpeed>
+                    </TrueAirSpeed>
+                    <MachNumber>
+                        <EstimatedMachNumber>
+                            <Value>0.663</Value>
+                        </EstimatedMachNumber>
+                    </MachNumber>
+                    <IndicatedAirSpeed>
+                        <EstimatedSpeed>
+                            <Value unit="kt">282</Value>
+                        </EstimatedSpeed>
+                    </IndicatedAirSpeed>
+                    <GroundSpeed>
+                        <EstimatedSpeed>
+                            <Value unit="kt">386</Value>
+                        </EstimatedSpeed>
+                    </GroundSpeed>
+                    <Tracks>
+                        <OutboundTrack>
+                            <Value type="true" unit="deg">248</Value>
+                        </OutboundTrack>
+                        <OutboundTrack>
+                            <Value type="magnetic" unit="deg">247</Value>
+                        </OutboundTrack>
+                        <SegmentTrack>
+                            <Value type="true" unit="deg">248</Value>
+                        </SegmentTrack>
+                        <SegmentTrack>
+                            <Value type="magnetic" unit="deg">247</Value>
+                        </SegmentTrack>
+                    </Tracks>
+                    <GroundDistance>
+                        <Value unit="NM">88</Value>
+                    </GroundDistance>
+                    <RemainingGroundDistance>
+                        <Value unit="NM">69</Value>
+                    </RemainingGroundDistance>
+                    <AirDistance>
+                        <Value unit="NM">94</Value> 
+                    </AirDistance>
+                    <RemainingAirDistance>
+                        <Value unit="NM">72</Value>
+                    </RemainingAirDistance>
+                    <TimeFromPreviousWaypoint>
+                        <EstimatedTime>
+                            <Value>PT0H13M46S</Value>
+                        </EstimatedTime>
+                    </TimeFromPreviousWaypoint>
+                    <CumulatedFlightTime>
+                        <EstimatedTime>
+                            <Value>PT0H36M45S</Value>
+                        </EstimatedTime>
+                    </CumulatedFlightTime>
+                    <RemainingFlightTime>
+                        <EstimatedTime>
+                            <Value>PT0H14M51S</Value>
+                        </EstimatedTime>
+                    </RemainingFlightTime>
+                    <BurnOff>
+                        <EstimatedWeight>
+                            <Value unit="kg">608</Value>
+                        </EstimatedWeight>
+                    </BurnOff>
+                    <CumulatedBurnOff>
+                        <EstimatedWeight>
+                            <Value unit="kg">2150</Value>
+                        </EstimatedWeight>
+                    </CumulatedBurnOff>
+                    <FuelOnBoard>
+                        <EstimatedWeight>
+                            <Value unit="kg">1448</Value>
+                        </EstimatedWeight>
+                    </FuelOnBoard>
+                    <MinimumFuelOnBoard>
+                        <Value unit="kg">1448</Value>
+                    </MinimumFuelOnBoard>
+                    <Function>TopOfDescent</Function>
+                </Waypoint>
+                <Waypoint sequenceId="6" waypointId="TMS" waypointName="TMS" waypointLongName="TAMENGHASSET VORDME" countryICAOCode="DA">
+                    <Coordinates latitude="+82107" longitude="+19608">N2248.5 E00526.8</Coordinates>
+                    <Airway type="Airway">J60</Airway>
+                    <Altitude>
+                        <EstimatedAltitude>
+                            <Value unit="ft/100">152</Value>
+                        </EstimatedAltitude>
+                    </Altitude>
+                    <MinimumSafeAltitude>
+                        <Value unit="ft/100">96</Value> 
+                    </MinimumSafeAltitude>
+                    <SegmentWind>
+                        <Direction>
+                            <Value type="true" unit="deg">265</Value>
+                        </Direction>
+                        <Speed>
+                            <Value unit="kt">12</Value>
+                        </Speed>
+                    </SegmentWind>
+                    <SegmentWindComponent>
+                        <Value unit="kt">-11</Value>
+                    </SegmentWindComponent>
+                    <SegmentTemperature>
+                        <Value unit="C">-13</Value>
+                    </SegmentTemperature>
+                    <SegmentISADeviation>
+                        <Value unit="C">11</Value>
+                    </SegmentISADeviation>
+                    <Tropopause>
+                        <Value unit="ft/100">561</Value>
+                    </Tropopause>
+                    <TrueAirSpeed>
+                        <EstimatedSpeed>
+                            <Value unit="kt">410</Value>
+                        </EstimatedSpeed>
+                    </TrueAirSpeed>
+                    <MachNumber>
+                        <EstimatedMachNumber>
+                            <Value>0.78</Value>
+                        </EstimatedMachNumber>
+                    </MachNumber>
+                    <IndicatedAirSpeed>
+                        <EstimatedSpeed>
+                            <Value unit="kt">300</Value>
+                        </EstimatedSpeed>
+                    </IndicatedAirSpeed>
+                    <GroundSpeed>
+                        <EstimatedSpeed>
+                            <Value unit="kt">387</Value>
+                        </EstimatedSpeed>
+                    </GroundSpeed>
+                    <Tracks>
+                        <OutboundTrack>
+                            <Value type="true" unit="deg">50</Value>
+                        </OutboundTrack>
+                        <OutboundTrack>
+                            <Value type="magnetic" unit="deg">49</Value>
+                        </OutboundTrack>
+                        <SegmentTrack>
+                            <Value type="true" unit="deg">248</Value>
+                        </SegmentTrack>
+                        <SegmentTrack>
+                            <Value type="magnetic" unit="deg">248</Value>
+                        </SegmentTrack>
+                    </Tracks>
+                    <GroundDistance>
+                        <Value unit="NM">24</Value>
+                    </GroundDistance>
+                    <RemainingGroundDistance>
+                        <Value unit="NM">45</Value>
+                    </RemainingGroundDistance>
+                    <AirDistance>
+                        <Value unit="NM">25</Value> 
+                    </AirDistance>
+                    <RemainingAirDistance>
+                        <Value unit="NM">47</Value>
+                    </RemainingAirDistance>
+                    <TimeFromPreviousWaypoint>
+                        <EstimatedTime>
+                            <Value>PT0H3M47S</Value>
+                        </EstimatedTime>
+                    </TimeFromPreviousWaypoint>
+                    <CumulatedFlightTime>
+                        <EstimatedTime>
+                            <Value>PT0H40M32S</Value>
+                        </EstimatedTime>
+                    </CumulatedFlightTime>
+                    <RemainingFlightTime>
+                        <EstimatedTime>
+                            <Value>PT0H11M04S</Value>
+                        </EstimatedTime>
+                    </RemainingFlightTime>
+                    <BurnOff>
+                        <EstimatedWeight>
+                            <Value unit="kg">60</Value>
+                        </EstimatedWeight>
+                    </BurnOff>
+                    <CumulatedBurnOff>
+                        <EstimatedWeight>
+                            <Value unit="kg">2210</Value>
+                        </EstimatedWeight>
+                    </CumulatedBurnOff>
+                    <FuelOnBoard>
+                        <EstimatedWeight>
+                            <Value unit="kg">1388</Value>
+                        </EstimatedWeight>
+                    </FuelOnBoard>
+                    <MinimumFuelOnBoard>
+                        <Value unit="kg">1388</Value>
+                    </MinimumFuelOnBoard>
+                    <Function>Enroute</Function>
+                </Waypoint>
+                <Waypoint sequenceId="7" waypointId="DAAT" waypointName="DAAT" waypointLongName="TAMENGHASSET/AGUENAR-HADJ BEY" countryICAOCode="DA">
+                    <Coordinates latitude="+82120" longitude="+19623">N2248.7 E00527.1</Coordinates>
+                    <Airway type="Direct">DCT</Airway>
+                    <Altitude>
+                        <EstimatedAltitude>
+                            <Value unit="ft/100">45</Value>
+                        </EstimatedAltitude>
+                    </Altitude>
+                    <MinimumSafeAltitude>
+                        <Value unit="ft/100">85</Value> 
+                    </MinimumSafeAltitude>
+                    <SegmentWind>
+                        <Direction>
+                            <Value type="true" unit="deg">49</Value>
+                        </Direction>
+                        <Speed>
+                            <Value unit="kt">10</Value>
+                        </Speed>
+                    </SegmentWind>
+                    <SegmentWindComponent>
+                        <Value unit="kt">-10</Value>
+                    </SegmentWindComponent>
+                    <SegmentTemperature>
+                        <Value unit="C">6</Value>  
+                    </SegmentTemperature>
+                    <SegmentISADeviation>
+                        <Value unit="C">8</Value>
+                    </SegmentISADeviation>
+                    <Tropopause>
+                        <Value unit="ft/100">561</Value>
+                    </Tropopause>
+                    <TrueAirSpeed>
+                        <EstimatedSpeed>
+                            <Value unit="kt">410</Value>
+                        </EstimatedSpeed>
+                    </TrueAirSpeed>
+                    <MachNumber>
+                        <EstimatedMachNumber>
+                            <Value>0.78</Value>
+                        </EstimatedMachNumber>
+                    </MachNumber>
+                    <IndicatedAirSpeed>
+                        <EstimatedSpeed>
+                            <Value unit="kt">300</Value>
+                        </EstimatedSpeed>
+                    </IndicatedAirSpeed>
+                    <GroundSpeed>
+                        <EstimatedSpeed>
+                            <Value unit="kt">244</Value>
+                        </EstimatedSpeed>
+                    </GroundSpeed>
+                    <Tracks>
+                        <OutboundTrack>
+                            <Value type="true" unit="deg">50</Value>
+                        </OutboundTrack>
+                        <OutboundTrack>
+                            <Value type="magnetic" unit="deg">49</Value>
+                        </OutboundTrack>
+                        <SegmentTrack>
+                            <Value type="true" unit="deg">267</Value>
+                        </SegmentTrack>
+                        <SegmentTrack>
+                            <Value type="magnetic" unit="deg">266</Value>
+                        </SegmentTrack>
+                    </Tracks>
+                    <GroundDistance>
+                        <Value unit="NM">45</Value>
+                    </GroundDistance>
+                    <RemainingGroundDistance>
+                        <Value unit="NM">0</Value> 
+                    </RemainingGroundDistance>
+                    <AirDistance>
+                        <Value unit="NM">47</Value> 
+                    </AirDistance>
+                    <RemainingAirDistance>
+                        <Value unit="NM">0</Value> 
+                    </RemainingAirDistance>
+                    <TimeFromPreviousWaypoint>
+                        <EstimatedTime>
+                            <Value>PT0H11M04S</Value>
+                        </EstimatedTime>
+                    </TimeFromPreviousWaypoint>
+                    <CumulatedFlightTime>
+                        <EstimatedTime>
+                            <Value>PT0H51M36S</Value>
+                        </EstimatedTime>
+                    </CumulatedFlightTime>
+                    <BurnOff>
+                        <EstimatedWeight>
+                            <Value unit="kg">188</Value>
+                        </EstimatedWeight>
+                    </BurnOff>
+                    <CumulatedBurnOff>
+                        <EstimatedWeight>
+                            <Value unit="kg">2398</Value>
+                        </EstimatedWeight>
+                    </CumulatedBurnOff>
+                    <FuelOnBoard>
+                        <EstimatedWeight>
+                            <Value unit="kg">1200</Value>
+                        </EstimatedWeight>
+                    </FuelOnBoard>
+                    <MinimumFuelOnBoard>
+                        <Value unit="kg">1200</Value>
+                    </MinimumFuelOnBoard>
+                    <Function>PrimaryArrivalAlternateAirport</Function>
+                </Waypoint>
+            </Waypoints>
+               
+            <Airport airportFunction="PrimaryArrivalAlternateAirport" airportName="TAMENGHASSET/AGUENAR-HADJ BEY">
+                <AirportICAOCode>DAAT</AirportICAOCode>
+                <AirportIATACode>TMR</AirportIATACode>
+            </Airport>
+            <RouteInformation>
+                <AverageWind>
+                    <Direction>
+                        <Value type="true" unit="deg">258</Value>
+                    </Direction>
+                    <Speed>
+                        <Value unit="kt">11</Value>
+                    </Speed>
+                </AverageWind>
+                <AverageWindComponent>
+                    <Value unit="kt">-16</Value>
+                </AverageWindComponent>
+                <AverageISADeviation>
+                    <Value unit="C">10</Value>
+                </AverageISADeviation>
+                <InitialAltitude>
+                    <Value unit="ft/100">240</Value>
+                </InitialAltitude>
+                <RouteDescription>DCT DJA J60 TMS DCT</RouteDescription>
+                <GroundDistance>
+                    <Value unit="NM">295</Value>
+                </GroundDistance>
+                <AirDistance>
+                    <Value unit="NM">309</Value>
+                </AirDistance>
+                <GreatCircleDistance>
+                    <Value unit="NM">238</Value>
+                </GreatCircleDistance>
+            </RouteInformation>
+        </AlternateRoute>
+        <AlternateRoute>
+            <Waypoints>
+                <Waypoint sequenceId="1" waypointId="DAAJ" waypointName="DAAJ" waypointLongName="DJANET/TISKA" countryICAOCode="DA">
+                    <Coordinates latitude="+87455" longitude="+34027">N2417.6 E00927.1</Coordinates>
+                    <Airway type="Direct">DCT</Airway>
+                    <Tropopause>
+                        <Value unit="ft/100">552</Value>
+                    </Tropopause>
+                    <Tracks>
+                        <OutboundTrack>
+                            <Value type="true" unit="deg">167</Value>
+                        </OutboundTrack>
+                        <OutboundTrack>
+                            <Value type="magnetic" unit="deg">165</Value>
+                        </OutboundTrack>
+                    </Tracks>
+                    <RemainingGroundDistance>
+                        <Value unit="NM">281</Value>
+                    </RemainingGroundDistance>
+                    <RemainingAirDistance>
+                        <Value unit="NM">280</Value>
+                    </RemainingAirDistance>
+                    <CumulatedFlightTime>
+                        <EstimatedTime>
+                            <Value>PT0H0M00S</Value>
+                        </EstimatedTime>
+                    </CumulatedFlightTime>
+                    <RemainingFlightTime>
+                        <EstimatedTime>
+                            <Value>PT0H48M30S</Value>
+                        </EstimatedTime>
+                    </RemainingFlightTime>
+                    <CumulatedBurnOff>
+                        <EstimatedWeight>
+                            <Value unit="kg">0</Value>
+                        </EstimatedWeight>
+                    </CumulatedBurnOff>
+                    <FuelOnBoard>
+                        <EstimatedWeight>
+                            <Value unit="kg">3598</Value>
+                        </EstimatedWeight>
+                    </FuelOnBoard>
+                    <MinimumFuelOnBoard>
+                        <Value unit="kg">3392</Value>
+                    </MinimumFuelOnBoard>
+                    <Function>ArrivalAirport</Function>
+                </Waypoint>
+                <Waypoint sequenceId="2" waypointId="DJA" waypointName="DJA" waypointLongName="DJANET" countryICAOCode="DA">
+                    <Coordinates latitude="+87436" longitude="+34032">N2417.3 E00927.2</Coordinates>
+                    <Airway type="Direct">DCT</Airway>
+                    <Altitude>
+                        <EstimatedAltitude>
+                            <Value unit="ft/100">95</Value>
+                        </EstimatedAltitude>
+                    </Altitude>
+                    <MinimumSafeAltitude>
+                        <Value unit="ft/100">61</Value> 
+                    </MinimumSafeAltitude>
+                    <SegmentWind>
+                        <Direction>
+                            <Value type="true" unit="deg">41</Value>
+                        </Direction>
+                        <Speed>
+                            <Value unit="kt">9</Value> 
+                        </Speed>
+                    </SegmentWind>
+                    <SegmentWindComponent>
+                        <Value unit="kt">5</Value> 
+                    </SegmentWindComponent>
+                    <SegmentTemperature>
+                        <Value unit="C">7</Value>  
+                    </SegmentTemperature>
+                    <SegmentISADeviation>
+                        <Value unit="C">5</Value>
+                    </SegmentISADeviation>
+                    <Tropopause>
+                        <Value unit="ft/100">553</Value>
+                    </Tropopause>
+                    <TrueAirSpeed>
+                        <EstimatedSpeed>
+                            <Value unit="kt">410</Value>
+                        </EstimatedSpeed>
+                    </TrueAirSpeed>
+                    <MachNumber>
+                        <EstimatedMachNumber>
+                            <Value>0.78</Value>
+                        </EstimatedMachNumber>
+                    </MachNumber>
+                    <IndicatedAirSpeed>
+                        <EstimatedSpeed>
+                            <Value unit="kt">300</Value>
+                        </EstimatedSpeed>
+                    </IndicatedAirSpeed>
+                    <GroundSpeed>
+                        <EstimatedSpeed>
+                            <Value unit="kt">205</Value>
+                        </EstimatedSpeed>
+                    </GroundSpeed>
+                    <Tracks>
+                        <OutboundTrack>
+                            <Value type="true" unit="deg">349</Value>
+                        </OutboundTrack>
+                        <OutboundTrack>
+                            <Value type="magnetic" unit="deg">346</Value>
+                        </OutboundTrack>
+                        <SegmentTrack>
+                            <Value type="true" unit="deg">167</Value>
+                        </SegmentTrack>
+                        <SegmentTrack>
+                            <Value type="magnetic" unit="deg">165</Value>
+                        </SegmentTrack>
+                    </Tracks>
+                    <GroundDistance>
+                        <Value unit="NM">12</Value>
+                    </GroundDistance>
+                    <RemainingGroundDistance>
+                        <Value unit="NM">269</Value>
+                    </RemainingGroundDistance>
+                    <AirDistance>
+                        <Value unit="NM">12</Value> 
+                    </AirDistance>
+                    <RemainingAirDistance>
+                        <Value unit="NM">268</Value>
+                    </RemainingAirDistance>
+                    <TimeFromPreviousWaypoint>
+                        <EstimatedTime>
+                            <Value>PT0H3M31S</Value>
+                        </EstimatedTime>
+                    </TimeFromPreviousWaypoint>
+                    <CumulatedFlightTime>
+                        <EstimatedTime>
+                            <Value>PT0H3M31S</Value>
+                        </EstimatedTime>
+                    </CumulatedFlightTime>
+                    <RemainingFlightTime>
+                        <EstimatedTime>
+                            <Value>PT0H44M59S</Value>
+                        </EstimatedTime>
+                    </RemainingFlightTime>
+                    <BurnOff>
+                        <EstimatedWeight>
+                            <Value unit="kg">375</Value>
+                        </EstimatedWeight>
+                    </BurnOff>
+                    <CumulatedBurnOff>
+                        <EstimatedWeight>
+                            <Value unit="kg">375</Value>
+                        </EstimatedWeight>
+                    </CumulatedBurnOff>
+                    <FuelOnBoard>
+                        <EstimatedWeight>
+                            <Value unit="kg">3223</Value>
+                        </EstimatedWeight>
+                    </FuelOnBoard>
+                    <MinimumFuelOnBoard>
+                        <Value unit="kg">3017</Value>
+                    </MinimumFuelOnBoard>
+                    <Function>Enroute</Function>
+                </Waypoint>
+                <Waypoint sequenceId="3" waypointId="T_O_C" waypointName="T_O_C"    >
+                    <Coordinates latitude="+90192" longitude="+33419">N2503.2 E00917.0</Coordinates>
+                    <Airway type="Airway">A605</Airway>
+                    <Altitude>
+                        <EstimatedAltitude>
+                            <Value unit="ft/100">240</Value>
+                        </EstimatedAltitude>
+                    </Altitude>
+                    <MinimumSafeAltitude>
+                        <Value unit="ft/100">69</Value> 
+                    </MinimumSafeAltitude>
+                    <SegmentWind>
+                        <Direction>
+                            <Value type="true" unit="deg">283</Value>
+                        </Direction>
+                        <Speed>
+                            <Value unit="kt">12</Value>
+                        </Speed>
+                    </SegmentWind>
+                    <SegmentWindComponent>
+                        <Value unit="kt">-5</Value>
+                    </SegmentWindComponent>
+                    <SegmentTemperature>
+                        <Value unit="C">-10</Value>
+                    </SegmentTemperature>
+                    <SegmentISADeviation>
+                        <Value unit="C">10</Value>
+                    </SegmentISADeviation>
+                    <Tropopause>
+                        <Value unit="ft/100">548</Value>
+                    </Tropopause>
+                    <TrueAirSpeed>
+                        <EstimatedSpeed>
+                            <Value unit="kt">410</Value>
+                        </EstimatedSpeed>
+                    </TrueAirSpeed>
+                    <MachNumber>
+                        <EstimatedMachNumber>
+                            <Value>0.78</Value>
+                        </EstimatedMachNumber>
+                    </MachNumber>
+                    <IndicatedAirSpeed>
+                        <EstimatedSpeed>
+                            <Value unit="kt">300</Value>
+                        </EstimatedSpeed>
+                    </IndicatedAirSpeed>
+                    <GroundSpeed>
+                        <EstimatedSpeed>
+                            <Value unit="kt">384</Value>
+                        </EstimatedSpeed>
+                    </GroundSpeed>
+                    <Tracks>
+                        <OutboundTrack>
+                            <Value type="true" unit="deg">349</Value>
+                        </OutboundTrack>
+                        <OutboundTrack>
+                            <Value type="magnetic" unit="deg">346</Value>
+                        </OutboundTrack>
+                        <SegmentTrack>
+                            <Value type="true" unit="deg">349</Value>
+                        </SegmentTrack>
+                        <SegmentTrack>
+                            <Value type="magnetic" unit="deg">346</Value>
+                        </SegmentTrack>
+                    </Tracks>
+                    <GroundDistance>
+                        <Value unit="NM">47</Value>
+                    </GroundDistance>
+                    <RemainingGroundDistance>
+                        <Value unit="NM">222</Value>
+                    </RemainingGroundDistance>
+                    <AirDistance>
+                        <Value unit="NM">48</Value> 
+                    </AirDistance>
+                    <RemainingAirDistance>
+                        <Value unit="NM">221</Value>
+                    </RemainingAirDistance>
+                    <TimeFromPreviousWaypoint>
+                        <EstimatedTime>
+                            <Value>PT0H7M20S</Value>
+                        </EstimatedTime>
+                    </TimeFromPreviousWaypoint>
+                    <CumulatedFlightTime>
+                        <EstimatedTime>
+                            <Value>PT0H10M51S</Value>
+                        </EstimatedTime>
+                    </CumulatedFlightTime>
+                    <RemainingFlightTime>
+                        <EstimatedTime>
+                            <Value>PT0H37M39S</Value>
+                        </EstimatedTime>
+                    </RemainingFlightTime>
+                    <BurnOff>
+                        <EstimatedWeight>
+                            <Value unit="kg">640</Value>
+                        </EstimatedWeight>
+                    </BurnOff>
+                    <CumulatedBurnOff>
+                        <EstimatedWeight>
+                            <Value unit="kg">1015</Value>
+                        </EstimatedWeight>
+                    </CumulatedBurnOff>
+                    <FuelOnBoard>
+                        <EstimatedWeight>
+                            <Value unit="kg">2583</Value>
+                        </EstimatedWeight>
+                    </FuelOnBoard>
+                    <MinimumFuelOnBoard>
+                        <Value unit="kg">2377</Value>
+                    </MinimumFuelOnBoard>
+                    <Function>TopOfClimb</Function>
+                </Waypoint>
+                <Waypoint sequenceId="4" waypointId="TARAT" waypointName="TARAT" waypointLongName="TARAT" countryICAOCode="DA">
+                    <Coordinates latitude="+93600" longitude="+32650">N2600.0 E00904.2</Coordinates>
+                    <Airway type="Airway">A605</Airway>
+                    <Altitude>
+                        <EstimatedAltitude>
+                            <Value unit="ft/100">240</Value>
+                        </EstimatedAltitude>
+                    </Altitude>
+                    <MinimumSafeAltitude>
+                        <Value unit="ft/100">69</Value> 
+                    </MinimumSafeAltitude>
+                    <SegmentWind>
+                        <Direction>
+                            <Value type="true" unit="deg">259</Value>
+                        </Direction>
+                        <Speed>
+                            <Value unit="kt">24</Value>
+                        </Speed>
+                    </SegmentWind>
+                    <SegmentWindComponent>
+                        <Value unit="kt">-0</Value>
+                    </SegmentWindComponent>
+                    <SegmentTemperature>
+                        <Value unit="C">-22</Value>
+                    </SegmentTemperature>
+                    <SegmentISADeviation>
+                        <Value unit="C">10</Value>
+                    </SegmentISADeviation>
+                    <Tropopause>
+                        <Value unit="ft/100">460</Value>
+                    </Tropopause>
+                    <TrueAirSpeed>
+                        <EstimatedSpeed>
+                            <Value unit="kt">410</Value>
+                        </EstimatedSpeed>
+                    </TrueAirSpeed>
+                    <MachNumber>
+                        <EstimatedMachNumber>
+                            <Value>0.664</Value>
+                        </EstimatedMachNumber>
+                    </MachNumber>
+                    <IndicatedAirSpeed>
+                        <EstimatedSpeed>
+                            <Value unit="kt">282</Value>
+                        </EstimatedSpeed>
+                    </IndicatedAirSpeed>
+                    <GroundSpeed>
+                        <EstimatedSpeed>
+                            <Value unit="kt">409</Value>
+                        </EstimatedSpeed>
+                    </GroundSpeed>
+                    <Tracks>
+                        <OutboundTrack>
+                            <Value type="true" unit="deg">349</Value>
+                        </OutboundTrack>
+                        <OutboundTrack>
+                            <Value type="magnetic" unit="deg">346</Value>
+                        </OutboundTrack>
+                        <SegmentTrack>
+                            <Value type="true" unit="deg">348</Value>
+                        </SegmentTrack>
+                        <SegmentTrack>
+                            <Value type="magnetic" unit="deg">346</Value>
+                        </SegmentTrack>
+                    </Tracks>
+                    <GroundDistance>
+                        <Value unit="NM">58</Value>
+                    </GroundDistance>
+                    <RemainingGroundDistance>
+                        <Value unit="NM">164</Value>
+                    </RemainingGroundDistance>
+                    <AirDistance>
+                        <Value unit="NM">58</Value> 
+                    </AirDistance>
+                    <RemainingAirDistance>
+                        <Value unit="NM">163</Value>
+                    </RemainingAirDistance>
+                    <TimeFromPreviousWaypoint>
+                        <EstimatedTime>
+                            <Value>PT0H8M31S</Value>
+                        </EstimatedTime>
+                    </TimeFromPreviousWaypoint>
+                    <CumulatedFlightTime>
+                        <EstimatedTime>
+                            <Value>PT0H19M22S</Value>
+                        </EstimatedTime>
+                    </CumulatedFlightTime>
+                    <RemainingFlightTime>
+                        <EstimatedTime>
+                            <Value>PT0H29M08S</Value>
+                        </EstimatedTime>
+                    </RemainingFlightTime>
+                    <BurnOff>
+                        <EstimatedWeight>
+                            <Value unit="kg">362</Value>
+                        </EstimatedWeight>
+                    </BurnOff>
+                    <CumulatedBurnOff>
+                        <EstimatedWeight>
+                            <Value unit="kg">1377</Value>
+                        </EstimatedWeight>
+                    </CumulatedBurnOff>
+                    <FuelOnBoard>
+                        <EstimatedWeight>
+                            <Value unit="kg">2221</Value>
+                        </EstimatedWeight>
+                    </FuelOnBoard>
+                    <MinimumFuelOnBoard>
+                        <Value unit="kg">2015</Value>
+                    </MinimumFuelOnBoard>
+                    <Function>BottomOfClimb</Function>
+                </Waypoint>
+                <Waypoint sequenceId="5" waypointId="TILMA" waypointName="TILMA" waypointLongName="TILMA" countryICAOCode="DA">
+                    <Coordinates latitude="+97179" longitude="+31836">N2659.7 E00850.6</Coordinates>
+                    <Airway type="Airway">UA605</Airway>
+                    <Altitude>
+                        <EstimatedAltitude>
+                            <Value unit="ft/100">260</Value>
+                        </EstimatedAltitude>
+                    </Altitude>
+                    <MinimumSafeAltitude>
+                        <Value unit="ft/100">55</Value> 
+                    </MinimumSafeAltitude>
+                    <SegmentWind>
+                        <Direction>
+                            <Value type="true" unit="deg">260</Value>
+                        </Direction>
+                        <Speed>
+                            <Value unit="kt">30</Value>
+                        </Speed>
+                    </SegmentWind>
+                    <SegmentWindComponent>
+                        <Value unit="kt">-1</Value>
+                    </SegmentWindComponent>
+                    <SegmentTemperature>
+                        <Value unit="C">-28</Value>
+                    </SegmentTemperature>
+                    <SegmentISADeviation>
+                        <Value unit="C">8</Value>
+                    </SegmentISADeviation>
+                    <Tropopause>
+                        <Value unit="ft/100">487</Value>
+                    </Tropopause>
+                    <TrueAirSpeed>
+                        <EstimatedSpeed>
+                            <Value unit="kt">410</Value>
+                        </EstimatedSpeed>
+                    </TrueAirSpeed>
+                    <MachNumber>
+                        <EstimatedMachNumber>
+                            <Value>0.671</Value>
+                        </EstimatedMachNumber>
+                    </MachNumber>
+                    <IndicatedAirSpeed>
+                        <EstimatedSpeed>
+                            <Value unit="kt">274</Value>
+                        </EstimatedSpeed>
+                    </IndicatedAirSpeed>
+                    <GroundSpeed>
+                        <EstimatedSpeed>
+                            <Value unit="kt">413</Value>
+                        </EstimatedSpeed>
+                    </GroundSpeed>
+                    <Tracks>
+                        <OutboundTrack>
+                            <Value type="true" unit="deg">34</Value>
+                        </OutboundTrack>
+                        <OutboundTrack>
+                            <Value type="magnetic" unit="deg">32</Value>
+                        </OutboundTrack>
+                        <SegmentTrack>
+                            <Value type="true" unit="deg">348</Value>
+                        </SegmentTrack>
+                        <SegmentTrack>
+                            <Value type="magnetic" unit="deg">346</Value>
+                        </SegmentTrack>
+                    </Tracks>
+                    <GroundDistance>
+                        <Value unit="NM">61</Value>
+                    </GroundDistance>
+                    <RemainingGroundDistance>
+                        <Value unit="NM">103</Value>
+                    </RemainingGroundDistance>
+                    <AirDistance>
+                        <Value unit="NM">61</Value> 
+                    </AirDistance>
+                    <RemainingAirDistance>
+                        <Value unit="NM">101</Value>
+                    </RemainingAirDistance>
+                    <TimeFromPreviousWaypoint>
+                        <EstimatedTime>
+                            <Value>PT0H8M52S</Value>
+                        </EstimatedTime>
+                    </TimeFromPreviousWaypoint>
+                    <CumulatedFlightTime>
+                        <EstimatedTime>
+                            <Value>PT0H28M14S</Value>
+                        </EstimatedTime>
+                    </CumulatedFlightTime>
+                    <RemainingFlightTime>
+                        <EstimatedTime>
+                            <Value>PT0H20M16S</Value>
+                        </EstimatedTime>
+                    </RemainingFlightTime>
+                    <BurnOff>
+                        <EstimatedWeight>
+                            <Value unit="kg">412</Value>
+                        </EstimatedWeight>
+                    </BurnOff>
+                    <CumulatedBurnOff>
+                        <EstimatedWeight>
+                            <Value unit="kg">1789</Value>
+                        </EstimatedWeight>
+                    </CumulatedBurnOff>
+                    <FuelOnBoard>
+                        <EstimatedWeight>
+                            <Value unit="kg">1809</Value>
+                        </EstimatedWeight>
+                    </FuelOnBoard>
+                    <MinimumFuelOnBoard>
+                        <Value unit="kg">1603</Value>
+                    </MinimumFuelOnBoard>
+                    <Function>TopOfDescent</Function>
+                </Waypoint>
+                <Waypoint sequenceId="6" waypointId="T_O_D" waypointName="T_O_D"    >
+                    <Coordinates latitude="+98271" longitude="+32661">N2717.8 E00904.4</Coordinates>
+                    <Airway type="Airway">UB727</Airway>
+                    <Altitude>
+                        <EstimatedAltitude>
+                            <Value unit="ft/100">250</Value>
+                        </EstimatedAltitude>
+                    </Altitude>
+                    <MinimumSafeAltitude>
+                        <Value unit="ft/100">37</Value> 
+                    </MinimumSafeAltitude>
+                    <SegmentWind>
+                        <Direction>
+                            <Value type="true" unit="deg">264</Value>
+                        </Direction>
+                        <Speed>
+                            <Value unit="kt">35</Value>
+                        </Speed>
+                    </SegmentWind>
+                    <SegmentWindComponent>
+                        <Value unit="kt">23</Value>
+                    </SegmentWindComponent>
+                    <SegmentTemperature>
+                        <Value unit="C">-27</Value>
+                    </SegmentTemperature>
+                    <SegmentISADeviation>
+                        <Value unit="C">8</Value>
+                    </SegmentISADeviation>
+                    <Tropopause>
+                        <Value unit="ft/100">528</Value>
+                    </Tropopause>
+                    <TrueAirSpeed>
+                        <EstimatedSpeed>
+                            <Value unit="kt">408</Value>
+                        </EstimatedSpeed>
+                    </TrueAirSpeed>
+                    <MachNumber>
+                        <EstimatedMachNumber>
+                            <Value>0.667</Value>
+                        </EstimatedMachNumber>
+                    </MachNumber>
+                    <IndicatedAirSpeed>
+                        <EstimatedSpeed>
+                            <Value unit="kt">278</Value>
+                        </EstimatedSpeed>
+                    </IndicatedAirSpeed>
+                    <GroundSpeed>
+                        <EstimatedSpeed>
+                            <Value unit="kt">427</Value>
+                        </EstimatedSpeed>
+                    </GroundSpeed>
+                    <Tracks>
+                        <OutboundTrack>
+                            <Value type="true" unit="deg">34</Value>
+                        </OutboundTrack>
+                        <OutboundTrack>
+                            <Value type="magnetic" unit="deg">32</Value>
+                        </OutboundTrack>
+                        <SegmentTrack>
+                            <Value type="true" unit="deg">30</Value>
+                        </SegmentTrack>
+                        <SegmentTrack>
+                            <Value type="magnetic" unit="deg">27</Value>
+                        </SegmentTrack>
+                    </Tracks>
+                    <GroundDistance>
+                        <Value unit="NM">22</Value>
+                    </GroundDistance>
+                    <RemainingGroundDistance>
+                        <Value unit="NM">81</Value>
+                    </RemainingGroundDistance>
+                    <AirDistance>
+                        <Value unit="NM">21</Value> 
+                    </AirDistance>
+                    <RemainingAirDistance>
+                        <Value unit="NM">80</Value>
+                    </RemainingAirDistance>
+                    <TimeFromPreviousWaypoint>
+                        <EstimatedTime>
+                            <Value>PT0H3M02S</Value>
+                        </EstimatedTime>
+                    </TimeFromPreviousWaypoint>
+                    <CumulatedFlightTime>
+                        <EstimatedTime>
+                            <Value>PT0H31M16S</Value>
+                        </EstimatedTime>
+                    </CumulatedFlightTime>
+                    <RemainingFlightTime>
+                        <EstimatedTime>
+                            <Value>PT0H17M14S</Value>
+                        </EstimatedTime>
+                    </RemainingFlightTime>
+                    <BurnOff>
+                        <EstimatedWeight>
+                            <Value unit="kg">120</Value>
+                        </EstimatedWeight>
+                    </BurnOff>
+                    <CumulatedBurnOff>
+                        <EstimatedWeight>
+                            <Value unit="kg">1909</Value>
+                        </EstimatedWeight>
+                    </CumulatedBurnOff>
+                    <FuelOnBoard>
+                        <EstimatedWeight>
+                            <Value unit="kg">1689</Value>
+                        </EstimatedWeight>
+                    </FuelOnBoard>
+                    <MinimumFuelOnBoard>
+                        <Value unit="kg">1483</Value>
+                    </MinimumFuelOnBoard>
+                    <Function>TopOfDescent</Function>
+                </Waypoint>
+                <Waypoint sequenceId="7" waypointId="IMN" waypointName="IMN" waypointLongName="ZARZAITINE/IN AMENAS" countryICAOCode="DA">
+                    <Coordinates latitude="+101040" longitude="+34779">N2804.0 E00939.7</Coordinates>
+                    <Airway type="Airway">UB727</Airway>
+                    <Altitude>
+                        <EstimatedAltitude>
+                            <Value unit="ft/100">68</Value>
+                        </EstimatedAltitude>
+                    </Altitude>
+                    <MinimumSafeAltitude>
+                        <Value unit="ft/100">37</Value> 
+                    </MinimumSafeAltitude>
+                    <SegmentWind>
+                        <Direction>
+                            <Value type="true" unit="deg">302</Value>
+                        </Direction>
+                        <Speed>
+                            <Value unit="kt">17</Value>
+                        </Speed>
+                    </SegmentWind>
+                    <SegmentWindComponent>
+                        <Value unit="kt">1</Value> 
+                    </SegmentWindComponent>
+                    <SegmentTemperature>
+                        <Value unit="C">-8</Value> 
+                    </SegmentTemperature>
+                    <SegmentISADeviation>
+                        <Value unit="C">8</Value>
+                    </SegmentISADeviation>
+                    <Tropopause>
+                        <Value unit="ft/100">513</Value>
+                    </Tropopause>
+                    <TrueAirSpeed>
+                        <EstimatedSpeed>
+                            <Value unit="kt">408</Value>
+                        </EstimatedSpeed>
+                    </TrueAirSpeed>
+                    <MachNumber>
+                        <EstimatedMachNumber>
+                            <Value>0.78</Value>
+                        </EstimatedMachNumber>
+                    </MachNumber>
+                    <IndicatedAirSpeed>
+                        <EstimatedSpeed>
+                            <Value unit="kt">300</Value>
+                        </EstimatedSpeed>
+                    </IndicatedAirSpeed>
+                    <GroundSpeed>
+                        <EstimatedSpeed>
+                            <Value unit="kt">359</Value>
+                        </EstimatedSpeed>
+                    </GroundSpeed>
+                    <Tracks>
+                        <OutboundTrack>
+                            <Value type="true" unit="deg">227</Value>
+                        </OutboundTrack>
+                        <OutboundTrack>
+                            <Value type="magnetic" unit="deg">224</Value>
+                        </OutboundTrack>
+                        <SegmentTrack>
+                            <Value type="true" unit="deg">33</Value>
+                        </SegmentTrack>
+                        <SegmentTrack>
+                            <Value type="magnetic" unit="deg">30</Value>
+                        </SegmentTrack>
+                    </Tracks>
+                    <GroundDistance>
+                        <Value unit="NM">56</Value>
+                    </GroundDistance>
+                    <RemainingGroundDistance>
+                        <Value unit="NM">25</Value>
+                    </RemainingGroundDistance>
+                    <AirDistance>
+                        <Value unit="NM">56</Value> 
+                    </AirDistance>
+                    <RemainingAirDistance>
+                        <Value unit="NM">25</Value>
+                    </RemainingAirDistance>
+                    <TimeFromPreviousWaypoint>
+                        <EstimatedTime>
+                            <Value>PT0H9M24S</Value>
+                        </EstimatedTime>
+                    </TimeFromPreviousWaypoint>
+                    <CumulatedFlightTime>
+                        <EstimatedTime>
+                            <Value>PT0H40M40S</Value>
+                        </EstimatedTime>
+                    </CumulatedFlightTime>
+                    <RemainingFlightTime>
+                        <EstimatedTime>
+                            <Value>PT0H7M50S</Value>
+                        </EstimatedTime>
+                    </RemainingFlightTime>
+                    <BurnOff>
+                        <EstimatedWeight>
+                            <Value unit="kg">132</Value>
+                        </EstimatedWeight>
+                    </BurnOff>
+                    <CumulatedBurnOff>
+                        <EstimatedWeight>
+                            <Value unit="kg">2041</Value>
+                        </EstimatedWeight>
+                    </CumulatedBurnOff>
+                    <FuelOnBoard>
+                        <EstimatedWeight>
+                            <Value unit="kg">1557</Value>
+                        </EstimatedWeight>
+                    </FuelOnBoard>
+                    <MinimumFuelOnBoard>
+                        <Value unit="kg">1351</Value>
+                    </MinimumFuelOnBoard>
+                    <Function>Enroute</Function>
+                </Waypoint>
+                <Waypoint sequenceId="8" waypointId="DAUZ" waypointName="DAUZ" waypointLongName="ZARZAITINE/IN AMENAS" countryICAOCode="DA">
+                    <Coordinates latitude="+100985" longitude="+34714">N2803.1 E00938.6</Coordinates>
+                    <Airway type="Direct">DCT</Airway>
+                    <Altitude>
+                        <EstimatedAltitude>
+                            <Value unit="ft/100">18</Value>
+                        </EstimatedAltitude>
+                    </Altitude>
+                    <MinimumSafeAltitude>
+                        <Value unit="ft/100">32</Value> 
+                    </MinimumSafeAltitude>
+                    <SegmentWind>
+                        <Direction>
+                            <Value type="true" unit="deg">347</Value>
+                        </Direction>
+                        <Speed>
+                            <Value unit="kt">7</Value> 
+                        </Speed>
+                    </SegmentWind>
+                    <SegmentWindComponent>
+                        <Value unit="kt">3</Value> 
+                    </SegmentWindComponent>
+                    <SegmentTemperature>
+                        <Value unit="C">14</Value> 
+                    </SegmentTemperature>
+                    <SegmentISADeviation>
+                        <Value unit="C">6</Value>
+                    </SegmentISADeviation>
+                    <Tropopause>
+                        <Value unit="ft/100">513</Value>
+                    </Tropopause>
+                    <TrueAirSpeed>
+                        <EstimatedSpeed>
+                            <Value unit="kt">408</Value>
+                        </EstimatedSpeed>
+                    </TrueAirSpeed>
+                    <MachNumber>
+                        <EstimatedMachNumber>
+                            <Value>0.78</Value>
+                        </EstimatedMachNumber>
+                    </MachNumber>
+                    <IndicatedAirSpeed>
+                        <EstimatedSpeed>
+                            <Value unit="kt">300</Value>
+                        </EstimatedSpeed>
+                    </IndicatedAirSpeed>
+                    <GroundSpeed>
+                        <EstimatedSpeed>
+                            <Value unit="kt">191</Value>
+                        </EstimatedSpeed>
+                    </GroundSpeed>
+                    <Tracks>
+                        <OutboundTrack>
+                            <Value type="true" unit="deg">227</Value>
+                        </OutboundTrack>
+                        <OutboundTrack>
+                            <Value type="magnetic" unit="deg">224</Value>
+                        </OutboundTrack>
+                        <SegmentTrack>
+                            <Value type="true" unit="deg">318</Value>
+                        </SegmentTrack>
+                        <SegmentTrack>
+                            <Value type="magnetic" unit="deg">316</Value>
+                        </SegmentTrack>
+                    </Tracks>
+                    <GroundDistance>
+                        <Value unit="NM">25</Value>
+                    </GroundDistance>
+                    <RemainingGroundDistance>
+                        <Value unit="NM">0</Value> 
+                    </RemainingGroundDistance>
+                    <AirDistance>
+                        <Value unit="NM">25</Value> 
+                    </AirDistance>
+                    <RemainingAirDistance>
+                        <Value unit="NM">0</Value> 
+                    </RemainingAirDistance>
+                    <TimeFromPreviousWaypoint>
+                        <EstimatedTime>
+                            <Value>PT0H7M50S</Value>
+                        </EstimatedTime>
+                    </TimeFromPreviousWaypoint>
+                    <CumulatedFlightTime>
+                        <EstimatedTime>
+                            <Value>PT0H48M30S</Value>
+                        </EstimatedTime>
+                    </CumulatedFlightTime>
+                    <BurnOff>
+                        <EstimatedWeight>
+                            <Value unit="kg">151</Value>
+                        </EstimatedWeight>
+                    </BurnOff>
+                    <CumulatedBurnOff>
+                        <EstimatedWeight>
+                            <Value unit="kg">2192</Value>
+                        </EstimatedWeight>
+                    </CumulatedBurnOff>
+                    <FuelOnBoard>
+                        <EstimatedWeight>
+                            <Value unit="kg">1406</Value>
+                        </EstimatedWeight>
+                    </FuelOnBoard>
+                    <MinimumFuelOnBoard>
+                        <Value unit="kg">1200</Value>
+                    </MinimumFuelOnBoard>
+                    <Function>ArrivalAlternateAirport</Function>
+                </Waypoint>
+            </Waypoints>
+               
+            <Airport airportFunction="ArrivalAlternateAirport" airportName="ZARZAITINE/IN AMENAS">
+                <AirportICAOCode>DAUZ</AirportICAOCode>
+                <AirportIATACode>IAM</AirportIATACode>
+            </Airport>
+            <RouteInformation>
+                <AverageWind>
+                    <Direction>
+                        <Value type="true" unit="deg">276</Value>
+                    </Direction>
+                    <Speed>
+                        <Value unit="kt">16</Value>
+                    </Speed>
+                </AverageWind>
+                <AverageWindComponent>
+                    <Value unit="kt">1</Value> 
+                </AverageWindComponent>
+                <AverageISADeviation>
+                    <Value unit="C">8</Value>
+                </AverageISADeviation>
+                <InitialAltitude>
+                    <Value unit="ft/100">240</Value>
+                </InitialAltitude>
+                <RouteDescription>DCT DJA A605 TARAT UA605 TILMA UB727 IMN DCT</RouteDescription>
+                <GroundDistance>
+                    <Value unit="NM">281</Value>
+                </GroundDistance>
+                <AirDistance>
+                    <Value unit="NM">280</Value>
+                </AirDistance>
+                <GreatCircleDistance>
+                    <Value unit="NM">226</Value>
+                </GreatCircleDistance>
+            </RouteInformation>
+        </AlternateRoute>
+    </AlternateRoutes>
+<AirportDataList>
+    <AirportData>
+        <Airport airportFunction="DepartureAirport" airportName="TAMENGHASSET/AGUENAR-HADJ BEY">
+            <AirportICAOCode>DAAT</AirportICAOCode>
+            <AirportIATACode>TMR</AirportIATACode>
+        </Airport>
+        <PlannedRunway>20</PlannedRunway>
+        <TerminalProcedure procedureType="DCT">DAAT/D</TerminalProcedure>
+        <SuitablePeriod from="2024-12-21T01:35:00Z" until="2024-12-21T02:35:00Z"/>
+        <RequiredWeatherCondition>
+            <RequiredHorizontalVisibility unit="m">250</RequiredHorizontalVisibility>
+            <RequiredVerticalVisibility unit="ft">0 </RequiredVerticalVisibility> 
+        </RequiredWeatherCondition>
+        <ConsideredWeatherCondition>
+            <ConsideredHorizontalVisibility unit="m">9999</ConsideredHorizontalVisibility>
+            <ConsideredVerticalVisibility unit="ft">9999</ConsideredVerticalVisibility>
+        </ConsideredWeatherCondition>
+    </AirportData>
+    <AirportData>
+        <Airport airportFunction="ArrivalAirport" airportName="DJANET/TISKA">
+            <AirportICAOCode>DAAJ</AirportICAOCode>
+            <AirportIATACode>DJG</AirportIATACode>
+        </Airport>
+        <PlannedRunway>30</PlannedRunway>
+        <TerminalProcedure procedureType="DCT">DAAJ/A</TerminalProcedure>
+        <SuitablePeriod from="2024-12-21T01:20:00Z" until="2024-12-21T03:20:00Z"/>
+        <RequiredWeatherCondition>
+            <RequiredHorizontalVisibility unit="m">3700</RequiredHorizontalVisibility>
+            <RequiredVerticalVisibility unit="ft">705</RequiredVerticalVisibility> 
+        </RequiredWeatherCondition>
+        <ConsideredWeatherCondition>
+            <ConsideredHorizontalVisibility unit="m">9999</ConsideredHorizontalVisibility>
+            <ConsideredVerticalVisibility unit="ft">9999</ConsideredVerticalVisibility>
+        </ConsideredWeatherCondition>
+    </AirportData>
+    <AirportData>
+        <Airport airportFunction="PrimaryArrivalAlternateAirport" airportName="TAMENGHASSET/AGUENAR-HADJ BEY">
+            <AirportICAOCode>DAAT</AirportICAOCode>
+            <AirportIATACode>TMR</AirportIATACode>
+        </Airport>
+        <PlannedRunway>20</PlannedRunway>
+        <TerminalProcedure procedureType="DCT">DAAJ/D</TerminalProcedure>
+        <TerminalProcedure procedureType="DCT">DAAT/A</TerminalProcedure>
+        <SuitablePeriod from="2024-12-21T02:11:00Z" until="2024-12-21T04:11:00Z"/>
+        <RequiredWeatherCondition>
+            <RequiredHorizontalVisibility unit="m">3200</RequiredHorizontalVisibility>
+            <RequiredVerticalVisibility unit="ft">600</RequiredVerticalVisibility> 
+        </RequiredWeatherCondition>
+        <ConsideredWeatherCondition>
+            <ConsideredHorizontalVisibility unit="m">9999</ConsideredHorizontalVisibility>
+            <ConsideredVerticalVisibility unit="ft">9999</ConsideredVerticalVisibility>
+        </ConsideredWeatherCondition>
+    </AirportData>
+    <AirportData>
+        <Airport airportFunction="ArrivalAlternateAirport" airportName="ZARZAITINE/IN AMENAS">
+            <AirportICAOCode>DAUZ</AirportICAOCode>
+            <AirportIATACode>IAM</AirportIATACode>
+        </Airport>
+        <PlannedRunway>23</PlannedRunway>
+        <TerminalProcedure procedureType="DCT">DAAJ/D</TerminalProcedure>
+        <TerminalProcedure procedureType="DCT">DAUZ/A</TerminalProcedure>
+        <SuitablePeriod from="2024-12-21T02:08:00Z" until="2024-12-21T04:08:00Z"/>
+        <RequiredWeatherCondition>
+            <RequiredHorizontalVisibility unit="m">3400</RequiredHorizontalVisibility>
+            <RequiredVerticalVisibility unit="ft">650</RequiredVerticalVisibility> 
+        </RequiredWeatherCondition>
+        <ConsideredWeatherCondition>
+            <ConsideredHorizontalVisibility unit="m">9999</ConsideredHorizontalVisibility>
+            <ConsideredVerticalVisibility unit="ft">9999</ConsideredVerticalVisibility>
+        </ConsideredWeatherCondition>
+    </AirportData>
+</AirportDataList>
+<TankeringInfo>
+    <TankeringAdvice  priority="Load">no tankering recommended
+    </TankeringAdvice>
+    <TankeringWeight>
+        <Value unit="kg">0</Value>
+    </TankeringWeight>
+    <TankeringProfit unit="USD/TO">-600</TankeringProfit>
+</TankeringInfo>
+</FlightPlan>

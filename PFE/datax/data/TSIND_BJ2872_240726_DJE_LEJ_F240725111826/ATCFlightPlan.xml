@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP4" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-07-25T11:18:21" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-07-26" scheduledTimeOfDeparture="2024-07-26T13:00:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>LBT2872</FlightIdentifier>
+				<FlightNumber airlineIATACode="BJ" number="2872">
+					<CommercialFlightNumber>BJ2872</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>DTTJ</AirportICAOCode>
+				<AirportIATACode>DJE</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>EDDP</AirportICAOCode>
+				<AirportIATACode>LEJ</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSIND">
+			<AircraftModel>
+				<AircraftICAOType>A320</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF DTTJZAZX DTTJZPZX DTTJZTZX EUCHZMFP EUCBZMFP DTTCZQZX DTTCZRZX</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>(FPL-LBT2872-IN</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>-A320/M-SDFGHIJ1LORVWY/LB1</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-DTTJ1300</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-N0458F380 DCT JBA M735 RELBA UM735 BABLO DCT MEGAN DCT AMTEL DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>SUMIR DCT BRENO DCT KONIN DCT ERNAS M726 LASGA/N0433F290 T953</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>VOCIM T954 GOXLI GOXLI1V</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>-EDDP0229 EDDE EDDC</Text>
+		</Paragraph>
+		<Paragraph sequence="10">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/240726 REG/TSIND EET/LIRR0027 LIMM0121</Text>
+		</Paragraph>
+		<Paragraph sequence="11">
+			<Text>LOVV0147 EDUU0151 SEL/LPBR CODE/02A1A3 OPR/LBT PER/C)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="DTTJZAZX DTTJZPZX DTTJZTZX EUCHZMFP EUCBZMFP DTTCZQZX DTTCZRZX" />
+		<Originator address="DTMBLBTO" />
+		<Items>
+			<Item7 aTCCallsign="LBT2872" />
+			<Item8 flightRules="I" typeOfFlight="N" />
+			<Item9 typeOfAircraft="A320" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDFGHIJ1LORVWY/LB1" />
+			<Item13 departureAirport="DTTJ" departureTime="1300" />
+			<Item15 cruisingSpeed="N0458" cruisingLevel="F380" route="DCT JBA M735 RELBA UM735 BABLO DCT MEGAN DCT AMTEL DCT SUMIR DCT BRENO DCT KONIN DCT ERNAS M726 LASGA/N0433F290 T953 VOCIM T954 GOXLI GOXLI1V" />
+			<Item16 arrivalAirport="EDDP" estimatedFlightTime="0229" alternateAirport="EDDE" secondAlternateAirport="EDDC" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/240726 REG/TSIND EET/LIRR0027 LIMM0121 LOVV0147 EDUU0151 SEL/LPBR CODE/02A1A3 OPR/LBT PER/C">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>240726</DOF>
+				<REG>TSIND</REG>
+				<EET>LIRR0027 LIMM0121 LOVV0147 EDUU0151</EET>
+				<SEL>LPBR</SEL>
+				<CODE>02A1A3</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

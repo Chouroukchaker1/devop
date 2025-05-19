@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP7" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-11-22T06:03:13" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-11-22" scheduledTimeOfDeparture="2024-11-22T12:20:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>LBT281</FlightIdentifier>
+				<FlightNumber airlineIATACode="BJ" number=" 281">
+					<CommercialFlightNumber>BJ281</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>EDDM</AirportICAOCode>
+				<AirportIATACode>MUC</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>DTTA</AirportICAOCode>
+				<AirportIATACode>TUN</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSIND">
+			<AircraftModel>
+				<AircraftICAOType>A320</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF EUCHZMFP EUCBZMFP</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>AD DTTCZQZX DTTCZRZX DTTAZAZX DTTAZPZX DTTAZTZX</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>(FPL-LBT281-IS</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-A320/M-SDFGHIJ1LORVWY/LB1</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-EDDM1220</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>-N0460F370 TURBU7N TURBU Y107 TOBSO DCT BAKOR DCT GIKEB DCT BOA DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>TIPNI DCT LOMED DCT OSMOX DCT GINAR DCT VELAD DCT QUENN DCT NOLSI</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>UA868 MEDAR DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="10">
+			<Text>-DTTA0139 DTNH</Text>
+		</Paragraph>
+		<Paragraph sequence="11">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/241122 REG/TSIND EET/LOVV0009 LIMM0014</Text>
+		</Paragraph>
+		<Paragraph sequence="12">
+			<Text>LIRR0043 DTTC0130 SEL/LPBR CODE/02A1A3 OPR/LBT PER/C)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="EUCHZMFP EUCBZMFP" />
+		<Originator address="DTMBLBTO" />
+		<AdditionalAddressees addresses="DTTCZQZX DTTCZRZX DTTAZAZX DTTAZPZX DTTAZTZX" />
+		<Items>
+			<Item7 aTCCallsign="LBT281" />
+			<Item8 flightRules="I" typeOfFlight="S" />
+			<Item9 typeOfAircraft="A320" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDFGHIJ1LORVWY/LB1" />
+			<Item13 departureAirport="EDDM" departureTime="1220" />
+			<Item15 cruisingSpeed="N0460" cruisingLevel="F370" route="TURBU7N TURBU Y107 TOBSO DCT BAKOR DCT GIKEB DCT BOA DCT TIPNI DCT LOMED DCT OSMOX DCT GINAR DCT VELAD DCT QUENN DCT NOLSI UA868 MEDAR DCT" />
+			<Item16 arrivalAirport="DTTA" estimatedFlightTime="0139" alternateAirport="DTNH" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/241122 REG/TSIND EET/LOVV0009 LIMM0014 LIRR0043 DTTC0130 SEL/LPBR CODE/02A1A3 OPR/LBT PER/C">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>241122</DOF>
+				<REG>TSIND</REG>
+				<EET>LOVV0009 LIMM0014 LIRR0043 DTTC0130</EET>
+				<SEL>LPBR</SEL>
+				<CODE>02A1A3</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

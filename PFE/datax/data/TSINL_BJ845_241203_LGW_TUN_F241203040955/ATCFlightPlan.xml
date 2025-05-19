@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP12" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-12-03T04:09:47" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-12-03" scheduledTimeOfDeparture="2024-12-03T11:45:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>LBT845</FlightIdentifier>
+				<FlightNumber airlineIATACode="BJ" number=" 845">
+					<CommercialFlightNumber>BJ845</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>EGKK</AirportICAOCode>
+				<AirportIATACode>LGW</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>DTTA</AirportICAOCode>
+				<AirportIATACode>TUN</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSINL">
+			<AircraftModel>
+				<AircraftICAOType>A20N</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF EUCHZMFP EUCBZMFP</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>AD DTTCZQZX DTTCZRZX DTTAZAZX DTTAZPZX DTTAZTZX</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>(FPL-LBT845-IS</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-A20N/M-SDFGHIJ1LORVWY/LB1G1</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-EGKK1145</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>-N0391F230 BOGNA1M BOGNA L612 XAMAB/N0445F370 UL612 OGULO DCT OKASI</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>DCT OKEKO DCT MOU/N0446F390 DCT MADIV DCT MOKIP DCT TUFTA DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>KOGAS DCT VEVAR UM623 KOLON DCT OMARD DCT VAREK DCT LOKDU DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="10">
+			<Text>PELOS DCT IPROM DCT MALAV DCT ARSIK DCT TEKSA DCT RAMEN DCT KOVAS</Text>
+		</Paragraph>
+		<Paragraph sequence="11">
+			<Text>DCT CAR DCT NOLSI A868 MEDAR DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="12">
+			<Text>-DTTA0210 DTNH</Text>
+		</Paragraph>
+		<Paragraph sequence="13">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/241203 REG/TSINL EET/LFFF0011 LIMM0103</Text>
+		</Paragraph>
+		<Paragraph sequence="14">
+			<Text>LFFF0105 LIMM0106 LFFF0109 LIRR0134 DTTC0201 SEL/MPER CODE/02A1AB</Text>
+		</Paragraph>
+		<Paragraph sequence="15">
+			<Text>OPR/LBT PER/C)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="EUCHZMFP EUCBZMFP" />
+		<Originator address="DTMBLBTO" />
+		<AdditionalAddressees addresses="DTTCZQZX DTTCZRZX DTTAZAZX DTTAZPZX DTTAZTZX" />
+		<Items>
+			<Item7 aTCCallsign="LBT845" />
+			<Item8 flightRules="I" typeOfFlight="S" />
+			<Item9 typeOfAircraft="A20N" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDFGHIJ1LORVWY/LB1G1" />
+			<Item13 departureAirport="EGKK" departureTime="1145" />
+			<Item15 cruisingSpeed="N0391" cruisingLevel="F230" route="BOGNA1M BOGNA L612 XAMAB/N0445F370 UL612 OGULO DCT OKASI DCT OKEKO DCT MOU/N0446F390 DCT MADIV DCT MOKIP DCT TUFTA DCT KOGAS DCT VEVAR UM623 KOLON DCT OMARD DCT VAREK DCT LOKDU DCT PELOS DCT IPROM DCT MALAV DCT ARSIK DCT TEKSA DCT RAMEN DCT KOVAS DCT CAR DCT NOLSI A868 MEDAR DCT" />
+			<Item16 arrivalAirport="DTTA" estimatedFlightTime="0210" alternateAirport="DTNH" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/241203 REG/TSINL EET/LFFF0011 LIMM0103 LFFF0105 LIMM0106 LFFF0109 LIRR0134 DTTC0201 SEL/MPER CODE/02A1AB OPR/LBT PER/C">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>241203</DOF>
+				<REG>TSINL</REG>
+				<EET>LFFF0011 LIMM0103 LFFF0105 LIMM0106 LFFF0109 LIRR0134 DTTC0201</EET>
+				<SEL>MPER</SEL>
+				<CODE>02A1AB</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

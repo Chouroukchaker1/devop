@@ -1,0 +1,100 @@
+.navbar {
+    background-color: #f3f4f7;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+    padding: 3px 0;
+    height: 50px;
+}
+
+/* Style pour les icônes */
+.nav-icon {
+    font-size: 18px; /* Taille des icônes */
+    margin: 0;
+    vertical-align: middle;
+}
+
+/* Espacement et taille des liens */
+.navbar-nav .nav-link {
+    color: rgb(0, 72, 153) !important;
+    margin-right: 15px;
+    font-size: 14px;
+    padding: 0 12px; /* Augmenté légèrement pour que les icônes aient plus d'espace */
+    display: flex;
+    align-items: center;
+    height: 44px;
+}
+
+/* Ajout d'un effet au survol pour montrer l'interactivité */
+.navbar-nav .nav-link:hover {
+    color: rgb(0, 72, 153) !important;
+    background-color: rgba(0, 72, 153, 0.05);
+    border-radius: 4px;
+}
+
+/* Container fluid pour occuper toute la largeur */
+.navbar .container-fluid {
+    width: 100%;
+    padding: 0 10px;
+    margin: 0;
+}
+
+/* Style du bouton hamburger */
+.navbar-toggler {
+    border-color: rgb(0, 72, 153);
+    padding: 6px;
+}
+/* Notifications */
+.notification-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    font-size: 0.7rem;
+  }
+  
+  .unread-notification {
+    background-color: #f8f9fa;
+  }
+  
+  /* Navbar general */
+  .navbar {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 1rem;
+  }
+  
+  .nav-icon {
+    font-size: 1.2rem;
+    color: #495057;
+    transition: color 0.3s;
+  }
+  
+  .nav-icon:hover {
+    color: #0d6efd;
+  }
+  
+  /* Dropdowns */
+  .dropdown-menu {
+    padding: 0;
+  }
+  
+  .dropdown-item {
+    padding: 0.5rem 1rem;
+    white-space: normal;
+  }
+  
+  .dropdown-item:active {
+    background-color: #e9ecef;
+    color: #212529;
+  }
+  
+  /* Spinner */
+  .spinner-border {
+    width: 1rem;
+    height: 1rem;
+    border-width: 0.15em;
+  }
+  

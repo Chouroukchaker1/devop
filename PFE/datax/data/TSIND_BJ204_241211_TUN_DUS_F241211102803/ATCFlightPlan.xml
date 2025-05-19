@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP7" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-12-11T10:27:55" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-12-11" scheduledTimeOfDeparture="2024-12-11T13:15:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>LBT204</FlightIdentifier>
+				<FlightNumber airlineIATACode="BJ" number=" 204">
+					<CommercialFlightNumber>BJ204</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>DTTA</AirportICAOCode>
+				<AirportIATACode>TUN</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>EDDL</AirportICAOCode>
+				<AirportIATACode>DUS</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSIND">
+			<AircraftModel>
+				<AircraftICAOType>A320</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF DTTAZAZX DTTAZPZX DTTAZTZX DTTCZQZX DTTCZRZX EUCHZMFP EUCBZMFP</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>(FPL-LBT204-IS</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>-A320/M-SDFGHIJ1LORVWY/LB1</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-DTTA1315</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-N0454F360 TOBIB2A TOBIB A725 TANIT UA725 OSMAR DCT PIRIX DCT UPDUT</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>DCT CORSI DCT OKROK DCT AKUTI DCT TORTU DCT OLETI DCT UNITA DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>OTMUV DCT GEN DCT BOTAL DCT PEPAG DCT ABESI DCT LOKTA DCT TEDGO</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>DCT HAREM DCT LOHRE Z850 ADEMI T854 DOMUX DOMUX1A</Text>
+		</Paragraph>
+		<Paragraph sequence="10">
+			<Text>-EDDL0208 EDDK</Text>
+		</Paragraph>
+		<Paragraph sequence="11">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/241211 REG/TSIND EET/LIRR0015 LFFF0040</Text>
+		</Paragraph>
+		<Paragraph sequence="12">
+			<Text>LIMM0056 LSAS0117 EDUU0131 EDGG0156 SEL/LPBR CODE/02A1A3 OPR/LBT</Text>
+		</Paragraph>
+		<Paragraph sequence="13">
+			<Text>PER/C)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="DTTAZAZX DTTAZPZX DTTAZTZX EUCHZMFP EUCBZMFP DTTCZQZX DTTCZRZX" />
+		<Originator address="DTMBLBTO" />
+		<Items>
+			<Item7 aTCCallsign="LBT204" />
+			<Item8 flightRules="I" typeOfFlight="S" />
+			<Item9 typeOfAircraft="A320" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDFGHIJ1LORVWY/LB1" />
+			<Item13 departureAirport="DTTA" departureTime="1315" />
+			<Item15 cruisingSpeed="N0454" cruisingLevel="F360" route="TOBIB2A TOBIB A725 TANIT UA725 OSMAR DCT PIRIX DCT UPDUT DCT CORSI DCT OKROK DCT AKUTI DCT TORTU DCT OLETI DCT UNITA DCT OTMUV DCT GEN DCT BOTAL DCT PEPAG DCT ABESI DCT LOKTA DCT TEDGO DCT HAREM DCT LOHRE Z850 ADEMI T854 DOMUX DOMUX1A" />
+			<Item16 arrivalAirport="EDDL" estimatedFlightTime="0208" alternateAirport="EDDK" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/241211 REG/TSIND EET/LIRR0015 LFFF0040 LIMM0056 LSAS0117 EDUU0131 EDGG0156 SEL/LPBR CODE/02A1A3 OPR/LBT PER/C">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>241211</DOF>
+				<REG>TSIND</REG>
+				<EET>LIRR0015 LFFF0040 LIMM0056 LSAS0117 EDUU0131 EDGG0156</EET>
+				<SEL>LPBR</SEL>
+				<CODE>02A1A3</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AirportData creationTime="2024-08-29T00:00:42" flightPlanId="OFP7" fullPackage="true" xsi:schemaLocation="http://aeec.aviation-ia.net/633 AirportData.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<M633Header timestamp="2024-08-29T00:00:41Z" versionNumber="3"/> 
+<M633SupplementaryHeader>
+    <Flight flightOriginDate="2024-08-28Z" scheduledTimeOfDeparture="2024-08-29T02:25:00Z">
+        <FlightIdentification>
+            <FlightIdentifier>LBT7246</FlightIdentifier>
+                <FlightNumber airlineIATACode="BJ" number="7246" >
+                    <CommercialFlightNumber>BJ7246</CommercialFlightNumber>
+                </FlightNumber>
+             </FlightIdentification>
+        <DepartureAirport airportFunction="DepartureAirport" airportName="DJERBA/ZARZIS">
+            <AirportICAOCode>DTTJ</AirportICAOCode>
+            <AirportIATACode>DJE</AirportIATACode>
+        </DepartureAirport>
+        <ArrivalAirport airportFunction="ArrivalAirport" airportName="LJUBLJANA/BRNIK">
+            <AirportICAOCode>LJLJ</AirportICAOCode>
+            <AirportIATACode>LJU</AirportIATACode>
+        </ArrivalAirport>
+    </Flight>
+    <Aircraft aircraftRegistration="TSINC" >
+        <AircraftModel airlineSpecificSubType="5.94">
+            <AircraftICAOType>A320</AircraftICAOType>
+        </AircraftModel>
+    </Aircraft>
+</M633SupplementaryHeader>
+    <Airport>
+        <AirportIdentification airportFunction="DepartureAirport" airportName="DJERBA/ZARZIS">
+            <AirportICAOCode>DTTJ</AirportICAOCode>
+            <AirportIATACode>DJE</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="27"> 
+            <Approach procedureName="TKOF">
+                <RequiredHorizontalVisibility unit="m">250</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">0</RequiredVerticalVisibility>  
+            </Approach>
+            <Elevation unit="ft">19</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">20</Elevation>
+        <AirportReferencePoint><Coordinates latitude="121952" longitude="38798">N3352.5 E01046.6</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT01H</LocalTimeOffsetToUTC>
+    </Airport>
+    <Airport>
+        <AirportIdentification airportFunction="ArrivalAirport" airportName="LJUBLJANA/BRNIK">
+            <AirportICAOCode>LJLJ</AirportICAOCode>
+            <AirportIATACode>LJU</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="30"> 
+            <Approach procedureName="CAT2">
+                <RequiredHorizontalVisibility unit="m">450</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">0</RequiredVerticalVisibility>
+            </Approach>
+            <Elevation unit="ft">1191</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">1273</Elevation>
+        <AirportReferencePoint><Coordinates latitude="166408" longitude="52042">N4613.5 E01427.4</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT02H</LocalTimeOffsetToUTC>
+    </Airport>
+    <Airport>
+        <AirportIdentification airportFunction="PrimaryArrivalAlternateAirport" airportName="KLAGENFURT">
+            <AirportICAOCode>LOWK</AirportICAOCode>
+            <AirportIATACode>KLU</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="28R">
+            <Approach procedureName="CAT1DME">
+                <RequiredHorizontalVisibility unit="m">1800</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">0</RequiredVerticalVisibility>
+            </Approach>
+            <Elevation unit="ft">1444</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">1472</Elevation>
+        <AirportReferencePoint><Coordinates latitude="167914" longitude="51614">N4638.6 E01420.2</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT02H</LocalTimeOffsetToUTC>
+    </Airport>
+    <Airport>
+        <AirportIdentification airportFunction="ArrivalAlternateAirport" airportName="GRAZ">
+            <AirportICAOCode>LOWG</AirportICAOCode>
+            <AirportIATACode>GRZ</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="34C">
+            <Approach procedureName="CAT1DME">
+                <RequiredHorizontalVisibility unit="m">550</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">0</RequiredVerticalVisibility>
+            </Approach>
+            <Elevation unit="ft">1089</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">1120</Elevation>
+        <AirportReferencePoint><Coordinates latitude="169175" longitude="55581">N4659.6 E01526.4</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT02H</LocalTimeOffsetToUTC>
+    </Airport>
+    <Airport>
+        <AirportIdentification airportFunction="ArrivalAlternateAirport" airportName="VIENNA/SCHWECHAT">
+            <AirportICAOCode>LOWW</AirportICAOCode>
+            <AirportIATACode>VIE</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="16">
+            <Approach procedureName="CAT1DME">
+                <RequiredHorizontalVisibility unit="m">550</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">0</RequiredVerticalVisibility>
+            </Approach>
+            <Elevation unit="ft">597</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">600</Elevation>
+        <AirportReferencePoint><Coordinates latitude="173197" longitude="59651">N4806.6 E01634.2</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT02H</LocalTimeOffsetToUTC>
+    </Airport>
+</AirportData>

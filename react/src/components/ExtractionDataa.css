@@ -1,0 +1,490 @@
+/* ========================================================================== */
+/* Root Variables */
+/* ========================================================================== */
+:root {
+  /* Colors */
+  --primary-color: #03123d;
+  --secondary-color: #3b82f6;
+  --background-color: #f3f4f6;
+  --card-bg: #ffffff;
+  --text-color: #111827;
+  --success-color: #10b981;
+  --error-color: #ef4444;
+  --warning-color: #f59e0b;
+  --border-color: #e5e7eb;
+
+  /* Effects */
+  --shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  --transition: all 0.2s ease;
+
+  /* Typography */
+  --font-family: 'Roboto', sans-serif;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 2rem;
+
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+
+  /* Dark Mode */
+  @media (prefers-color-scheme: dark) {
+    --background-color: #1f2937;
+    --card-bg: #374151;
+    --text-color: #e5e7eb;
+    --border-color: #4b5563;
+  }
+}
+
+/* ========================================================================== */
+/* Base Styles */
+/* ========================================================================== */
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  color: var(--text-color);
+  background-color: var(--background-color);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ========================================================================== */
+/* Header Styles */
+/* ========================================================================== */
+.carbon-header {
+  background: var(--card-bg);
+  padding: var(--spacing-xl);
+  border-radius: 12px;
+  margin: var(--spacing-xl) 0;
+  box-shadow: var(--shadow);
+}
+
+.carbon-header h1 {
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--spacing-md);
+  color: #000000;
+  font-weight: 700;
+}
+
+.carbon-header p {
+  font-size: var(--font-size-lg);
+  color: #6b7280;
+}
+
+/* ========================================================================== */
+/* Status Messages */
+/* ========================================================================== */
+.status-messages {
+  position: fixed;
+  top: var(--spacing-md);
+  right: var(--spacing-md);
+  z-index: 1000;
+  max-width: 350px;
+}
+
+.alert {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md);
+  border-radius: 8px;
+  margin-bottom: var(--spacing-md);
+  color: white;
+}
+
+.alert i {
+  font-size: var(--font-size-lg);
+}
+
+.alert-danger {
+  background-color: var(--error-color);
+}
+
+.alert-success {
+  background-color: var(--success-color);
+}
+
+.alert-warning {
+  background-color: var(--warning-color);
+}
+
+/* ========================================================================== */
+/* Data Cards */
+/* ========================================================================== */
+.card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  background: var(--card-bg);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card-body {
+  padding: var(--spacing-lg);
+}
+
+.icon-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-xl);
+}
+
+/* ========================================================================== */
+/* Tables */
+/* ========================================================================== */
+.fuel-data-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--card-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.fuel-data-table th {
+  background: #0d6efd;
+  color: white;
+  padding: var(--spacing-md);
+  text-align: left;
+  font-weight: 500;
+}
+
+.fuel-data-table td {
+  padding: var(--spacing-md);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.fuel-data-table tr:last-child td {
+  border-bottom: none;
+}
+
+.fuel-data-table tr:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.actions-cell {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+}
+
+.new-label {
+  font-size: 0.75rem;
+  color: var(--success-color);
+  margin-left: var(--spacing-xs);
+  font-weight: 500;
+}
+
+/* ========================================================================== */
+/* Modal Styles */
+/* ========================================================================== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items
+
+: center;
+  justify-content: center;
+  z-index: 1050;
+}
+
+.modal-content {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: var(--spacing-xl);
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: var(--shadow);
+}
+
+.modal-table-container {
+  max-height: 60vh;
+  overflow-y: auto;
+  margin: var(--spacing-md) 0;
+  scrollbar-width: thin;
+  scrollbar-color: var(--secondary-color) var(--border-color);
+}
+
+.modal-table-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-table-container::-webkit-scrollbar-track {
+  background: var(--border-color);
+}
+
+.modal-table-container::-webkit-scrollbar-thumb {
+  background: var(--secondary-color);
+  border-radius: 4px;
+}
+
+.modal-footer {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: flex-end;
+  margin-top: var(--spacing-lg);
+}
+
+.close-btn {
+  position: absolute;
+  top: var(--spacing-sm);
+  right: var(--spacing-sm);
+  background: transparent;
+  color: #6b7280;
+  border: none;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.close-btn:hover {
+  background: var(--background-color);
+  color: var(--error-color);
+}
+
+.close-btn i {
+  font-size: 0.95rem;
+}
+
+/* ========================================================================== */
+/* Form Elements */
+/* ========================================================================== */
+.form-control {
+  border-radius: 8px;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 1px solid var(--border-color);
+  transition: border-color 0.2s ease;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.btn {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  transition: var(--transition);
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  line-height: 1.5;
+}
+
+.btn-sm {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  font-size: 0.875rem;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--secondary-color);
+  outline-offset: 2px;
+}
+
+.btn-primary {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #2563eb;
+  transform: scale(1.02);
+}
+
+.btn-success {
+  background-color: var(--success-color);
+  color: white;
+}
+
+.btn-success:hover {
+  background-color: #059669;
+  transform: scale(1.02);
+}
+
+.btn-danger {
+  background-color: var(--error-color);
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #dc2626;
+  transform: scale(1.02);
+}
+
+.btn-info {
+  background-color: #0ea5e9;
+  color: white;
+}
+
+.btn-info:hover {
+  background-color: #0284c7;
+  transform: scale(1.02);
+}
+
+/* ========================================================================== */
+/* Chart Container */
+/* ========================================================================== */
+.chart-container {
+  background: var(--card-bg);
+  padding: var(--spacing-xl);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  margin: var(--spacing-xl) 0;
+}
+
+.chart-header h2 {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--spacing-md);
+  color: var(--text-color);
+}
+
+/* ========================================================================== */
+/* Responsive Design */
+/* ========================================================================== */
+@media (max-width: 768px) {
+  .carbon-header h1 {
+    font-size: var(--font-size-xl);
+  }
+
+  .carbon-header p {
+    font-size: var(--font-size-base);
+  }
+
+  .card {
+    margin-bottom: var(--spacing-md);
+  }
+
+  .modal-content {
+    width: 95vw;
+    padding: var(--spacing-md);
+  }
+
+  .fuel-data-table th,
+  .fuel-data-table td {
+    padding: var(--spacing-sm);
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: 0.9rem;
+  }
+
+  .actions-cell {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 576px) {
+  .carbon-header {
+    padding: var(--spacing-lg);
+  }
+
+  .chart-container {
+    padding: var(--spacing-md);
+  }
+
+  .modal-footer {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+
+  .modal-footer .btn {
+    width: 100%;
+  }
+
+  .actions-cell {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .actions-cell .btn {
+    width: 100%;
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .actions-cell .new-label {
+    margin-top: var(--spacing-xs);
+  }
+}
+
+/* ========================================================================== */
+/* Accessibility: Reduced Motion */
+/* ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .btn,
+  .close-btn {
+    transition: none;
+  }
+}
+
+/* Styles supplémentaires pour la section de bienvenue */
+.welcome-section h2 {
+  color: #000000;
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--spacing-md);
+}
+
+.welcome-section p {
+  color: #4b5563;
+  margin-bottom: var(--spacing-lg);
+}
+
+/* Styles pour les cartes d'action */
+.action-card {
+  transition: all 0.3s ease;
+}
+
+.action-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.action-card .card-title {
+  color: #000000;
+  font-weight: 600;
+}
+
+.action-card .card-text {
+  color: #4b5563;
+}
+ /* Modal content */
+.app .modal-content{
+  top:43px;
+ }
+ 
+/* Card body */
+.settings-page .theme-sensitive .card-body{
+  padding-bottom:95px;
+  height:244px;
+ }
+ 
+  
+ 
+ 

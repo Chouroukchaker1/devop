@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP5" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-12-25T04:16:33" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-12-25" scheduledTimeOfDeparture="2024-12-25T07:00:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>LBT234</FlightIdentifier>
+				<FlightNumber airlineIATACode="BJ" number=" 234">
+					<CommercialFlightNumber>BJ234</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>DTTA</AirportICAOCode>
+				<AirportIATACode>TUN</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>EDDF</AirportICAOCode>
+				<AirportIATACode>FRA</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSINE">
+			<AircraftModel>
+				<AircraftICAOType>A320</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF DTTAZAZX DTTAZPZX DTTAZTZX DTTCZQZX DTTCZRZX EUCHZMFP EUCBZMFP</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>(FPL-LBT234-IS</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>-A320/M-SDFGHIJ1LORVWY/LB1</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-DTTA0700</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-N0456F380 ICANI2A ICANI B979 SIRVI UG727 NIBEL DCT ADAMI DCT TINTO</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>DCT ABREG DCT LADOL T163 EMPAX EMPAX5B</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>-EDDF0213 EDDK</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/241225 REG/TSINE EET/LIRR0012 LIMM0105</Text>
+		</Paragraph>
+		<Paragraph sequence="10">
+			<Text>LSAS0130 EDUU0144 EDGG0209 SEL/KQEJ CODE/02A1A4 OPR/LBT PER/C)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="DTTAZAZX DTTAZPZX DTTAZTZX EUCHZMFP EUCBZMFP DTTCZQZX DTTCZRZX" />
+		<Originator address="DTMBLBTO" />
+		<Items>
+			<Item7 aTCCallsign="LBT234" />
+			<Item8 flightRules="I" typeOfFlight="S" />
+			<Item9 typeOfAircraft="A320" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDFGHIJ1LORVWY/LB1" />
+			<Item13 departureAirport="DTTA" departureTime="0700" />
+			<Item15 cruisingSpeed="N0456" cruisingLevel="F380" route="ICANI2A ICANI B979 SIRVI UG727 NIBEL DCT ADAMI DCT TINTO DCT ABREG DCT LADOL T163 EMPAX EMPAX5B" />
+			<Item16 arrivalAirport="EDDF" estimatedFlightTime="0213" alternateAirport="EDDK" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/241225 REG/TSINE EET/LIRR0012 LIMM0105 LSAS0130 EDUU0144 EDGG0209 SEL/KQEJ CODE/02A1A4 OPR/LBT PER/C">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>241225</DOF>
+				<REG>TSINE</REG>
+				<EET>LIRR0012 LIMM0105 LSAS0130 EDUU0144 EDGG0209</EET>
+				<SEL>KQEJ</SEL>
+				<CODE>02A1A4</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

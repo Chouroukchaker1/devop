@@ -1,0 +1,103 @@
+/* Contact Form Styles */
+.contact-container {
+  background-image: url('../assets/mo.jpg'); /* Assurez-vous que le chemin est correct */
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  box-sizing: border-box;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+form {
+  background-color: rgba(255, 255, 255, 0.92);
+  padding: 30px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  animation: slideUp 1s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+form h2 {
+  text-align: center;
+  color: #003366;
+  margin-bottom: 20px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 12px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+  background-color: #fff;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #004899;
+  box-shadow: 0 0 5px rgba(0, 72, 153, 0.5);
+  transform: scale(1.03);
+  outline: none;
+}
+
+button {
+  
+  padding: 12px;
+  background-color: #004899;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #003366;
+  transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  form {
+    padding: 20px;
+  }
+
+  input,
+  textarea {
+    font-size: 15px;
+  }
+
+  button {
+    font-size: 15px;
+  }
+}

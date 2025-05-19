@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP18" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-11-08T11:56:36" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-11-08" scheduledTimeOfDeparture="2024-11-08T13:15:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>LBT2598</FlightIdentifier>
+				<FlightNumber airlineIATACode="BJ" number="2598">
+					<CommercialFlightNumber>BJ2598</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>DTMB</AirportICAOCode>
+				<AirportIATACode>MIR</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>EDDV</AirportICAOCode>
+				<AirportIATACode>HAJ</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSINO">
+			<AircraftModel>
+				<AircraftICAOType>A320</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF DTMBZPZX DTMBZTZX DTTCZQZX DTTCZRZX EUCHZMFP EUCBZMFP</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>(FPL-LBT2598-IN</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>-A320/M-SDFGHIJ1LORVWY/LB1</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-DTMB1315</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-N0450F340 LARBI1B LARBI DCT TUC UA725 OSMAR DCT PIRIX DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>CAR/N0446F360 DCT TINTO DCT SUMIR DCT BRENO DCT KONIN DCT KEMES</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>DCT LASGA M726 LASTO M852 BIRKA T803 GITEX GITEX5P</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>-EDDV0219 EDDH</Text>
+		</Paragraph>
+		<Paragraph sequence="10">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/241108 REG/TSINO EET/LIRR0025 LIMM0111</Text>
+		</Paragraph>
+		<Paragraph sequence="11">
+			<Text>LOVV0136 EDUU0140 EDMM0210 EDWW0213 SEL/LQHJ CODE/02A1AE OPR/LBT</Text>
+		</Paragraph>
+		<Paragraph sequence="12">
+			<Text>PER/C)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="DTMBZPZX DTMBZTZX DTTCZQZX DTTCZRZX EUCHZMFP EUCBZMFP" />
+		<Originator address="DTMBLBTO" />
+		<Items>
+			<Item7 aTCCallsign="LBT2598" />
+			<Item8 flightRules="I" typeOfFlight="N" />
+			<Item9 typeOfAircraft="A320" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDFGHIJ1LORVWY/LB1" />
+			<Item13 departureAirport="DTMB" departureTime="1315" />
+			<Item15 cruisingSpeed="N0450" cruisingLevel="F340" route="LARBI1B LARBI DCT TUC UA725 OSMAR DCT PIRIX DCT CAR/N0446F360 DCT TINTO DCT SUMIR DCT BRENO DCT KONIN DCT KEMES DCT LASGA M726 LASTO M852 BIRKA T803 GITEX GITEX5P" />
+			<Item16 arrivalAirport="EDDV" estimatedFlightTime="0219" alternateAirport="EDDH" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/241108 REG/TSINO EET/LIRR0025 LIMM0111 LOVV0136 EDUU0140 EDMM0210 EDWW0213 SEL/LQHJ CODE/02A1AE OPR/LBT PER/C">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>241108</DOF>
+				<REG>TSINO</REG>
+				<EET>LIRR0025 LIMM0111 LOVV0136 EDUU0140 EDMM0210 EDWW0213</EET>
+				<SEL>LQHJ</SEL>
+				<CODE>02A1AE</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

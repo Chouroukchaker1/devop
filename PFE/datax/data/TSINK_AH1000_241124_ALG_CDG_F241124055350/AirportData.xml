@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AirportData creationTime="2024-11-24T05:53:44" flightPlanId="OFP7" fullPackage="true" xsi:schemaLocation="http://aeec.aviation-ia.net/633 AirportData.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<M633Header timestamp="2024-11-24T05:53:44Z" versionNumber="3"/> 
+<M633SupplementaryHeader>
+    <Flight flightOriginDate="2024-11-24Z" scheduledTimeOfDeparture="2024-11-24T09:30:00Z">
+        <FlightIdentification>
+            <FlightIdentifier>DAH1000</FlightIdentifier>
+                <FlightNumber airlineIATACode="AH" number="1000" >
+                    <CommercialFlightNumber>AH1000</CommercialFlightNumber>
+                </FlightNumber>
+             </FlightIdentification>
+        <DepartureAirport airportFunction="DepartureAirport" airportName="ALGER/HOUARI BOUMEDIENE">
+            <AirportICAOCode>DAAG</AirportICAOCode>
+            <AirportIATACode>ALG</AirportIATACode>
+        </DepartureAirport>
+        <ArrivalAirport airportFunction="ArrivalAirport" airportName="PARIS/CHARLES DE GAULLE">
+            <AirportICAOCode>LFPG</AirportICAOCode>
+            <AirportIATACode>CDG</AirportIATACode>
+        </ArrivalAirport>
+    </Flight>
+    <Aircraft aircraftRegistration="TSINK" >
+        <AircraftModel airlineSpecificSubType="1.11">
+            <AircraftICAOType>A320</AircraftICAOType>
+        </AircraftModel>
+    </Aircraft>
+</M633SupplementaryHeader>
+    <Airport>
+        <AirportIdentification airportFunction="DepartureAirport" airportName="ALGER/HOUARI BOUMEDIENE">
+            <AirportICAOCode>DAAG</AirportICAOCode>
+            <AirportIATACode>ALG</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="27"> 
+            <Approach procedureName="TKOF">
+                <RequiredHorizontalVisibility unit="m">250</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">0</RequiredVerticalVisibility>  
+            </Approach>
+            <Elevation unit="ft">62</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">82</Elevation>
+        <AirportReferencePoint><Coordinates latitude="132100" longitude="11581">N3641.7 E00313.0</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT01H</LocalTimeOffsetToUTC>
+    </Airport>
+    <Airport>
+        <AirportIdentification airportFunction="ArrivalAirport" airportName="PARIS/CHARLES DE GAULLE">
+            <AirportICAOCode>LFPG</AirportICAOCode>
+            <AirportIATACode>CDG</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="08R">
+            <Approach procedureName="CAT2">
+                <RequiredHorizontalVisibility unit="m">300</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">0</RequiredVerticalVisibility>
+            </Approach>
+            <Elevation unit="ft">337</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">392</Elevation>
+        <AirportReferencePoint><Coordinates latitude="176435" longitude="9172">N4900.6 E00232.9</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT01H</LocalTimeOffsetToUTC>
+    </Airport>
+    <Airport>
+        <AirportIdentification airportFunction="PrimaryArrivalAlternateAirport" airportName="LYON/SAINT EXUPERY">
+            <AirportICAOCode>LFLL</AirportICAOCode>
+            <AirportIATACode>LYS</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="35R">
+            <Elevation unit="ft">821</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">821</Elevation>
+        <AirportReferencePoint><Coordinates latitude="164612" longitude="18292">N4543.5 E00504.9</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT01H</LocalTimeOffsetToUTC>
+    </Airport>
+    <Airport>
+        <AirportIdentification airportFunction="ArrivalAlternateAirport" airportName="PARIS/ORLY">
+            <AirportICAOCode>LFPO</AirportICAOCode>
+            <AirportIATACode>ORY</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="24">
+            <Approach procedureName="CIRC LOCDME+VOR@06">
+                <RequiredHorizontalVisibility unit="m">2400</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">880</RequiredVerticalVisibility>
+            </Approach>
+            <Elevation unit="ft">285</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">291</Elevation>
+        <AirportReferencePoint><Coordinates latitude="175404" longitude="8566">N4843.4 E00222.8</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT01H</LocalTimeOffsetToUTC>
+    </Airport>
+</AirportData>

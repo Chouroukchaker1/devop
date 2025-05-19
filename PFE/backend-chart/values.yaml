@@ -1,0 +1,21 @@
+replicaCount: 1
+
+image:
+  repository: tonutilisateurdocker/devop-backend
+  tag: latest
+  pullPolicy: IfNotPresent
+
+containerPort: 3000
+
+service:
+  type: ClusterIP
+  port: 3000
+
+serviceAccount:
+  create: false
+
+ingress:
+  enabled: false
+  
+autoscaling:
+  enabled: false

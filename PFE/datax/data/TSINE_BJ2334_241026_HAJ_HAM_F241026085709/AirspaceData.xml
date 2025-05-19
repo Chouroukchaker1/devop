@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AirspaceData flightPlanId="OFP1" xsi:schemaLocation="http://aeec.aviation-ia.net/633 AirspaceData.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<M633Header timestamp="2024-10-26T08:57:04Z" versionNumber="3"/> 
+<M633SupplementaryHeader>
+    <Flight flightOriginDate="2024-10-26Z" scheduledTimeOfDeparture="2024-10-26T09:15:00Z">
+        <FlightIdentification>
+            <FlightIdentifier>LBT2334</FlightIdentifier>
+                <FlightNumber airlineIATACode="BJ" number="2334" >
+                    <CommercialFlightNumber>BJ2334</CommercialFlightNumber>
+                </FlightNumber>
+             </FlightIdentification>
+        <DepartureAirport airportFunction="DepartureAirport" airportName="HANNOVER">
+            <AirportICAOCode>EDDV</AirportICAOCode>
+            <AirportIATACode>HAJ</AirportIATACode>
+        </DepartureAirport>
+        <ArrivalAirport airportFunction="ArrivalAirport" airportName="HAMBURG">
+            <AirportICAOCode>EDDH</AirportICAOCode>
+            <AirportIATACode>HAM</AirportIATACode>
+        </ArrivalAirport>
+    </Flight>
+    <Aircraft aircraftRegistration="TSINE" >
+        <AircraftModel airlineSpecificSubType="1.05">
+            <AircraftICAOType>A320</AircraftICAOType>
+        </AircraftModel>
+    </Aircraft>
+</M633SupplementaryHeader>
+    <Airspace airspaceName="BREMEN_FIR" airspaceType="FIR" airspaceICAOCode="EDWW">
+        <Entry cumulatedFlightTime="PT0H0M00S">
+            <Coordinates latitude="+188857" longitude="+34861">N5227.6 E00941.0</Coordinates>
+            <CumulatedGroundDistance unit="NM">0</CumulatedGroundDistance>
+        </Entry>
+        <Exit cumulatedFlightTime="PT0H32M38S">
+            <Coordinates  latitude="+193069" longitude="+35958">N5337.8 E00959.3</Coordinates>
+            <CumulatedGroundDistance unit="NM">166</CumulatedGroundDistance>
+        </Exit>
+        <GroundDistance unit="NM">0</GroundDistance>
+    </Airspace>
+</AirspaceData>

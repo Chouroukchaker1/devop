@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AirspaceData flightPlanId="OFP1" xsi:schemaLocation="http://aeec.aviation-ia.net/633 AirspaceData.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<M633Header timestamp="2024-12-20T18:52:15Z" versionNumber="3"/> 
+<M633SupplementaryHeader>
+    <Flight flightOriginDate="2024-12-21Z" scheduledTimeOfDeparture="2024-12-21T01:25:00Z">
+        <FlightIdentification>
+            <FlightIdentifier>DAH6232</FlightIdentifier>
+                <FlightNumber airlineIATACode="AH" number="6232" >
+                    <CommercialFlightNumber>AH6232</CommercialFlightNumber>
+                </FlightNumber>
+             </FlightIdentification>
+        <DepartureAirport airportFunction="DepartureAirport" airportName="TAMENGHASSET/AGUENAR-HADJ BEY">
+            <AirportICAOCode>DAAT</AirportICAOCode>
+            <AirportIATACode>TMR</AirportIATACode>
+        </DepartureAirport>
+        <ArrivalAirport airportFunction="ArrivalAirport" airportName="DJANET/TISKA">
+            <AirportICAOCode>DAAJ</AirportICAOCode>
+            <AirportIATACode>DJG</AirportIATACode>
+        </ArrivalAirport>
+    </Flight>
+    <Aircraft aircraftRegistration="TSINK" >
+        <AircraftModel airlineSpecificSubType="1.15">
+            <AircraftICAOType>A320</AircraftICAOType>
+        </AircraftModel>
+    </Aircraft>
+</M633SupplementaryHeader>
+    <Airspace airspaceName="ALGIERS_FIR" airspaceType="FIR" airspaceICAOCode="DAAA">
+        <Entry cumulatedFlightTime="PT0H0M00S">
+            <Coordinates latitude="+82120" longitude="+19623">N2248.7 E00527.1</Coordinates>
+            <CumulatedGroundDistance unit="NM">0</CumulatedGroundDistance>
+        </Entry>
+        <Exit cumulatedFlightTime="PT0H11M49S">
+            <Coordinates  latitude="+83469" longitude="+23246">N2311.2 E00627.4</Coordinates>
+            <CumulatedGroundDistance unit="NM">66</CumulatedGroundDistance>
+        </Exit>
+        <GroundDistance unit="NM">0</GroundDistance>
+    </Airspace>
+    <Airspace airspaceName="ALGIERS_UIR" airspaceType="UIR" airspaceICAOCode="DAAA">
+        <Entry cumulatedFlightTime="PT0H11M49S">
+            <Coordinates latitude="+83469" longitude="+23246">N2311.2 E00627.4</Coordinates>
+            <CumulatedGroundDistance unit="NM">66</CumulatedGroundDistance>
+        </Entry>
+        <Exit cumulatedFlightTime="PT0H31M19S">
+            <Coordinates  latitude="+86892" longitude="+32525">N2408.2 E00902.1</Coordinates>
+            <CumulatedGroundDistance unit="NM">220</CumulatedGroundDistance>
+        </Exit>
+        <GreatCircleDistance unit="NM">55</GreatCircleDistance>
+        <GroundDistance unit="NM">66</GroundDistance>
+    </Airspace>
+    <Airspace airspaceName="ALGIERS_FIR" airspaceType="FIR" airspaceICAOCode="DAAA">
+        <Entry cumulatedFlightTime="PT0H31M19S">
+            <Coordinates latitude="+86892" longitude="+32525">N2408.2 E00902.1</Coordinates>
+            <CumulatedGroundDistance unit="NM">220</CumulatedGroundDistance>
+        </Entry>
+        <Exit cumulatedFlightTime="PT0H44M37S">
+            <Coordinates  latitude="+87455" longitude="+34027">N2417.6 E00927.1</Coordinates>
+            <CumulatedGroundDistance unit="NM">281</CumulatedGroundDistance>
+        </Exit>
+        <GreatCircleDistance unit="NM">208</GreatCircleDistance>
+        <GroundDistance unit="NM">220</GroundDistance>
+    </Airspace>
+</AirspaceData>

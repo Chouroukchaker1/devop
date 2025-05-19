@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RegionWeatherBriefing creationTime="2024-11-22T02:51:13" fullPackage="true" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://aeec.aviation-ia.net/633 RegionWeatherBriefing.xsd">
+    <M633Header timestamp="2024-11-22T02:51:13" versionNumber="3"/>
+    <M633SupplementaryHeader>
+        <Flight flightOriginDate="2024-11-22" scheduledTimeOfDeparture="2024-11-22T06:00:00Z">
+            <FlightIdentification>
+                <FlightIdentifier>LBT640</FlightIdentifier>
+                <FlightNumber airlineIATACode="BJ" number="640">
+                    <CommercialFlightNumber>BJ640</CommercialFlightNumber>
+                </FlightNumber>
+            </FlightIdentification>
+            <DepartureAirport>
+                <AirportICAOCode>DTTA</AirportICAOCode>
+                <AirportIATACode>TUN</AirportIATACode>
+            </DepartureAirport>
+            <ArrivalAirport>
+                <AirportICAOCode>LTFM</AirportICAOCode>
+                <AirportIATACode>IST</AirportIATACode>
+            </ArrivalAirport>
+        </Flight>
+        <Aircraft aircraftRegistration="TSINM">
+            <AircraftModel>
+                <AircraftICAOType>A20N</AircraftICAOType>
+            </AircraftModel>
+        </Aircraft>
+    </M633SupplementaryHeader>
+    <RegionWeathers>
+        <RegionWeather issuer="LIRR" type="AIRMET" startValidTime="2024-11-22T03:00:00" endValidTime="2024-11-22T07:00:00" observationTime="2024-11-22T02:46:00" sequence="1">
+            <RegionWeatherText>
+                <Paragraph sequence="1">
+                    <Text>AIRMET 4 VALID 220300/220700 LIIB- LIRR ROMA FIR MT</Text>
+                </Paragraph>
+                <Paragraph sequence="2">
+                    <Text>OBSC FCST WI N4106 E00905 - N4042 E00845 - N3909</Text>
+                </Paragraph>
+                <Paragraph sequence="3">
+                    <Text>E00848 - N3908 E00939 - N4032 E00939 - N4106 E00934 -</Text>
+                </Paragraph>
+                <Paragraph sequence="4">
+                    <Text>N4106 E00905 STNR NC=</Text>
+                </Paragraph>
+            </RegionWeatherText>
+            <Location>
+                <Airspaces>
+                    <Airspace airspaceICAOCode="LIRR">
+                        <AirspaceName>ROMA FIR</AirspaceName>
+                    </Airspace>
+                </Airspaces>
+            </Location>
+        </RegionWeather>
+        <RegionWeather issuer="LIRR" type="AIRMET" startValidTime="2024-11-22T03:00:00" endValidTime="2024-11-22T07:00:00" observationTime="2024-11-22T02:43:00" sequence="2">
+            <RegionWeatherText>
+                <Paragraph sequence="1">
+                    <Text>AIRMET 3 VALID 220300/220700 LIIB- LIRR ROMA FIR MOD</Text>
+                </Paragraph>
+                <Paragraph sequence="2">
+                    <Text>ICE FCST N OF LINE N4036 E00743 - N3911 E01645 ABV</Text>
+                </Paragraph>
+                <Paragraph sequence="3">
+                    <Text>FL070 STNR NC=</Text>
+                </Paragraph>
+            </RegionWeatherText>
+            <Location>
+                <Airspaces>
+                    <Airspace airspaceICAOCode="LIRR">
+                        <AirspaceName>ROMA FIR</AirspaceName>
+                    </Airspace>
+                </Airspaces>
+            </Location>
+        </RegionWeather>
+    </RegionWeathers>
+</RegionWeatherBriefing>

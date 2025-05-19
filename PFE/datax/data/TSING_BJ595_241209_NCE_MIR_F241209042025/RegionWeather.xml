@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RegionWeatherBriefing creationTime="2024-12-09T04:20:25" fullPackage="true" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://aeec.aviation-ia.net/633 RegionWeatherBriefing.xsd">
+    <M633Header timestamp="2024-12-09T04:20:25" versionNumber="3"/>
+    <M633SupplementaryHeader>
+        <Flight flightOriginDate="2024-12-09" scheduledTimeOfDeparture="2024-12-09T09:35:00Z">
+            <FlightIdentification>
+                <FlightIdentifier>LBT595</FlightIdentifier>
+                <FlightNumber airlineIATACode="BJ" number="595">
+                    <CommercialFlightNumber>BJ595</CommercialFlightNumber>
+                </FlightNumber>
+            </FlightIdentification>
+            <DepartureAirport>
+                <AirportICAOCode>LFMN</AirportICAOCode>
+                <AirportIATACode>NCE</AirportIATACode>
+            </DepartureAirport>
+            <ArrivalAirport>
+                <AirportICAOCode>DTMB</AirportICAOCode>
+                <AirportIATACode>MIR</AirportIATACode>
+            </ArrivalAirport>
+        </Flight>
+        <Aircraft aircraftRegistration="TSING">
+            <AircraftModel>
+                <AircraftICAOType>A320</AircraftICAOType>
+            </AircraftModel>
+        </Aircraft>
+    </M633SupplementaryHeader>
+    <RegionWeathers>
+        <RegionWeather issuer="LIMM" type="AIRMET" startValidTime="2024-12-09T04:30:00" endValidTime="2024-12-09T08:30:00" observationTime="2024-12-09T04:15:00" sequence="1">
+            <RegionWeatherText>
+                <Paragraph sequence="1">
+                    <Text>AIRMET 10 VALID 090430/090830 LIIB- LIMM MILANO FIR</Text>
+                </Paragraph>
+                <Paragraph sequence="2">
+                    <Text>MOD TURB FCST S OF LINE N4617 E01342 - N4625 E00953</Text>
+                </Paragraph>
+                <Paragraph sequence="3">
+                    <Text>FL030/130 STNR NC=</Text>
+                </Paragraph>
+            </RegionWeatherText>
+            <Location>
+                <Airspaces>
+                    <Airspace airspaceICAOCode="LIMM">
+                        <AirspaceName>MILANO FIR</AirspaceName>
+                    </Airspace>
+                </Airspaces>
+            </Location>
+        </RegionWeather>
+        <RegionWeather issuer="LIMM" type="AIRMET" startValidTime="2024-12-09T04:30:00" endValidTime="2024-12-09T08:30:00" observationTime="2024-12-09T04:11:00" sequence="2">
+            <RegionWeatherText>
+                <Paragraph sequence="1">
+                    <Text>AIRMET 9 VALID 090430/090830 LIIB- LIMM MILANO FIR</Text>
+                </Paragraph>
+                <Paragraph sequence="2">
+                    <Text>ISOL TS FCST WI N4332 E01423 - N4336 E01245 - N4444</Text>
+                </Paragraph>
+                <Paragraph sequence="3">
+                    <Text>E01140 - N4538 E01206 - N4536 E01329 - N4521 E01303 -</Text>
+                </Paragraph>
+                <Paragraph sequence="4">
+                    <Text>N4511 E01258 - N4431 E01319 - N4332 E01423 TOP ABV</Text>
+                </Paragraph>
+                <Paragraph sequence="5">
+                    <Text>FL150 STNR NC=</Text>
+                </Paragraph>
+            </RegionWeatherText>
+            <Location>
+                <Airspaces>
+                    <Airspace airspaceICAOCode="LIMM">
+                        <AirspaceName>MILANO FIR</AirspaceName>
+                    </Airspace>
+                </Airspaces>
+            </Location>
+        </RegionWeather>
+        <RegionWeather issuer="LFMM" type="SIGMET" startValidTime="2024-12-09T04:00:00" endValidTime="2024-12-09T08:00:00" observationTime="2024-12-09T00:33:00" sequence="3">
+            <RegionWeatherText>
+                <Paragraph sequence="1">
+                    <Text>SIGMET U01 VALID 090400/090800 LFPW- LFMM MARSEILLE</Text>
+                </Paragraph>
+                <Paragraph sequence="2">
+                    <Text>FIR/UIR SEV TURB FCST WI N4215 E00315 - N4215 E00230</Text>
+                </Paragraph>
+                <Paragraph sequence="3">
+                    <Text>- N4345 E00245 - N4500 E00430 - N4315 E00415 - N4215</Text>
+                </Paragraph>
+                <Paragraph sequence="4">
+                    <Text>E00315 SFC/FL050 STNR WKN=</Text>
+                </Paragraph>
+            </RegionWeatherText>
+            <Location>
+                <Airspaces>
+                    <Airspace airspaceICAOCode="LFMM">
+                        <AirspaceName>MARSEILLE FIR/UIR</AirspaceName>
+                    </Airspace>
+                </Airspaces>
+            </Location>
+        </RegionWeather>
+    </RegionWeathers>
+</RegionWeatherBriefing>

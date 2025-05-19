@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AirportData creationTime="2024-07-14T14:00:17" flightPlanId="OFP9" fullPackage="true" xsi:schemaLocation="http://aeec.aviation-ia.net/633 AirportData.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<M633Header timestamp="2024-07-14T14:00:17Z" versionNumber="3"/> 
+<M633SupplementaryHeader>
+    <Flight flightOriginDate="2024-07-15Z" scheduledTimeOfDeparture="2024-07-15T12:30:00Z">
+        <FlightIdentification>
+            <FlightIdentifier>LBT2022</FlightIdentifier>
+                <FlightNumber airlineIATACode="BJ" number="2022" >
+                    <CommercialFlightNumber>BJ2022</CommercialFlightNumber>
+                </FlightNumber>
+             </FlightIdentification>
+        <DepartureAirport airportFunction="DepartureAirport" airportName="DJERBA/ZARZIS">
+            <AirportICAOCode>DTTJ</AirportICAOCode>
+            <AirportIATACode>DJE</AirportIATACode>
+        </DepartureAirport>
+        <ArrivalAirport airportFunction="ArrivalAirport" airportName="DUESSELDORF">
+            <AirportICAOCode>EDDL</AirportICAOCode>
+            <AirportIATACode>DUS</AirportIATACode>
+        </ArrivalAirport>
+    </Flight>
+    <Aircraft aircraftRegistration="TSINC" >
+        <AircraftModel airlineSpecificSubType="5.93">
+            <AircraftICAOType>A320</AircraftICAOType>
+        </AircraftModel>
+    </Aircraft>
+</M633SupplementaryHeader>
+    <Airport>
+        <AirportIdentification airportFunction="DepartureAirport" airportName="DJERBA/ZARZIS">
+            <AirportICAOCode>DTTJ</AirportICAOCode>
+            <AirportIATACode>DJE</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="27"> 
+            <Elevation unit="ft">19</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">20</Elevation>
+        <AirportReferencePoint><Coordinates latitude="121952" longitude="38798">N3352.5 E01046.6</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT01H</LocalTimeOffsetToUTC>
+    </Airport>
+    <Airport>
+        <AirportIdentification airportFunction="ArrivalAirport" airportName="DUESSELDORF">
+            <AirportICAOCode>EDDL</AirportICAOCode>
+            <AirportIATACode>DUS</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="05L">
+            <Approach procedureName="RNAV GPS LNAV/VNAV">
+                <RequiredHorizontalVisibility unit="m">1200</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">417</RequiredVerticalVisibility>
+            </Approach>
+            <Elevation unit="ft">116</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">147</Elevation>
+        <AirportReferencePoint><Coordinates latitude="184611" longitude="24326">N5116.9 E00645.4</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT02H</LocalTimeOffsetToUTC>
+    </Airport>
+    <Airport>
+        <AirportIdentification airportFunction="ArrivalAlternateAirport" airportName="COLOGNE/BONN">
+            <AirportICAOCode>EDDK</AirportICAOCode>
+            <AirportIATACode>CGN</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="31R">
+            <Approach procedureName="CAT1">
+                <RequiredHorizontalVisibility unit="m">550</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">0</RequiredVerticalVisibility>
+            </Approach>
+            <Elevation unit="ft">300</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">300</Elevation>
+        <AirportReferencePoint><Coordinates latitude="183117" longitude="25714">N5052.0 E00708.6</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT02H</LocalTimeOffsetToUTC>
+    </Airport>
+    <Airport>
+        <AirportIdentification airportFunction="ArrivalAlternateAirport" airportName="BRUSSELS/BRUSSELS NATIONAL">
+            <AirportICAOCode>EBBR</AirportICAOCode>
+            <AirportIATACode>BRU</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="07L">
+            <Approach procedureName="VORDME">
+                <RequiredHorizontalVisibility unit="m">4300</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">730</RequiredVerticalVisibility>
+            </Approach>
+            <Elevation unit="ft">121</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">175</Elevation>
+        <AirportReferencePoint><Coordinates latitude="183245" longitude="16144">N5054.1 E00429.1</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT02H</LocalTimeOffsetToUTC>
+    </Airport>
+    <Airport>
+        <AirportIdentification airportFunction="PrimaryArrivalAlternateAirport" airportName="MAASTRICHT/AACHEN">
+            <AirportICAOCode>EHBK</AirportICAOCode>
+            <AirportIATACode>MST</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="21">
+            <Approach procedureName="CIRC LOCDME@03">
+                <RequiredHorizontalVisibility unit="m">2400</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">800</RequiredVerticalVisibility>
+            </Approach>
+            <Elevation unit="ft">371</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">375</Elevation>
+        <AirportReferencePoint><Coordinates latitude="183297" longitude="20797">N5055.0 E00546.6</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT02H</LocalTimeOffsetToUTC>
+    </Airport>
+</AirportData>

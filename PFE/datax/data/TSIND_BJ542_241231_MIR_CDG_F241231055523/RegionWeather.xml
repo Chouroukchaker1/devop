@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RegionWeatherBriefing creationTime="2024-12-31T05:55:23" fullPackage="true" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://aeec.aviation-ia.net/633 RegionWeatherBriefing.xsd">
+    <M633Header timestamp="2024-12-31T05:55:23" versionNumber="3"/>
+    <M633SupplementaryHeader>
+        <Flight flightOriginDate="2024-12-31" scheduledTimeOfDeparture="2024-12-31T06:30:00Z">
+            <FlightIdentification>
+                <FlightIdentifier>LBT542</FlightIdentifier>
+                <FlightNumber airlineIATACode="BJ" number="542">
+                    <CommercialFlightNumber>BJ542</CommercialFlightNumber>
+                </FlightNumber>
+            </FlightIdentification>
+            <DepartureAirport>
+                <AirportICAOCode>DTMB</AirportICAOCode>
+                <AirportIATACode>MIR</AirportIATACode>
+            </DepartureAirport>
+            <ArrivalAirport>
+                <AirportICAOCode>LFPG</AirportICAOCode>
+                <AirportIATACode>CDG</AirportIATACode>
+            </ArrivalAirport>
+        </Flight>
+        <Aircraft aircraftRegistration="TSIND">
+            <AircraftModel>
+                <AircraftICAOType>A320</AircraftICAOType>
+            </AircraftModel>
+        </Aircraft>
+    </M633SupplementaryHeader>
+    <RegionWeathers>
+        <RegionWeather issuer="LIRR" type="AIRMET" startValidTime="2024-12-31T05:01:00" endValidTime="2024-12-31T06:00:00" observationTime="2024-12-31T05:01:00" sequence="1">
+            <RegionWeatherText>
+                <Paragraph sequence="1">
+                    <Text>AIRMET 1 VALID 310501/310600 LIIB- LIRR ROMA FIR SFC</Text>
+                </Paragraph>
+                <Paragraph sequence="2">
+                    <Text>VIS 0800M FG OBS AT 0600Z N OF LINE N4315 E00938 -</Text>
+                </Paragraph>
+                <Paragraph sequence="3">
+                    <Text>N4332 E01335 NC=</Text>
+                </Paragraph>
+            </RegionWeatherText>
+            <Location>
+                <Airspaces>
+                    <Airspace airspaceICAOCode="LIRR">
+                        <AirspaceName>ROMA FIR</AirspaceName>
+                    </Airspace>
+                </Airspaces>
+            </Location>
+        </RegionWeather>
+        <RegionWeather issuer="DTTC" type="AIRMET" startValidTime="2024-12-31T05:00:00" endValidTime="2024-12-31T09:00:00" observationTime="2024-12-31T05:00:00" sequence="2">
+            <RegionWeatherText>
+                <Paragraph sequence="1">
+                    <Text>AIRMET 02 VALID 310500/310900 DTTA- DTTC TUNIS FIR</Text>
+                </Paragraph>
+                <Paragraph sequence="2">
+                    <Text>ISOL CB FCST E OF LINE N3730 E00959 - N3219 - E01113</Text>
+                </Paragraph>
+                <Paragraph sequence="3">
+                    <Text>TOP FL340 MOV E NC=</Text>
+                </Paragraph>
+            </RegionWeatherText>
+            <Location>
+                <Airspaces>
+                    <Airspace airspaceICAOCode="DTTC">
+                        <AirspaceName>TUNIS FIR</AirspaceName>
+                    </Airspace>
+                </Airspaces>
+            </Location>
+        </RegionWeather>
+        <RegionWeather issuer="DTTC" type="AIRMET" startValidTime="2024-12-31T05:00:00" endValidTime="2024-12-31T09:00:00" observationTime="2024-12-31T05:00:00" sequence="3">
+            <RegionWeatherText>
+                <Paragraph sequence="1">
+                    <Text>AIRMET 01 VALID 310500/310900 DTTA- DTTC TUNIS FIR</Text>
+                </Paragraph>
+                <Paragraph sequence="2">
+                    <Text>SFC VIS 0100 FG FCST WI N3700 E00857 - N3705 E00930 -</Text>
+                </Paragraph>
+                <Paragraph sequence="3">
+                    <Text>N3640 E00930 - N3637 E00900 - N3700 E00857 STNR WKN=</Text>
+                </Paragraph>
+            </RegionWeatherText>
+            <Location>
+                <Airspaces>
+                    <Airspace airspaceICAOCode="DTTC">
+                        <AirspaceName>TUNIS FIR</AirspaceName>
+                    </Airspace>
+                </Airspaces>
+            </Location>
+        </RegionWeather>
+        <RegionWeather issuer="EGTT" type="SIGMET" startValidTime="2024-12-31T04:00:00" endValidTime="2024-12-31T08:00:00" observationTime="2024-12-31T03:59:00" sequence="4">
+            <RegionWeatherText>
+                <Paragraph sequence="1">
+                    <Text>SIGMET 01 VALID 310400/310800 EGRR- EGTT LONDON FIR</Text>
+                </Paragraph>
+                <Paragraph sequence="2">
+                    <Text>SEV MTW FCST WI N5325 W00106 - N5253 W00252 - N5244</Text>
+                </Paragraph>
+                <Paragraph sequence="3">
+                    <Text>W00416 - N5500 W00329 - N5500 W00143 - N5325 W00106</Text>
+                </Paragraph>
+                <Paragraph sequence="4">
+                    <Text>FL030/180 STNR NC=</Text>
+                </Paragraph>
+            </RegionWeatherText>
+            <Location>
+                <Airspaces>
+                    <Airspace airspaceICAOCode="EGTT">
+                        <AirspaceName>LONDON FIR</AirspaceName>
+                    </Airspace>
+                </Airspaces>
+            </Location>
+        </RegionWeather>
+    </RegionWeathers>
+</RegionWeatherBriefing>

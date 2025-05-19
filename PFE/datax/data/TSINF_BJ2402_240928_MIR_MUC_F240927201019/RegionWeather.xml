@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RegionWeatherBriefing creationTime="2024-09-27T20:10:19" fullPackage="true" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://aeec.aviation-ia.net/633 RegionWeatherBriefing.xsd">
+    <M633Header timestamp="2024-09-27T20:10:19" versionNumber="3"/>
+    <M633SupplementaryHeader>
+        <Flight flightOriginDate="2024-09-28" scheduledTimeOfDeparture="2024-09-28T03:05:00Z">
+            <FlightIdentification>
+                <FlightIdentifier>LBT2402</FlightIdentifier>
+                <FlightNumber airlineIATACode="BJ" number="2402">
+                    <CommercialFlightNumber>BJ2402</CommercialFlightNumber>
+                </FlightNumber>
+            </FlightIdentification>
+            <DepartureAirport>
+                <AirportICAOCode>DTMB</AirportICAOCode>
+                <AirportIATACode>MIR</AirportIATACode>
+            </DepartureAirport>
+            <ArrivalAirport>
+                <AirportICAOCode>EDDM</AirportICAOCode>
+                <AirportIATACode>MUC</AirportIATACode>
+            </ArrivalAirport>
+        </Flight>
+        <Aircraft aircraftRegistration="TSINF">
+            <AircraftModel>
+                <AircraftICAOType>A320</AircraftICAOType>
+            </AircraftModel>
+        </Aircraft>
+    </M633SupplementaryHeader>
+    <RegionWeathers>
+        <RegionWeather issuer="LIRR" type="AIRMET" startValidTime="2024-09-27T21:30:00" endValidTime="2024-09-28T01:30:00" observationTime="2024-09-27T19:57:00" sequence="1">
+            <RegionWeatherText>
+                <Paragraph sequence="1">
+                    <Text>AIRMET 18 VALID 272130/280130 LIIB- LIRR ROMA FIR MT</Text>
+                </Paragraph>
+                <Paragraph sequence="2">
+                    <Text>OBSC FCST WI N4330 E01322 - N4254 E01304 - N4128</Text>
+                </Paragraph>
+                <Paragraph sequence="3">
+                    <Text>E01422 - N4231 E01211 - N4250 E01027 - N4342 E01121 -</Text>
+                </Paragraph>
+                <Paragraph sequence="4">
+                    <Text>N4330 E01322 STNR NC=</Text>
+                </Paragraph>
+            </RegionWeatherText>
+            <Location>
+                <Airspaces>
+                    <Airspace airspaceICAOCode="LIRR">
+                        <AirspaceName>ROMA FIR</AirspaceName>
+                    </Airspace>
+                </Airspaces>
+            </Location>
+        </RegionWeather>
+    </RegionWeathers>
+</RegionWeatherBriefing>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP5" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-06-29T07:17:11" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-06-29" scheduledTimeOfDeparture="2024-06-29T13:35:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>LBT2423</FlightIdentifier>
+				<FlightNumber airlineIATACode="BJ" number="2423">
+					<CommercialFlightNumber>BJ2423</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>EDDB</AirportICAOCode>
+				<AirportIATACode>BER</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>DTTJ</AirportICAOCode>
+				<AirportIATACode>DJE</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSING">
+			<AircraftModel>
+				<AircraftICAOType>A320</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF EUCHZMFP EUCBZMFP</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>AD DTTCZQZX DTTCZRZX DTTJZAZX DTTJZPZX DTTJZTZX</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>(FPL-LBT2423-IS</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-A320/M-SDFGIJ1LORVWY/LB1</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-EDDB1335</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>-N0456F280 LUROS2N LUROS Y211 BEBKU/N0457F340 DCT MAREM/N0454F350</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>DCT BUDEX/N0452F360 DCT BAXON/N0455F350 DCT GOTMO DCT PININ DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>TUNEX UG737 CBN UG727 SFX A411 BISKO DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="10">
+			<Text>-DTTJ0240 DTMB</Text>
+		</Paragraph>
+		<Paragraph sequence="11">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/240629 REG/TSING EET/EDUU0012 LKAA0022</Text>
+		</Paragraph>
+		<Paragraph sequence="12">
+			<Text>LOVV0039 LJLA0056 LIMM0102 LJLA0104 LDZO0105 LIMM0113 LIRR0121</Text>
+		</Paragraph>
+		<Paragraph sequence="13">
+			<Text>DTTC0210 SEL/HPAE CODE/02A1A6 OPR/LBT PER/C)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="EUCHZMFP EUCBZMFP DTTJZAZX DTTJZPZX DTTJZTZX" />
+		<Originator address="DTMBLBTO" />
+		<AdditionalAddressees addresses="DTTCZQZX DTTCZRZX DTTJZAZX DTTJZPZX DTTJZTZX" />
+		<Items>
+			<Item7 aTCCallsign="LBT2423" />
+			<Item8 flightRules="I" typeOfFlight="S" />
+			<Item9 typeOfAircraft="A320" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDFGIJ1LORVWY/LB1" />
+			<Item13 departureAirport="EDDB" departureTime="1335" />
+			<Item15 cruisingSpeed="N0456" cruisingLevel="F280" route="LUROS2N LUROS Y211 BEBKU/N0457F340 DCT MAREM/N0454F350 DCT BUDEX/N0452F360 DCT BAXON/N0455F350 DCT GOTMO DCT PININ DCT TUNEX UG737 CBN UG727 SFX A411 BISKO DCT" />
+			<Item16 arrivalAirport="DTTJ" estimatedFlightTime="0240" alternateAirport="DTMB" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/240629 REG/TSING EET/EDUU0012 LKAA0022 LOVV0039 LJLA0056 LIMM0102 LJLA0104 LDZO0105 LIMM0113 LIRR0121 DTTC0210 SEL/HPAE CODE/02A1A6 OPR/LBT PER/C">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>240629</DOF>
+				<REG>TSING</REG>
+				<EET>EDUU0012 LKAA0022 LOVV0039 LJLA0056 LIMM0102 LJLA0104 LDZO0105 LIMM0113 LIRR0121 DTTC0210</EET>
+				<SEL>HPAE</SEL>
+				<CODE>02A1A6</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

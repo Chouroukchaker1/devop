@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP10" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-10-19T12:02:08" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-10-19" scheduledTimeOfDeparture="2024-10-19T13:30:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>LBT362</FlightIdentifier>
+				<FlightNumber airlineIATACode="BJ" number=" 362">
+					<CommercialFlightNumber>BJ362</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>DTMB</AirportICAOCode>
+				<AirportIATACode>MIR</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>EBBR</AirportICAOCode>
+				<AirportIATACode>BRU</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSINC">
+			<AircraftModel>
+				<AircraftICAOType>A320</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF DTMBZPZX DTMBZTZX DTTCZQZX DTTCZRZX EUCHZMFP EUCBZMFP</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>(FPL-LBT362-IS</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>-A320/M-SDFGHIJ1LORVWY/LB1</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-DTMB1415</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-N0458F360 LARBI1B LARBI A411 VAXAL UA411 TUC UM733 OSMAR DCT PIRIX</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>DCT CAR DCT GIGGI DCT MINKA DCT UPDUT DCT CORSI DCT OKROK DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>AKUTI DCT TORTU/N0451F340 DCT ERTEV DCT IXITO DCT PIMOT DCT AOSTA</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>DCT ORSUD DCT MOLUS DCT GILIR DCT PENDU DCT IXILU/N0450F320 DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="10">
+			<Text>GIVOR DCT SORAL DCT IBERA DCT DIK Y37 BATTY BATTY6A</Text>
+		</Paragraph>
+		<Paragraph sequence="11">
+			<Text>-EBBR0215 EBLG</Text>
+		</Paragraph>
+		<Paragraph sequence="12">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/241019 REG/TSINC EET/LIRR0026 LFFF0051</Text>
+		</Paragraph>
+		<Paragraph sequence="13">
+			<Text>LIMM0106 LSAS0127 LFFF0131 LSAS0132 LFFF0135 EBUR0156 EBBU0214</Text>
+		</Paragraph>
+		<Paragraph sequence="14">
+			<Text>SEL/KSEF CODE/02A1A2 OPR/LBT PER/C)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="DTMBZPZX DTMBZTZX EUCHZMFP EUCBZMFP DTTCZQZX DTTCZRZX" />
+		<Originator address="DTMBLBTO" />
+		<Items>
+			<Item7 aTCCallsign="LBT362" />
+			<Item8 flightRules="I" typeOfFlight="S" />
+			<Item9 typeOfAircraft="A320" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDFGHIJ1LORVWY/LB1" />
+			<Item13 departureAirport="DTMB" departureTime="1415" />
+			<Item15 cruisingSpeed="N0458" cruisingLevel="F360" route="LARBI1B LARBI A411 VAXAL UA411 TUC UM733 OSMAR DCT PIRIX DCT CAR DCT GIGGI DCT MINKA DCT UPDUT DCT CORSI DCT OKROK DCT AKUTI DCT TORTU/N0451F340 DCT ERTEV DCT IXITO DCT PIMOT DCT AOSTA DCT ORSUD DCT MOLUS DCT GILIR DCT PENDU DCT IXILU/N0450F320 DCT GIVOR DCT SORAL DCT IBERA DCT DIK Y37 BATTY BATTY6A" />
+			<Item16 arrivalAirport="EBBR" estimatedFlightTime="0215" alternateAirport="EBLG" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/241019 REG/TSINC EET/LIRR0026 LFFF0051 LIMM0106 LSAS0127 LFFF0131 LSAS0132 LFFF0135 EBUR0156 EBBU0214 SEL/KSEF CODE/02A1A2 OPR/LBT PER/C">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>241019</DOF>
+				<REG>TSINC</REG>
+				<EET>LIRR0026 LFFF0051 LIMM0106 LSAS0127 LFFF0131 LSAS0132 LFFF0135 EBUR0156 EBBU0214</EET>
+				<SEL>KSEF</SEL>
+				<CODE>02A1A2</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RegionWeatherBriefing creationTime="2024-11-23T11:17:26" fullPackage="true" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://aeec.aviation-ia.net/633 RegionWeatherBriefing.xsd">
+    <M633Header timestamp="2024-11-23T11:17:26" versionNumber="3"/>
+    <M633SupplementaryHeader>
+        <Flight flightOriginDate="2024-11-23" scheduledTimeOfDeparture="2024-11-23T14:30:00Z">
+            <FlightIdentification>
+                <FlightIdentifier>LBT594</FlightIdentifier>
+                <FlightNumber airlineIATACode="BJ" number="594">
+                    <CommercialFlightNumber>BJ594</CommercialFlightNumber>
+                </FlightNumber>
+            </FlightIdentification>
+            <DepartureAirport>
+                <AirportICAOCode>DTMB</AirportICAOCode>
+                <AirportIATACode>MIR</AirportIATACode>
+            </DepartureAirport>
+            <ArrivalAirport>
+                <AirportICAOCode>LFMN</AirportICAOCode>
+                <AirportIATACode>NCE</AirportIATACode>
+            </ArrivalAirport>
+        </Flight>
+        <Aircraft aircraftRegistration="TSINO">
+            <AircraftModel>
+                <AircraftICAOType>A320</AircraftICAOType>
+            </AircraftModel>
+        </Aircraft>
+    </M633SupplementaryHeader>
+    <RegionWeathers>
+        <RegionWeather issuer="LIRR" type="AIRMET" startValidTime="2024-11-23T11:00:00" endValidTime="2024-11-23T13:00:00" observationTime="2024-11-23T10:31:00" sequence="1">
+            <RegionWeatherText>
+                <Paragraph sequence="1">
+                    <Text>AIRMET 13 VALID 231100/231300 LIIB- LIRR ROMA FIR MOD</Text>
+                </Paragraph>
+                <Paragraph sequence="2">
+                    <Text>MTW FCST WI N3758 E01525 - N3715 E01326 - N3630</Text>
+                </Paragraph>
+                <Paragraph sequence="3">
+                    <Text>E01514 - N3632 E01631 - N3701 E01721 - N3810 E01819 -</Text>
+                </Paragraph>
+                <Paragraph sequence="4">
+                    <Text>N3833 E01753 - N3855 E01703 - N3900 E01625 - N3758</Text>
+                </Paragraph>
+                <Paragraph sequence="5">
+                    <Text>E01525 FL080/180 STNR WKN=</Text>
+                </Paragraph>
+            </RegionWeatherText>
+            <Location>
+                <Airspaces>
+                    <Airspace airspaceICAOCode="LIRR">
+                        <AirspaceName>ROMA FIR</AirspaceName>
+                    </Airspace>
+                </Airspaces>
+            </Location>
+        </RegionWeather>
+    </RegionWeathers>
+</RegionWeatherBriefing>

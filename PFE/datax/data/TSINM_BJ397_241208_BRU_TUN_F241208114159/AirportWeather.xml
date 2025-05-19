@@ -1,0 +1,1475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AirportWeather creationTime="2024-12-08T11:41:59" fullPackage="false" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://aeec.aviation-ia.net/633 AirportWeather.xsd">
+    <M633Header timestamp="2024-12-08T11:41:59" versionNumber="3"/>
+    <M633SupplementaryHeader>
+        <Flight flightOriginDate="2024-12-08" scheduledTimeOfDeparture="2024-12-08T18:15:00Z">
+            <FlightIdentification>
+                <FlightIdentifier>LBT397</FlightIdentifier>
+                <FlightNumber airlineIATACode="BJ" number="397">
+                    <CommercialFlightNumber>BJ397</CommercialFlightNumber>
+                </FlightNumber>
+            </FlightIdentification>
+            <DepartureAirport>
+                <AirportICAOCode>EBBR</AirportICAOCode>
+                <AirportIATACode>BRU</AirportIATACode>
+            </DepartureAirport>
+            <ArrivalAirport>
+                <AirportICAOCode>DTTA</AirportICAOCode>
+                <AirportIATACode>TUN</AirportIATACode>
+            </ArrivalAirport>
+        </Flight>
+        <Aircraft aircraftRegistration="TSINM">
+            <AircraftModel>
+                <AircraftICAOType>A20N</AircraftICAOType>
+            </AircraftModel>
+        </Aircraft>
+    </M633SupplementaryHeader>
+    <WeatherBulletins>
+        <WeatherBulletin sequence="1">
+            <Airport airportName="TUNIS/CARTHAGE" airportFunction="ArrivalAirport">
+                <AirportICAOCode>DTTA</AirportICAOCode>
+                <AirportIATACode>TUN</AirportIATACode>
+            </Airport>
+            <Observation observationTime="2024-12-08T11:30:00" observationType="METAR">
+                <ObservationDetails>
+                    <SurfaceWinds>
+                        <SurfaceWind>
+                            <Directions>
+                                <Direction>
+                                    <Value type="true" unit="deg">230</Value>
+                                </Direction>
+                            </Directions>
+                            <Speeds>
+                                <Speed>
+                                    <Value unit="kt">12</Value>
+                                </Speed>
+                            </Speeds>
+                        </SurfaceWind>
+                    </SurfaceWinds>
+                    <VisibilitiesAndWeather>
+                        <Visibilities>
+                            <PrevailingVisibility>
+                                <Value unit="m">8000</Value>
+                            </PrevailingVisibility>
+                        </Visibilities>
+                    </VisibilitiesAndWeather>
+                    <Temperatures>
+                        <AirTemperature>
+                            <Value unit="C">13</Value>
+                        </AirTemperature>
+                        <DewPointTemperature>
+                            <Value unit="C">8</Value>
+                        </DewPointTemperature>
+                    </Temperatures>
+                    <Pressures>
+                        <QNH>
+                            <Value unit="hPa">1010</Value>
+                        </QNH>
+                    </Pressures>
+                </ObservationDetails>
+                <ObservationText>
+                    <Paragraph sequence="1">
+                        <Text>SA 081130 23012KT 8000 SCT023 13/08 Q1010=</Text>
+                    </Paragraph>
+                </ObservationText>
+            </Observation>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="2">
+            <Airport airportName="TUNIS/CARTHAGE" airportFunction="ArrivalAirport">
+                <AirportICAOCode>DTTA</AirportICAOCode>
+                <AirportIATACode>TUN</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-12-08T11:00:00" forecastType="FT" forecastStartTime="2024-12-08T12:00:00" forecastEndTime="2024-12-09T12:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 081100 0812/0912 30015KT 9999 SCT023</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>TEMPO 0812/0818 26018G35KT SQ</Text>
+                    </Paragraph>
+                    <Paragraph sequence="3">
+                        <Text>TEMPO 0812/0816 RA=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="3">
+            <Airport airportName="BRUSSELS/BRUSSELS NATIONAL" airportFunction="DepartureAirport">
+                <AirportICAOCode>EBBR</AirportICAOCode>
+                <AirportIATACode>BRU</AirportIATACode>
+            </Airport>
+            <Observation observationTime="2024-12-08T11:20:00" observationType="METAR">
+                <ObservationDetails>
+                    <SurfaceWinds>
+                        <SurfaceWind>
+                            <Directions>
+                                <Direction>
+                                    <Value type="true" unit="deg">40</Value>
+                                </Direction>
+                            </Directions>
+                            <Speeds>
+                                <Speed>
+                                    <Value unit="kt">12</Value>
+                                </Speed>
+                            </Speeds>
+                        </SurfaceWind>
+                    </SurfaceWinds>
+                    <VisibilitiesAndWeather>
+                        <Visibilities>
+                            <PrevailingVisibility>
+                                <Value unit="m">9999</Value>
+                            </PrevailingVisibility>
+                        </Visibilities>
+                        <Clouds>
+                            <CloudDescriptions>
+                                <CloudDescription cloudCover="BKN">
+                                    <Ceiling>
+                                        <Value unit="ft">700</Value>
+                                    </Ceiling>
+                                </CloudDescription>
+                            </CloudDescriptions>
+                        </Clouds>
+                    </VisibilitiesAndWeather>
+                    <Temperatures>
+                        <AirTemperature>
+                            <Value unit="C">7</Value>
+                        </AirTemperature>
+                        <DewPointTemperature>
+                            <Value unit="C">6</Value>
+                        </DewPointTemperature>
+                    </Temperatures>
+                    <Pressures>
+                        <QNH>
+                            <Value unit="hPa">1007</Value>
+                        </QNH>
+                    </Pressures>
+                </ObservationDetails>
+                <ObservationText>
+                    <Paragraph sequence="1">
+                        <Text>SA 081120 04012KT 9999 BKN007 07/06 Q1007 NOSIG=</Text>
+                    </Paragraph>
+                </ObservationText>
+            </Observation>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="4">
+            <Airport airportName="BRUSSELS/BRUSSELS NATIONAL" airportFunction="DepartureAirport">
+                <AirportICAOCode>EBBR</AirportICAOCode>
+                <AirportIATACode>BRU</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-12-08T11:20:00" forecastType="FT" forecastStartTime="2024-12-08T12:00:00" forecastEndTime="2024-12-09T18:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 081120 0812/0918 04010KT 9999 SCT008 BKN012</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>PROB30 TEMPO 0812/0814 4500 -DZRA SCT005 BKN008</Text>
+                    </Paragraph>
+                    <Paragraph sequence="3">
+                        <Text>BECMG 0814/0816 SCT012 SCT020</Text>
+                    </Paragraph>
+                    <Paragraph sequence="4">
+                        <Text>BECMG 0820/0822 SCT008 BKN012</Text>
+                    </Paragraph>
+                    <Paragraph sequence="5">
+                        <Text>TEMPO 0822/0909 4000 -RADZ BKN007</Text>
+                    </Paragraph>
+                    <Paragraph sequence="6">
+                        <Text>PROB30 TEMPO 0900/0902 2000 DZRA BKN003</Text>
+                    </Paragraph>
+                    <Paragraph sequence="7">
+                        <Text>PROB30 TEMPO 0904/0908 SCT012 BKN018</Text>
+                    </Paragraph>
+                    <Paragraph sequence="8">
+                        <Text>PROB30 TEMPO 0908/0910 4500 -RADZ -SHRA BKN008</Text>
+                    </Paragraph>
+                    <Paragraph sequence="9">
+                        <Text>BKN012TCU</Text>
+                    </Paragraph>
+                    <Paragraph sequence="10">
+                        <Text>PROB30 TEMPO 0910/0916 4500 -SHRA SCT012 BKN018TCU=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="5">
+            <Airport airportName="ENFIDHA / HAMMAMET" airportFunction="PrimaryArrivalAlternateAirport">
+                <AirportICAOCode>DTNH</AirportICAOCode>
+                <AirportIATACode>NBE</AirportIATACode>
+            </Airport>
+            <Observation observationTime="2024-12-08T11:30:00" observationType="METAR">
+                <ObservationDetails>
+                    <SurfaceWinds>
+                        <SurfaceWind>
+                            <Directions>
+                                <Variable>VRB</Variable>
+                            </Directions>
+                            <Speeds>
+                                <Speed>
+                                    <Value unit="kt">14</Value>
+                                </Speed>
+                            </Speeds>
+                        </SurfaceWind>
+                    </SurfaceWinds>
+                    <VisibilitiesAndWeather>
+                        <Visibilities>
+                            <PrevailingVisibility>
+                                <Value unit="m">9999</Value>
+                            </PrevailingVisibility>
+                        </Visibilities>
+                        <Clouds>
+                            <CloudDescriptions>
+                                <CloudDescription cloudCover="BKN">
+                                    <Ceiling>
+                                        <Value unit="ft">3300</Value>
+                                    </Ceiling>
+                                </CloudDescription>
+                            </CloudDescriptions>
+                        </Clouds>
+                    </VisibilitiesAndWeather>
+                    <Temperatures>
+                        <AirTemperature>
+                            <Value unit="C">15</Value>
+                        </AirTemperature>
+                        <DewPointTemperature>
+                            <Value unit="C">9</Value>
+                        </DewPointTemperature>
+                    </Temperatures>
+                    <Pressures>
+                        <QNH>
+                            <Value unit="hPa">1011</Value>
+                        </QNH>
+                    </Pressures>
+                </ObservationDetails>
+                <ObservationText>
+                    <Paragraph sequence="1">
+                        <Text>SA 081130 VRB10KT 9999 FEW026 BKN033 15/09 Q1011=</Text>
+                    </Paragraph>
+                </ObservationText>
+            </Observation>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="6">
+            <Airport airportName="ENFIDHA / HAMMAMET" airportFunction="PrimaryArrivalAlternateAirport">
+                <AirportICAOCode>DTNH</AirportICAOCode>
+                <AirportIATACode>NBE</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-12-08T11:00:00" forecastType="FT" forecastStartTime="2024-12-08T12:00:00" forecastEndTime="2024-12-09T12:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 081100 0812/0912 27012KT 9999 SCT026</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>TEMPO 0812/0818 28018G30KT</Text>
+                    </Paragraph>
+                    <Paragraph sequence="3">
+                        <Text>BECMG 0902/0904 21010KT=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="7">
+            <Airport airportName="MONASTIR/HABIB BOURGUIBA" airportFunction="ArrivalAlternateAirport">
+                <AirportICAOCode>DTMB</AirportICAOCode>
+                <AirportIATACode>MIR</AirportIATACode>
+            </Airport>
+            <Observation observationTime="2024-12-08T11:30:00" observationType="METAR">
+                <ObservationDetails>
+                    <SurfaceWinds>
+                        <SurfaceWind>
+                            <Directions>
+                                <Direction>
+                                    <Value type="true" unit="deg">300</Value>
+                                </Direction>
+                            </Directions>
+                            <Speeds>
+                                <Speed>
+                                    <Value unit="kt">17</Value>
+                                </Speed>
+                            </Speeds>
+                        </SurfaceWind>
+                    </SurfaceWinds>
+                    <VisibilitiesAndWeather>
+                        <Visibilities>
+                            <PrevailingVisibility>
+                                <Value unit="m">8000</Value>
+                            </PrevailingVisibility>
+                        </Visibilities>
+                        <Clouds>
+                            <CloudDescriptions>
+                                <CloudDescription cloudCover="BKN">
+                                    <Ceiling>
+                                        <Value unit="ft">2300</Value>
+                                    </Ceiling>
+                                </CloudDescription>
+                            </CloudDescriptions>
+                        </Clouds>
+                    </VisibilitiesAndWeather>
+                    <Temperatures>
+                        <AirTemperature>
+                            <Value unit="C">15</Value>
+                        </AirTemperature>
+                        <DewPointTemperature>
+                            <Value unit="C">8</Value>
+                        </DewPointTemperature>
+                    </Temperatures>
+                    <Pressures>
+                        <QNH>
+                            <Value unit="hPa">1011</Value>
+                        </QNH>
+                    </Pressures>
+                </ObservationDetails>
+                <ObservationText>
+                    <Paragraph sequence="1">
+                        <Text>SA 081130 30017KT 250V320 8000 BKN023 SCT030 15/08 Q1011=</Text>
+                    </Paragraph>
+                </ObservationText>
+            </Observation>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="8">
+            <Airport airportName="MONASTIR/HABIB BOURGUIBA" airportFunction="ArrivalAlternateAirport">
+                <AirportICAOCode>DTMB</AirportICAOCode>
+                <AirportIATACode>MIR</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-12-08T11:00:00" forecastType="FT" forecastStartTime="2024-12-08T12:00:00" forecastEndTime="2024-12-09T12:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 081100 0812/0912 28018KT 8000 SCT023</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>TEMPO 0812/0818 29020G30KT</Text>
+                    </Paragraph>
+                    <Paragraph sequence="3">
+                        <Text>BECMG 0822/0824 23010KT=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="9">
+            <Airport airportName="SFAX/THYNA" airportFunction="ArrivalAlternateAirport">
+                <AirportICAOCode>DTTX</AirportICAOCode>
+                <AirportIATACode>SFA</AirportIATACode>
+            </Airport>
+            <Observation observationTime="2024-12-08T11:00:00" observationType="METAR">
+                <ObservationDetails>
+                    <SurfaceWinds>
+                        <SurfaceWind>
+                            <Directions>
+                                <Direction>
+                                    <Value type="true" unit="deg">310</Value>
+                                </Direction>
+                            </Directions>
+                            <Speeds>
+                                <Speed>
+                                    <Value unit="kt">16</Value>
+                                </Speed>
+                            </Speeds>
+                        </SurfaceWind>
+                    </SurfaceWinds>
+                    <VisibilitiesAndWeather>
+                        <Visibilities>
+                            <PrevailingVisibility>
+                                <Value unit="m">9999</Value>
+                            </PrevailingVisibility>
+                        </Visibilities>
+                    </VisibilitiesAndWeather>
+                    <Temperatures>
+                        <AirTemperature>
+                            <Value unit="C">21</Value>
+                        </AirTemperature>
+                        <DewPointTemperature>
+                            <Value unit="C">5</Value>
+                        </DewPointTemperature>
+                    </Temperatures>
+                    <Pressures>
+                        <QNH>
+                            <Value unit="hPa">1011</Value>
+                        </QNH>
+                    </Pressures>
+                </ObservationDetails>
+                <ObservationText>
+                    <Paragraph sequence="1">
+                        <Text>SA 081100 31016KT 9999 SCT030 21/05 Q1011=</Text>
+                    </Paragraph>
+                </ObservationText>
+            </Observation>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="10">
+            <Airport airportName="SFAX/THYNA" airportFunction="ArrivalAlternateAirport">
+                <AirportICAOCode>DTTX</AirportICAOCode>
+                <AirportIATACode>SFA</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-12-08T11:00:00" forecastType="FT" forecastStartTime="2024-12-08T12:00:00" forecastEndTime="2024-12-09T12:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 081100 0812/0912 30010KT 9999 SCT020</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>BECMG 0819/0821 VRB02KT=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="11">
+            <Airport airportName="DJERBA/ZARZIS" airportFunction="ArrivalAlternateAirport">
+                <AirportICAOCode>DTTJ</AirportICAOCode>
+                <AirportIATACode>DJE</AirportIATACode>
+            </Airport>
+            <Observation observationTime="2024-12-08T11:30:00" observationType="METAR">
+                <ObservationDetails>
+                    <SurfaceWinds>
+                        <SurfaceWind>
+                            <Directions>
+                                <Direction>
+                                    <Value type="true" unit="deg">260</Value>
+                                </Direction>
+                            </Directions>
+                            <Speeds>
+                                <Speed>
+                                    <Value unit="kt">13</Value>
+                                </Speed>
+                            </Speeds>
+                        </SurfaceWind>
+                    </SurfaceWinds>
+                    <VisibilitiesAndWeather>
+                        <Visibilities>
+                            <PrevailingVisibility>
+                                <Value unit="m">9999</Value>
+                            </PrevailingVisibility>
+                        </Visibilities>
+                    </VisibilitiesAndWeather>
+                    <Temperatures>
+                        <AirTemperature>
+                            <Value unit="C">18</Value>
+                        </AirTemperature>
+                        <DewPointTemperature>
+                            <Value unit="C">7</Value>
+                        </DewPointTemperature>
+                    </Temperatures>
+                    <Pressures>
+                        <QNH>
+                            <Value unit="hPa">1012</Value>
+                        </QNH>
+                    </Pressures>
+                </ObservationDetails>
+                <ObservationText>
+                    <Paragraph sequence="1">
+                        <Text>SA 081130 26013KT 9999 FEW020 18/07 Q1012 NOSIG=</Text>
+                    </Paragraph>
+                </ObservationText>
+            </Observation>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="12">
+            <Airport airportName="DJERBA/ZARZIS" airportFunction="ArrivalAlternateAirport">
+                <AirportICAOCode>DTTJ</AirportICAOCode>
+                <AirportIATACode>DJE</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-12-08T11:00:00" forecastType="FT" forecastStartTime="2024-12-08T12:00:00" forecastEndTime="2024-12-09T12:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 081100 0812/0912 27015KT 9999 FEW026=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="13">
+            <Airport airportName="LUXEMBOURG" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>ELLX</AirportICAOCode>
+                <AirportIATACode>LUX</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-12-08T11:00:00" forecastType="FT" forecastStartTime="2024-12-08T12:00:00" forecastEndTime="2024-12-09T18:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 081100 0812/0918 09008KT 3000 -RADZ BKN003</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>TEMPO 0812/0816 1200 RADZ BKN002</Text>
+                    </Paragraph>
+                    <Paragraph sequence="3">
+                        <Text>BECMG 0816/0819 8000 BKN020</Text>
+                    </Paragraph>
+                    <Paragraph sequence="4">
+                        <Text>BECMG 0902/0905 BKN005</Text>
+                    </Paragraph>
+                    <Paragraph sequence="5">
+                        <Text>PROB40 TEMPO 0904/0909 3000 -DZ</Text>
+                    </Paragraph>
+                    <Paragraph sequence="6">
+                        <Text>BECMG 0909/0912 BKN010=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="14">
+            <Airport airportName="METZ/NANCY LORRAINE" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>LFJL</AirportICAOCode>
+                <AirportIATACode>ETZ</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-12-08T10:10:00" forecastType="FT" forecastStartTime="2024-12-08T10:00:00" forecastEndTime="2024-12-09T06:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 081010 0810/0906 16010KT 9999 OVC018</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>TEMPO 0810/0817 4000 -RADZ OVC005</Text>
+                    </Paragraph>
+                    <Paragraph sequence="3">
+                        <Text>BECMG 0814/0817 06010KT</Text>
+                    </Paragraph>
+                    <Paragraph sequence="4">
+                        <Text>TEMPO 0818/0906 BKN010=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="15">
+            <Airport airportName="SAARBRUECKEN" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>EDDR</AirportICAOCode>
+                <AirportIATACode>SCN</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-12-08T11:00:00" forecastType="FT" forecastStartTime="2024-12-08T12:00:00" forecastEndTime="2024-12-09T12:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 081100 0812/0912 07009KT 8000 BKN008</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>BECMG 0812/0816 SCT015</Text>
+                    </Paragraph>
+                    <Paragraph sequence="3">
+                        <Text>PROB30 TEMPO 0818/0823 BKN010</Text>
+                    </Paragraph>
+                    <Paragraph sequence="4">
+                        <Text>BECMG 0823/0902 BKN010</Text>
+                    </Paragraph>
+                    <Paragraph sequence="5">
+                        <Text>PROB30 TEMPO 0900/0912 4000 -DZ BKN005=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="16">
+            <Airport airportName="LIEGE" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>EBLG</AirportICAOCode>
+                <AirportIATACode>LGG</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-12-08T11:20:00" forecastType="FT" forecastStartTime="2024-12-08T12:00:00" forecastEndTime="2024-12-09T18:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 081120 0812/0918 04010KT 9999 SCT015 BKN025</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>PROB30 TEMPO 0812/0817 BKN012</Text>
+                    </Paragraph>
+                    <Paragraph sequence="3">
+                        <Text>BECMG 0820/0822 SCT008 BKN012</Text>
+                    </Paragraph>
+                    <Paragraph sequence="4">
+                        <Text>TEMPO 0822/0909 4000 -RADZ BKN007</Text>
+                    </Paragraph>
+                    <Paragraph sequence="5">
+                        <Text>PROB40 TEMPO 0900/0903 1500 DZRA BKN003</Text>
+                    </Paragraph>
+                    <Paragraph sequence="6">
+                        <Text>PROB30 TEMPO 0904/0908 SCT012 BKN018</Text>
+                    </Paragraph>
+                    <Paragraph sequence="7">
+                        <Text>PROB30 TEMPO 0908/0910 4500 -RADZ -SHRA BKN008</Text>
+                    </Paragraph>
+                    <Paragraph sequence="8">
+                        <Text>BKN012TCU</Text>
+                    </Paragraph>
+                    <Paragraph sequence="9">
+                        <Text>PROB30 TEMPO 0910/0916 2500 -RASN -SHRASN BKN008</Text>
+                    </Paragraph>
+                    <Paragraph sequence="10">
+                        <Text>BKN012TCU=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="17">
+            <Airport airportName="STRASBOURG/ENTZHEIM" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>LFST</AirportICAOCode>
+                <AirportIATACode>SXB</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-12-08T05:00:00" forecastType="FT" forecastStartTime="2024-12-08T06:00:00" forecastEndTime="2024-12-09T06:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 080500 0806/0906 18010KT 9999 BKN035</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>TEMPO 0806/0809 -RA</Text>
+                    </Paragraph>
+                    <Paragraph sequence="3">
+                        <Text>PROB30 TEMPO 0809/0813 BKN008</Text>
+                    </Paragraph>
+                    <Paragraph sequence="4">
+                        <Text>TEMPO 0812/0814 10004KT</Text>
+                    </Paragraph>
+                    <Paragraph sequence="5">
+                        <Text>BECMG 0814/0817 03010KT</Text>
+                    </Paragraph>
+                    <Paragraph sequence="6">
+                        <Text>TEMPO 0819/0906 BKN008</Text>
+                    </Paragraph>
+                    <Paragraph sequence="7">
+                        <Text>PROB40 TEMPO 0901/0906 -DZRA=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="18">
+            <Airport airportName="CHARLEROI BRUSSELS SOUTH" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>EBCI</AirportICAOCode>
+                <AirportIATACode>CRL</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-12-08T11:20:00" forecastType="FT" forecastStartTime="2024-12-08T12:00:00" forecastEndTime="2024-12-09T18:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 081120 0812/0918 04010KT 9999 SCT005 BKN008</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>PROB30 TEMPO 0812/0815 4500 -DZRA SCT003 BKN005</Text>
+                    </Paragraph>
+                    <Paragraph sequence="3">
+                        <Text>BECMG 0816/0818 SCT008 BKN012</Text>
+                    </Paragraph>
+                    <Paragraph sequence="4">
+                        <Text>PROB30 TEMPO 0818/0822 SCT010 SCT016</Text>
+                    </Paragraph>
+                    <Paragraph sequence="5">
+                        <Text>TEMPO 0822/0909 4000 -RADZ BKN007</Text>
+                    </Paragraph>
+                    <Paragraph sequence="6">
+                        <Text>PROB40 TEMPO 0900/0905 1500 DZRA BKN003</Text>
+                    </Paragraph>
+                    <Paragraph sequence="7">
+                        <Text>PROB30 TEMPO 0905/0908 SCT012 BKN018</Text>
+                    </Paragraph>
+                    <Paragraph sequence="8">
+                        <Text>PROB30 TEMPO 0908/0910 4500 -RADZ -SHRA BKN008</Text>
+                    </Paragraph>
+                    <Paragraph sequence="9">
+                        <Text>BKN012TCU</Text>
+                    </Paragraph>
+                    <Paragraph sequence="10">
+                        <Text>PROB30 TEMPO 0910/0916 2500 -RASN -SHRASN BKN008</Text>
+                    </Paragraph>
+                    <Paragraph sequence="11">
+                        <Text>BKN012TCU=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="19">
+            <Airport airportName="MAASTRICHT/AACHEN" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>EHBK</AirportICAOCode>
+                <AirportIATACode>MST</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-12-08T11:07:00" forecastType="FT" forecastStartTime="2024-12-08T12:00:00" forecastEndTime="2024-12-09T18:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 081107 0812/0918 06006KT 9999 BKN025</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>PROB30 TEMPO 0812/0816 6000 -DZRA BKN009</Text>
+                    </Paragraph>
+                    <Paragraph sequence="3">
+                        <Text>BECMG 0818/0821 03010KT 4000 BR BKN004</Text>
+                    </Paragraph>
+                    <Paragraph sequence="4">
+                        <Text>PROB30 0820/0901 1200 BR -DZ BKN002</Text>
+                    </Paragraph>
+                    <Paragraph sequence="5">
+                        <Text>BECMG 0900/0903 9999 NSW BKN012</Text>
+                    </Paragraph>
+                    <Paragraph sequence="6">
+                        <Text>TEMPO 0903/0906 BKN020</Text>
+                    </Paragraph>
+                    <Paragraph sequence="7">
+                        <Text>PROB40 0906/0918 7000 -RADZ BKN008=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="20">
+            <Airport airportName="KARLSRUHE/BADEN-BADEN" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>EDSB</AirportICAOCode>
+                <AirportIATACode>FKB</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-12-08T11:00:00" forecastType="FT" forecastStartTime="2024-12-08T12:00:00" forecastEndTime="2024-12-09T12:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 081100 0812/0912 02008KT 9999 SCT030</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>TEMPO 0821/0912 BKN010</Text>
+                    </Paragraph>
+                    <Paragraph sequence="3">
+                        <Text>PROB30 TEMPO 0823/0907 4500 -RA BR BKN005=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="21">
+            <Airport airportName="COLOGNE/BONN" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>EDDK</AirportICAOCode>
+                <AirportIATACode>CGN</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-12-08T05:00:00" forecastType="FT" forecastStartTime="2024-12-08T06:00:00" forecastEndTime="2024-12-09T12:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 080500 0806/0912 12008KT 9999 BKN030</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>BECMG 0811/0814 06005KT</Text>
+                    </Paragraph>
+                    <Paragraph sequence="3">
+                        <Text>BECMG 0817/0820 36006KT</Text>
+                    </Paragraph>
+                    <Paragraph sequence="4">
+                        <Text>TEMPO 0820/0912 BKN012</Text>
+                    </Paragraph>
+                    <Paragraph sequence="5">
+                        <Text>PROB30 TEMPO 0905/0909 3500 -DZ=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="22">
+            <Airport airportName="DUESSELDORF" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>EDDL</AirportICAOCode>
+                <AirportIATACode>DUS</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-12-08T05:00:00" forecastType="FT" forecastStartTime="2024-12-08T06:00:00" forecastEndTime="2024-12-09T12:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 080500 0806/0912 10008KT 9999 BKN025</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>BECMG 0811/0814 03010KT</Text>
+                    </Paragraph>
+                    <Paragraph sequence="3">
+                        <Text>BECMG 0818/0820 BKN010</Text>
+                    </Paragraph>
+                    <Paragraph sequence="4">
+                        <Text>TEMPO 0818/0822 BKN007</Text>
+                    </Paragraph>
+                    <Paragraph sequence="5">
+                        <Text>PROB40 TEMPO 0822/0910 2500 DZ BKN007=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="23">
+            <Airport airportName="EINDHOVEN" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>EHEH</AirportICAOCode>
+                <AirportIATACode>EIN</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-12-08T05:03:00" forecastType="FT" forecastStartTime="2024-12-08T06:00:00" forecastEndTime="2024-12-09T12:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 080503 0806/0912 06007KT 7000 -RA FEW005 OVC010</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>TEMPO 0806/0809 3500 DZRA SCT004 BKN005 OVC008</Text>
+                    </Paragraph>
+                    <Paragraph sequence="3">
+                        <Text>BECMG 0809/0811 FEW012 BKN020</Text>
+                    </Paragraph>
+                    <Paragraph sequence="4">
+                        <Text>BECMG 0818/0821 4000 BR SCT003 OVC005</Text>
+                    </Paragraph>
+                    <Paragraph sequence="5">
+                        <Text>BECMG 0823/0902 9999 NSW SCT015 BKN020</Text>
+                    </Paragraph>
+                    <Paragraph sequence="6">
+                        <Text>PROB30 TEMPO 0902/0912 BKN013 OVC015=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="24">
+            <Airport airportName="LILLE/LESQUIN" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>LFQQ</AirportICAOCode>
+                <AirportIATACode>LIL</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-12-08T11:00:00" forecastType="FT" forecastStartTime="2024-12-08T12:00:00" forecastEndTime="2024-12-09T18:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 081100 0812/0918 01015G25KT 9999 BKN012 BKN024</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>TEMPO 0812/0820 4000 -RADZ BKN008 OVC016</Text>
+                    </Paragraph>
+                    <Paragraph sequence="3">
+                        <Text>BECMG 0815/0818 04013KT</Text>
+                    </Paragraph>
+                    <Paragraph sequence="4">
+                        <Text>BECMG 0820/0824 BKN004 OVC008</Text>
+                    </Paragraph>
+                    <Paragraph sequence="5">
+                        <Text>PROB40 TEMPO 0820/0902 1500 DZ</Text>
+                    </Paragraph>
+                    <Paragraph sequence="6">
+                        <Text>BECMG 0901/0905 SCT009 OVC014</Text>
+                    </Paragraph>
+                    <Paragraph sequence="7">
+                        <Text>PROB40 TEMPO 0907/0918 4000 -RADZ BKN009 OVC014=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="25">
+            <Airport airportName="OOSTENDE-BRUGGE/OOSTENDE" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>EBOS</AirportICAOCode>
+                <AirportIATACode>OST</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-12-08T11:20:00" forecastType="FT" forecastStartTime="2024-12-08T12:00:00" forecastEndTime="2024-12-09T18:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 081120 0812/0918 04015KT 9999 SCT018 BKN030</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>PROB40 TEMPO 0812/0817 04017G27KT BKN014TCU</Text>
+                    </Paragraph>
+                    <Paragraph sequence="3">
+                        <Text>BECMG 0820/0822 BKN014</Text>
+                    </Paragraph>
+                    <Paragraph sequence="4">
+                        <Text>PROB30 TEMPO 0822/0902 BKN008</Text>
+                    </Paragraph>
+                    <Paragraph sequence="5">
+                        <Text>BECMG 0902/0904 SCT015</Text>
+                    </Paragraph>
+                    <Paragraph sequence="6">
+                        <Text>PROB40 TEMPO 0906/0918 05017G27KT=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="26">
+            <Airport airportName="ROTTERDAM" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>EHRD</AirportICAOCode>
+                <AirportIATACode>RTM</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-12-08T11:06:00" forecastType="FT" forecastStartTime="2024-12-08T12:00:00" forecastEndTime="2024-12-09T18:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 081106 0812/0918 04014KT 9999 FEW008 BKN040</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>PROB30 TEMPO 0812/0817 BKN008</Text>
+                    </Paragraph>
+                    <Paragraph sequence="3">
+                        <Text>BECMG 0817/0819 BKN006</Text>
+                    </Paragraph>
+                    <Paragraph sequence="4">
+                        <Text>BECMG 0821/0823 BKN025</Text>
+                    </Paragraph>
+                    <Paragraph sequence="5">
+                        <Text>TEMPO 0911/0918 05016G26KT</Text>
+                    </Paragraph>
+                    <Paragraph sequence="6">
+                        <Text>PROB30 TEMPO 0914/0918 7000 -RADZ BKN014=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="27">
+            <Airport airportName="AMSTERDAM/SCHIPHOL" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>EHAM</AirportICAOCode>
+                <AirportIATACode>AMS</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-12-08T11:05:00" forecastType="FT" forecastStartTime="2024-12-08T12:00:00" forecastEndTime="2024-12-09T18:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 081105 0812/0918 04015KT 9999 FEW008 BKN040</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>PROB30 TEMPO 0812/0815 BKN008</Text>
+                    </Paragraph>
+                    <Paragraph sequence="3">
+                        <Text>BECMG 0815/0818 BKN006</Text>
+                    </Paragraph>
+                    <Paragraph sequence="4">
+                        <Text>BECMG 0819/0822 BKN025</Text>
+                    </Paragraph>
+                    <Paragraph sequence="5">
+                        <Text>TEMPO 0911/0918 05017G27KT</Text>
+                    </Paragraph>
+                    <Paragraph sequence="6">
+                        <Text>PROB40 TEMPO 0914/0918 7000 -RADZ FEW012 BKN018=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="28">
+            <Airport airportName="BASLE/MULHOUSE" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>LFSB</AirportICAOCode>
+                <AirportIATACode>BSL</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-12-08T05:00:00" forecastType="FT" forecastStartTime="2024-12-08T06:00:00" forecastEndTime="2024-12-09T06:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 080500 0806/0906 VRB03KT 9999 OVC023</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>TEMPO 0806/0811 -RA</Text>
+                    </Paragraph>
+                    <Paragraph sequence="3">
+                        <Text>PROB40 TEMPO 0809/0812 BKN013</Text>
+                    </Paragraph>
+                    <Paragraph sequence="4">
+                        <Text>PROB30 TEMPO 0811/0818 -RA</Text>
+                    </Paragraph>
+                    <Paragraph sequence="5">
+                        <Text>BECMG 0818/0821 34006KT BKN006</Text>
+                    </Paragraph>
+                    <Paragraph sequence="6">
+                        <Text>TEMPO 0818/0906 2500 -RADZ BR BKN003=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="29">
+            <Airport airportName="ZURICH" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>LSZH</AirportICAOCode>
+                <AirportIATACode>ZRH</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-12-08T11:25:00" forecastType="FT" forecastStartTime="2024-12-08T12:00:00" forecastEndTime="2024-12-09T18:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 081125 0812/0918 VRB02KT 9999 SCT015 BKN020 TX06/0813Z</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>TN02/0906Z</Text>
+                    </Paragraph>
+                    <Paragraph sequence="3">
+                        <Text>BECMG 0816/0818 02005KT</Text>
+                    </Paragraph>
+                    <Paragraph sequence="4">
+                        <Text>BECMG 0819/0822 BKN012</Text>
+                    </Paragraph>
+                    <Paragraph sequence="5">
+                        <Text>TEMPO 0822/0910 -RASN</Text>
+                    </Paragraph>
+                    <Paragraph sequence="6">
+                        <Text>PROB30 TEMPO 0900/0910 -SN BKN008</Text>
+                    </Paragraph>
+                    <Paragraph sequence="7">
+                        <Text>BECMG 0908/0910 03010KT BKN030=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="30">
+            <Airport airportName="FRANKFURT/MAIN" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>EDDF</AirportICAOCode>
+                <AirportIATACode>FRA</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-12-08T11:00:00" forecastType="FT" forecastStartTime="2024-12-08T12:00:00" forecastEndTime="2024-12-09T18:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 081100 0812/0918 05008KT 9999 SCT030</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>BECMG 0820/0823 BKN020</Text>
+                    </Paragraph>
+                    <Paragraph sequence="3">
+                        <Text>PROB30 TEMPO 0822/0903 4500 -DZ BKN012</Text>
+                    </Paragraph>
+                    <Paragraph sequence="4">
+                        <Text>PROB30 TEMPO 0910/0916 4500 -DZ BKN012=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="31">
+            <Airport airportName="STUTTGART" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>EDDS</AirportICAOCode>
+                <AirportIATACode>STR</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-12-08T11:00:00" forecastType="FT" forecastStartTime="2024-12-08T12:00:00" forecastEndTime="2024-12-09T12:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 081100 0812/0912 06004KT 9999 FEW025</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>BECMG 0816/0820 36008KT</Text>
+                    </Paragraph>
+                    <Paragraph sequence="3">
+                        <Text>BECMG 0818/0822 BKN010</Text>
+                    </Paragraph>
+                    <Paragraph sequence="4">
+                        <Text>TEMPO 0822/0912 4000 -RA BR BKN004=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="32">
+            <Airport airportName="DOLE TAVAUX" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>LFGJ</AirportICAOCode>
+                <AirportIATACode>DLE</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-12-08T11:00:00" forecastType="FC" forecastStartTime="2024-12-08T12:00:00" forecastEndTime="2024-12-08T21:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FC 081100 0812/0821 19008KT 9999 BKN020</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>TEMPO 0812/0818 -RA</Text>
+                    </Paragraph>
+                    <Paragraph sequence="3">
+                        <Text>PROB40 TEMPO 0812/0816 4000 RA BKN008 FEW025TCU=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="33">
+            <Airport airportName="MILAN/MALPENSA" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>LIMC</AirportICAOCode>
+                <AirportIATACode>MXP</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-12-08T11:00:00" forecastType="FT" forecastStartTime="2024-12-08T12:00:00" forecastEndTime="2024-12-09T18:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 081100 0812/0918 VRB05KT 6000 BKN050</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>TEMPO 0812/0816 1500 -RA BR BKN010</Text>
+                    </Paragraph>
+                    <Paragraph sequence="3">
+                        <Text>TEMPO 0821/0907 0600 FG BKN007=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="34">
+            <Airport airportName="MILAN/LINATE" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>LIML</AirportICAOCode>
+                <AirportIATACode>LIN</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-12-08T11:00:00" forecastType="FT" forecastStartTime="2024-12-08T12:00:00" forecastEndTime="2024-12-09T12:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 081100 0812/0912 VRB05KT 4000 RA BR BKN040</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>BECMG 0903/0905 NSW</Text>
+                    </Paragraph>
+                    <Paragraph sequence="3">
+                        <Text>TEMPO 0904/0909 0800 FG BKN008</Text>
+                    </Paragraph>
+                    <Paragraph sequence="4">
+                        <Text>BECMG 0910/0912 6000=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="35">
+            <Airport airportName="BERGAMO/ORIO AL SERIO" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>LIME</AirportICAOCode>
+                <AirportIATACode>BGY</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-12-08T11:00:00" forecastType="FT" forecastStartTime="2024-12-08T12:00:00" forecastEndTime="2024-12-09T12:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 081100 0812/0912 VRB05KT 3000 BR BKN040</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>TEMPO 0812/0816 0900 -RA FG BKN010</Text>
+                    </Paragraph>
+                    <Paragraph sequence="3">
+                        <Text>TEMPO 0816/0903 -RA</Text>
+                    </Paragraph>
+                    <Paragraph sequence="4">
+                        <Text>BECMG 0910/0912 6000=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="36">
+            <Airport airportName="BRESCIA/MONTICHIARI" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>LIPO</AirportICAOCode>
+                <AirportIATACode>VBS</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-12-08T11:00:00" forecastType="FT" forecastStartTime="2024-12-08T12:00:00" forecastEndTime="2024-12-09T12:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 081100 0812/0912 28010KT 2000 RA BR BKN020</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>BECMG 0816/0818 VRB05KT</Text>
+                    </Paragraph>
+                    <Paragraph sequence="3">
+                        <Text>BECMG 0903/0905 4000 NSW</Text>
+                    </Paragraph>
+                    <Paragraph sequence="4">
+                        <Text>TEMPO 0903/0908 1200 BCFG</Text>
+                    </Paragraph>
+                    <Paragraph sequence="5">
+                        <Text>BECMG 0910/0912 6000=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="37">
+            <Airport airportName="GENEVA" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>LSGG</AirportICAOCode>
+                <AirportIATACode>GVA</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-12-08T11:25:00" forecastType="FT" forecastStartTime="2024-12-08T12:00:00" forecastEndTime="2024-12-09T18:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 081125 0812/0918 23005KT 9999 BKN035 TX05/0813Z TN03/0906Z</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>BECMG 0821/0823 04010KT</Text>
+                    </Paragraph>
+                    <Paragraph sequence="3">
+                        <Text>BECMG 0906/0908 04015G25KT=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="38">
+            <Airport airportName="GENOVA/SESTRI" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>LIMJ</AirportICAOCode>
+                <AirportIATACode>GOA</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-12-08T11:00:00" forecastType="FT" forecastStartTime="2024-12-08T12:00:00" forecastEndTime="2024-12-09T12:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 081100 0812/0912 03016KT 9999 SCT030</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>TEMPO 0812/0824 03018G30KT 4000 RA=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="39">
+            <Airport airportName="PARMA" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>LIMP</AirportICAOCode>
+                <AirportIATACode>PMF</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-12-08T11:00:00" forecastType="FT" forecastStartTime="2024-12-08T12:00:00" forecastEndTime="2024-12-09T12:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 081100 0812/0912 30012KT 2000 RASN BKN010</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>BECMG 0812/0814 4000 BKN030</Text>
+                    </Paragraph>
+                    <Paragraph sequence="3">
+                        <Text>BECMG 0812/0814 VRB05KT</Text>
+                    </Paragraph>
+                    <Paragraph sequence="4">
+                        <Text>BECMG 0818/0820 2000</Text>
+                    </Paragraph>
+                    <Paragraph sequence="5">
+                        <Text>BECMG 0909/0911 6000 NSW=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="40">
+            <Airport airportName="PISA" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>LIRP</AirportICAOCode>
+                <AirportIATACode>PSA</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-12-08T11:00:00" forecastType="FT" forecastStartTime="2024-12-08T12:00:00" forecastEndTime="2024-12-09T12:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 081100 0812/0912 11005KT 9999 SCT020 BKN040</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>TEMPO 0817/0902 RA=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="41">
+            <Airport airportName="VERONA/VILLAFRANCA" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>LIPX</AirportICAOCode>
+                <AirportIATACode>VRN</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-12-08T11:00:00" forecastType="FT" forecastStartTime="2024-12-08T12:00:00" forecastEndTime="2024-12-09T12:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 081100 0812/0912 06013KT 6000 RA BKN040</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>BECMG 0819/0821 29005KT</Text>
+                    </Paragraph>
+                    <Paragraph sequence="3">
+                        <Text>BECMG 0905/0907 NSW</Text>
+                    </Paragraph>
+                    <Paragraph sequence="4">
+                        <Text>TEMPO 0905/0908 3000 BR=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="42">
+            <Airport airportName="BOLOGNA/BORGO PANIGALE" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>LIPE</AirportICAOCode>
+                <AirportIATACode>BLQ</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-12-08T11:00:00" forecastType="FT" forecastStartTime="2024-12-08T12:00:00" forecastEndTime="2024-12-09T12:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 081100 0812/0912 02012KT 6000 RA BKN012</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>BECMG 0900/0902 28008KT=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="43">
+            <Airport airportName="BASTIA/PORETTA" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>LFKB</AirportICAOCode>
+                <AirportIATACode>BIA</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-12-08T08:00:00" forecastType="FT" forecastStartTime="2024-12-08T09:00:00" forecastEndTime="2024-12-09T09:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 080800 0809/0909 30016KT 9999 SCT025TCU BKN030 TX11/0812Z</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>TN08/0905Z</Text>
+                    </Paragraph>
+                    <Paragraph sequence="3">
+                        <Text>TEMPO 0809/0818 30015G25KT 4000 SHRA SCT035CB</Text>
+                    </Paragraph>
+                    <Paragraph sequence="4">
+                        <Text>PROB30 TEMPO 0809/0811 TSRA</Text>
+                    </Paragraph>
+                    <Paragraph sequence="5">
+                        <Text>PROB40 TEMPO 0818/0909 SHRA</Text>
+                    </Paragraph>
+                    <Paragraph sequence="6">
+                        <Text>BECMG 0903/0905 01008KT=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="44">
+            <Airport airportName="OLBIA/COSTA SMERALDA" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>LIEO</AirportICAOCode>
+                <AirportIATACode>OLB</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-12-08T11:00:00" forecastType="FT" forecastStartTime="2024-12-08T12:00:00" forecastEndTime="2024-12-09T12:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 081100 0812/0912 27016G28KT 9999 SCT030</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>TEMPO 0812/0815 4000 SHRA</Text>
+                    </Paragraph>
+                    <Paragraph sequence="3">
+                        <Text>BECMG 0818/0820 25015KT=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="45">
+            <Airport airportName="CAGLIARI/ELMAS" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>LIEE</AirportICAOCode>
+                <AirportIATACode>CAG</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-12-08T11:00:00" forecastType="FT" forecastStartTime="2024-12-08T12:00:00" forecastEndTime="2024-12-09T12:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 081100 0812/0912 30014KT 9999 SCT030</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>TEMPO 0812/0815 30018G32KT</Text>
+                    </Paragraph>
+                    <Paragraph sequence="3">
+                        <Text>TEMPO 0812/0824 4000 SHRA=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="46">
+            <Airport airportName="FIGARI/SUD CORSE" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>LFKF</AirportICAOCode>
+                <AirportIATACode>FSC</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-12-08T10:54:00" forecastType="FT" forecastStartTime="2024-12-08T10:00:00" forecastEndTime="2024-12-09T09:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 081054 0810/0909 29016G30KT 9999 BKN035</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>TEMPO 0810/0816 4000 SHRA FEW030CB SCT035TCU</Text>
+                    </Paragraph>
+                    <Paragraph sequence="3">
+                        <Text>PROB30 TEMPO 0813/0815 31012KT</Text>
+                    </Paragraph>
+                    <Paragraph sequence="4">
+                        <Text>BECMG 0815/0817 30010KT</Text>
+                    </Paragraph>
+                    <Paragraph sequence="5">
+                        <Text>PROB30 TEMPO 0820/0909 SHRA SCT065TCU</Text>
+                    </Paragraph>
+                    <Paragraph sequence="6">
+                        <Text>BECMG 0823/0901 21006KT=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="47">
+            <Airport airportName="ALGHERO/FERTILIA" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>LIEA</AirportICAOCode>
+                <AirportIATACode>AHO</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-12-08T11:00:00" forecastType="FT" forecastStartTime="2024-12-08T12:00:00" forecastEndTime="2024-12-09T12:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 081100 0812/0912 30025G35KT 9999 BKN030</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>TEMPO 0812/0816 4000 SHRA</Text>
+                    </Paragraph>
+                    <Paragraph sequence="3">
+                        <Text>BECMG 0816/0818 30015G25KT</Text>
+                    </Paragraph>
+                    <Paragraph sequence="4">
+                        <Text>BECMG 0904/0906 30010KT=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="48">
+            <Airport airportName="PRATICA DI MARE MIL" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>LIRE</AirportICAOCode>
+                <AirportIATACode>QEZ</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-12-08T11:00:00" forecastType="FC" forecastStartTime="2024-12-08T12:00:00" forecastEndTime="2024-12-08T21:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FC 081100 0812/0821 25015KT 9999 SCT020 SCT040</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>TEMPO 0812/0816 6000 SHRA FEW018TCU BKN025</Text>
+                    </Paragraph>
+                    <Paragraph sequence="3">
+                        <Text>PROB30 TEMPO 0812/0816 4000 TSRA FEW015CB BKN020=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="49">
+            <Airport airportName="ROME/FIUMICINO" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>LIRF</AirportICAOCode>
+                <AirportIATACode>FCO</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-12-08T11:00:00" forecastType="FT" forecastStartTime="2024-12-08T12:00:00" forecastEndTime="2024-12-09T18:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 081100 0812/0918 24014KT 9999 SCT040</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>TEMPO 0812/0815 3000 TSRA</Text>
+                    </Paragraph>
+                    <Paragraph sequence="3">
+                        <Text>TEMPO 0815/0821 SHRA</Text>
+                    </Paragraph>
+                    <Paragraph sequence="4">
+                        <Text>BECMG 0817/0819 30010KT</Text>
+                    </Paragraph>
+                    <Paragraph sequence="5">
+                        <Text>BECMG 0822/0824 VRB06KT</Text>
+                    </Paragraph>
+                    <Paragraph sequence="6">
+                        <Text>TEMPO 0900/0912 4000 SHRA</Text>
+                    </Paragraph>
+                    <Paragraph sequence="7">
+                        <Text>BECMG 0910/0912 16010KT=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="50">
+            <Airport airportName="TABARKA/AIN DRAHAM" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>DTKA</AirportICAOCode>
+                <AirportIATACode>TBJ</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-12-08T09:00:00" forecastType="FC" forecastStartTime="2024-12-08T10:00:00" forecastEndTime="2024-12-08T19:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FC 080900 0810/0819 27020KT 9999 SCT026</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>TEMPO 0810/0816 27022G36KT SQ</Text>
+                    </Paragraph>
+                    <Paragraph sequence="3">
+                        <Text>TEMPO 0810/0819 RA FEW026TCU=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="51">
+            <Airport airportName="BISKRA/MOHAMED KHIDER" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>DAUB</AirportICAOCode>
+                <AirportIATACode>BSK</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-12-08T11:00:00" forecastType="FT" forecastStartTime="2024-12-08T12:00:00" forecastEndTime="2024-12-09T12:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 081100 0812/0912 32016KT 6000 NSC</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>TEMPO 0812/0818 32020G30KT 2000 DRSA</Text>
+                    </Paragraph>
+                    <Paragraph sequence="3">
+                        <Text>PROB40 TEMPO 0815/0824 FEW026CB</Text>
+                    </Paragraph>
+                    <Paragraph sequence="4">
+                        <Text>BECMG 0821/0823 21008KT=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="52">
+            <Airport airportName="SETIF/8 MAI 45" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>DAAS</AirportICAOCode>
+                <AirportIATACode>QSF</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-12-08T11:00:00" forecastType="FT" forecastStartTime="2024-12-08T12:00:00" forecastEndTime="2024-12-09T12:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 081100 0812/0912 32016KT 9999 FEW020 BKN030</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>TEMPO 0812/0822 31020G30KT 4000 -TSRA FEW023CB</Text>
+                    </Paragraph>
+                    <Paragraph sequence="3">
+                        <Text>BECMG 0820/0822 23009KT</Text>
+                    </Paragraph>
+                    <Paragraph sequence="4">
+                        <Text>PROB30 TEMPO 0821/0906 2000 -SNRA BKN008=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="53">
+            <Airport airportName="EL OUED/GUEMAR" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>DAUO</AirportICAOCode>
+                <AirportIATACode>ELU</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-12-08T08:00:00" forecastType="FC" forecastStartTime="2024-12-08T09:00:00" forecastEndTime="2024-12-08T18:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FC 080800 0809/0818 32008KT CAVOK</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>PROB40 TEMPO 0809/0816 32015G25KT 2000 DRSA=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+    </WeatherBulletins>
+</AirportWeather>

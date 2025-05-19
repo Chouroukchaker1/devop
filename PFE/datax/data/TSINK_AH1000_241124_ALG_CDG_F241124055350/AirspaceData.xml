@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AirspaceData flightPlanId="OFP7" xsi:schemaLocation="http://aeec.aviation-ia.net/633 AirspaceData.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<M633Header timestamp="2024-11-24T05:53:44Z" versionNumber="3"/> 
+<M633SupplementaryHeader>
+    <Flight flightOriginDate="2024-11-24Z" scheduledTimeOfDeparture="2024-11-24T09:30:00Z">
+        <FlightIdentification>
+            <FlightIdentifier>DAH1000</FlightIdentifier>
+                <FlightNumber airlineIATACode="AH" number="1000" >
+                    <CommercialFlightNumber>AH1000</CommercialFlightNumber>
+                </FlightNumber>
+             </FlightIdentification>
+        <DepartureAirport airportFunction="DepartureAirport" airportName="ALGER/HOUARI BOUMEDIENE">
+            <AirportICAOCode>DAAG</AirportICAOCode>
+            <AirportIATACode>ALG</AirportIATACode>
+        </DepartureAirport>
+        <ArrivalAirport airportFunction="ArrivalAirport" airportName="PARIS/CHARLES DE GAULLE">
+            <AirportICAOCode>LFPG</AirportICAOCode>
+            <AirportIATACode>CDG</AirportIATACode>
+        </ArrivalAirport>
+    </Flight>
+    <Aircraft aircraftRegistration="TSINK" >
+        <AircraftModel airlineSpecificSubType="1.11">
+            <AircraftICAOType>A320</AircraftICAOType>
+        </AircraftModel>
+    </Aircraft>
+</M633SupplementaryHeader>
+    <Airspace airspaceName="ALGIERS_FIR" airspaceType="FIR" airspaceICAOCode="DAAA">
+        <Entry cumulatedFlightTime="PT0H0M00S">
+            <Coordinates latitude="+132100" longitude="+11581">N3641.7 E00313.0</Coordinates>
+            <CumulatedGroundDistance unit="NM">0</CumulatedGroundDistance>
+        </Entry>
+        <Exit cumulatedFlightTime="PT0H12M59S">
+            <Coordinates  latitude="+135743" longitude="+8669">N3742.4 E00224.5</Coordinates>
+            <CumulatedGroundDistance unit="NM">72</CumulatedGroundDistance>
+        </Exit>
+        <GroundDistance unit="NM">0</GroundDistance>
+    </Airspace>
+    <Airspace airspaceName="ALGIERS_UIR" airspaceType="UIR" airspaceICAOCode="DAAA">
+        <Entry cumulatedFlightTime="PT0H12M59S">
+            <Coordinates latitude="+135743" longitude="+8669">N3742.4 E00224.5</Coordinates>
+            <CumulatedGroundDistance unit="NM">72</CumulatedGroundDistance>
+        </Entry>
+        <Exit cumulatedFlightTime="PT0H13M42S">
+            <Coordinates  latitude="+136006" longitude="+8455">N3746.8 E00220.9</Coordinates>
+            <CumulatedGroundDistance unit="NM">77</CumulatedGroundDistance>
+        </Exit>
+        <GreatCircleDistance unit="NM">72</GreatCircleDistance>
+        <GroundDistance unit="NM">72</GroundDistance>
+    </Airspace>
+    <Airspace airspaceName="BARCELONA_UIR" airspaceType="UIR" airspaceICAOCode="LECB">
+        <Entry cumulatedFlightTime="PT0H13M42S">
+            <Coordinates latitude="+136006" longitude="+8455">N3746.8 E00220.9</Coordinates>
+            <CumulatedGroundDistance unit="NM">77</CumulatedGroundDistance>
+        </Entry>
+        <Exit cumulatedFlightTime="PT0H51M44S">
+            <Coordinates  latitude="+152860" longitude="+5431">N4227.7 E00130.5</Coordinates>
+            <CumulatedGroundDistance unit="NM">373</CumulatedGroundDistance>
+        </Exit>
+        <GreatCircleDistance unit="NM">77</GreatCircleDistance>
+        <GroundDistance unit="NM">77</GroundDistance>
+    </Airspace>
+    <Airspace airspaceName="FRANCE_UIR" airspaceType="UIR" airspaceICAOCode="LFFF">
+        <Entry cumulatedFlightTime="PT0H51M44S">
+            <Coordinates latitude="+152860" longitude="+5431">N4227.7 E00130.5</Coordinates>
+            <CumulatedGroundDistance unit="NM">373</CumulatedGroundDistance>
+        </Entry>
+        <Exit cumulatedFlightTime="PT1H43M29S">
+            <Coordinates  latitude="+174525" longitude="+5478">N4828.8 E00131.3</Coordinates>
+            <CumulatedGroundDistance unit="NM">772</CumulatedGroundDistance>
+        </Exit>
+        <GreatCircleDistance unit="NM">356</GreatCircleDistance>
+        <GroundDistance unit="NM">373</GroundDistance>
+    </Airspace>
+    <Airspace airspaceName="PARIS_FIR" airspaceType="FIR" airspaceICAOCode="LFFF">
+        <Entry cumulatedFlightTime="PT1H43M29S">
+            <Coordinates latitude="+174525" longitude="+5478">N4828.8 E00131.3</Coordinates>
+            <CumulatedGroundDistance unit="NM">772</CumulatedGroundDistance>
+        </Entry>
+        <Exit cumulatedFlightTime="PT1H55M34S">
+            <Coordinates  latitude="+176435" longitude="+9172">N4900.6 E00232.9</Coordinates>
+            <CumulatedGroundDistance unit="NM">828</CumulatedGroundDistance>
+        </Exit>
+        <GreatCircleDistance unit="NM">716</GreatCircleDistance>
+        <GroundDistance unit="NM">772</GroundDistance>
+    </Airspace>
+</AirspaceData>

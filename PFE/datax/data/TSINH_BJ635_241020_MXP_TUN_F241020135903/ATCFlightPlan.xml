@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP7" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-10-20T13:58:56" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-10-20" scheduledTimeOfDeparture="2024-10-20T19:50:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>LBT635</FlightIdentifier>
+				<FlightNumber airlineIATACode="BJ" number=" 635">
+					<CommercialFlightNumber>BJ635</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>LIMC</AirportICAOCode>
+				<AirportIATACode>MXP</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>DTTA</AirportICAOCode>
+				<AirportIATACode>TUN</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSINH">
+			<AircraftModel>
+				<AircraftICAOType>A320</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF EUCHZMFP EUCBZMFP</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>AD DTTCZQZX DTTCZRZX DTTAZAZX DTTAZPZX DTTAZTZX</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>(FPL-LBT635-IS</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-A320/M-SDFGHIJ1LORVWY/LB1</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-LIMC1950</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>-N0449F370 LAGEN5U LAGEN DCT PIDAD DCT TALEP DCT VAREK DCT LOKDU</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>DCT PELOS DCT IPROM DCT KOVAS DCT CAR DCT NOLSI UA868 MEDAR DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>-DTTA0117 DTNH</Text>
+		</Paragraph>
+		<Paragraph sequence="10">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/241020 REG/TSINH EET/LFFF0022 LIRR0039</Text>
+		</Paragraph>
+		<Paragraph sequence="11">
+			<Text>DTTC0107 SEL/CHKP CODE/02A1A7 OPR/LBT PER/C)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="EUCHZMFP EUCBZMFP" />
+		<Originator address="DTMBLBTO" />
+		<AdditionalAddressees addresses="DTTCZQZX DTTCZRZX DTTAZAZX DTTAZPZX DTTAZTZX" />
+		<Items>
+			<Item7 aTCCallsign="LBT635" />
+			<Item8 flightRules="I" typeOfFlight="S" />
+			<Item9 typeOfAircraft="A320" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDFGHIJ1LORVWY/LB1" />
+			<Item13 departureAirport="LIMC" departureTime="1950" />
+			<Item15 cruisingSpeed="N0449" cruisingLevel="F370" route="LAGEN5U LAGEN DCT PIDAD DCT TALEP DCT VAREK DCT LOKDU DCT PELOS DCT IPROM DCT KOVAS DCT CAR DCT NOLSI UA868 MEDAR DCT" />
+			<Item16 arrivalAirport="DTTA" estimatedFlightTime="0117" alternateAirport="DTNH" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/241020 REG/TSINH EET/LFFF0022 LIRR0039 DTTC0107 SEL/CHKP CODE/02A1A7 OPR/LBT PER/C">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>241020</DOF>
+				<REG>TSINH</REG>
+				<EET>LFFF0022 LIRR0039 DTTC0107</EET>
+				<SEL>CHKP</SEL>
+				<CODE>02A1A7</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

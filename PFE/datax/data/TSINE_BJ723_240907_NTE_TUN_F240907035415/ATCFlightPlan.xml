@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP6" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-09-07T03:54:06" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-09-07" scheduledTimeOfDeparture="2024-09-07T10:20:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>LBT723</FlightIdentifier>
+				<FlightNumber airlineIATACode="BJ" number=" 723">
+					<CommercialFlightNumber>BJ723</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>LFRS</AirportICAOCode>
+				<AirportIATACode>NTE</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>DTTA</AirportICAOCode>
+				<AirportIATACode>TUN</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSINE">
+			<AircraftModel>
+				<AircraftICAOType>A320</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF EUCHZMFP EUCBZMFP</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>AD DTTCZQZX DTTCZRZX DTTAZAZX DTTAZPZX DTTAZTZX</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>(FPL-LBT723-IS</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-A320/M-SDFGHIJ1LORVWY/LB1</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-LFRS1020</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>-N0458F370 LUGEN4S LUGEN UM184 TUPAR DCT CNA DCT SECHE DCT SOVET</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>DCT FJR/N0448F390 UM731 AMFAC DCT BATIV DCT PELOS DCT IPROM DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>KOVAS DCT CAR DCT NOLSI UA868 TUC DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="10">
+			<Text>-DTTA0156 DTNH</Text>
+		</Paragraph>
+		<Paragraph sequence="11">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/240907 REG/TSINE EET/LFFF0008 LIRR0119</Text>
+		</Paragraph>
+		<Paragraph sequence="12">
+			<Text>DTTC0145 SEL/KQEJ CODE/02A1A4 OPR/LBT PER/C TALT/LFBD)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="EUCHZMFP EUCBZMFP" />
+		<Originator address="DTMBLBTO" />
+		<AdditionalAddressees addresses="DTTCZQZX DTTCZRZX DTTAZAZX DTTAZPZX DTTAZTZX" />
+		<Items>
+			<Item7 aTCCallsign="LBT723" />
+			<Item8 flightRules="I" typeOfFlight="S" />
+			<Item9 typeOfAircraft="A320" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDFGHIJ1LORVWY/LB1" />
+			<Item13 departureAirport="LFRS" departureTime="1020" />
+			<Item15 cruisingSpeed="N0458" cruisingLevel="F370" route="LUGEN4S LUGEN UM184 TUPAR DCT CNA DCT SECHE DCT SOVET DCT FJR/N0448F390 UM731 AMFAC DCT BATIV DCT PELOS DCT IPROM DCT KOVAS DCT CAR DCT NOLSI UA868 TUC DCT" />
+			<Item16 arrivalAirport="DTTA" estimatedFlightTime="0156" alternateAirport="DTNH" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/240907 REG/TSINE EET/LFFF0008 LIRR0119 DTTC0145 SEL/KQEJ CODE/02A1A4 OPR/LBT PER/C TALT/LFBD">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>240907</DOF>
+				<REG>TSINE</REG>
+				<EET>LFFF0008 LIRR0119 DTTC0145</EET>
+				<SEL>KQEJ</SEL>
+				<CODE>02A1A4</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+				<TALT>LFBD</TALT>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

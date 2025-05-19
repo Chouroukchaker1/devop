@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP9" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-12-01T20:19:41" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-12-02" scheduledTimeOfDeparture="2024-12-02T08:00:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>LBT508</FlightIdentifier>
+				<FlightNumber airlineIATACode="BJ" number=" 508">
+					<CommercialFlightNumber>BJ508</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>DTTJ</AirportICAOCode>
+				<AirportIATACode>DJE</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>LFPG</AirportICAOCode>
+				<AirportIATACode>CDG</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSINP">
+			<AircraftModel>
+				<AircraftICAOType>A320</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF DTTJZAZX DTTJZPZX DTTJZTZX EUCHZMFP EUCBZMFP DTTCZQZX DTTCZRZX</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>(FPL-LBT508-IS</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>-A320/M-SDFGHIJ1LORVWY/LB1</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-DTTJ0800</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-N0450F340 KBIRA1B KBIRA V334 NEDOS UV334 TBK UG869 DOPEL DCT DEC</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>DCT LUNAM DCT UPDUT DCT CORSI DCT OMEDA/N0445F360 DCT MERLU DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>PIGOS UM733 GIPNO UT26 LOGNI DCT MOKIP DCT ARFOZ UN854 TINIL</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>TINIL9E</Text>
+		</Paragraph>
+		<Paragraph sequence="10">
+			<Text>-LFPG0226 LFPO</Text>
+		</Paragraph>
+		<Paragraph sequence="11">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/241202 REG/TSINP EET/LIRR0046 LFFF0108</Text>
+		</Paragraph>
+		<Paragraph sequence="12">
+			<Text>SEL/PRKM CODE/02A1AF OPR/LBT PER/C)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="DTTJZAZX DTTJZPZX DTTJZTZX EUCHZMFP EUCBZMFP DTTCZQZX DTTCZRZX" />
+		<Originator address="DTMBLBTO" />
+		<Items>
+			<Item7 aTCCallsign="LBT508" />
+			<Item8 flightRules="I" typeOfFlight="S" />
+			<Item9 typeOfAircraft="A320" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDFGHIJ1LORVWY/LB1" />
+			<Item13 departureAirport="DTTJ" departureTime="0800" />
+			<Item15 cruisingSpeed="N0450" cruisingLevel="F340" route="KBIRA1B KBIRA V334 NEDOS UV334 TBK UG869 DOPEL DCT DEC DCT LUNAM DCT UPDUT DCT CORSI DCT OMEDA/N0445F360 DCT MERLU DCT PIGOS UM733 GIPNO UT26 LOGNI DCT MOKIP DCT ARFOZ UN854 TINIL TINIL9E" />
+			<Item16 arrivalAirport="LFPG" estimatedFlightTime="0226" alternateAirport="LFPO" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/241202 REG/TSINP EET/LIRR0046 LFFF0108 SEL/PRKM CODE/02A1AF OPR/LBT PER/C">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>241202</DOF>
+				<REG>TSINP</REG>
+				<EET>LIRR0046 LFFF0108</EET>
+				<SEL>PRKM</SEL>
+				<CODE>02A1AF</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

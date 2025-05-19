@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP10" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-09-23T07:51:42" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-09-23" scheduledTimeOfDeparture="2024-09-23T14:10:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>LBT363</FlightIdentifier>
+				<FlightNumber airlineIATACode="BJ" number=" 363">
+					<CommercialFlightNumber>BJ363</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>EBBR</AirportICAOCode>
+				<AirportIATACode>BRU</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>DTMB</AirportICAOCode>
+				<AirportIATACode>MIR</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSINF">
+			<AircraftModel>
+				<AircraftICAOType>A320</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF EUCHZMFP EUCBZMFP</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>AD DTTCZQZX DTTCZRZX DTMBZPZX DTMBZTZX</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>(FPL-LBT363-IS</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-A320/M-SDFGIJ1LORVWY/LB1</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-EBBR1410</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>-N0457F330 CIV3G CIV N872 MEDIL UN872 KOVIN UM728 RESMI UN857</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>DISAK/N0458F350 DCT DIRMO DCT ETAMO DCT ADEKA DCT MOKDI DCT MEN</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>DCT BADAM DCT FJR UM731 DIVKO UM154 JUSQO DCT OBLAD DCT OLNUL DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="10">
+			<Text>NIVDA DCT PELOS DCT IPROM DCT KOVAS DCT CAR DCT PIRIX DCT OSMAR</Text>
+		</Paragraph>
+		<Paragraph sequence="11">
+			<Text>UA725 TANIT UM731 TUC UA411 MON DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="12">
+			<Text>-DTMB0231 DTNH</Text>
+		</Paragraph>
+		<Paragraph sequence="13">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/240923 REG/TSINF EET/EBUR0009 LFFF0010</Text>
+		</Paragraph>
+		<Paragraph sequence="14">
+			<Text>LIRR0144 DTTC0209 SEL/GRFM CODE/02A1A5 OPR/LBT PER/C)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="EUCHZMFP EUCBZMFP" />
+		<Originator address="DTMBLBTO" />
+		<AdditionalAddressees addresses="DTTCZQZX DTTCZRZX DTMBZPZX DTMBZTZX" />
+		<Items>
+			<Item7 aTCCallsign="LBT363" />
+			<Item8 flightRules="I" typeOfFlight="S" />
+			<Item9 typeOfAircraft="A320" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDFGIJ1LORVWY/LB1" />
+			<Item13 departureAirport="EBBR" departureTime="1410" />
+			<Item15 cruisingSpeed="N0457" cruisingLevel="F330" route="CIV3G CIV N872 MEDIL UN872 KOVIN UM728 RESMI UN857 DISAK/N0458F350 DCT DIRMO DCT ETAMO DCT ADEKA DCT MOKDI DCT MEN DCT BADAM DCT FJR UM731 DIVKO UM154 JUSQO DCT OBLAD DCT OLNUL DCT NIVDA DCT PELOS DCT IPROM DCT KOVAS DCT CAR DCT PIRIX DCT OSMAR UA725 TANIT UM731 TUC UA411 MON DCT" />
+			<Item16 arrivalAirport="DTMB" estimatedFlightTime="0231" alternateAirport="DTNH" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/240923 REG/TSINF EET/EBUR0009 LFFF0010 LIRR0144 DTTC0209 SEL/GRFM CODE/02A1A5 OPR/LBT PER/C">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>240923</DOF>
+				<REG>TSINF</REG>
+				<EET>EBUR0009 LFFF0010 LIRR0144 DTTC0209</EET>
+				<SEL>GRFM</SEL>
+				<CODE>02A1A5</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

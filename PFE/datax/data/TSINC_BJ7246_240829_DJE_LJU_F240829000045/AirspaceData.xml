@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AirspaceData flightPlanId="OFP7" xsi:schemaLocation="http://aeec.aviation-ia.net/633 AirspaceData.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<M633Header timestamp="2024-08-29T00:00:41Z" versionNumber="3"/> 
+<M633SupplementaryHeader>
+    <Flight flightOriginDate="2024-08-28Z" scheduledTimeOfDeparture="2024-08-29T02:25:00Z">
+        <FlightIdentification>
+            <FlightIdentifier>LBT7246</FlightIdentifier>
+                <FlightNumber airlineIATACode="BJ" number="7246" >
+                    <CommercialFlightNumber>BJ7246</CommercialFlightNumber>
+                </FlightNumber>
+             </FlightIdentification>
+        <DepartureAirport airportFunction="DepartureAirport" airportName="DJERBA/ZARZIS">
+            <AirportICAOCode>DTTJ</AirportICAOCode>
+            <AirportIATACode>DJE</AirportIATACode>
+        </DepartureAirport>
+        <ArrivalAirport airportFunction="ArrivalAirport" airportName="LJUBLJANA/BRNIK">
+            <AirportICAOCode>LJLJ</AirportICAOCode>
+            <AirportIATACode>LJU</AirportIATACode>
+        </ArrivalAirport>
+    </Flight>
+    <Aircraft aircraftRegistration="TSINC" >
+        <AircraftModel airlineSpecificSubType="5.94">
+            <AircraftICAOType>A320</AircraftICAOType>
+        </AircraftModel>
+    </Aircraft>
+</M633SupplementaryHeader>
+    <Airspace airspaceName="TUNIS_FIR" airspaceType="FIR" airspaceICAOCode="DTTC">
+        <Entry cumulatedFlightTime="PT0H0M00S">
+            <Coordinates latitude="+121952" longitude="+38798">N3352.5 E01046.6</Coordinates>
+            <CumulatedGroundDistance unit="NM">0</CumulatedGroundDistance>
+        </Entry>
+        <Exit cumulatedFlightTime="PT0H12M06S">
+            <Coordinates  latitude="+125438" longitude="+39933">N3450.6 E01105.6</Coordinates>
+            <CumulatedGroundDistance unit="NM">65</CumulatedGroundDistance>
+        </Exit>
+        <GroundDistance unit="NM">0</GroundDistance>
+    </Airspace>
+    <Airspace airspaceName="TUNIS_UIR" airspaceType="UIR" airspaceICAOCode="DTTC">
+        <Entry cumulatedFlightTime="PT0H12M06S">
+            <Coordinates latitude="+125438" longitude="+39933">N3450.6 E01105.6</Coordinates>
+            <CumulatedGroundDistance unit="NM">65</CumulatedGroundDistance>
+        </Entry>
+        <Exit cumulatedFlightTime="PT0H28M34S">
+            <Coordinates  latitude="+132623" longitude="+41400">N3650.4 E01130.0</Coordinates>
+            <CumulatedGroundDistance unit="NM">187</CumulatedGroundDistance>
+        </Exit>
+        <GreatCircleDistance unit="NM">61</GreatCircleDistance>
+        <GroundDistance unit="NM">65</GroundDistance>
+    </Airspace>
+    <Airspace airspaceName="ROME_UIR" airspaceType="UIR" airspaceICAOCode="LIRR">
+        <Entry cumulatedFlightTime="PT0H28M34S">
+            <Coordinates latitude="+132623" longitude="+41400">N3650.4 E01130.0</Coordinates>
+            <CumulatedGroundDistance unit="NM">187</CumulatedGroundDistance>
+        </Entry>
+        <Exit cumulatedFlightTime="PT1H24M54S">
+            <Coordinates  latitude="+156676" longitude="+47848">N4331.3 E01317.5</Coordinates>
+            <CumulatedGroundDistance unit="NM">604</CumulatedGroundDistance>
+        </Exit>
+        <GreatCircleDistance unit="NM">182</GreatCircleDistance>
+        <GroundDistance unit="NM">187</GroundDistance>
+    </Airspace>
+    <Airspace airspaceName="MILAN_UIR" airspaceType="UIR" airspaceICAOCode="LIMM">
+        <Entry cumulatedFlightTime="PT1H24M54S">
+            <Coordinates latitude="+156676" longitude="+47848">N4331.3 E01317.5</Coordinates>
+            <CumulatedGroundDistance unit="NM">604</CumulatedGroundDistance>
+        </Entry>
+        <Exit cumulatedFlightTime="PT1H30M58S">
+            <Coordinates  latitude="+159210" longitude="+49274">N4413.5 E01341.2</Coordinates>
+            <CumulatedGroundDistance unit="NM">649</CumulatedGroundDistance>
+        </Exit>
+        <GreatCircleDistance unit="NM">592</GreatCircleDistance>
+        <GroundDistance unit="NM">604</GroundDistance>
+    </Airspace>
+    <Airspace airspaceName="ZAGREB_FIR" airspaceType="FIR" airspaceICAOCode="LDZO">
+        <Entry cumulatedFlightTime="PT1H30M57S">
+            <Coordinates latitude="+159199" longitude="+49270">N4413.3 E01341.2</Coordinates>
+            <CumulatedGroundDistance unit="NM">649</CumulatedGroundDistance>
+        </Entry>
+        <Exit cumulatedFlightTime="PT1H42M25S">
+            <Coordinates  latitude="+164030" longitude="+51013">N4533.8 E01410.2</Coordinates>
+            <CumulatedGroundDistance unit="NM">732</CumulatedGroundDistance>
+        </Exit>
+        <GreatCircleDistance unit="NM">637</GreatCircleDistance>
+        <GroundDistance unit="NM">649</GroundDistance>
+    </Airspace>
+    <Airspace airspaceName="LJUBLJANA_FIR" airspaceType="FIR" airspaceICAOCode="LJLA">
+        <Entry cumulatedFlightTime="PT1H42M25S">
+            <Coordinates latitude="+164030" longitude="+51013">N4533.8 E01410.2</Coordinates>
+            <CumulatedGroundDistance unit="NM">732</CumulatedGroundDistance>
+        </Entry>
+        <Exit cumulatedFlightTime="PT1H56M26S">
+            <Coordinates  latitude="+166408" longitude="+52042">N4613.5 E01427.4</Coordinates>
+            <CumulatedGroundDistance unit="NM">788</CumulatedGroundDistance>
+        </Exit>
+        <GreatCircleDistance unit="NM">720</GreatCircleDistance>
+        <GroundDistance unit="NM">732</GroundDistance>
+    </Airspace>
+</AirspaceData>

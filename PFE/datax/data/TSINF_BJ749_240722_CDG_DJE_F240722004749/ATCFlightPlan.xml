@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP6" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-07-22T00:47:44" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-07-22" scheduledTimeOfDeparture="2024-07-22T06:55:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>LBT749</FlightIdentifier>
+				<FlightNumber airlineIATACode="BJ" number=" 749">
+					<CommercialFlightNumber>BJ749</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>LFPG</AirportICAOCode>
+				<AirportIATACode>CDG</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>DTTJ</AirportICAOCode>
+				<AirportIATACode>DJE</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSINF">
+			<AircraftModel>
+				<AircraftICAOType>A320</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF EUCHZMFP EUCBZMFP</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>AD DAAAZQZX DAAAZQZR DTTCZQZX DTTCZRZX DTTJZAZX DTTJZPZX DTTJZTZX</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>(FPL-LBT749-IS</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-A320/M-SDFGIJ1LORVWY/LB1</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-LFPG0655</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>-N0454F370 ERIXU5H ERIXU DCT ETAMO DCT ADEKA DCT MOKDI DCT MEN DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>BADAM DCT FJR UM731 DIVKO UM154 JUSQO DCT FIRRA DCT NAFOQ DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>SALMA/N0456F370 UG6 DIMAO/N0456F370 UZ147 KIRAS A856 TINAP DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="10">
+			<Text>-DTTJ0214 DTTX</Text>
+		</Paragraph>
+		<Paragraph sequence="11">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/240722 REG/TSINF EET/DAAA0129 DTTC0151</Text>
+		</Paragraph>
+		<Paragraph sequence="12">
+			<Text>SEL/GRFM CODE/02A1A5 OPR/LBT PER/C)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="EUCHZMFP EUCBZMFP DTTJZAZX DTTJZPZX DTTJZTZX" />
+		<Originator address="DTMBLBTO" />
+		<AdditionalAddressees addresses="DAAAZQZX DAAAZQZR DTTCZQZX DTTCZRZX DTTJZAZX DTTJZPZX DTTJZTZX" />
+		<Items>
+			<Item7 aTCCallsign="LBT749" />
+			<Item8 flightRules="I" typeOfFlight="S" />
+			<Item9 typeOfAircraft="A320" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDFGIJ1LORVWY/LB1" />
+			<Item13 departureAirport="LFPG" departureTime="0655" />
+			<Item15 cruisingSpeed="N0454" cruisingLevel="F370" route="ERIXU5H ERIXU DCT ETAMO DCT ADEKA DCT MOKDI DCT MEN DCT BADAM DCT FJR UM731 DIVKO UM154 JUSQO DCT FIRRA DCT NAFOQ DCT SALMA/N0456F370 UG6 DIMAO/N0456F370 UZ147 KIRAS A856 TINAP DCT" />
+			<Item16 arrivalAirport="DTTJ" estimatedFlightTime="0214" alternateAirport="DTTX" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/240722 REG/TSINF EET/DAAA0129 DTTC0151 SEL/GRFM CODE/02A1A5 OPR/LBT PER/C">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>240722</DOF>
+				<REG>TSINF</REG>
+				<EET>DAAA0129 DTTC0151</EET>
+				<SEL>GRFM</SEL>
+				<CODE>02A1A5</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

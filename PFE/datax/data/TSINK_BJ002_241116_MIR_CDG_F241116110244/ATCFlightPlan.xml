@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP4" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-11-16T11:02:35" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-11-15" scheduledTimeOfDeparture="2024-11-16T14:00:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>LBT002</FlightIdentifier>
+				<FlightNumber airlineIATACode="BJ" number=" 002">
+					<CommercialFlightNumber>BJ002</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>DTMB</AirportICAOCode>
+				<AirportIATACode>MIR</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>LFPG</AirportICAOCode>
+				<AirportIATACode>CDG</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSINK">
+			<AircraftModel>
+				<AircraftICAOType>A320</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF DTMBZPZX DTMBZTZX DTTCZQZX DTTCZRZX EUCHZMFP EUCBZMFP</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>(FPL-LBT002-IS</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>-A320/M-SDFGHIJ1LORVWY/LB1</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-DTMB1400</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-N0450F370 SORAB1B SORAB UL874 LOBNA UP161 TUC/N0449F380 UA725</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>TANIT UM739 NIVAB M739 TABOT DCT KUPIM DCT NIVDA DCT AMFAC UM731</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>FJR DCT GAI DCT PERIG DCT POI/N0435F300 DCT PEPAX DCT ROMGO</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>ROMGO9E</Text>
+		</Paragraph>
+		<Paragraph sequence="10">
+			<Text>-LFPG0232 LFPO</Text>
+		</Paragraph>
+		<Paragraph sequence="11">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/241116 REG/TSINK EET/LIRR0043 LFFF0048</Text>
+		</Paragraph>
+		<Paragraph sequence="12">
+			<Text>SEL/KRCQ CODE/02A1AA OPR/LBT PER/C TALT/DTNH)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="DTMBZPZX DTMBZTZX EUCHZMFP EUCBZMFP DTTCZQZX DTTCZRZX" />
+		<Originator address="DTMBLBTO" />
+		<Items>
+			<Item7 aTCCallsign="LBT002" />
+			<Item8 flightRules="I" typeOfFlight="S" />
+			<Item9 typeOfAircraft="A320" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDFGHIJ1LORVWY/LB1" />
+			<Item13 departureAirport="DTMB" departureTime="1400" />
+			<Item15 cruisingSpeed="N0450" cruisingLevel="F370" route="SORAB1B SORAB UL874 LOBNA UP161 TUC/N0449F380 UA725 TANIT UM739 NIVAB M739 TABOT DCT KUPIM DCT NIVDA DCT AMFAC UM731 FJR DCT GAI DCT PERIG DCT POI/N0435F300 DCT PEPAX DCT ROMGO ROMGO9E" />
+			<Item16 arrivalAirport="LFPG" estimatedFlightTime="0232" alternateAirport="LFPO" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/241116 REG/TSINK EET/LIRR0043 LFFF0048 SEL/KRCQ CODE/02A1AA OPR/LBT PER/C TALT/DTNH">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>241116</DOF>
+				<REG>TSINK</REG>
+				<EET>LIRR0043 LFFF0048</EET>
+				<SEL>KRCQ</SEL>
+				<CODE>02A1AA</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+				<TALT>DTNH</TALT>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

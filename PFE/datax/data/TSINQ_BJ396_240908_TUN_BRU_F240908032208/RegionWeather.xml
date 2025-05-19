@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RegionWeatherBriefing creationTime="2024-09-08T03:22:08" fullPackage="true" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://aeec.aviation-ia.net/633 RegionWeatherBriefing.xsd">
+    <M633Header timestamp="2024-09-08T03:22:08" versionNumber="3"/>
+    <M633SupplementaryHeader>
+        <Flight flightOriginDate="2024-09-08" scheduledTimeOfDeparture="2024-09-08T06:00:00Z">
+            <FlightIdentification>
+                <FlightIdentifier>LBT396</FlightIdentifier>
+                <FlightNumber airlineIATACode="BJ" number="396">
+                    <CommercialFlightNumber>BJ396</CommercialFlightNumber>
+                </FlightNumber>
+            </FlightIdentification>
+            <DepartureAirport>
+                <AirportICAOCode>DTTA</AirportICAOCode>
+                <AirportIATACode>TUN</AirportIATACode>
+            </DepartureAirport>
+            <ArrivalAirport>
+                <AirportICAOCode>EBBR</AirportICAOCode>
+                <AirportIATACode>BRU</AirportIATACode>
+            </ArrivalAirport>
+        </Flight>
+        <Aircraft aircraftRegistration="TSINQ">
+            <AircraftModel>
+                <AircraftICAOType>A320</AircraftICAOType>
+            </AircraftModel>
+        </Aircraft>
+    </M633SupplementaryHeader>
+    <RegionWeathers>
+        <RegionWeather issuer="LIMM" type="AIRMET" startValidTime="2024-09-08T03:00:00" endValidTime="2024-09-08T07:00:00" observationTime="2024-09-08T02:37:00" sequence="1">
+            <RegionWeatherText>
+                <Paragraph sequence="1">
+                    <Text>AIRMET 3 VALID 080300/080700 LIIB- LIMM MILANO FIR</Text>
+                </Paragraph>
+                <Paragraph sequence="2">
+                    <Text>MOD TURB FCST N OF LINE N4330 E00754 - N4527 E01340</Text>
+                </Paragraph>
+                <Paragraph sequence="3">
+                    <Text>FL080/150 STNR NC=</Text>
+                </Paragraph>
+            </RegionWeatherText>
+            <Location>
+                <Airspaces>
+                    <Airspace airspaceICAOCode="LIMM">
+                        <AirspaceName>MILANO FIR</AirspaceName>
+                    </Airspace>
+                </Airspaces>
+            </Location>
+        </RegionWeather>
+    </RegionWeathers>
+</RegionWeatherBriefing>

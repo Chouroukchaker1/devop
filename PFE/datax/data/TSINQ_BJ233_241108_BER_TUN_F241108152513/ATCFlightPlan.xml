@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP8" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-11-08T15:25:05" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-11-08" scheduledTimeOfDeparture="2024-11-08T17:35:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>LBT233</FlightIdentifier>
+				<FlightNumber airlineIATACode="BJ" number=" 233">
+					<CommercialFlightNumber>BJ233</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>EDDB</AirportICAOCode>
+				<AirportIATACode>BER</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>DTTA</AirportICAOCode>
+				<AirportIATACode>TUN</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSINQ">
+			<AircraftModel>
+				<AircraftICAOType>A320</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF EUCHZMFP EUCBZMFP</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>AD DTTCZQZX DTTCZRZX DTTAZAZX DTTAZPZX DTTAZTZX</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>(FPL-LBT233-IS</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-A320/M-SDFGHIJ1LORVWY/LB1</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-EDDB1920</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>-N0450F280 LUROS3N LUROS Y211 BEBKU/N0452F340 DCT MAREM DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>RUDAP/N0450F360 DCT BAMTA DCT RADIZ/N0448F370 DCT VABMO DCT TINTO</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>DCT QUENN DCT NOLSI UA868 MEDAR DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="10">
+			<Text>-DTTA0217 DTNH</Text>
+		</Paragraph>
+		<Paragraph sequence="11">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/241108 REG/TSINQ EET/EDUU0012 LKAA0023</Text>
+		</Paragraph>
+		<Paragraph sequence="12">
+			<Text>EDUU0037 LOVV0050 LIMM0057 LIRR0123 DTTC0208 SEL/JMLQ CODE/02A1B0</Text>
+		</Paragraph>
+		<Paragraph sequence="13">
+			<Text>OPR/LBT PER/C)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="EUCHZMFP EUCBZMFP" />
+		<Originator address="DTMBLBTO" />
+		<AdditionalAddressees addresses="DTTCZQZX DTTCZRZX DTTAZAZX DTTAZPZX DTTAZTZX" />
+		<Items>
+			<Item7 aTCCallsign="LBT233" />
+			<Item8 flightRules="I" typeOfFlight="S" />
+			<Item9 typeOfAircraft="A320" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDFGHIJ1LORVWY/LB1" />
+			<Item13 departureAirport="EDDB" departureTime="1920" />
+			<Item15 cruisingSpeed="N0450" cruisingLevel="F280" route="LUROS3N LUROS Y211 BEBKU/N0452F340 DCT MAREM DCT RUDAP/N0450F360 DCT BAMTA DCT RADIZ/N0448F370 DCT VABMO DCT TINTO DCT QUENN DCT NOLSI UA868 MEDAR DCT" />
+			<Item16 arrivalAirport="DTTA" estimatedFlightTime="0217" alternateAirport="DTNH" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/241108 REG/TSINQ EET/EDUU0012 LKAA0023 EDUU0037 LOVV0050 LIMM0057 LIRR0123 DTTC0208 SEL/JMLQ CODE/02A1B0 OPR/LBT PER/C">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>241108</DOF>
+				<REG>TSINQ</REG>
+				<EET>EDUU0012 LKAA0023 EDUU0037 LOVV0050 LIMM0057 LIRR0123 DTTC0208</EET>
+				<SEL>JMLQ</SEL>
+				<CODE>02A1B0</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

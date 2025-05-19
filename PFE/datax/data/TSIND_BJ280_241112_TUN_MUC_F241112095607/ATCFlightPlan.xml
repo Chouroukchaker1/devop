@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP5" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-11-12T09:56:00" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-11-12" scheduledTimeOfDeparture="2024-11-12T13:00:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>LBT280</FlightIdentifier>
+				<FlightNumber airlineIATACode="BJ" number=" 280">
+					<CommercialFlightNumber>BJ280</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>DTTA</AirportICAOCode>
+				<AirportIATACode>TUN</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>EDDM</AirportICAOCode>
+				<AirportIATACode>MUC</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSIND">
+			<AircraftModel>
+				<AircraftICAOType>A320</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF DTTAZAZX DTTAZPZX DTTAZTZX DTTCZQZX DTTCZRZX EUCHZMFP EUCBZMFP</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>(FPL-LBT280-IS</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>-A320/M-SDFGHIJ1LORVWY/LB1</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-DTTA1300</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-N0446F360 ICANI2A ICANI B979 SIRVI UB979 SUSIP DCT PININ DCT RONAB</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>DCT TAQ DCT TISAX DCT IVKAL T102 NINUR T101 BETOS BETOS1B</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>-EDDM0141 EDDN</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/241112 REG/TSIND EET/LIRR0011 LIMM0059</Text>
+		</Paragraph>
+		<Paragraph sequence="10">
+			<Text>LOVV0125 EDUU0129 EDMM0135 SEL/LPBR CODE/02A1A3 OPR/LBT PER/C)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="DTTAZAZX DTTAZPZX DTTAZTZX EUCHZMFP EUCBZMFP DTTCZQZX DTTCZRZX" />
+		<Originator address="DTMBLBTO" />
+		<Items>
+			<Item7 aTCCallsign="LBT280" />
+			<Item8 flightRules="I" typeOfFlight="S" />
+			<Item9 typeOfAircraft="A320" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDFGHIJ1LORVWY/LB1" />
+			<Item13 departureAirport="DTTA" departureTime="1300" />
+			<Item15 cruisingSpeed="N0446" cruisingLevel="F360" route="ICANI2A ICANI B979 SIRVI UB979 SUSIP DCT PININ DCT RONAB DCT TAQ DCT TISAX DCT IVKAL T102 NINUR T101 BETOS BETOS1B" />
+			<Item16 arrivalAirport="EDDM" estimatedFlightTime="0141" alternateAirport="EDDN" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/241112 REG/TSIND EET/LIRR0011 LIMM0059 LOVV0125 EDUU0129 EDMM0135 SEL/LPBR CODE/02A1A3 OPR/LBT PER/C">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>241112</DOF>
+				<REG>TSIND</REG>
+				<EET>LIRR0011 LIMM0059 LOVV0125 EDUU0129 EDMM0135</EET>
+				<SEL>LPBR</SEL>
+				<CODE>02A1A3</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

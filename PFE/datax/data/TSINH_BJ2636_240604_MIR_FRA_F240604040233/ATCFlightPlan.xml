@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP7" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-06-04T04:02:23" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-06-04" scheduledTimeOfDeparture="2024-06-04T08:50:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>LBT2636</FlightIdentifier>
+				<FlightNumber airlineIATACode="BJ" number="2636">
+					<CommercialFlightNumber>BJ2636</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>DTMB</AirportICAOCode>
+				<AirportIATACode>MIR</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>EDDF</AirportICAOCode>
+				<AirportIATACode>FRA</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSINH">
+			<AircraftModel>
+				<AircraftICAOType>A320</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF DTMBZPZX DTMBZTZX DTTCZQZX DTTCZRZX EUCHZMFP EUCBZMFP</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>(FPL-LBT2636-IS</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>-A320/M-SDFGHIJ1LORVWY/LB1</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-DTMB0850</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-N0449F380 LARBI1B LARBI A411 VAXAL UA411 TUC UA725 OSMAR DCT PIRIX</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>DCT CAR DCT GIGGI/N0452F360 DCT UPDUT DCT CORSI DCT OKROK DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>AKUTI DCT TORTU/N0454F380 DCT ERTEV DCT SRN DCT ABESI DCT LADOL</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>T163 EMPAX EMPAX5B</Text>
+		</Paragraph>
+		<Paragraph sequence="10">
+			<Text>-EDDF0206 EDDK</Text>
+		</Paragraph>
+		<Paragraph sequence="11">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/240604 REG/TSINH EET/LIRR0025 LFFF0050</Text>
+		</Paragraph>
+		<Paragraph sequence="12">
+			<Text>LIMM0105 LSAS0127 EDUU0140 EDGG0203 SEL/CHKP CODE/02A1A7 OPR/LBT</Text>
+		</Paragraph>
+		<Paragraph sequence="13">
+			<Text>PER/C)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="DTMBZPZX DTMBZTZX EUCHZMFP EUCBZMFP DTTCZQZX DTTCZRZX" />
+		<Originator address="DTMBLBTO" />
+		<Items>
+			<Item7 aTCCallsign="LBT2636" />
+			<Item8 flightRules="I" typeOfFlight="S" />
+			<Item9 typeOfAircraft="A320" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDFGHIJ1LORVWY/LB1" />
+			<Item13 departureAirport="DTMB" departureTime="0850" />
+			<Item15 cruisingSpeed="N0449" cruisingLevel="F380" route="LARBI1B LARBI A411 VAXAL UA411 TUC UA725 OSMAR DCT PIRIX DCT CAR DCT GIGGI/N0452F360 DCT UPDUT DCT CORSI DCT OKROK DCT AKUTI DCT TORTU/N0454F380 DCT ERTEV DCT SRN DCT ABESI DCT LADOL T163 EMPAX EMPAX5B" />
+			<Item16 arrivalAirport="EDDF" estimatedFlightTime="0206" alternateAirport="EDDK" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/240604 REG/TSINH EET/LIRR0025 LFFF0050 LIMM0105 LSAS0127 EDUU0140 EDGG0203 SEL/CHKP CODE/02A1A7 OPR/LBT PER/C">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>240604</DOF>
+				<REG>TSINH</REG>
+				<EET>LIRR0025 LFFF0050 LIMM0105 LSAS0127 EDUU0140 EDGG0203</EET>
+				<SEL>CHKP</SEL>
+				<CODE>02A1A7</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AirportData creationTime="2024-10-19T16:37:10" flightPlanId="OFP8" fullPackage="true" xsi:schemaLocation="http://aeec.aviation-ia.net/633 AirportData.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<M633Header timestamp="2024-10-19T16:37:10Z" versionNumber="3"/> 
+<M633SupplementaryHeader>
+    <Flight flightOriginDate="2024-10-19Z" scheduledTimeOfDeparture="2024-10-19T18:45:00Z">
+        <FlightIdentification>
+            <FlightIdentifier>LBT572</FlightIdentifier>
+                <FlightNumber airlineIATACode="BJ" number="572" >
+                    <CommercialFlightNumber>BJ572</CommercialFlightNumber>
+                </FlightNumber>
+             </FlightIdentification>
+        <DepartureAirport airportFunction="DepartureAirport" airportName="MONASTIR/HABIB BOURGUIBA">
+            <AirportICAOCode>DTMB</AirportICAOCode>
+            <AirportIATACode>MIR</AirportIATACode>
+        </DepartureAirport>
+        <ArrivalAirport airportFunction="ArrivalAirport" airportName="LYON/SAINT EXUPERY">
+            <AirportICAOCode>LFLL</AirportICAOCode>
+            <AirportIATACode>LYS</AirportIATACode>
+        </ArrivalAirport>
+    </Flight>
+    <Aircraft aircraftRegistration="TSINH" >
+        <AircraftModel airlineSpecificSubType="1.04">
+            <AircraftICAOType>A320</AircraftICAOType>
+        </AircraftModel>
+    </Aircraft>
+</M633SupplementaryHeader>
+    <Airport>
+        <AirportIdentification airportFunction="DepartureAirport" airportName="MONASTIR/HABIB BOURGUIBA">
+            <AirportICAOCode>DTMB</AirportICAOCode>
+            <AirportIATACode>MIR</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="25"> 
+            <Approach procedureName="TKOF">
+                <RequiredHorizontalVisibility unit="m">250</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">0</RequiredVerticalVisibility>  
+            </Approach>
+            <Elevation unit="ft">8</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">9</Elevation>
+        <AirportReferencePoint><Coordinates latitude="128729" longitude="38717">N3545.5 E01045.3</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT01H</LocalTimeOffsetToUTC>
+    </Airport>
+    <Airport>
+        <AirportIdentification airportFunction="ArrivalAirport" airportName="LYON/SAINT EXUPERY">
+            <AirportICAOCode>LFLL</AirportICAOCode>
+            <AirportIATACode>LYS</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="35L">
+            <Approach procedureName="CAT2">
+                <RequiredHorizontalVisibility unit="m">500</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">0</RequiredVerticalVisibility>
+            </Approach>
+            <Elevation unit="ft">814</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">821</Elevation>
+        <AirportReferencePoint><Coordinates latitude="164612" longitude="18292">N4543.5 E00504.9</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT02H</LocalTimeOffsetToUTC>
+    </Airport>
+    <Airport>
+        <AirportIdentification airportFunction="PrimaryArrivalAlternateAirport" airportName="MARSEILLE/PROVENCE">
+            <AirportICAOCode>LFML</AirportICAOCode>
+            <AirportIATACode>MRS</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="13L">
+            <Approach procedureName="LOCDME">
+                <RequiredHorizontalVisibility unit="m">1300</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">370</RequiredVerticalVisibility>
+            </Approach>
+            <Elevation unit="ft">9</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">70</Elevation>
+        <AirportReferencePoint><Coordinates latitude="156372" longitude="18774">N4326.2 E00512.9</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT02H</LocalTimeOffsetToUTC>
+    </Airport>
+    <Airport>
+        <AirportIdentification airportFunction="ArrivalAlternateAirport" airportName="TOULOUSE/BLAGNAC">
+            <AirportICAOCode>LFBO</AirportICAOCode>
+            <AirportIATACode>TLS</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="32L">
+            <Approach procedureName="VORDME">
+                <RequiredHorizontalVisibility unit="m">2400</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">480</RequiredVerticalVisibility>
+            </Approach>
+            <Elevation unit="ft">497</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">499</Elevation>
+        <AirportReferencePoint><Coordinates latitude="157086" longitude="4924">N4338.1 E00122.1</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT02H</LocalTimeOffsetToUTC>
+    </Airport>
+</AirportData>

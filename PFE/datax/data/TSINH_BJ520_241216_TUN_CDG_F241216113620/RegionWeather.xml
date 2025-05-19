@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RegionWeatherBriefing creationTime="2024-12-16T11:36:20" fullPackage="true" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://aeec.aviation-ia.net/633 RegionWeatherBriefing.xsd">
+    <M633Header timestamp="2024-12-16T11:36:20" versionNumber="3"/>
+    <M633SupplementaryHeader>
+        <Flight flightOriginDate="2024-12-16" scheduledTimeOfDeparture="2024-12-16T15:00:00Z">
+            <FlightIdentification>
+                <FlightIdentifier>LBT520</FlightIdentifier>
+                <FlightNumber airlineIATACode="BJ" number="520">
+                    <CommercialFlightNumber>BJ520</CommercialFlightNumber>
+                </FlightNumber>
+            </FlightIdentification>
+            <DepartureAirport>
+                <AirportICAOCode>DTTA</AirportICAOCode>
+                <AirportIATACode>TUN</AirportIATACode>
+            </DepartureAirport>
+            <ArrivalAirport>
+                <AirportICAOCode>LFPG</AirportICAOCode>
+                <AirportIATACode>CDG</AirportIATACode>
+            </ArrivalAirport>
+        </Flight>
+        <Aircraft aircraftRegistration="TSINH">
+            <AircraftModel>
+                <AircraftICAOType>A320</AircraftICAOType>
+            </AircraftModel>
+        </Aircraft>
+    </M633SupplementaryHeader>
+    <RegionWeathers>
+        <RegionWeather issuer="DTTC" type="AIRMET" startValidTime="2024-12-16T11:00:00" endValidTime="2024-12-16T15:00:00" observationTime="2024-12-16T11:00:00" sequence="1">
+            <RegionWeatherText>
+                <Paragraph sequence="1">
+                    <Text>AIRMET 04 VALID 161100/161500 DTTA- DTTC TUNIS FIR</Text>
+                </Paragraph>
+                <Paragraph sequence="2">
+                    <Text>MOD TURB FCST WI N3739 E01122 - N3313 E01127 - N3313</Text>
+                </Paragraph>
+                <Paragraph sequence="3">
+                    <Text>E00930 - N3735 E00938 - N3739 E01122 BLW FL150 MOV</Text>
+                </Paragraph>
+                <Paragraph sequence="4">
+                    <Text>EAST NC=</Text>
+                </Paragraph>
+            </RegionWeatherText>
+            <Location>
+                <Airspaces>
+                    <Airspace airspaceICAOCode="DTTC">
+                        <AirspaceName>TUNIS FIR</AirspaceName>
+                    </Airspace>
+                </Airspaces>
+            </Location>
+        </RegionWeather>
+        <RegionWeather issuer="DTTC" type="AIRMET" startValidTime="2024-12-16T10:00:00" endValidTime="2024-12-16T14:00:00" observationTime="2024-12-16T10:00:00" sequence="2">
+            <RegionWeatherText>
+                <Paragraph sequence="1">
+                    <Text>AIRMET 03 VALID 161000/161400 DTTA- DTTC TUNIS FIR</Text>
+                </Paragraph>
+                <Paragraph sequence="2">
+                    <Text>ISOL TS FCST WI N3443 E01159 - N3315 E01125 - N3312</Text>
+                </Paragraph>
+                <Paragraph sequence="3">
+                    <Text>E01012 - N3443 E01031 - N3443 E01159 TOP FL370 MOV E</Text>
+                </Paragraph>
+                <Paragraph sequence="4">
+                    <Text>INTSF=</Text>
+                </Paragraph>
+            </RegionWeatherText>
+            <Location>
+                <Airspaces>
+                    <Airspace airspaceICAOCode="DTTC">
+                        <AirspaceName>TUNIS FIR</AirspaceName>
+                    </Airspace>
+                </Airspaces>
+            </Location>
+        </RegionWeather>
+        <RegionWeather issuer="DTTC" type="SIGMET" startValidTime="2024-12-16T11:00:00" endValidTime="2024-12-16T15:00:00" observationTime="2024-12-16T11:00:00" sequence="3">
+            <RegionWeatherText>
+                <Paragraph sequence="1">
+                    <Text>SIGMET 01 VALID 161100/161500 DTTA- DTTC TUNIS FIR</Text>
+                </Paragraph>
+                <Paragraph sequence="2">
+                    <Text>EMBD TSGR FCST WI N3443 E01159 - N3315 E01125 - N3312</Text>
+                </Paragraph>
+                <Paragraph sequence="3">
+                    <Text>E01012 - N3443 E01031 - N3443 E01159 TOP FL370 MOV E</Text>
+                </Paragraph>
+                <Paragraph sequence="4">
+                    <Text>INTSF=</Text>
+                </Paragraph>
+            </RegionWeatherText>
+            <Location>
+                <Airspaces>
+                    <Airspace airspaceICAOCode="DTTC">
+                        <AirspaceName>TUNIS FIR</AirspaceName>
+                    </Airspace>
+                </Airspaces>
+            </Location>
+        </RegionWeather>
+    </RegionWeathers>
+</RegionWeatherBriefing>

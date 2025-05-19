@@ -1,0 +1,954 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AirportWeather creationTime="2024-11-24T05:53:50" fullPackage="false" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://aeec.aviation-ia.net/633 AirportWeather.xsd">
+    <M633Header timestamp="2024-11-24T05:53:50" versionNumber="3"/>
+    <M633SupplementaryHeader>
+        <Flight flightOriginDate="2024-11-24" scheduledTimeOfDeparture="2024-11-24T09:30:00Z">
+            <FlightIdentification>
+                <FlightIdentifier>DAH1000</FlightIdentifier>
+                <FlightNumber airlineIATACode="AH" number="1000">
+                    <CommercialFlightNumber>AH1000</CommercialFlightNumber>
+                </FlightNumber>
+            </FlightIdentification>
+            <DepartureAirport>
+                <AirportICAOCode>DAAG</AirportICAOCode>
+                <AirportIATACode>ALG</AirportIATACode>
+            </DepartureAirport>
+            <ArrivalAirport>
+                <AirportICAOCode>LFPG</AirportICAOCode>
+                <AirportIATACode>CDG</AirportIATACode>
+            </ArrivalAirport>
+        </Flight>
+        <Aircraft aircraftRegistration="TSINK">
+            <AircraftModel>
+                <AircraftICAOType>A320</AircraftICAOType>
+            </AircraftModel>
+        </Aircraft>
+    </M633SupplementaryHeader>
+    <WeatherBulletins>
+        <WeatherBulletin sequence="1">
+            <Airport airportName="PARIS/CHARLES DE GAULLE" airportFunction="ArrivalAirport">
+                <AirportICAOCode>LFPG</AirportICAOCode>
+                <AirportIATACode>CDG</AirportIATACode>
+            </Airport>
+            <Observation observationTime="2024-11-24T05:30:00" observationType="METAR">
+                <ObservationDetails>
+                    <SurfaceWinds>
+                        <SurfaceWind>
+                            <Directions>
+                                <Direction>
+                                    <Value type="true" unit="deg">190</Value>
+                                </Direction>
+                            </Directions>
+                            <Speeds>
+                                <Speed>
+                                    <Value unit="kt">15</Value>
+                                </Speed>
+                            </Speeds>
+                        </SurfaceWind>
+                    </SurfaceWinds>
+                    <VisibilitiesAndWeather>
+                        <Visibilities>
+                            <PrevailingVisibility>
+                                <Value unit="m">9999</Value>
+                            </PrevailingVisibility>
+                        </Visibilities>
+                    </VisibilitiesAndWeather>
+                    <Temperatures>
+                        <AirTemperature>
+                            <Value unit="C">12</Value>
+                        </AirTemperature>
+                        <DewPointTemperature>
+                            <Value unit="C">5</Value>
+                        </DewPointTemperature>
+                    </Temperatures>
+                    <Pressures>
+                        <QNH>
+                            <Value unit="hPa">1010</Value>
+                        </QNH>
+                    </Pressures>
+                </ObservationDetails>
+                <ObservationText>
+                    <Paragraph sequence="1">
+                        <Text>SA 240530 19015KT CAVOK 12/05 Q1010</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>TEMPO 20015G25KT=</Text>
+                    </Paragraph>
+                </ObservationText>
+            </Observation>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="2">
+            <Airport airportName="PARIS/CHARLES DE GAULLE" airportFunction="ArrivalAirport">
+                <AirportICAOCode>LFPG</AirportICAOCode>
+                <AirportIATACode>CDG</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-11-24T05:00:00" forecastType="FT" forecastStartTime="2024-11-24T06:00:00" forecastEndTime="2024-11-25T12:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 240500 2406/2512 19015G25KT CAVOK TX16/2413Z TN11/2512Z</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>TEMPO 2416/2502 18020G35KT</Text>
+                    </Paragraph>
+                    <Paragraph sequence="3">
+                        <Text>BECMG 2506/2508 -RA BKN013</Text>
+                    </Paragraph>
+                    <Paragraph sequence="4">
+                        <Text>PROB40 TEMPO 2508/2511 4000 RA</Text>
+                    </Paragraph>
+                    <Paragraph sequence="5">
+                        <Text>BECMG 2511/2512 26015G25KT NSW BKN040=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="3">
+            <Airport airportName="ALGER/HOUARI BOUMEDIENE" airportFunction="DepartureAirport">
+                <AirportICAOCode>DAAG</AirportICAOCode>
+                <AirportIATACode>ALG</AirportIATACode>
+            </Airport>
+            <Observation observationTime="2024-11-24T05:30:00" observationType="METAR">
+                <ObservationDetails>
+                    <SurfaceWinds>
+                        <SurfaceWind>
+                            <Directions>
+                                <Direction>
+                                    <Value type="true" unit="deg">210</Value>
+                                </Direction>
+                            </Directions>
+                            <Speeds>
+                                <Speed>
+                                    <Value unit="kt">6</Value>
+                                </Speed>
+                            </Speeds>
+                        </SurfaceWind>
+                    </SurfaceWinds>
+                    <VisibilitiesAndWeather>
+                        <Visibilities>
+                            <PrevailingVisibility>
+                                <Value unit="m">9999</Value>
+                            </PrevailingVisibility>
+                        </Visibilities>
+                    </VisibilitiesAndWeather>
+                    <Temperatures>
+                        <AirTemperature>
+                            <Value unit="C">19</Value>
+                        </AirTemperature>
+                        <DewPointTemperature>
+                            <Value unit="C">8</Value>
+                        </DewPointTemperature>
+                    </Temperatures>
+                    <Pressures>
+                        <QNH>
+                            <Value unit="hPa">1026</Value>
+                        </QNH>
+                    </Pressures>
+                </ObservationDetails>
+                <ObservationText>
+                    <Paragraph sequence="1">
+                        <Text>SA 240530 21006KT 170V240 9999 FEW023 19/08 Q1026=</Text>
+                    </Paragraph>
+                </ObservationText>
+            </Observation>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="4">
+            <Airport airportName="ALGER/HOUARI BOUMEDIENE" airportFunction="DepartureAirport">
+                <AirportICAOCode>DAAG</AirportICAOCode>
+                <AirportIATACode>ALG</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-11-24T05:00:00" forecastType="FT" forecastStartTime="2024-11-24T06:00:00" forecastEndTime="2024-11-25T06:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 240500 2406/2506 20012KT 9999 FEW023</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>PROB40 TEMPO 2406/2415 20015G25KT=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="5">
+            <Airport airportName="LYON/SAINT EXUPERY" airportFunction="PrimaryArrivalAlternateAirport">
+                <AirportICAOCode>LFLL</AirportICAOCode>
+                <AirportIATACode>LYS</AirportIATACode>
+            </Airport>
+            <Observation observationTime="2024-11-24T05:30:00" observationType="METAR">
+                <ObservationDetails>
+                    <SurfaceWinds>
+                        <SurfaceWind>
+                            <Directions>
+                                <Direction>
+                                    <Value type="true" unit="deg">150</Value>
+                                </Direction>
+                            </Directions>
+                            <Speeds>
+                                <Speed>
+                                    <Value unit="kt">14</Value>
+                                </Speed>
+                                <Gusts>
+                                    <Value unit="kt">25</Value>
+                                </Gusts>
+                            </Speeds>
+                        </SurfaceWind>
+                    </SurfaceWinds>
+                    <VisibilitiesAndWeather>
+                        <Visibilities>
+                            <PrevailingVisibility>
+                                <Value unit="m">9999</Value>
+                            </PrevailingVisibility>
+                        </Visibilities>
+                        <Clouds>
+                            <CloudDescriptions>
+                                <CloudDescription cloudCover="BKN">
+                                    <Ceiling>
+                                        <Value unit="ft">26000</Value>
+                                    </Ceiling>
+                                </CloudDescription>
+                            </CloudDescriptions>
+                        </Clouds>
+                    </VisibilitiesAndWeather>
+                    <Temperatures>
+                        <AirTemperature>
+                            <Value unit="C">13</Value>
+                        </AirTemperature>
+                        <DewPointTemperature>
+                            <Value unit="C">7</Value>
+                        </DewPointTemperature>
+                    </Temperatures>
+                    <Pressures>
+                        <QNH>
+                            <Value unit="hPa">1023</Value>
+                        </QNH>
+                    </Pressures>
+                </ObservationDetails>
+                <ObservationText>
+                    <Paragraph sequence="1">
+                        <Text>SA 240530 15014G25KT 120V180 9999 FEW030 SCT260 13/07 Q1023</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>TEMPO 19015G30KT=</Text>
+                    </Paragraph>
+                </ObservationText>
+            </Observation>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="6">
+            <Airport airportName="LYON/SAINT EXUPERY" airportFunction="PrimaryArrivalAlternateAirport">
+                <AirportICAOCode>LFLL</AirportICAOCode>
+                <AirportIATACode>LYS</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-11-24T05:00:00" forecastType="FT" forecastStartTime="2024-11-24T06:00:00" forecastEndTime="2024-11-25T12:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 240500 2406/2512 18020G35KT CAVOK</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>TEMPO 2410/2417 BKN030</Text>
+                    </Paragraph>
+                    <Paragraph sequence="3">
+                        <Text>TEMPO 2501/2512 18030G50KT</Text>
+                    </Paragraph>
+                    <Paragraph sequence="4">
+                        <Text>PROB30 TEMPO 2507/2511 18040G60KT=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="7">
+            <Airport airportName="PARIS/ORLY" airportFunction="ArrivalAlternateAirport">
+                <AirportICAOCode>LFPO</AirportICAOCode>
+                <AirportIATACode>ORY</AirportIATACode>
+            </Airport>
+            <Observation observationTime="2024-11-24T05:30:00" observationType="METAR">
+                <ObservationDetails>
+                    <SurfaceWinds>
+                        <SurfaceWind>
+                            <Directions>
+                                <Direction>
+                                    <Value type="true" unit="deg">200</Value>
+                                </Direction>
+                            </Directions>
+                            <Speeds>
+                                <Speed>
+                                    <Value unit="kt">10</Value>
+                                </Speed>
+                            </Speeds>
+                        </SurfaceWind>
+                    </SurfaceWinds>
+                    <VisibilitiesAndWeather>
+                        <Visibilities>
+                            <PrevailingVisibility>
+                                <Value unit="m">9999</Value>
+                            </PrevailingVisibility>
+                        </Visibilities>
+                    </VisibilitiesAndWeather>
+                    <Temperatures>
+                        <AirTemperature>
+                            <Value unit="C">13</Value>
+                        </AirTemperature>
+                        <DewPointTemperature>
+                            <Value unit="C">6</Value>
+                        </DewPointTemperature>
+                    </Temperatures>
+                    <Pressures>
+                        <QNH>
+                            <Value unit="hPa">1010</Value>
+                        </QNH>
+                    </Pressures>
+                </ObservationDetails>
+                <ObservationText>
+                    <Paragraph sequence="1">
+                        <Text>SA 240530 20010KT CAVOK 13/06 Q1010 NOSIG=</Text>
+                    </Paragraph>
+                </ObservationText>
+            </Observation>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="8">
+            <Airport airportName="PARIS/ORLY" airportFunction="ArrivalAlternateAirport">
+                <AirportICAOCode>LFPO</AirportICAOCode>
+                <AirportIATACode>ORY</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-11-24T05:00:00" forecastType="FT" forecastStartTime="2024-11-24T06:00:00" forecastEndTime="2024-11-25T12:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 240500 2406/2512 20015G25KT CAVOK</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>TEMPO 2406/2412 -RA</Text>
+                    </Paragraph>
+                    <Paragraph sequence="3">
+                        <Text>TEMPO 2408/2411 4000 RA BKN012</Text>
+                    </Paragraph>
+                    <Paragraph sequence="4">
+                        <Text>BECMG 2410/2412 28010KT=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="9">
+            <Airport airportName="IBIZA" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>LEIB</AirportICAOCode>
+                <AirportIATACode>IBZ</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-11-24T02:00:00" forecastType="FT" forecastStartTime="2024-11-24T03:00:00" forecastEndTime="2024-11-25T03:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 240200 2403/2503 12008KT 9999 FEW025 TX24/2412Z TN15/2407Z</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>BECMG 2408/2410 18012KT</Text>
+                    </Paragraph>
+                    <Paragraph sequence="3">
+                        <Text>BECMG 2416/2418 12007KT</Text>
+                    </Paragraph>
+                    <Paragraph sequence="4">
+                        <Text>BECMG 2419/2421 19010KT=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="10">
+            <Airport airportName="CHLEF" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>DAOI</AirportICAOCode>
+                <AirportIATACode>CFK</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-11-24T05:00:00" forecastType="FT" forecastStartTime="2024-11-24T06:00:00" forecastEndTime="2024-11-25T06:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 240500 2406/2506 17008KT 8000 NSC=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="11">
+            <Airport airportName="ALICANTE-ELCHE M.HERNANDEZ" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>LEAL</AirportICAOCode>
+                <AirportIATACode>ALC</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-11-24T05:00:00" forecastType="FT" forecastStartTime="2024-11-24T06:00:00" forecastEndTime="2024-11-25T06:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 240500 2406/2506 01008KT 9999 BKN020 TX20/2412Z TN15/2406Z</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>TEMPO 2406/2410 BKN014</Text>
+                    </Paragraph>
+                    <Paragraph sequence="3">
+                        <Text>BECMG 2408/2410 07010KT</Text>
+                    </Paragraph>
+                    <Paragraph sequence="4">
+                        <Text>BECMG 2417/2419 01005KT=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="12">
+            <Airport airportName="BEJAIA/SOUMMAM-ABANE RAMDANE" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>DAAE</AirportICAOCode>
+                <AirportIATACode>BJA</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-11-24T05:00:00" forecastType="FT" forecastStartTime="2024-11-24T06:00:00" forecastEndTime="2024-11-25T06:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 240500 2406/2506 25008KT 9999 FEW026</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>PROB30 TEMPO 2412/2420 31012KT FEW023TCU=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="13">
+            <Airport airportName="SETIF/8 MAI 45" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>DAAS</AirportICAOCode>
+                <AirportIATACode>QSF</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-11-24T05:00:00" forecastType="FT" forecastStartTime="2024-11-24T06:00:00" forecastEndTime="2024-11-25T06:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 240500 2406/2506 02008KT 9999 FEW016 SCT023</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>PROB30 TEMPO 2406/2409 3000 BR BKN006</Text>
+                    </Paragraph>
+                    <Paragraph sequence="3">
+                        <Text>PROB40 2412/2420 FEW023TCU=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="14">
+            <Airport airportName="PALMA DE MALLORCA" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>LEPA</AirportICAOCode>
+                <AirportIATACode>PMI</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-11-24T05:00:00" forecastType="FT" forecastStartTime="2024-11-24T06:00:00" forecastEndTime="2024-11-25T06:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 240500 2406/2506 06004KT 9999 FEW030 TX21/2412Z TN14/2406Z</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>BECMG 2408/2411 18010KT</Text>
+                    </Paragraph>
+                    <Paragraph sequence="3">
+                        <Text>BECMG 2416/2418 05005KT=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="15">
+            <Airport airportName="BISKRA/MOHAMED KHIDER" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>DAUB</AirportICAOCode>
+                <AirportIATACode>BSK</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-11-24T05:00:00" forecastType="FT" forecastStartTime="2024-11-24T06:00:00" forecastEndTime="2024-11-25T06:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 240500 2406/2506 29008KT 9999 FEW040</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>PROB30 TEMPO 2412/2419 16012KT FEW030TCU=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="16">
+            <Airport airportName="VALENCIA" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>LEVC</AirportICAOCode>
+                <AirportIATACode>VLC</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-11-24T05:00:00" forecastType="FT" forecastStartTime="2024-11-24T06:00:00" forecastEndTime="2024-11-25T06:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 240500 2406/2506 30005KT 9999 SCT030 TX20/2413Z TN10/2406Z</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>PROB30 TEMPO 2412/2416 10008KT=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="17">
+            <Airport airportName="BARCELONA/EL PRAT" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>LEBL</AirportICAOCode>
+                <AirportIATACode>BCN</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-11-24T05:00:00" forecastType="FT" forecastStartTime="2024-11-24T06:00:00" forecastEndTime="2024-11-25T06:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 240500 2406/2506 18007KT 9999 SCT025 TX19/2412Z TN15/2406Z</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>BECMG 2408/2411 09007KT=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="18">
+            <Airport airportName="EL OUED/GUEMAR" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>DAUO</AirportICAOCode>
+                <AirportIATACode>ELU</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-11-24T05:00:00" forecastType="FC" forecastStartTime="2024-11-24T06:00:00" forecastEndTime="2024-11-24T15:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FC 240500 2406/2415 11008KT CAVOK=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="19">
+            <Airport airportName="PERPIGNAN/RIVESALTES" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>LFMP</AirportICAOCode>
+                <AirportIATACode>PGF</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-11-24T02:00:00" forecastType="FT" forecastStartTime="2024-11-24T03:00:00" forecastEndTime="2024-11-25T03:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 240200 2403/2503 25005KT CAVOK</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>BECMG 2408/2410 16020G32KT</Text>
+                    </Paragraph>
+                    <Paragraph sequence="3">
+                        <Text>TEMPO 2410/2415 16025G40KT=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="20">
+            <Airport airportName="CARCASSONNE/SALVAZA" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>LFMK</AirportICAOCode>
+                <AirportIATACode>CCF</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-11-24T04:46:00" forecastType="FT" forecastStartTime="2024-11-24T04:00:00" forecastEndTime="2024-11-25T03:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 240446 2404/2503 11012KT 9999 BKN007</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>TEMPO 2406/2409 4500 BR OVC002</Text>
+                    </Paragraph>
+                    <Paragraph sequence="3">
+                        <Text>BECMG 2409/2410 CAVOK</Text>
+                    </Paragraph>
+                    <Paragraph sequence="4">
+                        <Text>BECMG 2410/2412 09019G29KT</Text>
+                    </Paragraph>
+                    <Paragraph sequence="5">
+                        <Text>BECMG 2416/2418 BKN020</Text>
+                    </Paragraph>
+                    <Paragraph sequence="6">
+                        <Text>BECMG 2422/2424 NSC=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="21">
+            <Airport airportName="TOULOUSE/BLAGNAC" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>LFBO</AirportICAOCode>
+                <AirportIATACode>TLS</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-11-24T05:00:00" forecastType="FT" forecastStartTime="2024-11-24T06:00:00" forecastEndTime="2024-11-25T12:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 240500 2406/2512 13012KT CAVOK</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>BECMG 2413/2415 12016G26KT</Text>
+                    </Paragraph>
+                    <Paragraph sequence="3">
+                        <Text>BECMG 2423/2501 12024G36KT</Text>
+                    </Paragraph>
+                    <Paragraph sequence="4">
+                        <Text>BECMG 2509/2511 28010KT=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="22">
+            <Airport airportName="MADRID ADOLFO SUAREZ/BARAJAS" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>LEMD</AirportICAOCode>
+                <AirportIATACode>MAD</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-11-24T05:00:00" forecastType="FT" forecastStartTime="2024-11-24T06:00:00" forecastEndTime="2024-11-25T12:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 240500 2406/2512 VRB05KT 9999 FEW030 TX18/2415Z TN07/2406Z</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>TEMPO 2406/2411 BKN010</Text>
+                    </Paragraph>
+                    <Paragraph sequence="3">
+                        <Text>PROB30 TEMPO 2406/2409 4000 BR BKN004</Text>
+                    </Paragraph>
+                    <Paragraph sequence="4">
+                        <Text>PROB40 TEMPO 2418/2424 16010KT</Text>
+                    </Paragraph>
+                    <Paragraph sequence="5">
+                        <Text>BECMG 2502/2504 18010KT</Text>
+                    </Paragraph>
+                    <Paragraph sequence="6">
+                        <Text>TEMPO 2506/2512 RA BKN014=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="23">
+            <Airport airportName="RODEZ/AVEYRON" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>LFCR</AirportICAOCode>
+                <AirportIATACode>RDZ</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-11-24T05:00:00" forecastType="FT" forecastStartTime="2024-11-24T06:00:00" forecastEndTime="2024-11-25T06:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 240500 2406/2506 12020G30KT 9999 BKN016</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>TEMPO 2406/2412 BKN012</Text>
+                    </Paragraph>
+                    <Paragraph sequence="3">
+                        <Text>BECMG 2418/2420 13030G40KT</Text>
+                    </Paragraph>
+                    <Paragraph sequence="4">
+                        <Text>TEMPO 2421/2502 NSC</Text>
+                    </Paragraph>
+                    <Paragraph sequence="5">
+                        <Text>TEMPO 2501/2504 15030G47KT</Text>
+                    </Paragraph>
+                    <Paragraph sequence="6">
+                        <Text>BECMG 2504/2506 NSC=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="24">
+            <Airport airportName="POITIERS/BIARD" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>LFBI</AirportICAOCode>
+                <AirportIATACode>PIS</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-11-24T05:00:00" forecastType="FT" forecastStartTime="2024-11-24T06:00:00" forecastEndTime="2024-11-25T06:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 240500 2406/2506 18015G25KT 9999 SCT090TCU</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>BECMG 2409/2411 17025G35KT</Text>
+                    </Paragraph>
+                    <Paragraph sequence="3">
+                        <Text>BECMG 2503/2505 -RA=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="25">
+            <Airport airportName="PAU/PYRENEES" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>LFBP</AirportICAOCode>
+                <AirportIATACode>PUF</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-11-24T05:00:00" forecastType="FT" forecastStartTime="2024-11-24T06:00:00" forecastEndTime="2024-11-25T06:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 240500 2406/2506 VRB03KT CAVOK</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>BECMG 2414/2416 18016KT</Text>
+                    </Paragraph>
+                    <Paragraph sequence="3">
+                        <Text>TEMPO 2416/2421 18015G25KT</Text>
+                    </Paragraph>
+                    <Paragraph sequence="4">
+                        <Text>TEMPO 2504/2506 18018G29KT=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="26">
+            <Airport airportName="TOURS/VAL DE LOIRE" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>LFOT</AirportICAOCode>
+                <AirportIATACode>TUF</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-11-24T05:00:00" forecastType="FT" forecastStartTime="2024-11-24T06:00:00" forecastEndTime="2024-11-25T06:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 240500 2406/2506 19017G28KT CAVOK</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>TEMPO 2417/2424 18020G40KT</Text>
+                    </Paragraph>
+                    <Paragraph sequence="3">
+                        <Text>TEMPO 2504/2506 4000 RA BKN030=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="27">
+            <Airport airportName="LIMOGES/BELLEGARDE" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>LFBL</AirportICAOCode>
+                <AirportIATACode>LIG</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-11-24T05:00:00" forecastType="FT" forecastStartTime="2024-11-24T06:00:00" forecastEndTime="2024-11-25T06:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 240500 2406/2506 15015KT CAVOK</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>TEMPO 2406/2410 16015G30KT</Text>
+                    </Paragraph>
+                    <Paragraph sequence="3">
+                        <Text>BECMG 2410/2412 16020G30KT</Text>
+                    </Paragraph>
+                    <Paragraph sequence="4">
+                        <Text>TEMPO 2414/2506 16025G40KT=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="28">
+            <Airport airportName="LA ROCHELLE/ILE DE RE" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>LFBH</AirportICAOCode>
+                <AirportIATACode>LRH</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-11-24T05:00:00" forecastType="FT" forecastStartTime="2024-11-24T06:00:00" forecastEndTime="2024-11-25T06:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 240500 2406/2506 16020G30KT CAVOK</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>TEMPO 2408/2423 16020G40KT</Text>
+                    </Paragraph>
+                    <Paragraph sequence="3">
+                        <Text>BECMG 2501/2503 -RA</Text>
+                    </Paragraph>
+                    <Paragraph sequence="4">
+                        <Text>BECMG 2503/2505 22015G25KT</Text>
+                    </Paragraph>
+                    <Paragraph sequence="5">
+                        <Text>TEMPO 2504/2506 3000 RA BKN012=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="29">
+            <Airport airportName="NANTES ATLANTIQUE" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>LFRS</AirportICAOCode>
+                <AirportIATACode>NTE</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-11-24T05:00:00" forecastType="FT" forecastStartTime="2024-11-24T06:00:00" forecastEndTime="2024-11-25T12:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 240500 2406/2512 18015G25KT CAVOK</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>TEMPO 2406/2409 18018G30KT</Text>
+                    </Paragraph>
+                    <Paragraph sequence="3">
+                        <Text>BECMG 2409/2411 17020G35KT</Text>
+                    </Paragraph>
+                    <Paragraph sequence="4">
+                        <Text>PROB40 TEMPO 2417/2421 18025G45KT</Text>
+                    </Paragraph>
+                    <Paragraph sequence="5">
+                        <Text>BECMG 2422/2424 -RA</Text>
+                    </Paragraph>
+                    <Paragraph sequence="6">
+                        <Text>TEMPO 2501/2506 3000 RA BKN008</Text>
+                    </Paragraph>
+                    <Paragraph sequence="7">
+                        <Text>BECMG 2503/2505 30010KT</Text>
+                    </Paragraph>
+                    <Paragraph sequence="8">
+                        <Text>FM250800 19005KT 9999 SCT030=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="30">
+            <Airport airportName="BORDEAUX/MERIGNAC" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>LFBD</AirportICAOCode>
+                <AirportIATACode>BOD</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-11-24T05:00:00" forecastType="FT" forecastStartTime="2024-11-24T06:00:00" forecastEndTime="2024-11-25T12:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 240500 2406/2512 15015KT CAVOK TX17/2414Z TN09/2406Z</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>TEMPO 2417/2503 15015G25KT</Text>
+                    </Paragraph>
+                    <Paragraph sequence="3">
+                        <Text>PROB30 TEMPO 2504/2507 -SHRA SCT090TCU</Text>
+                    </Paragraph>
+                    <Paragraph sequence="4">
+                        <Text>FM250700 26010KT 9999 BKN040</Text>
+                    </Paragraph>
+                    <Paragraph sequence="5">
+                        <Text>TEMPO 2507/2512 4000 -RA BKN010=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="31">
+            <Airport airportName="PARIS/LE BOURGET" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>LFPB</AirportICAOCode>
+                <AirportIATACode>LBG</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-11-24T05:00:00" forecastType="FT" forecastStartTime="2024-11-24T06:00:00" forecastEndTime="2024-11-25T06:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 240500 2406/2506 19015G25KT CAVOK</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>TEMPO 2416/2502 18020G35KT=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="32">
+            <Airport airportName="BEAUVAIS/TILLE" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>LFOB</AirportICAOCode>
+                <AirportIATACode>BVA</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-11-24T05:00:00" forecastType="FT" forecastStartTime="2024-11-24T06:00:00" forecastEndTime="2024-11-25T06:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 240500 2406/2506 18015G25KT CAVOK</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>TEMPO 2406/2417 18020G35KT</Text>
+                    </Paragraph>
+                    <Paragraph sequence="3">
+                        <Text>PROB40 TEMPO 2417/2424 18020G35KT</Text>
+                    </Paragraph>
+                    <Paragraph sequence="4">
+                        <Text>TEMPO 2504/2506 4000 RA BKN030 SCT040TCU OVC080=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="33">
+            <Airport airportName="RENNES/ST JACQUES" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>LFRN</AirportICAOCode>
+                <AirportIATACode>RNS</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-11-24T05:00:00" forecastType="FT" forecastStartTime="2024-11-24T06:00:00" forecastEndTime="2024-11-25T06:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 240500 2406/2506 16010KT 9999 SCT030</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>BECMG 2406/2408 18015G30KT</Text>
+                    </Paragraph>
+                    <Paragraph sequence="3">
+                        <Text>PROB30 TEMPO 2406/2408 BKN008</Text>
+                    </Paragraph>
+                    <Paragraph sequence="4">
+                        <Text>PROB40 TEMPO 2408/2502 18025G40KT</Text>
+                    </Paragraph>
+                    <Paragraph sequence="5">
+                        <Text>TEMPO 2420/2424 4000 RA</Text>
+                    </Paragraph>
+                    <Paragraph sequence="6">
+                        <Text>TEMPO 2500/2506 2000 RA BKN008 BKN020CB</Text>
+                    </Paragraph>
+                    <Paragraph sequence="7">
+                        <Text>BECMG 2502/2504 28010KT</Text>
+                    </Paragraph>
+                    <Paragraph sequence="8">
+                        <Text>BECMG 2504/2506 22010KT=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="34">
+            <Airport airportName="DEAUVILLE/NORMANDIE" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>LFRG</AirportICAOCode>
+                <AirportIATACode>DOL</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-11-24T05:00:00" forecastType="FC" forecastStartTime="2024-11-24T06:00:00" forecastEndTime="2024-11-24T15:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FC 240500 2406/2415 18020G35KT 9999 SCT030</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>PROB40 TEMPO 2406/2415 18025G45KT=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="35">
+            <Airport airportName="LILLE/LESQUIN" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>LFQQ</AirportICAOCode>
+                <AirportIATACode>LIL</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-11-24T05:00:00" forecastType="FT" forecastStartTime="2024-11-24T06:00:00" forecastEndTime="2024-11-25T12:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 240500 2406/2512 18020G35KT 9999 FEW018 OVC100</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>PROB40 TEMPO 2410/2422 18025G45KT</Text>
+                    </Paragraph>
+                    <Paragraph sequence="3">
+                        <Text>BECMG 2504/2507 4000 RA BKN020 SCT050TCU OVC100</Text>
+                    </Paragraph>
+                    <Paragraph sequence="4">
+                        <Text>PROB40 TEMPO 2506/2511 VRB20G40KT 1500 +RA BKN006</Text>
+                    </Paragraph>
+                    <Paragraph sequence="5">
+                        <Text>BKN012 SCT040TCU OVC070</Text>
+                    </Paragraph>
+                    <Paragraph sequence="6">
+                        <Text>BECMG 2511/2512 21013KT=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="36">
+            <Airport airportName="LE HAVRE - OCTEVILLE" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>LFOH</AirportICAOCode>
+                <AirportIATACode>LEH</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-11-24T05:00:00" forecastType="FT" forecastStartTime="2024-11-24T06:00:00" forecastEndTime="2024-11-25T06:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 240500 2406/2506 18020G35KT 9999 FEW016 BKN120</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>PROB40 TEMPO 2406/2502 18025G45KT</Text>
+                    </Paragraph>
+                    <Paragraph sequence="3">
+                        <Text>BECMG 2502/2506 24013KT</Text>
+                    </Paragraph>
+                    <Paragraph sequence="4">
+                        <Text>TEMPO 2502/2506 3500 RA BKN020 SCT030TCU OVC070</Text>
+                    </Paragraph>
+                    <Paragraph sequence="5">
+                        <Text>PROB40 TEMPO 2504/2506 VRB25G40KT 1500 +RA BKN004</Text>
+                    </Paragraph>
+                    <Paragraph sequence="6">
+                        <Text>BKN006 BKN014TCU=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+        <WeatherBulletin sequence="37">
+            <Airport airportName="EINDHOVEN" airportFunction="EnRouteAlternateAirport">
+                <AirportICAOCode>EHEH</AirportICAOCode>
+                <AirportIATACode>EIN</AirportIATACode>
+            </Airport>
+            <Forecast forecastTime="2024-11-24T05:36:00" forecastType="FT" forecastStartTime="2024-11-24T06:00:00" forecastEndTime="2024-11-25T12:00:00">
+                <ForecastText>
+                    <Paragraph sequence="1">
+                        <Text>FT 240536 2406/2512 19015KT 9999 BKN030 BKN045</Text>
+                    </Paragraph>
+                    <Paragraph sequence="2">
+                        <Text>TEMPO 2406/2509 20016G28KT</Text>
+                    </Paragraph>
+                    <Paragraph sequence="3">
+                        <Text>TEMPO 2509/2512 4500 RA SCT015 OVC030=</Text>
+                    </Paragraph>
+                </ForecastText>
+            </Forecast>
+        </WeatherBulletin>
+    </WeatherBulletins>
+</AirportWeather>

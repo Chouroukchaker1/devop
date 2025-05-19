@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP5" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-12-28T03:58:45" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-12-28" scheduledTimeOfDeparture="2024-12-28T07:00:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>LBT214</FlightIdentifier>
+				<FlightNumber airlineIATACode="BJ" number=" 214">
+					<CommercialFlightNumber>BJ214</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>DTMB</AirportICAOCode>
+				<AirportIATACode>MIR</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>EDDL</AirportICAOCode>
+				<AirportIATACode>DUS</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSINQ">
+			<AircraftModel>
+				<AircraftICAOType>A320</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF DTMBZPZX DTMBZTZX DTTCZQZX DTTCZRZX EUCHZMFP EUCBZMFP</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>(FPL-LBT214-IS</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>-A320/M-SDFGHIJ1LORVWY/LB1</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-DTMB0700</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-N0448F360 LARBI1B LARBI A411 VAXAL UA411 TUC UA725 TANIT UM739</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>NIVAB/N0445F380 M739 TABOT DCT BUKID DCT GARPU DCT PIGOS UM733</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>BARSO UM622 IRMAR DCT KINES DCT VANAS DCT MOBLO DCT UBIMA DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>GILIR DCT PENDU DCT IXILU DCT EPL/N0446F320 DCT ROUSY DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="10">
+			<Text>DIK/N0443F310 N853 ARCKY T853 NVO T857 BIKMU BIKMU1A</Text>
+		</Paragraph>
+		<Paragraph sequence="11">
+			<Text>-EDDL0224 EDDK</Text>
+		</Paragraph>
+		<Paragraph sequence="12">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/241228 REG/TSINQ EET/LIRR0033 LFFF0038</Text>
+		</Paragraph>
+		<Paragraph sequence="13">
+			<Text>LIMM0129 LFFF0131 LSAS0142 LFFF0145 EBUR0210 EBBU0217 EDGG0218</Text>
+		</Paragraph>
+		<Paragraph sequence="14">
+			<Text>SEL/JMLQ CODE/02A1B0 OPR/LBT PER/C)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="DTMBZPZX DTMBZTZX EUCHZMFP EUCBZMFP DTTCZQZX DTTCZRZX" />
+		<Originator address="DTMBLBTO" />
+		<Items>
+			<Item7 aTCCallsign="LBT214" />
+			<Item8 flightRules="I" typeOfFlight="S" />
+			<Item9 typeOfAircraft="A320" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDFGHIJ1LORVWY/LB1" />
+			<Item13 departureAirport="DTMB" departureTime="0700" />
+			<Item15 cruisingSpeed="N0448" cruisingLevel="F360" route="LARBI1B LARBI A411 VAXAL UA411 TUC UA725 TANIT UM739 NIVAB/N0445F380 M739 TABOT DCT BUKID DCT GARPU DCT PIGOS UM733 BARSO UM622 IRMAR DCT KINES DCT VANAS DCT MOBLO DCT UBIMA DCT GILIR DCT PENDU DCT IXILU DCT EPL/N0446F320 DCT ROUSY DCT DIK/N0443F310 N853 ARCKY T853 NVO T857 BIKMU BIKMU1A" />
+			<Item16 arrivalAirport="EDDL" estimatedFlightTime="0224" alternateAirport="EDDK" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/241228 REG/TSINQ EET/LIRR0033 LFFF0038 LIMM0129 LFFF0131 LSAS0142 LFFF0145 EBUR0210 EBBU0217 EDGG0218 SEL/JMLQ CODE/02A1B0 OPR/LBT PER/C">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>241228</DOF>
+				<REG>TSINQ</REG>
+				<EET>LIRR0033 LFFF0038 LIMM0129 LFFF0131 LSAS0142 LFFF0145 EBUR0210 EBBU0217 EDGG0218</EET>
+				<SEL>JMLQ</SEL>
+				<CODE>02A1B0</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

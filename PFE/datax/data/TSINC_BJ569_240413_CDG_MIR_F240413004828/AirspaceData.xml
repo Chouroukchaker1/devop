@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AirspaceData flightPlanId="OFP6" xsi:schemaLocation="http://aeec.aviation-ia.net/633 AirspaceData.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<M633Header timestamp="2024-04-13T00:48:19Z" versionNumber="3"/> 
+<M633SupplementaryHeader>
+    <Flight flightOriginDate="2024-04-13Z" scheduledTimeOfDeparture="2024-04-13T08:05:00Z">
+        <FlightIdentification>
+            <FlightIdentifier>LBT569</FlightIdentifier>
+                <FlightNumber airlineIATACode="BJ" number="569" >
+                    <CommercialFlightNumber>BJ569</CommercialFlightNumber>
+                </FlightNumber>
+             </FlightIdentification>
+        <DepartureAirport airportFunction="DepartureAirport" airportName="PARIS/CHARLES DE GAULLE">
+            <AirportICAOCode>LFPG</AirportICAOCode>
+            <AirportIATACode>CDG</AirportIATACode>
+        </DepartureAirport>
+        <ArrivalAirport airportFunction="ArrivalAirport" airportName="MONASTIR/HABIB BOURGUIBA">
+            <AirportICAOCode>DTMB</AirportICAOCode>
+            <AirportIATACode>MIR</AirportIATACode>
+        </ArrivalAirport>
+    </Flight>
+    <Aircraft aircraftRegistration="TSINC" >
+        <AircraftModel airlineSpecificSubType="5.90">
+            <AircraftICAOType>A320</AircraftICAOType>
+        </AircraftModel>
+    </Aircraft>
+</M633SupplementaryHeader>
+    <Airspace airspaceName="PARIS_FIR" airspaceType="FIR" airspaceICAOCode="LFFF">
+        <Entry cumulatedFlightTime="PT0H0M00S">
+            <Coordinates latitude="+176435" longitude="+9172">N4900.6 E00232.9</Coordinates>
+            <CumulatedGroundDistance unit="NM">0</CumulatedGroundDistance>
+        </Entry>
+        <Exit cumulatedFlightTime="PT0H9M24S">
+            <Coordinates  latitude="+175582" longitude="+13356">N4846.4 E00342.6</Coordinates>
+            <CumulatedGroundDistance unit="NM">49</CumulatedGroundDistance>
+        </Exit>
+        <GroundDistance unit="NM">0</GroundDistance>
+    </Airspace>
+    <Airspace airspaceName="FRANCE_UIR" airspaceType="UIR" airspaceICAOCode="LFFF">
+        <Entry cumulatedFlightTime="PT0H9M24S">
+            <Coordinates latitude="+175582" longitude="+13356">N4846.4 E00342.6</Coordinates>
+            <CumulatedGroundDistance unit="NM">49</CumulatedGroundDistance>
+        </Entry>
+        <Exit cumulatedFlightTime="PT0H30M38S">
+            <Coordinates  latitude="+171517" longitude="+27414">N4738.6 E00736.9</Coordinates>
+            <CumulatedGroundDistance unit="NM">223</CumulatedGroundDistance>
+        </Exit>
+        <GreatCircleDistance unit="NM">49</GreatCircleDistance>
+        <GroundDistance unit="NM">49</GroundDistance>
+    </Airspace>
+    <Airspace airspaceName="SWITZERLAND_UIR" airspaceType="UIR" airspaceICAOCode="LSAS">
+        <Entry cumulatedFlightTime="PT0H30M38S">
+            <Coordinates latitude="+171518" longitude="+27414">N4738.6 E00736.9</Coordinates>
+            <CumulatedGroundDistance unit="NM">223</CumulatedGroundDistance>
+        </Entry>
+        <Exit cumulatedFlightTime="PT0H42M26S">
+            <Coordinates  latitude="+166248" longitude="+31013">N4610.8 E00836.9</Coordinates>
+            <CumulatedGroundDistance unit="NM">320</CumulatedGroundDistance>
+        </Exit>
+        <GreatCircleDistance unit="NM">221</GreatCircleDistance>
+        <GroundDistance unit="NM">223</GroundDistance>
+    </Airspace>
+    <Airspace airspaceName="RHEIN_UIR" airspaceType="UIR" airspaceICAOCode="EDUU">
+        <Entry cumulatedFlightTime="PT0H30M38S">
+            <Coordinates latitude="+171517" longitude="+27414">N4738.6 E00736.9</Coordinates>
+            <CumulatedGroundDistance unit="NM">223</CumulatedGroundDistance>
+        </Entry>
+        <Exit cumulatedFlightTime="PT0H31M13S">
+            <Coordinates  latitude="+171261" longitude="+27594">N4734.4 E00739.9</Coordinates>
+            <CumulatedGroundDistance unit="NM">228</CumulatedGroundDistance>
+        </Exit>
+        <GreatCircleDistance unit="NM">221</GreatCircleDistance>
+        <GroundDistance unit="NM">223</GroundDistance>
+    </Airspace>
+    <Airspace airspaceName="MILAN_UIR" airspaceType="UIR" airspaceICAOCode="LIMM">
+        <Entry cumulatedFlightTime="PT0H42M26S">
+            <Coordinates latitude="+166248" longitude="+31013">N4610.8 E00836.9</Coordinates>
+            <CumulatedGroundDistance unit="NM">320</CumulatedGroundDistance>
+        </Entry>
+        <Exit cumulatedFlightTime="PT1H5M24S">
+            <Coordinates  latitude="+155441" longitude="+35153">N4310.7 E00945.9</Coordinates>
+            <CumulatedGroundDistance unit="NM">507</CumulatedGroundDistance>
+        </Exit>
+        <GreatCircleDistance unit="NM">299</GreatCircleDistance>
+        <GroundDistance unit="NM">320</GroundDistance>
+    </Airspace>
+    <Airspace airspaceName="ROME_UIR" airspaceType="UIR" airspaceICAOCode="LIRR">
+        <Entry cumulatedFlightTime="PT1H5M24S">
+            <Coordinates latitude="+155441" longitude="+35153">N4310.7 E00945.9</Coordinates>
+            <CumulatedGroundDistance unit="NM">507</CumulatedGroundDistance>
+        </Entry>
+        <Exit cumulatedFlightTime="PT1H43M13S">
+            <Coordinates  latitude="+137717" longitude="+35234">N3815.3 E00947.2</Coordinates>
+            <CumulatedGroundDistance unit="NM">805</CumulatedGroundDistance>
+        </Exit>
+        <GreatCircleDistance unit="NM">458</GreatCircleDistance>
+        <GroundDistance unit="NM">507</GroundDistance>
+    </Airspace>
+    <Airspace airspaceName="TUNIS_UIR" airspaceType="UIR" airspaceICAOCode="DTTC">
+        <Entry cumulatedFlightTime="PT1H43M13S">
+            <Coordinates latitude="+137717" longitude="+35234">N3815.3 E00947.2</Coordinates>
+            <CumulatedGroundDistance unit="NM">805</CumulatedGroundDistance>
+        </Entry>
+        <Exit cumulatedFlightTime="PT1H59M16S">
+            <Coordinates  latitude="+131147" longitude="+37554">N3625.8 E01025.9</Coordinates>
+            <CumulatedGroundDistance unit="NM">919</CumulatedGroundDistance>
+        </Exit>
+        <GreatCircleDistance unit="NM">712</GreatCircleDistance>
+        <GroundDistance unit="NM">805</GroundDistance>
+    </Airspace>
+    <Airspace airspaceName="TUNIS_FIR" airspaceType="FIR" airspaceICAOCode="DTTC">
+        <Entry cumulatedFlightTime="PT1H59M16S">
+            <Coordinates latitude="+131147" longitude="+37554">N3625.8 E01025.9</Coordinates>
+            <CumulatedGroundDistance unit="NM">919</CumulatedGroundDistance>
+        </Entry>
+        <Exit cumulatedFlightTime="PT2H15M23S">
+            <Coordinates  latitude="+128729" longitude="+38717">N3545.5 E01045.3</Coordinates>
+            <CumulatedGroundDistance unit="NM">986</CumulatedGroundDistance>
+        </Exit>
+        <GreatCircleDistance unit="NM">824</GreatCircleDistance>
+        <GroundDistance unit="NM">919</GroundDistance>
+    </Airspace>
+</AirspaceData>

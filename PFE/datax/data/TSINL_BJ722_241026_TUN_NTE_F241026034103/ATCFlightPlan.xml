@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP8" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-10-26T03:40:57" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-10-26" scheduledTimeOfDeparture="2024-10-26T07:00:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>LBT722</FlightIdentifier>
+				<FlightNumber airlineIATACode="BJ" number=" 722">
+					<CommercialFlightNumber>BJ722</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>DTTA</AirportICAOCode>
+				<AirportIATACode>TUN</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>LFRS</AirportICAOCode>
+				<AirportIATACode>NTE</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSINL">
+			<AircraftModel>
+				<AircraftICAOType>A20N</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF DTTAZAZX DTTAZPZX DTTAZTZX DTTCZQZX DTTCZRZX EUCHZMFP EUCBZMFP</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>(FPL-LBT722-IS</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>-A20N/M-SDE2FGHIJ1LORVWY/LB1G1</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-DTTA0700</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-N0449F380 TOBIB2A TOBIB A725 TANIT UM739 NIVAB M739 TABOT DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>KUPIM DCT NIVDA DCT AMFAC UM731 FJR DCT GAI DCT SECHE DCT UVELI</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>DCT CNA DCT MANAK MANAK1C</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>-LFRS0150 LFPG</Text>
+		</Paragraph>
+		<Paragraph sequence="10">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/241026 REG/TSINL EET/LIRR0022 LFFF0026</Text>
+		</Paragraph>
+		<Paragraph sequence="11">
+			<Text>LFBB0139 LFRR0148 SEL/MPER CODE/02A1AB OPR/LBT PER/C)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="DTTAZAZX DTTAZPZX DTTAZTZX EUCHZMFP EUCBZMFP DTTCZQZX DTTCZRZX" />
+		<Originator address="DTMBLBTO" />
+		<Items>
+			<Item7 aTCCallsign="LBT722" />
+			<Item8 flightRules="I" typeOfFlight="S" />
+			<Item9 typeOfAircraft="A20N" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDE2FGHIJ1LORVWY/LB1G1" />
+			<Item13 departureAirport="DTTA" departureTime="0700" />
+			<Item15 cruisingSpeed="N0449" cruisingLevel="F380" route="TOBIB2A TOBIB A725 TANIT UM739 NIVAB M739 TABOT DCT KUPIM DCT NIVDA DCT AMFAC UM731 FJR DCT GAI DCT SECHE DCT UVELI DCT CNA DCT MANAK MANAK1C" />
+			<Item16 arrivalAirport="LFRS" estimatedFlightTime="0150" alternateAirport="LFPG" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/241026 REG/TSINL EET/LIRR0022 LFFF0026 LFBB0139 LFRR0148 SEL/MPER CODE/02A1AB OPR/LBT PER/C">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>241026</DOF>
+				<REG>TSINL</REG>
+				<EET>LIRR0022 LFFF0026 LFBB0139 LFRR0148</EET>
+				<SEL>MPER</SEL>
+				<CODE>02A1AB</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

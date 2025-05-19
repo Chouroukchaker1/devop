@@ -1,0 +1,117 @@
+/* ============================= */
+/* GLOBAL STYLES */
+/* ============================= */
+
+/* Reset de base pour supprimer les marges et paddings par défaut */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Appliquer une hauteur complète à html et body */
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Centrage du contenu principal */
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* ============================= */
+/* UTILITY CLASSES */
+/* ============================= */
+
+/* Conteneur principal pour limiter la largeur du contenu */
+.container {
+  max-width: 1200px;
+  width: 100%;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+/* Espacement */
+.mt-10 { margin-top: 10px; }
+.mt-20 { margin-top: 20px; }
+.mb-10 { margin-bottom: 10px; }
+.mb-20 { margin-bottom: 20px; }
+
+/* Boutons réutilisables */
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+/* ============================= */
+/* HEADER */
+/* ============================= */
+
+.header {
+  width: 100%;
+  padding: 15px 20px;
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* ============================= */
+/* FOOTER */
+/* ============================= */
+
+.footer {
+  width: 100%;
+  padding: 10px 20px;
+ 
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  position: absolute;
+  bottom: 0;
+}
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
+/* Styles pour les écrans de taille moyenne (tablettes) */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  .header {
+    font-size: 20px;
+  }
+}
+
+/* Styles pour les petits écrans (mobiles) */
+@media (max-width: 480px) {
+  .header {
+    font-size: 18px;
+  }
+
+  .button {
+    width: 100%;
+    text-align: center;
+  }
+}

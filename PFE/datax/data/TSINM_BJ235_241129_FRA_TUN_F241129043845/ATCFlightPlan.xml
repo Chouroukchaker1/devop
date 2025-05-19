@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP9" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-11-29T04:38:38" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-11-29" scheduledTimeOfDeparture="2024-11-29T10:20:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>LBT235</FlightIdentifier>
+				<FlightNumber airlineIATACode="BJ" number=" 235">
+					<CommercialFlightNumber>BJ235</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>EDDF</AirportICAOCode>
+				<AirportIATACode>FRA</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>DTTA</AirportICAOCode>
+				<AirportIATACode>TUN</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSINM">
+			<AircraftModel>
+				<AircraftICAOType>A20N</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF EUCHZMFP EUCBZMFP</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>AD DTTCZQZX DTTCZRZX DTTAZAZX DTTAZPZX DTTAZTZX</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>(FPL-LBT235-IS</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-A20N/M-SDFGHIJ1LORVWY/LB1G1</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-EDDF1020</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>-N0442F370 ANEKI3F ANEKI Y163 NATOR DCT TRA DCT RIPUS DCT GERSA DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>SOSON DCT ODINA DCT ELB/N0448F350 DCT VELAD DCT QUENN DCT NOLSI</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>UA868 MEDAR DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="10">
+			<Text>-DTTA0139 DTNH</Text>
+		</Paragraph>
+		<Paragraph sequence="11">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/241129 REG/TSINM EET/EDUU0010 LSAS0019</Text>
+		</Paragraph>
+		<Paragraph sequence="12">
+			<Text>LIMM0031 LIRR0051 DTTC0131 SEL/KSAD CODE/02A1AC OPR/LBT PER/C)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="EUCHZMFP EUCBZMFP" />
+		<Originator address="DTMBLBTO" />
+		<AdditionalAddressees addresses="DTTCZQZX DTTCZRZX DTTAZAZX DTTAZPZX DTTAZTZX" />
+		<Items>
+			<Item7 aTCCallsign="LBT235" />
+			<Item8 flightRules="I" typeOfFlight="S" />
+			<Item9 typeOfAircraft="A20N" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDFGHIJ1LORVWY/LB1G1" />
+			<Item13 departureAirport="EDDF" departureTime="1020" />
+			<Item15 cruisingSpeed="N0442" cruisingLevel="F370" route="ANEKI3F ANEKI Y163 NATOR DCT TRA DCT RIPUS DCT GERSA DCT SOSON DCT ODINA DCT ELB/N0448F350 DCT VELAD DCT QUENN DCT NOLSI UA868 MEDAR DCT" />
+			<Item16 arrivalAirport="DTTA" estimatedFlightTime="0139" alternateAirport="DTNH" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/241129 REG/TSINM EET/EDUU0010 LSAS0019 LIMM0031 LIRR0051 DTTC0131 SEL/KSAD CODE/02A1AC OPR/LBT PER/C">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>241129</DOF>
+				<REG>TSINM</REG>
+				<EET>EDUU0010 LSAS0019 LIMM0031 LIRR0051 DTTC0131</EET>
+				<SEL>KSAD</SEL>
+				<CODE>02A1AC</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

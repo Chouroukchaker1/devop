@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AirportData creationTime="2024-05-06T00:20:11" flightPlanId="OFP9" fullPackage="true" xsi:schemaLocation="http://aeec.aviation-ia.net/633 AirportData.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<M633Header timestamp="2024-05-06T00:20:11Z" versionNumber="3"/> 
+<M633SupplementaryHeader>
+    <Flight flightOriginDate="2024-05-06Z" scheduledTimeOfDeparture="2024-05-06T07:20:00Z">
+        <FlightIdentification>
+            <FlightIdentifier>LBT7418</FlightIdentifier>
+                <FlightNumber airlineIATACode="BJ" number="7418" >
+                    <CommercialFlightNumber>BJ7418</CommercialFlightNumber>
+                </FlightNumber>
+             </FlightIdentification>
+        <DepartureAirport airportFunction="DepartureAirport" airportName="WARSAW/CHOPIN">
+            <AirportICAOCode>EPWA</AirportICAOCode>
+            <AirportIATACode>WAW</AirportIATACode>
+        </DepartureAirport>
+        <ArrivalAirport airportFunction="ArrivalAirport" airportName="KATOWICE/PYRZOWICE">
+            <AirportICAOCode>EPKT</AirportICAOCode>
+            <AirportIATACode>KTW</AirportIATACode>
+        </ArrivalAirport>
+    </Flight>
+    <Aircraft aircraftRegistration="TSINH" >
+        <AircraftModel airlineSpecificSubType="5.90">
+            <AircraftICAOType>A320</AircraftICAOType>
+        </AircraftModel>
+    </Aircraft>
+</M633SupplementaryHeader>
+    <Airport>
+        <AirportIdentification airportFunction="DepartureAirport" airportName="WARSAW/CHOPIN">
+            <AirportICAOCode>EPWA</AirportICAOCode>
+            <AirportIATACode>WAW</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="15"> 
+            <Approach procedureName="TKOF">
+                <RequiredHorizontalVisibility unit="m">200</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">0</RequiredVerticalVisibility>  
+            </Approach>
+            <Elevation unit="ft">352</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">362</Elevation>
+        <AirportReferencePoint><Coordinates latitude="187797" longitude="75482">N5210.0 E02058.0</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT02H</LocalTimeOffsetToUTC>
+    </Airport>
+    <Airport>
+        <AirportIdentification airportFunction="ArrivalAirport" airportName="KATOWICE/PYRZOWICE">
+            <AirportICAOCode>EPKT</AirportICAOCode>
+            <AirportIATACode>KTW</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="08"> 
+            <Approach procedureName="RNAV GPS LPV">
+                <RequiredHorizontalVisibility unit="m">800</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">220</RequiredVerticalVisibility>
+            </Approach>
+            <Elevation unit="ft">970</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">1007</Elevation>
+        <AirportReferencePoint><Coordinates latitude="181707" longitude="68688">N5028.5 E01904.8</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT02H</LocalTimeOffsetToUTC>
+    </Airport>
+    <Airport>
+        <AirportIdentification airportFunction="PrimaryArrivalAlternateAirport" airportName="KRAKOW/BALICE">
+            <AirportICAOCode>EPKK</AirportICAOCode>
+            <AirportIATACode>KRK</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="07">
+            <Approach procedureName="VORDME">
+                <RequiredHorizontalVisibility unit="m">3400</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">909</RequiredVerticalVisibility>
+            </Approach>
+            <Elevation unit="ft">791</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">791</Elevation>
+        <AirportReferencePoint><Coordinates latitude="180280" longitude="71225">N5004.7 E01947.1</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT02H</LocalTimeOffsetToUTC>
+    </Airport>
+    <Airport>
+        <AirportIdentification airportFunction="ArrivalAlternateAirport" airportName="OSTRAVA MOSNOV">
+            <AirportICAOCode>LKMT</AirportICAOCode>
+            <AirportIATACode>OSR</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="22">
+            <Approach procedureName="CAT1+DME">
+                <RequiredHorizontalVisibility unit="m">550</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">0</RequiredVerticalVisibility>
+            </Approach>
+            <Elevation unit="ft">808</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">844</Elevation>
+        <AirportReferencePoint><Coordinates latitude="178906" longitude="65199">N4941.8 E01806.7</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT02H</LocalTimeOffsetToUTC>
+    </Airport>
+    <Airport>
+        <AirportIdentification airportFunction="ArrivalAlternateAirport" airportName="BRNO/TURANY">
+            <AirportICAOCode>LKTB</AirportICAOCode>
+            <AirportIATACode>BRQ</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="27">
+            <Approach procedureName="LOCDME">
+                <RequiredHorizontalVisibility unit="m">750</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">290</RequiredVerticalVisibility>
+            </Approach>
+            <Elevation unit="ft">771</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">778</Elevation>
+        <AirportReferencePoint><Coordinates latitude="176945" longitude="60098">N4909.1 E01641.6</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT02H</LocalTimeOffsetToUTC>
+    </Airport>
+    <Airport>
+        <AirportIdentification airportFunction="ArrivalAlternateAirport" airportName="POZNAN/LAWICA">
+            <AirportICAOCode>EPPO</AirportICAOCode>
+            <AirportIATACode>POZ</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="28">
+            <Approach procedureName="CAT1DME+VOR">
+                <RequiredHorizontalVisibility unit="m">550</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">0</RequiredVerticalVisibility>
+            </Approach>
+            <Elevation unit="ft">288</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">308</Elevation>
+        <AirportReferencePoint><Coordinates latitude="188716" longitude="60575">N5225.3 E01649.6</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT02H</LocalTimeOffsetToUTC>
+    </Airport>
+</AirportData>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP12" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-09-22T07:40:37" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-09-22" scheduledTimeOfDeparture="2024-09-22T08:35:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>LBT511</FlightIdentifier>
+				<FlightNumber airlineIATACode="BJ" number=" 511">
+					<CommercialFlightNumber>BJ511</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>LFPG</AirportICAOCode>
+				<AirportIATACode>CDG</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>DTTA</AirportICAOCode>
+				<AirportIATACode>TUN</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSINC">
+			<AircraftModel>
+				<AircraftICAOType>A320</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF EUCHZMFP EUCBZMFP</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>AD DTTCZQZX DTTCZRZX DTTAZAZX DTTAZPZX DTTAZTZX</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>(FPL-LBT511-IS</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-A320/M-SDFGHIJ1LORVWY/LB1</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-LFPG0835</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>-N0449F370 OKASI5H OKASI DCT OKEKO DCT MOU DCT MADIV DCT MOKIP DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>TUFTA DCT KOGAS DCT MEDAM DCT NITAM DCT MOGBO DCT ENOBA/N0453F350</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>DCT OLETI DCT KONER DCT EVROG DCT QUENN DCT NOLSI UA868 MEDAR DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="10">
+			<Text>-DTTA0203 DTNH</Text>
+		</Paragraph>
+		<Paragraph sequence="11">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/240922 REG/TSINC EET/LIMM0049 LIRR0111</Text>
+		</Paragraph>
+		<Paragraph sequence="12">
+			<Text>DTTC0153 SEL/KSEF CODE/02A1A2 OPR/LBT PER/C)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="EUCHZMFP EUCBZMFP" />
+		<Originator address="DTMBLBTO" />
+		<AdditionalAddressees addresses="DTTCZQZX DTTCZRZX DTTAZAZX DTTAZPZX DTTAZTZX" />
+		<Items>
+			<Item7 aTCCallsign="LBT511" />
+			<Item8 flightRules="I" typeOfFlight="S" />
+			<Item9 typeOfAircraft="A320" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDFGHIJ1LORVWY/LB1" />
+			<Item13 departureAirport="LFPG" departureTime="0835" />
+			<Item15 cruisingSpeed="N0449" cruisingLevel="F370" route="OKASI5H OKASI DCT OKEKO DCT MOU DCT MADIV DCT MOKIP DCT TUFTA DCT KOGAS DCT MEDAM DCT NITAM DCT MOGBO DCT ENOBA/N0453F350 DCT OLETI DCT KONER DCT EVROG DCT QUENN DCT NOLSI UA868 MEDAR DCT" />
+			<Item16 arrivalAirport="DTTA" estimatedFlightTime="0203" alternateAirport="DTNH" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/240922 REG/TSINC EET/LIMM0049 LIRR0111 DTTC0153 SEL/KSEF CODE/02A1A2 OPR/LBT PER/C">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>240922</DOF>
+				<REG>TSINC</REG>
+				<EET>LIMM0049 LIRR0111 DTTC0153</EET>
+				<SEL>KSEF</SEL>
+				<CODE>02A1A2</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

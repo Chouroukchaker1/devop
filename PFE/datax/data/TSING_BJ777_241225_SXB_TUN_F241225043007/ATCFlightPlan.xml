@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP30" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-12-25T04:29:59" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-12-25" scheduledTimeOfDeparture="2024-12-25T10:05:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>LBT777</FlightIdentifier>
+				<FlightNumber airlineIATACode="BJ" number=" 777">
+					<CommercialFlightNumber>BJ777</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>LFST</AirportICAOCode>
+				<AirportIATACode>SXB</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>DTTA</AirportICAOCode>
+				<AirportIATACode>TUN</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSING">
+			<AircraftModel>
+				<AircraftICAOType>A320</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF EUCHZMFP EUCBZMFP</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>AD DTTCZQZX DTTCZRZX DTTAZAZX DTTAZPZX DTTAZTZX</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>(FPL-LBT777-IS</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-A320/M-SDFGIJ1LORVWY/LB1</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-LFST1005</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>-N0406F210 LUPEN8H LUPEN Y711 NATOR DCT TRA DCT RIPUS DCT GERSA DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>SOSON/N0443F370 DCT ODINA DCT BETEN/N0451F370 DCT RONAB DCT PININ</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>M725 SUSIP B979 ICANI DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="10">
+			<Text>-DTTA0141 DTNH</Text>
+		</Paragraph>
+		<Paragraph sequence="11">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/241225 REG/TSING EET/EDGG0004 LSAS0012</Text>
+		</Paragraph>
+		<Paragraph sequence="12">
+			<Text>LIMM0025 LIRR0047 DTTC0133 SEL/HPAE CODE/02A1A6 OPR/LBT PER/C)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="EUCHZMFP EUCBZMFP" />
+		<Originator address="DTMBLBTO" />
+		<AdditionalAddressees addresses="DTTCZQZX DTTCZRZX DTTAZAZX DTTAZPZX DTTAZTZX" />
+		<Items>
+			<Item7 aTCCallsign="LBT777" />
+			<Item8 flightRules="I" typeOfFlight="S" />
+			<Item9 typeOfAircraft="A320" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDFGIJ1LORVWY/LB1" />
+			<Item13 departureAirport="LFST" departureTime="1005" />
+			<Item15 cruisingSpeed="N0406" cruisingLevel="F210" route="LUPEN8H LUPEN Y711 NATOR DCT TRA DCT RIPUS DCT GERSA DCT SOSON/N0443F370 DCT ODINA DCT BETEN/N0451F370 DCT RONAB DCT PININ M725 SUSIP B979 ICANI DCT" />
+			<Item16 arrivalAirport="DTTA" estimatedFlightTime="0141" alternateAirport="DTNH" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/241225 REG/TSING EET/EDGG0004 LSAS0012 LIMM0025 LIRR0047 DTTC0133 SEL/HPAE CODE/02A1A6 OPR/LBT PER/C">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>241225</DOF>
+				<REG>TSING</REG>
+				<EET>EDGG0004 LSAS0012 LIMM0025 LIRR0047 DTTC0133</EET>
+				<SEL>HPAE</SEL>
+				<CODE>02A1A6</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RegionWeatherBriefing creationTime="2024-11-24T05:53:50" fullPackage="true" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://aeec.aviation-ia.net/633 RegionWeatherBriefing.xsd">
+    <M633Header timestamp="2024-11-24T05:53:50" versionNumber="3"/>
+    <M633SupplementaryHeader>
+        <Flight flightOriginDate="2024-11-24" scheduledTimeOfDeparture="2024-11-24T09:30:00Z">
+            <FlightIdentification>
+                <FlightIdentifier>DAH1000</FlightIdentifier>
+                <FlightNumber airlineIATACode="AH" number="1000">
+                    <CommercialFlightNumber>AH1000</CommercialFlightNumber>
+                </FlightNumber>
+            </FlightIdentification>
+            <DepartureAirport>
+                <AirportICAOCode>DAAG</AirportICAOCode>
+                <AirportIATACode>ALG</AirportIATACode>
+            </DepartureAirport>
+            <ArrivalAirport>
+                <AirportICAOCode>LFPG</AirportICAOCode>
+                <AirportIATACode>CDG</AirportIATACode>
+            </ArrivalAirport>
+        </Flight>
+        <Aircraft aircraftRegistration="TSINK">
+            <AircraftModel>
+                <AircraftICAOType>A320</AircraftICAOType>
+            </AircraftModel>
+        </Aircraft>
+    </M633SupplementaryHeader>
+    <RegionWeathers>
+        <RegionWeather issuer="LFBB" type="SIGMET" startValidTime="2024-11-24T05:00:00" endValidTime="2024-11-24T09:00:00" observationTime="2024-11-24T05:14:00" sequence="1">
+            <RegionWeatherText>
+                <Paragraph sequence="1">
+                    <Text>SIGMET U01 VALID 240500/240900 LFPW- LFBB BORDEAUX</Text>
+                </Paragraph>
+                <Paragraph sequence="2">
+                    <Text>FIR/UIR SEV TURB FCST WI N4245 W00000 - N4300 W00145</Text>
+                </Paragraph>
+                <Paragraph sequence="3">
+                    <Text>- N4330 W00145 - N4300 W00000 - N4245 W00000</Text>
+                </Paragraph>
+                <Paragraph sequence="4">
+                    <Text>SFC/FL090 STNR NC=</Text>
+                </Paragraph>
+            </RegionWeatherText>
+            <Location>
+                <Airspaces>
+                    <Airspace airspaceICAOCode="LFBB">
+                        <AirspaceName>BORDEAUX FIR/UIR</AirspaceName>
+                    </Airspace>
+                </Airspaces>
+            </Location>
+        </RegionWeather>
+    </RegionWeathers>
+</RegionWeatherBriefing>

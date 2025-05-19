@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AirportData creationTime="2024-08-26T17:33:40" flightPlanId="OFP1" fullPackage="true" xsi:schemaLocation="http://aeec.aviation-ia.net/633 AirportData.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<M633Header timestamp="2024-08-26T17:33:39Z" versionNumber="3"/> 
+<M633SupplementaryHeader>
+    <Flight flightOriginDate="2024-08-26Z" scheduledTimeOfDeparture="2024-08-26T19:50:00Z">
+        <FlightIdentification>
+            <FlightIdentifier>LBT624</FlightIdentifier>
+                <FlightNumber airlineIATACode="BJ" number="624" >
+                    <CommercialFlightNumber>BJ624</CommercialFlightNumber>
+                </FlightNumber>
+             </FlightIdentification>
+        <DepartureAirport airportFunction="DepartureAirport" airportName="TUNIS/CARTHAGE">
+            <AirportICAOCode>DTTA</AirportICAOCode>
+            <AirportIATACode>TUN</AirportIATACode>
+        </DepartureAirport>
+        <ArrivalAirport airportFunction="ArrivalAirport" airportName="MADRID ADOLFO SUAREZ/BARAJAS">
+            <AirportICAOCode>LEMD</AirportICAOCode>
+            <AirportIATACode>MAD</AirportIATACode>
+        </ArrivalAirport>
+    </Flight>
+    <Aircraft aircraftRegistration="TSINK" >
+        <AircraftModel airlineSpecificSubType="5.94">
+            <AircraftICAOType>A320</AircraftICAOType>
+        </AircraftModel>
+    </Aircraft>
+</M633SupplementaryHeader>
+    <Airport>
+        <AirportIdentification airportFunction="DepartureAirport" airportName="TUNIS/CARTHAGE">
+            <AirportICAOCode>DTTA</AirportICAOCode>
+            <AirportIATACode>TUN</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="01"> 
+            <Approach procedureName="TKOF">
+                <RequiredHorizontalVisibility unit="m">200</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">0</RequiredVerticalVisibility>  
+            </Approach>
+            <Elevation unit="ft">13</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">21</Elevation>
+        <AirportReferencePoint><Coordinates latitude="132664" longitude="36817">N3651.1 E01013.6</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT01H</LocalTimeOffsetToUTC>
+    </Airport>
+    <Airport>
+        <AirportIdentification airportFunction="ArrivalAirport" airportName="MADRID ADOLFO SUAREZ/BARAJAS">
+            <AirportICAOCode>LEMD</AirportICAOCode>
+            <AirportIATACode>MAD</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="18R">
+            <Approach procedureName="CAT2">
+                <RequiredHorizontalVisibility unit="m">400</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">0</RequiredVerticalVisibility>
+            </Approach>
+            <Elevation unit="ft">1991</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">1998</Elevation>
+        <AirportReferencePoint><Coordinates latitude="145700" longitude="-12819">N4028.3 W00333.7</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT02H</LocalTimeOffsetToUTC>
+    </Airport>
+    <Airport>
+        <AirportIdentification airportFunction="PrimaryArrivalAlternateAirport" airportName="VALENCIA">
+            <AirportICAOCode>LEVC</AirportICAOCode>
+            <AirportIATACode>VLC</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="12">
+            <Approach procedureName="LOC+VOR+DME">
+                <RequiredHorizontalVisibility unit="m">2400</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">860</RequiredVerticalVisibility>
+            </Approach>
+            <Elevation unit="ft">240</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">240</Elevation>
+        <AirportReferencePoint><Coordinates latitude="142162" longitude="-1734">N3929.4 W00028.9</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT02H</LocalTimeOffsetToUTC>
+    </Airport>
+    <Airport>
+        <AirportIdentification airportFunction="ArrivalAlternateAirport" airportName="ZARAGOZA">
+            <AirportICAOCode>LEZG</AirportICAOCode>
+            <AirportIATACode>ZAZ</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="30L">
+            <Approach procedureName="CIRC NDB@12R">
+                <RequiredHorizontalVisibility unit="m">2400</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">1510</RequiredVerticalVisibility>
+            </Approach>
+            <Elevation unit="ft">862</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">862</Elevation>
+        <AirportReferencePoint><Coordinates latitude="149998" longitude="-3750">N4140.0 W00102.5</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT02H</LocalTimeOffsetToUTC>
+    </Airport>
+    <Airport>
+        <AirportIdentification airportFunction="ArrivalAlternateAirport" airportName="ALICANTE-ELCHE M.HERNANDEZ">
+            <AirportICAOCode>LEAL</AirportICAOCode>
+            <AirportIATACode>ALC</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="10">
+            <Approach procedureName="VORDME">
+                <RequiredHorizontalVisibility unit="m">3000</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">790</RequiredVerticalVisibility>
+            </Approach>
+            <Elevation unit="ft">142</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">142</Elevation>
+        <AirportReferencePoint><Coordinates latitude="137816" longitude="-2009">N3816.9 W00033.5</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT02H</LocalTimeOffsetToUTC>
+    </Airport>
+</AirportData>

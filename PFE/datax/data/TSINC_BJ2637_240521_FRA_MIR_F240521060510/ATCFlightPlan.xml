@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP9" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-05-21T06:05:00" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-05-21" scheduledTimeOfDeparture="2024-05-21T12:35:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>LBT2637</FlightIdentifier>
+				<FlightNumber airlineIATACode="BJ" number="2637">
+					<CommercialFlightNumber>BJ2637</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>EDDF</AirportICAOCode>
+				<AirportIATACode>FRA</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>DTMB</AirportICAOCode>
+				<AirportIATACode>MIR</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSINC">
+			<AircraftModel>
+				<AircraftICAOType>A320</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF EUCHZMFP EUCBZMFP</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>AD DTTCZQZX DTTCZRZX DTMBZPZX DTMBZTZX</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>(FPL-LBT2637-IS</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-A320/M-SDFGHIJ1LORVWY/LB1</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-EDDF1235</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>-N0453F370 ANEKI2L ANEKI Y163 NATOR DCT TRA DCT RIPUS DCT GERSA DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>SOSON DCT ODINA DCT PIDAD DCT TALEP DCT VAREK DCT LOKDU DCT PELOS</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>DCT IPROM DCT PIRIX DCT OSMAR UA725 TANIT UM731 TUC DCT LARBI A411</Text>
+		</Paragraph>
+		<Paragraph sequence="10">
+			<Text>MON DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="11">
+			<Text>-DTMB0207 DTNH</Text>
+		</Paragraph>
+		<Paragraph sequence="12">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/240521 REG/TSINC EET/EDUU0012 LSAS0023</Text>
+		</Paragraph>
+		<Paragraph sequence="13">
+			<Text>LIMM0037 LFFF0100 LIRR0120 DTTC0145 SEL/KSEF CODE/02A1A2 OPR/LBT</Text>
+		</Paragraph>
+		<Paragraph sequence="14">
+			<Text>PER/C)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="EUCHZMFP EUCBZMFP DTMBZPZX DTMBZTZX" />
+		<Originator address="DTMBLBTO" />
+		<AdditionalAddressees addresses="DTTCZQZX DTTCZRZX DTMBZPZX DTMBZTZX" />
+		<Items>
+			<Item7 aTCCallsign="LBT2637" />
+			<Item8 flightRules="I" typeOfFlight="S" />
+			<Item9 typeOfAircraft="A320" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDFGHIJ1LORVWY/LB1" />
+			<Item13 departureAirport="EDDF" departureTime="1235" />
+			<Item15 cruisingSpeed="N0453" cruisingLevel="F370" route="ANEKI2L ANEKI Y163 NATOR DCT TRA DCT RIPUS DCT GERSA DCT SOSON DCT ODINA DCT PIDAD DCT TALEP DCT VAREK DCT LOKDU DCT PELOS DCT IPROM DCT PIRIX DCT OSMAR UA725 TANIT UM731 TUC DCT LARBI A411 MON DCT" />
+			<Item16 arrivalAirport="DTMB" estimatedFlightTime="0207" alternateAirport="DTNH" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/240521 REG/TSINC EET/EDUU0012 LSAS0023 LIMM0037 LFFF0100 LIRR0120 DTTC0145 SEL/KSEF CODE/02A1A2 OPR/LBT PER/C">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>240521</DOF>
+				<REG>TSINC</REG>
+				<EET>EDUU0012 LSAS0023 LIMM0037 LFFF0100 LIRR0120 DTTC0145</EET>
+				<SEL>KSEF</SEL>
+				<CODE>02A1A2</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

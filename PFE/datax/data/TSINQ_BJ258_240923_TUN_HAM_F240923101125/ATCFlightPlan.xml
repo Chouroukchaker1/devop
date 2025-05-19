@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP6" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-09-23T10:11:17" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-09-23" scheduledTimeOfDeparture="2024-09-23T13:00:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>LBT258</FlightIdentifier>
+				<FlightNumber airlineIATACode="BJ" number=" 258">
+					<CommercialFlightNumber>BJ258</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>DTTA</AirportICAOCode>
+				<AirportIATACode>TUN</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>EDDH</AirportICAOCode>
+				<AirportIATACode>HAM</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSINQ">
+			<AircraftModel>
+				<AircraftICAOType>A320</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF DTTAZAZX DTTAZPZX DTTAZTZX DTTCZQZX DTTCZRZX EUCHZMFP EUCBZMFP</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>(FPL-LBT258-IS</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>-A320/M-SDFGHIJ1LORVWY/LB1</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-DTTA1300</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-N0451F360 TOBIB2A TOBIB UA725 OSMAR DCT PIRIX DCT UPDUT DCT CORSI</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>DCT OKROK DCT AKUTI DCT TORTU DCT ERTEV DCT BOTAL DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>DESIP/N0450F340 DCT ABESI DCT UTAVO DCT ROLSA DCT LOKTA DCT TEDGO</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>DCT HAREM/N0447F360 DCT LOHRE DCT ELNAT P605 NOLGO NOLGO2D</Text>
+		</Paragraph>
+		<Paragraph sequence="10">
+			<Text>-EDDH0214 EDDV</Text>
+		</Paragraph>
+		<Paragraph sequence="11">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/240923 REG/TSINQ EET/LIRR0015 LFFF0040</Text>
+		</Paragraph>
+		<Paragraph sequence="12">
+			<Text>LIMM0055 LSAS0116 EDUU0128 EDVV0154 EDWW0204 SEL/JMLQ CODE/02A1B0</Text>
+		</Paragraph>
+		<Paragraph sequence="13">
+			<Text>OPR/LBT PER/C)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="DTTAZAZX DTTAZPZX DTTAZTZX EUCHZMFP EUCBZMFP DTTCZQZX DTTCZRZX" />
+		<Originator address="DTMBLBTO" />
+		<Items>
+			<Item7 aTCCallsign="LBT258" />
+			<Item8 flightRules="I" typeOfFlight="S" />
+			<Item9 typeOfAircraft="A320" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDFGHIJ1LORVWY/LB1" />
+			<Item13 departureAirport="DTTA" departureTime="1300" />
+			<Item15 cruisingSpeed="N0451" cruisingLevel="F360" route="TOBIB2A TOBIB UA725 OSMAR DCT PIRIX DCT UPDUT DCT CORSI DCT OKROK DCT AKUTI DCT TORTU DCT ERTEV DCT BOTAL DCT DESIP/N0450F340 DCT ABESI DCT UTAVO DCT ROLSA DCT LOKTA DCT TEDGO DCT HAREM/N0447F360 DCT LOHRE DCT ELNAT P605 NOLGO NOLGO2D" />
+			<Item16 arrivalAirport="EDDH" estimatedFlightTime="0214" alternateAirport="EDDV" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/240923 REG/TSINQ EET/LIRR0015 LFFF0040 LIMM0055 LSAS0116 EDUU0128 EDVV0154 EDWW0204 SEL/JMLQ CODE/02A1B0 OPR/LBT PER/C">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>240923</DOF>
+				<REG>TSINQ</REG>
+				<EET>LIRR0015 LFFF0040 LIMM0055 LSAS0116 EDUU0128 EDVV0154 EDWW0204</EET>
+				<SEL>JMLQ</SEL>
+				<CODE>02A1B0</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP7" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-08-07T22:57:40" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-08-08" scheduledTimeOfDeparture="2024-08-08T05:55:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>LBT7631</FlightIdentifier>
+				<FlightNumber airlineIATACode="BJ" number="7631">
+					<CommercialFlightNumber>BJ7631</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>EPPO</AirportICAOCode>
+				<AirportIATACode>POZ</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>DTTJ</AirportICAOCode>
+				<AirportIATACode>DJE</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSINE">
+			<AircraftModel>
+				<AircraftICAOType>A320</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF EUCHZMFP EUCBZMFP</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>AD DTTCZQZX DTTCZRZX DTTJZAZX DTTJZPZX DTTJZTZX</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>(FPL-LBT7631-IN</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-A320/M-SDFGHIJ1LORVWY/LB1</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-EPPO0620</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>-N0456F330 XIDNA1B XIDNA DCT DESEN/N0457F340 DCT MIKOV/N0454F360</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>DCT GIRDA/N0453F370 DCT BAXON DCT GOTMO/N0458F350 DCT PININ DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>TUNEX UG737 CBN UG727 SFX UA411 JBA DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="10">
+			<Text>-DTTJ0243 DTMB</Text>
+		</Paragraph>
+		<Paragraph sequence="11">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/240808 REG/TSINE EET/LKAA0024 LOVV0037</Text>
+		</Paragraph>
+		<Paragraph sequence="12">
+			<Text>LJLA0058 LDZO0108 LIMM0118 LIRR0126 DTTC0214 SEL/KQEJ CODE/02A1A4</Text>
+		</Paragraph>
+		<Paragraph sequence="13">
+			<Text>OPR/LBT PER/C)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="EUCHZMFP EUCBZMFP" />
+		<Originator address="DTMBLBTO" />
+		<AdditionalAddressees addresses="DTTCZQZX DTTCZRZX DTTJZAZX DTTJZPZX DTTJZTZX" />
+		<Items>
+			<Item7 aTCCallsign="LBT7631" />
+			<Item8 flightRules="I" typeOfFlight="N" />
+			<Item9 typeOfAircraft="A320" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDFGHIJ1LORVWY/LB1" />
+			<Item13 departureAirport="EPPO" departureTime="0620" />
+			<Item15 cruisingSpeed="N0456" cruisingLevel="F330" route="XIDNA1B XIDNA DCT DESEN/N0457F340 DCT MIKOV/N0454F360 DCT GIRDA/N0453F370 DCT BAXON DCT GOTMO/N0458F350 DCT PININ DCT TUNEX UG737 CBN UG727 SFX UA411 JBA DCT" />
+			<Item16 arrivalAirport="DTTJ" estimatedFlightTime="0243" alternateAirport="DTMB" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/240808 REG/TSINE EET/LKAA0024 LOVV0037 LJLA0058 LDZO0108 LIMM0118 LIRR0126 DTTC0214 SEL/KQEJ CODE/02A1A4 OPR/LBT PER/C">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>240808</DOF>
+				<REG>TSINE</REG>
+				<EET>LKAA0024 LOVV0037 LJLA0058 LDZO0108 LIMM0118 LIRR0126 DTTC0214</EET>
+				<SEL>KQEJ</SEL>
+				<CODE>02A1A4</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

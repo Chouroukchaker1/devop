@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP34" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-11-29T11:27:20" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-11-29" scheduledTimeOfDeparture="2024-11-29T14:30:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>LBT396</FlightIdentifier>
+				<FlightNumber airlineIATACode="BJ" number=" 396">
+					<CommercialFlightNumber>BJ396</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>DTTA</AirportICAOCode>
+				<AirportIATACode>TUN</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>EBBR</AirportICAOCode>
+				<AirportIATACode>BRU</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSINM">
+			<AircraftModel>
+				<AircraftICAOType>A20N</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF DTTAZAZX DTTAZPZX DTTAZTZX DTTCZQZX DTTCZRZX EUCHZMFP EUCBZMFP</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>(FPL-LBT396-IS</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>-A20N/M-SDFGHIJ1LORVWY/LB1G1</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-DTTA1430</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-N0447F240 TOBIB2A TOBIB A725 OSMAR/N0445F380 DCT PIRIX DCT CAR DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>DEXUL DCT GIGGI DCT UPDUT DCT CORSI DCT OMEDA DCT MERLU DCT PIGOS</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>UM733 IDAVO DCT BAGBI/N0448F340 DCT SIZZA UM733 LAULY/N0444F360</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>UM733 KOPOR UY376 SOMIL UN873 VEKIN UZ173 ARVOL ARVOL8A</Text>
+		</Paragraph>
+		<Paragraph sequence="10">
+			<Text>-EBBR0222 LFQQ</Text>
+		</Paragraph>
+		<Paragraph sequence="11">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/241129 REG/TSINM EET/LIRR0015 LFFF0045</Text>
+		</Paragraph>
+		<Paragraph sequence="12">
+			<Text>EBBU0218 SEL/KSAD CODE/02A1AC OPR/LBT PER/C)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="DTTAZAZX DTTAZPZX DTTAZTZX EUCHZMFP EUCBZMFP DTTCZQZX DTTCZRZX" />
+		<Originator address="DTMBLBTO" />
+		<Items>
+			<Item7 aTCCallsign="LBT396" />
+			<Item8 flightRules="I" typeOfFlight="S" />
+			<Item9 typeOfAircraft="A20N" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDFGHIJ1LORVWY/LB1G1" />
+			<Item13 departureAirport="DTTA" departureTime="1430" />
+			<Item15 cruisingSpeed="N0447" cruisingLevel="F240" route="TOBIB2A TOBIB A725 OSMAR/N0445F380 DCT PIRIX DCT CAR DCT DEXUL DCT GIGGI DCT UPDUT DCT CORSI DCT OMEDA DCT MERLU DCT PIGOS UM733 IDAVO DCT BAGBI/N0448F340 DCT SIZZA UM733 LAULY/N0444F360 UM733 KOPOR UY376 SOMIL UN873 VEKIN UZ173 ARVOL ARVOL8A" />
+			<Item16 arrivalAirport="EBBR" estimatedFlightTime="0222" alternateAirport="LFQQ" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/241129 REG/TSINM EET/LIRR0015 LFFF0045 EBBU0218 SEL/KSAD CODE/02A1AC OPR/LBT PER/C">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>241129</DOF>
+				<REG>TSINM</REG>
+				<EET>LIRR0015 LFFF0045 EBBU0218</EET>
+				<SEL>KSAD</SEL>
+				<CODE>02A1AC</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AirspaceData flightPlanId="OFP5" xsi:schemaLocation="http://aeec.aviation-ia.net/633 AirspaceData.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<M633Header timestamp="2024-07-09T11:02:35Z" versionNumber="3"/> 
+<M633SupplementaryHeader>
+    <Flight flightOriginDate="2024-07-09Z" scheduledTimeOfDeparture="2024-07-09T13:10:00Z">
+        <FlightIdentification>
+            <FlightIdentifier>LBT131</FlightIdentifier>
+                <FlightNumber airlineIATACode="BJ" number="131" >
+                    <CommercialFlightNumber>BJ131</CommercialFlightNumber>
+                </FlightNumber>
+             </FlightIdentification>
+        <DepartureAirport airportFunction="DepartureAirport" airportName="ALGER/HOUARI BOUMEDIENE">
+            <AirportICAOCode>DAAG</AirportICAOCode>
+            <AirportIATACode>ALG</AirportIATACode>
+        </DepartureAirport>
+        <ArrivalAirport airportFunction="ArrivalAirport" airportName="TUNIS/CARTHAGE">
+            <AirportICAOCode>DTTA</AirportICAOCode>
+            <AirportIATACode>TUN</AirportIATACode>
+        </ArrivalAirport>
+    </Flight>
+    <Aircraft aircraftRegistration="TSINE" >
+        <AircraftModel airlineSpecificSubType="5.93">
+            <AircraftICAOType>A320</AircraftICAOType>
+        </AircraftModel>
+    </Aircraft>
+</M633SupplementaryHeader>
+    <Airspace airspaceName="ALGIERS_FIR" airspaceType="FIR" airspaceICAOCode="DAAA">
+        <Entry cumulatedFlightTime="PT0H0M00S">
+            <Coordinates latitude="+132100" longitude="+11581">N3641.7 E00313.0</Coordinates>
+            <CumulatedGroundDistance unit="NM">0</CumulatedGroundDistance>
+        </Entry>
+        <Exit cumulatedFlightTime="PT0H13M32S">
+            <Coordinates  latitude="+132167" longitude="+16659">N3642.8 E00437.7</Coordinates>
+            <CumulatedGroundDistance unit="NM">80</CumulatedGroundDistance>
+        </Exit>
+        <GroundDistance unit="NM">0</GroundDistance>
+    </Airspace>
+    <Airspace airspaceName="ALGIERS_UIR" airspaceType="UIR" airspaceICAOCode="DAAA">
+        <Entry cumulatedFlightTime="PT0H13M32S">
+            <Coordinates latitude="+132167" longitude="+16659">N3642.8 E00437.7</Coordinates>
+            <CumulatedGroundDistance unit="NM">80</CumulatedGroundDistance>
+        </Entry>
+        <Exit cumulatedFlightTime="PT0H36M17S">
+            <Coordinates  latitude="+132604" longitude="+31140">N3650.1 E00839.0</Coordinates>
+            <CumulatedGroundDistance unit="NM">277</CumulatedGroundDistance>
+        </Exit>
+        <GreatCircleDistance unit="NM">80</GreatCircleDistance>
+        <GroundDistance unit="NM">80</GroundDistance>
+    </Airspace>
+    <Airspace airspaceName="TUNIS_UIR" airspaceType="UIR" airspaceICAOCode="DTTC">
+        <Entry cumulatedFlightTime="PT0H36M17S">
+            <Coordinates latitude="+132604" longitude="+31140">N3650.1 E00839.0</Coordinates>
+            <CumulatedGroundDistance unit="NM">277</CumulatedGroundDistance>
+        </Entry>
+        <Exit cumulatedFlightTime="PT0H37M13S">
+            <Coordinates  latitude="+132608" longitude="+31748">N3650.1 E00849.1</Coordinates>
+            <CumulatedGroundDistance unit="NM">285</CumulatedGroundDistance>
+        </Exit>
+        <GreatCircleDistance unit="NM">277</GreatCircleDistance>
+        <GroundDistance unit="NM">277</GroundDistance>
+    </Airspace>
+    <Airspace airspaceName="TUNIS_FIR" airspaceType="FIR" airspaceICAOCode="DTTC">
+        <Entry cumulatedFlightTime="PT0H37M13S">
+            <Coordinates latitude="+132608" longitude="+31748">N3650.1 E00849.1</Coordinates>
+            <CumulatedGroundDistance unit="NM">285</CumulatedGroundDistance>
+        </Entry>
+        <Exit cumulatedFlightTime="PT0H58M47S">
+            <Coordinates  latitude="+132664" longitude="+36817">N3651.1 E01013.6</Coordinates>
+            <CumulatedGroundDistance unit="NM">398</CumulatedGroundDistance>
+        </Exit>
+        <GreatCircleDistance unit="NM">285</GreatCircleDistance>
+        <GroundDistance unit="NM">285</GroundDistance>
+    </Airspace>
+</AirspaceData>

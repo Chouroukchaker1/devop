@@ -1,0 +1,77 @@
+/* Barre latérale */
+.sidebar {
+  width: 220px;
+  height: 80vh; /* Réduction de la hauteur pour plus d'espace en haut et en bas */
+  background-color: #343a40;
+  color: white;
+  padding: 30px 20px; /* Espace interne */
+  position: fixed;
+  top: 10vh; /* Plus d'espace entre la navbar et la sidebar */
+  left: 10px; /* Décalage sur le côté */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centre la liste pour l'éloigner du haut et du bas */
+  border-radius: 20px; /* Coins arrondis */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Ombre légère */
+}
+
+/* Liste des liens */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Liens dans la sidebar */
+.sidebar li {
+  margin: 15px 0; /* Augmente l'espace entre chaque lien */
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-radius: 12px; /* Arrondir les liens */
+  transition: background 0.3s, transform 0.2s;
+}
+
+.sidebar a:hover {
+  background: #007bff;
+  transform: translateX(5px);
+}
+
+/* Icônes */
+.sidebar i {
+  font-size: 18px;
+  margin-right: 10px;
+}
+/* Style pour le logo en haut de la barre latérale */
+.sidebar-logo-container {
+  text-align: center;
+  margin-bottom: 20px; /* Espace sous le logo */
+}
+
+ /* Container du logo */
+.sidebar-logo-container {
+  text-align: center; /* Centrer le logo horizontalement */
+  margin-bottom: 20px; /* Espacement sous le logo */
+}
+
+/* Style du logo */
+.sidebar-logo {
+  width: 100px; /* Largeur du logo */
+  height: auto; /* Laisser l'aspect ratio du logo inchangé */
+  margin-bottom: 20px; /* Espacement sous le logo */
+  object-fit: contain; /* Ajuster l'image sans la déformer */
+  transition: transform 0.3s ease-in-out; /* Animation lors du survol */
+}
+
+.sidebar-logo:hover {
+  transform: scale(1.1); /* Agrandir légèrement au survol */
+}
+
+/* Optionnel : Ajuster la position du logo */
+.sidebar {
+  padding-top: 10px; /* Décalage vers le haut */
+}

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP5" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-07-09T11:02:34" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-07-09" scheduledTimeOfDeparture="2024-07-09T13:10:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>LBT131</FlightIdentifier>
+				<FlightNumber airlineIATACode="BJ" number=" 131">
+					<CommercialFlightNumber>BJ131</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>DAAG</AirportICAOCode>
+				<AirportIATACode>ALG</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>DTTA</AirportICAOCode>
+				<AirportIATACode>TUN</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSINE">
+			<AircraftModel>
+				<AircraftICAOType>A320</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF DAAGZPZX DAAGZTZX DAAAZQZX DAAAZQZR DTTCZQZX DTTCZRZX DTTAZAZX</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DTTAZPZX DTTAZTZX</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>(FPL-LBT131-IS</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-A320/M-SDFGHIJ1LORVWY/LB1</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-DAAG1310</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>-N0460F350 BJA1B BJA UA411 MORJA/N0461F350 UM978 TUC DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>-DTTA0049 DTNH</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/240709 REG/TSINE EET/DTTC0036 SEL/KQEJ</Text>
+		</Paragraph>
+		<Paragraph sequence="10">
+			<Text>CODE/02A1A4 OPR/LBT PER/C)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="DAAGZPZX DAAGZTZX DTTAZAZX DTTAZPZX DTTAZTZX DAAAZQZX DAAAZQZR DTTCZQZX DTTCZRZX" />
+		<Originator address="DTMBLBTO" />
+		<Items>
+			<Item7 aTCCallsign="LBT131" />
+			<Item8 flightRules="I" typeOfFlight="S" />
+			<Item9 typeOfAircraft="A320" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDFGHIJ1LORVWY/LB1" />
+			<Item13 departureAirport="DAAG" departureTime="1310" />
+			<Item15 cruisingSpeed="N0460" cruisingLevel="F350" route="BJA1B BJA UA411 MORJA/N0461F350 UM978 TUC DCT" />
+			<Item16 arrivalAirport="DTTA" estimatedFlightTime="0049" alternateAirport="DTNH" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/240709 REG/TSINE EET/DTTC0036 SEL/KQEJ CODE/02A1A4 OPR/LBT PER/C">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>240709</DOF>
+				<REG>TSINE</REG>
+				<EET>DTTC0036</EET>
+				<SEL>KQEJ</SEL>
+				<CODE>02A1A4</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

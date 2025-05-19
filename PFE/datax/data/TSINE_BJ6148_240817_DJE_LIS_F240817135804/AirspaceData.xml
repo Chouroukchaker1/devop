@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AirspaceData flightPlanId="OFP2" xsi:schemaLocation="http://aeec.aviation-ia.net/633 AirspaceData.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<M633Header timestamp="2024-08-17T13:57:57Z" versionNumber="3"/> 
+<M633SupplementaryHeader>
+    <Flight flightOriginDate="2024-08-17Z" scheduledTimeOfDeparture="2024-08-17T17:40:00Z">
+        <FlightIdentification>
+            <FlightIdentifier>LBT6148</FlightIdentifier>
+                <FlightNumber airlineIATACode="BJ" number="6148" >
+                    <CommercialFlightNumber>BJ6148</CommercialFlightNumber>
+                </FlightNumber>
+             </FlightIdentification>
+        <DepartureAirport airportFunction="DepartureAirport" airportName="DJERBA/ZARZIS">
+            <AirportICAOCode>DTTJ</AirportICAOCode>
+            <AirportIATACode>DJE</AirportIATACode>
+        </DepartureAirport>
+        <ArrivalAirport airportFunction="ArrivalAirport" airportName="LISBON/HUMBERTO DELGADO">
+            <AirportICAOCode>LPPT</AirportICAOCode>
+            <AirportIATACode>LIS</AirportIATACode>
+        </ArrivalAirport>
+    </Flight>
+    <Aircraft aircraftRegistration="TSINE" >
+        <AircraftModel airlineSpecificSubType="5.93">
+            <AircraftICAOType>A320</AircraftICAOType>
+        </AircraftModel>
+    </Aircraft>
+</M633SupplementaryHeader>
+    <Airspace airspaceName="TUNIS_FIR" airspaceType="FIR" airspaceICAOCode="DTTC">
+        <Entry cumulatedFlightTime="PT0H0M00S">
+            <Coordinates latitude="+121952" longitude="+38798">N3352.5 E01046.6</Coordinates>
+            <CumulatedGroundDistance unit="NM">0</CumulatedGroundDistance>
+        </Entry>
+        <Exit cumulatedFlightTime="PT0H14M23S">
+            <Coordinates  latitude="+124304" longitude="+34992">N3431.7 E00943.2</Coordinates>
+            <CumulatedGroundDistance unit="NM">75</CumulatedGroundDistance>
+        </Exit>
+        <GroundDistance unit="NM">0</GroundDistance>
+    </Airspace>
+    <Airspace airspaceName="TUNIS_UIR" airspaceType="UIR" airspaceICAOCode="DTTC">
+        <Entry cumulatedFlightTime="PT0H14M23S">
+            <Coordinates latitude="+124304" longitude="+34992">N3431.7 E00943.2</Coordinates>
+            <CumulatedGroundDistance unit="NM">75</CumulatedGroundDistance>
+        </Entry>
+        <Exit cumulatedFlightTime="PT0H25M42S">
+            <Coordinates  latitude="+127041" longitude="+30176">N3517.4 E00822.9</Coordinates>
+            <CumulatedGroundDistance unit="NM">156</CumulatedGroundDistance>
+        </Exit>
+        <GreatCircleDistance unit="NM">75</GreatCircleDistance>
+        <GroundDistance unit="NM">75</GroundDistance>
+    </Airspace>
+    <Airspace airspaceName="ALGIERS_UIR" airspaceType="UIR" airspaceICAOCode="DAAA">
+        <Entry cumulatedFlightTime="PT0H25M42S">
+            <Coordinates latitude="+127041" longitude="+30176">N3517.4 E00822.9</Coordinates>
+            <CumulatedGroundDistance unit="NM">156</CumulatedGroundDistance>
+        </Entry>
+        <Exit cumulatedFlightTime="PT1H35M37S">
+            <Coordinates  latitude="+130508" longitude="-5381">N3615.1 W00129.7</Coordinates>
+            <CumulatedGroundDistance unit="NM">667</CumulatedGroundDistance>
+        </Exit>
+        <GreatCircleDistance unit="NM">156</GreatCircleDistance>
+        <GroundDistance unit="NM">156</GroundDistance>
+    </Airspace>
+    <Airspace airspaceName="BARCELONA_UIR" airspaceType="UIR" airspaceICAOCode="LECB">
+        <Entry cumulatedFlightTime="PT1H35M37S">
+            <Coordinates latitude="+130508" longitude="-5381">N3615.1 W00129.7</Coordinates>
+            <CumulatedGroundDistance unit="NM">667</CumulatedGroundDistance>
+        </Entry>
+        <Exit cumulatedFlightTime="PT1H38M48S">
+            <Coordinates  latitude="+130864" longitude="-7104">N3621.1 W00158.4</Coordinates>
+            <CumulatedGroundDistance unit="NM">691</CumulatedGroundDistance>
+        </Exit>
+        <GreatCircleDistance unit="NM">623</GreatCircleDistance>
+        <GroundDistance unit="NM">667</GroundDistance>
+    </Airspace>
+    <Airspace airspaceName="MADRID_UIR" airspaceType="UIR" airspaceICAOCode="LECM">
+        <Entry cumulatedFlightTime="PT1H38M48S">
+            <Coordinates latitude="+130864" longitude="-7104">N3621.1 W00158.4</Coordinates>
+            <CumulatedGroundDistance unit="NM">691</CumulatedGroundDistance>
+        </Entry>
+        <Exit cumulatedFlightTime="PT2H15M07S">
+            <Coordinates  latitude="+133664" longitude="-26580">N3707.7 W00723.0</Coordinates>
+            <CumulatedGroundDistance unit="NM">966</CumulatedGroundDistance>
+        </Exit>
+        <GreatCircleDistance unit="NM">647</GreatCircleDistance>
+        <GroundDistance unit="NM">691</GroundDistance>
+    </Airspace>
+    <Airspace airspaceName="LISBOA_FIR" airspaceType="FIR" airspaceICAOCode="LPPC">
+        <Entry cumulatedFlightTime="PT2H15M07S">
+            <Coordinates latitude="+133664" longitude="-26580">N3707.7 W00723.0</Coordinates>
+            <CumulatedGroundDistance unit="NM">966</CumulatedGroundDistance>
+        </Entry>
+        <Exit cumulatedFlightTime="PT2H48M52S">
+            <Coordinates  latitude="+139587" longitude="-32883">N3846.5 W00908.1</Coordinates>
+            <CumulatedGroundDistance unit="NM">1162</CumulatedGroundDistance>
+        </Exit>
+        <GreatCircleDistance unit="NM">911</GreatCircleDistance>
+        <GroundDistance unit="NM">966</GroundDistance>
+    </Airspace>
+</AirspaceData>

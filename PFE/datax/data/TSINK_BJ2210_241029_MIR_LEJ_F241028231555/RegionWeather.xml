@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RegionWeatherBriefing creationTime="2024-10-28T23:15:55" fullPackage="true" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://aeec.aviation-ia.net/633 RegionWeatherBriefing.xsd">
+    <M633Header timestamp="2024-10-28T23:15:55" versionNumber="3"/>
+    <M633SupplementaryHeader>
+        <Flight flightOriginDate="2024-10-29" scheduledTimeOfDeparture="2024-10-29T02:30:00Z">
+            <FlightIdentification>
+                <FlightIdentifier>LBT2210</FlightIdentifier>
+                <FlightNumber airlineIATACode="BJ" number="2210">
+                    <CommercialFlightNumber>BJ2210</CommercialFlightNumber>
+                </FlightNumber>
+            </FlightIdentification>
+            <DepartureAirport>
+                <AirportICAOCode>DTMB</AirportICAOCode>
+                <AirportIATACode>MIR</AirportIATACode>
+            </DepartureAirport>
+            <ArrivalAirport>
+                <AirportICAOCode>EDDP</AirportICAOCode>
+                <AirportIATACode>LEJ</AirportIATACode>
+            </ArrivalAirport>
+        </Flight>
+        <Aircraft aircraftRegistration="TSINK">
+            <AircraftModel>
+                <AircraftICAOType>A320</AircraftICAOType>
+            </AircraftModel>
+        </Aircraft>
+    </M633SupplementaryHeader>
+    <RegionWeathers>
+        <RegionWeather issuer="LIMM" type="AIRMET" startValidTime="2024-10-28T23:00:00" endValidTime="2024-10-29T03:00:00" observationTime="2024-10-28T22:58:00" sequence="1">
+            <RegionWeatherText>
+                <Paragraph sequence="1">
+                    <Text>AIRMET 8 VALID 282300/290300 LIIB- LIMM MILANO FIR</Text>
+                </Paragraph>
+                <Paragraph sequence="2">
+                    <Text>SFC VIS 2500M BR FCST WI N4509 E01303 - N4519 E00855</Text>
+                </Paragraph>
+                <Paragraph sequence="3">
+                    <Text>- N4550 E00847 - N4553 E01332 - N4534 E01349 - N4534</Text>
+                </Paragraph>
+                <Paragraph sequence="4">
+                    <Text>E01328 - N4517 E01255 - N4509 E01303 STNR NC=</Text>
+                </Paragraph>
+            </RegionWeatherText>
+            <Location>
+                <Airspaces>
+                    <Airspace airspaceICAOCode="LIMM">
+                        <AirspaceName>MILANO FIR</AirspaceName>
+                    </Airspace>
+                </Airspaces>
+            </Location>
+        </RegionWeather>
+    </RegionWeathers>
+</RegionWeatherBriefing>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP14" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-08-28T17:12:01" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-08-29" scheduledTimeOfDeparture="2024-08-29T00:15:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>LBT4529</FlightIdentifier>
+				<FlightNumber airlineIATACode="BJ" number="4529">
+					<CommercialFlightNumber>BJ4529</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>LTAI</AirportICAOCode>
+				<AirportIATACode>AYT</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>DTTA</AirportICAOCode>
+				<AirportIATACode>TUN</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSINK">
+			<AircraftModel>
+				<AircraftICAOType>A320</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF EUCHZMFP EUCBZMFP</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>AD LTACYWYX DTTCZQZX DTTCZRZX DTTAZAZX DTTAZPZX DTTAZTZX</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>(FPL-LBT4529-IN</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-A320/M-SDFGHIJ1LORVWY/LB1</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-LTAI0035</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>-N0469F300 DCT LORKO UW79 DAL UN136 RDS/N0469F320 UM601</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>ETERU/N0464F360 UM601 MIL UP32 MONUV UN45 ROTAS DCT DOBIX DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>SONAK M978 DIDON DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="10">
+			<Text>-DTTA0225 DTNH</Text>
+		</Paragraph>
+		<Paragraph sequence="11">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/240829 REG/TSINK EET/LTBB0008 LGGG0020</Text>
+		</Paragraph>
+		<Paragraph sequence="12">
+			<Text>LMMM0120 LIRR0215 DTTC0219 SEL/KRCQ CODE/02A1AA OPR/LBT PER/C)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="EUCHZMFP EUCBZMFP" />
+		<Originator address="DTMBLBTO" />
+		<AdditionalAddressees addresses="LTACYWYX DTTCZQZX DTTCZRZX DTTAZAZX DTTAZPZX DTTAZTZX" />
+		<Items>
+			<Item7 aTCCallsign="LBT4529" />
+			<Item8 flightRules="I" typeOfFlight="N" />
+			<Item9 typeOfAircraft="A320" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDFGHIJ1LORVWY/LB1" />
+			<Item13 departureAirport="LTAI" departureTime="0035" />
+			<Item15 cruisingSpeed="N0469" cruisingLevel="F300" route="DCT LORKO UW79 DAL UN136 RDS/N0469F320 UM601 ETERU/N0464F360 UM601 MIL UP32 MONUV UN45 ROTAS DCT DOBIX DCT SONAK M978 DIDON DCT" />
+			<Item16 arrivalAirport="DTTA" estimatedFlightTime="0225" alternateAirport="DTNH" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/240829 REG/TSINK EET/LTBB0008 LGGG0020 LMMM0120 LIRR0215 DTTC0219 SEL/KRCQ CODE/02A1AA OPR/LBT PER/C">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>240829</DOF>
+				<REG>TSINK</REG>
+				<EET>LTBB0008 LGGG0020 LMMM0120 LIRR0215 DTTC0219</EET>
+				<SEL>KRCQ</SEL>
+				<CODE>02A1AA</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

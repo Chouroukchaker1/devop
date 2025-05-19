@@ -1,0 +1,20 @@
+services:
+  backend:
+    build:
+      context: ./PFE
+    container_name: backend-app
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - ./PFE:/app
+
+  frontend:
+    build:
+      context: ./react
+    container_name: frontend-app
+    ports:
+      - "3001:80"
+    volumes:
+      - ./react:/app

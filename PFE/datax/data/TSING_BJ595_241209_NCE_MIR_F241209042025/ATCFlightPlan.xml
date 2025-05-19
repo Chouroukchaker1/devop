@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP5" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-12-09T04:20:19" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-12-09" scheduledTimeOfDeparture="2024-12-09T09:35:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>LBT595</FlightIdentifier>
+				<FlightNumber airlineIATACode="BJ" number=" 595">
+					<CommercialFlightNumber>BJ595</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>LFMN</AirportICAOCode>
+				<AirportIATACode>NCE</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>DTMB</AirportICAOCode>
+				<AirportIATACode>MIR</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSING">
+			<AircraftModel>
+				<AircraftICAOType>A320</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF EUCHZMFP EUCBZMFP</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>AD DTTCZQZX DTTCZRZX DTMBZPZX DTMBZTZX</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>(FPL-LBT595-IS</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-A320/M-SDFGIJ1LORVWY/LB1</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-LFMN0935</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>-N0457F350 VAREK7A VAREK DCT LOKDU DCT PELOS DCT IPROM DCT PIRIX</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>DCT OSMAR UA725 TANIT UM731 TUC UA411 MON DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>-DTMB0110 DTNH</Text>
+		</Paragraph>
+		<Paragraph sequence="10">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/241209 REG/TSING EET/LFFF0008 LIRR0024</Text>
+		</Paragraph>
+		<Paragraph sequence="11">
+			<Text>DTTC0048 SEL/HPAE CODE/02A1A6 OPR/LBT PER/C)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="EUCHZMFP EUCBZMFP" />
+		<Originator address="DTMBLBTO" />
+		<AdditionalAddressees addresses="DTTCZQZX DTTCZRZX DTMBZPZX DTMBZTZX" />
+		<Items>
+			<Item7 aTCCallsign="LBT595" />
+			<Item8 flightRules="I" typeOfFlight="S" />
+			<Item9 typeOfAircraft="A320" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDFGIJ1LORVWY/LB1" />
+			<Item13 departureAirport="LFMN" departureTime="0935" />
+			<Item15 cruisingSpeed="N0457" cruisingLevel="F350" route="VAREK7A VAREK DCT LOKDU DCT PELOS DCT IPROM DCT PIRIX DCT OSMAR UA725 TANIT UM731 TUC UA411 MON DCT" />
+			<Item16 arrivalAirport="DTMB" estimatedFlightTime="0110" alternateAirport="DTNH" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/241209 REG/TSING EET/LFFF0008 LIRR0024 DTTC0048 SEL/HPAE CODE/02A1A6 OPR/LBT PER/C">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>241209</DOF>
+				<REG>TSING</REG>
+				<EET>LFFF0008 LIRR0024 DTTC0048</EET>
+				<SEL>HPAE</SEL>
+				<CODE>02A1A6</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP8" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-11-17T03:55:33" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-11-17" scheduledTimeOfDeparture="2024-11-17T10:45:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>LBT641</FlightIdentifier>
+				<FlightNumber airlineIATACode="BJ" number=" 641">
+					<CommercialFlightNumber>BJ641</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>LTFM</AirportICAOCode>
+				<AirportIATACode>IST</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>DTTA</AirportICAOCode>
+				<AirportIATACode>TUN</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSINM">
+			<AircraftModel>
+				<AircraftICAOType>A20N</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF EUCHZMFP EUCBZMFP</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>AD DTTCZQZX DTTCZRZX DTTAZAZX DTTAZPZX DTTAZTZX</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>(FPL-LBT641-IS</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-A20N/M-SDFGHIJ1LORVWY/LB1G1</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-LTFM1045</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>-N0449F360 BARPE UG12 GOLDO DCT IDILO UM603 SUTIS DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>RUTOM/N0444F380 DCT MARON DCT SONAK M978 DIDON DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>-DTTA0209 DTNH</Text>
+		</Paragraph>
+		<Paragraph sequence="10">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/241117 REG/TSINM EET/LGGG0021 LIRR0108</Text>
+		</Paragraph>
+		<Paragraph sequence="11">
+			<Text>DTTC0202 SEL/KSAD CODE/02A1AC OPR/LBT PER/C)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="EUCHZMFP EUCBZMFP" />
+		<Originator address="DTMBLBTO" />
+		<AdditionalAddressees addresses="DTTCZQZX DTTCZRZX DTTAZAZX DTTAZPZX DTTAZTZX" />
+		<Items>
+			<Item7 aTCCallsign="LBT641" />
+			<Item8 flightRules="I" typeOfFlight="S" />
+			<Item9 typeOfAircraft="A20N" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDFGHIJ1LORVWY/LB1G1" />
+			<Item13 departureAirport="LTFM" departureTime="1045" />
+			<Item15 cruisingSpeed="N0449" cruisingLevel="F360" route="BARPE UG12 GOLDO DCT IDILO UM603 SUTIS DCT RUTOM/N0444F380 DCT MARON DCT SONAK M978 DIDON DCT" />
+			<Item16 arrivalAirport="DTTA" estimatedFlightTime="0209" alternateAirport="DTNH" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/241117 REG/TSINM EET/LGGG0021 LIRR0108 DTTC0202 SEL/KSAD CODE/02A1AC OPR/LBT PER/C">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>241117</DOF>
+				<REG>TSINM</REG>
+				<EET>LGGG0021 LIRR0108 DTTC0202</EET>
+				<SEL>KSAD</SEL>
+				<CODE>02A1AC</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

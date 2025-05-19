@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP3" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-05-24T10:39:30" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-05-24" scheduledTimeOfDeparture="2024-05-24T13:00:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>LBT232</FlightIdentifier>
+				<FlightNumber airlineIATACode="BJ" number=" 232">
+					<CommercialFlightNumber>BJ232</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>DTTA</AirportICAOCode>
+				<AirportIATACode>TUN</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>EDDB</AirportICAOCode>
+				<AirportIATACode>BER</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSINK">
+			<AircraftModel>
+				<AircraftICAOType>A320</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF DTTAZAZX DTTAZPZX DTTAZTZX DTTCZQZX DTTCZRZX EUCHZMFP EUCBZMFP</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>(FPL-LBT232-IS</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>-A320/M-SDFGHIJ1LORVWY/LB1</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-DTTA1300</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-N0450F380 TOBIB2A TOBIB A725 TANIT UA725 OSMAR DCT TIVUK DCT QUENN</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>DCT MAMAR DCT AMTEL DCT MALUG/N0458F390 DCT ERANI DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>SIMBA/N0457F380 DCT TIVDA/N0454F370 DCT ETVIS DCT NAVEK DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>GAVLI/N0448F360 T203 ATGUP DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="10">
+			<Text>-EDDB0210 EDDC</Text>
+		</Paragraph>
+		<Paragraph sequence="11">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/240524 REG/TSINK EET/LIRR0014 LIMM0057</Text>
+		</Paragraph>
+		<Paragraph sequence="12">
+			<Text>LOVV0120 EDUU0126 LOVV0128 EDUU0129 LOVV0129 EDUU0132 LKAA0142</Text>
+		</Paragraph>
+		<Paragraph sequence="13">
+			<Text>EDUU0151 SEL/KRCQ CODE/02A1AA OPR/LBT PER/C)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="DTTAZAZX DTTAZPZX DTTAZTZX EUCHZMFP EUCBZMFP DTTCZQZX DTTCZRZX" />
+		<Originator address="DTMBLBTO" />
+		<Items>
+			<Item7 aTCCallsign="LBT232" />
+			<Item8 flightRules="I" typeOfFlight="S" />
+			<Item9 typeOfAircraft="A320" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDFGHIJ1LORVWY/LB1" />
+			<Item13 departureAirport="DTTA" departureTime="1300" />
+			<Item15 cruisingSpeed="N0450" cruisingLevel="F380" route="TOBIB2A TOBIB A725 TANIT UA725 OSMAR DCT TIVUK DCT QUENN DCT MAMAR DCT AMTEL DCT MALUG/N0458F390 DCT ERANI DCT SIMBA/N0457F380 DCT TIVDA/N0454F370 DCT ETVIS DCT NAVEK DCT GAVLI/N0448F360 T203 ATGUP DCT" />
+			<Item16 arrivalAirport="EDDB" estimatedFlightTime="0210" alternateAirport="EDDC" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/240524 REG/TSINK EET/LIRR0014 LIMM0057 LOVV0120 EDUU0126 LOVV0128 EDUU0129 LOVV0129 EDUU0132 LKAA0142 EDUU0151 SEL/KRCQ CODE/02A1AA OPR/LBT PER/C">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>240524</DOF>
+				<REG>TSINK</REG>
+				<EET>LIRR0014 LIMM0057 LOVV0120 EDUU0126 LOVV0128 EDUU0129 LOVV0129 EDUU0132 LKAA0142 EDUU0151</EET>
+				<SEL>KRCQ</SEL>
+				<CODE>02A1AA</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP2" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-10-31T19:41:15" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-11-01" scheduledTimeOfDeparture="2024-11-01T04:30:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>LBT2806</FlightIdentifier>
+				<FlightNumber airlineIATACode="BJ" number="2806">
+					<CommercialFlightNumber>BJ2806</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>DTTJ</AirportICAOCode>
+				<AirportIATACode>DJE</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>EDDV</AirportICAOCode>
+				<AirportIATACode>HAJ</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSINF">
+			<AircraftModel>
+				<AircraftICAOType>A320</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF DTTJZAZX DTTJZPZX DTTJZTZX EUCHZMFP EUCBZMFP DTTCZQZX DTTCZRZX</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>(FPL-LBT2806-IN</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>-A320/M-SDFGIJ1LORVWY/LB1</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-DTTJ0430</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-N0456F340 DCT JBA UM731 TUC/N0454F350 UB979 SUSIP/N0452F360 DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>PININ DCT ELB/N0445F380 DCT GOVGO DCT DILEB DCT ABREG DCT LOKTA</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>DCT TEDGO DCT HAREM DCT LOHRE DCT MASEK Z99 ELNAT P605 WERRA</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>WERRA2P</Text>
+		</Paragraph>
+		<Paragraph sequence="10">
+			<Text>-EDDV0229 EDDH</Text>
+		</Paragraph>
+		<Paragraph sequence="11">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/241101 REG/TSINF EET/LIRR0037 LIMM0122</Text>
+		</Paragraph>
+		<Paragraph sequence="12">
+			<Text>LSAS0143 EDUU0153 EDGG0221 EDWW0222 SEL/GRFM CODE/02A1A5 OPR/LBT</Text>
+		</Paragraph>
+		<Paragraph sequence="13">
+			<Text>PER/C)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="DTTJZAZX DTTJZPZX DTTJZTZX EUCHZMFP EUCBZMFP DTTCZQZX DTTCZRZX" />
+		<Originator address="DTMBLBTO" />
+		<Items>
+			<Item7 aTCCallsign="LBT2806" />
+			<Item8 flightRules="I" typeOfFlight="N" />
+			<Item9 typeOfAircraft="A320" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDFGIJ1LORVWY/LB1" />
+			<Item13 departureAirport="DTTJ" departureTime="0430" />
+			<Item15 cruisingSpeed="N0456" cruisingLevel="F340" route="DCT JBA UM731 TUC/N0454F350 UB979 SUSIP/N0452F360 DCT PININ DCT ELB/N0445F380 DCT GOVGO DCT DILEB DCT ABREG DCT LOKTA DCT TEDGO DCT HAREM DCT LOHRE DCT MASEK Z99 ELNAT P605 WERRA WERRA2P" />
+			<Item16 arrivalAirport="EDDV" estimatedFlightTime="0229" alternateAirport="EDDH" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/241101 REG/TSINF EET/LIRR0037 LIMM0122 LSAS0143 EDUU0153 EDGG0221 EDWW0222 SEL/GRFM CODE/02A1A5 OPR/LBT PER/C">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>241101</DOF>
+				<REG>TSINF</REG>
+				<EET>LIRR0037 LIMM0122 LSAS0143 EDUU0153 EDGG0221 EDWW0222</EET>
+				<SEL>GRFM</SEL>
+				<CODE>02A1A5</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

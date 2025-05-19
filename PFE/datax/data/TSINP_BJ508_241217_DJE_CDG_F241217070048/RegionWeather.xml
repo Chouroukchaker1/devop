@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RegionWeatherBriefing creationTime="2024-12-17T07:00:48" fullPackage="true" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://aeec.aviation-ia.net/633 RegionWeatherBriefing.xsd">
+    <M633Header timestamp="2024-12-17T07:00:48" versionNumber="3"/>
+    <M633SupplementaryHeader>
+        <Flight flightOriginDate="2024-12-17" scheduledTimeOfDeparture="2024-12-17T08:00:00Z">
+            <FlightIdentification>
+                <FlightIdentifier>LBT508</FlightIdentifier>
+                <FlightNumber airlineIATACode="BJ" number="508">
+                    <CommercialFlightNumber>BJ508</CommercialFlightNumber>
+                </FlightNumber>
+            </FlightIdentification>
+            <DepartureAirport>
+                <AirportICAOCode>DTTJ</AirportICAOCode>
+                <AirportIATACode>DJE</AirportIATACode>
+            </DepartureAirport>
+            <ArrivalAirport>
+                <AirportICAOCode>LFPG</AirportICAOCode>
+                <AirportIATACode>CDG</AirportIATACode>
+            </ArrivalAirport>
+        </Flight>
+        <Aircraft aircraftRegistration="TSINP">
+            <AircraftModel>
+                <AircraftICAOType>A320</AircraftICAOType>
+            </AircraftModel>
+        </Aircraft>
+    </M633SupplementaryHeader>
+    <RegionWeathers>
+        <RegionWeather issuer="DTTC" type="AIRMET" startValidTime="2024-12-17T04:00:00" endValidTime="2024-12-17T08:00:00" observationTime="2024-12-17T03:42:00" sequence="1">
+            <RegionWeatherText>
+                <Paragraph sequence="1">
+                    <Text>AIRMET 01 VALID 170400/170800 DTTA- DTTC TUNIS FIR</Text>
+                </Paragraph>
+                <Paragraph sequence="2">
+                    <Text>ISOL CB FCST S OF LINE N3200 E00905 - N3400 E01130</Text>
+                </Paragraph>
+                <Paragraph sequence="3">
+                    <Text>TOP FL300 STNR NC=</Text>
+                </Paragraph>
+            </RegionWeatherText>
+            <Location>
+                <Airspaces>
+                    <Airspace airspaceICAOCode="DTTC">
+                        <AirspaceName>TUNIS FIR</AirspaceName>
+                    </Airspace>
+                </Airspaces>
+            </Location>
+        </RegionWeather>
+        <RegionWeather issuer="LIMM" type="AIRMET" startValidTime="2024-12-17T05:30:00" endValidTime="2024-12-17T08:30:00" observationTime="2024-12-17T05:03:00" sequence="2">
+            <RegionWeatherText>
+                <Paragraph sequence="1">
+                    <Text>AIRMET 1 VALID 170530/170830 LIIB- LIMM MILANO FIR</Text>
+                </Paragraph>
+                <Paragraph sequence="2">
+                    <Text>SFC VIS 900M FG FCST WI N4609 E01309 - N4530 E01118 -</Text>
+                </Paragraph>
+                <Paragraph sequence="3">
+                    <Text>N4527 E00952 - N4446 E01007 - N4415 E01216 - N4512</Text>
+                </Paragraph>
+                <Paragraph sequence="4">
+                    <Text>E01243 - N4539 E01330 - N4609 E01309 STNR NC=</Text>
+                </Paragraph>
+            </RegionWeatherText>
+            <Location>
+                <Airspaces>
+                    <Airspace airspaceICAOCode="LIMM">
+                        <AirspaceName>MILANO FIR</AirspaceName>
+                    </Airspace>
+                </Airspaces>
+            </Location>
+        </RegionWeather>
+    </RegionWeathers>
+</RegionWeatherBriefing>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RegionWeatherBriefing creationTime="2024-11-09T04:51:03" fullPackage="true" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://aeec.aviation-ia.net/633 RegionWeatherBriefing.xsd">
+    <M633Header timestamp="2024-11-09T04:51:03" versionNumber="3"/>
+    <M633SupplementaryHeader>
+        <Flight flightOriginDate="2024-11-09" scheduledTimeOfDeparture="2024-11-09T07:15:00Z">
+            <FlightIdentification>
+                <FlightIdentifier>LBT2640</FlightIdentifier>
+                <FlightNumber airlineIATACode="BJ" number="2640">
+                    <CommercialFlightNumber>BJ2640</CommercialFlightNumber>
+                </FlightNumber>
+            </FlightIdentification>
+            <DepartureAirport>
+                <AirportICAOCode>DTTJ</AirportICAOCode>
+                <AirportIATACode>DJE</AirportIATACode>
+            </DepartureAirport>
+            <ArrivalAirport>
+                <AirportICAOCode>EDDL</AirportICAOCode>
+                <AirportIATACode>DUS</AirportIATACode>
+            </ArrivalAirport>
+        </Flight>
+        <Aircraft aircraftRegistration="TSINE">
+            <AircraftModel>
+                <AircraftICAOType>A320</AircraftICAOType>
+            </AircraftModel>
+        </Aircraft>
+    </M633SupplementaryHeader>
+    <RegionWeathers>
+        <RegionWeather issuer="LMMM" type="SIGMET" startValidTime="2024-11-09T04:15:00" endValidTime="2024-11-09T08:15:00" observationTime="2024-11-09T04:15:00" sequence="1">
+            <RegionWeatherText>
+                <Paragraph sequence="1">
+                    <Text>SIGMET T02 VALID 090415/090815 LMML- LMMM MALTA FIR</Text>
+                </Paragraph>
+                <Paragraph sequence="2">
+                    <Text>FRQ TS OBS AT 0415Z N3567 E01475 - N3663 E01791 -</Text>
+                </Paragraph>
+                <Paragraph sequence="3">
+                    <Text>N3436 E01791 - N3431 E 01495 - N3567 E0475 TOP FL310</Text>
+                </Paragraph>
+                <Paragraph sequence="4">
+                    <Text>STNR NC=</Text>
+                </Paragraph>
+            </RegionWeatherText>
+            <Location>
+                <Airspaces>
+                    <Airspace airspaceICAOCode="LMMM">
+                        <AirspaceName>MALTA FIR</AirspaceName>
+                    </Airspace>
+                </Airspaces>
+            </Location>
+        </RegionWeather>
+    </RegionWeathers>
+</RegionWeatherBriefing>

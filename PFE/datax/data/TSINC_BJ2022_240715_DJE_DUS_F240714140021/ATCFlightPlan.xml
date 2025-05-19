@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP9" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-07-14T14:00:15" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-07-15" scheduledTimeOfDeparture="2024-07-15T12:30:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>LBT2022</FlightIdentifier>
+				<FlightNumber airlineIATACode="BJ" number="2022">
+					<CommercialFlightNumber>BJ2022</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>DTTJ</AirportICAOCode>
+				<AirportIATACode>DJE</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>EDDL</AirportICAOCode>
+				<AirportIATACode>DUS</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSINC">
+			<AircraftModel>
+				<AircraftICAOType>A320</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF DTTJZAZX DTTJZPZX DTTJZTZX EUCHZMFP EUCBZMFP DTTCZQZX DTTCZRZX</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>(FPL-LBT2022-IS</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>-A320/M-SDFGHIJ1LORVWY/LB1</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-DTTJ1230</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-N0440F240 KBIRA1B KBIRA V334 NEDOS/N0462F340 UV334 TBK UG869</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>DERIV/N0460F360 UG869 DOPEL DCT DEC DCT LUNAM DCT UPDUT DCT CORSI</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>DCT OKROK DCT AKUTI DCT TORTU DCT ERTEV DCT SRN DCT ABESI DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>LOKTA DCT TEDGO DCT HAREM DCT LOHRE Z850 ADEMI T854 DOMUX DOMUX2X</Text>
+		</Paragraph>
+		<Paragraph sequence="10">
+			<Text>-EDDL0235 EHBK</Text>
+		</Paragraph>
+		<Paragraph sequence="11">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/240715 REG/TSINC EET/LIRR0045 LFFF0106</Text>
+		</Paragraph>
+		<Paragraph sequence="12">
+			<Text>LIMM0122 LSAS0143 EDUU0155 EDVV0222 EDGG0226 SEL/KSEF CODE/02A1A2</Text>
+		</Paragraph>
+		<Paragraph sequence="13">
+			<Text>OPR/LBT PER/C)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="DTTJZAZX DTTJZPZX DTTJZTZX EUCHZMFP EUCBZMFP DTTCZQZX DTTCZRZX" />
+		<Originator address="DTMBLBTO" />
+		<Items>
+			<Item7 aTCCallsign="LBT2022" />
+			<Item8 flightRules="I" typeOfFlight="S" />
+			<Item9 typeOfAircraft="A320" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDFGHIJ1LORVWY/LB1" />
+			<Item13 departureAirport="DTTJ" departureTime="1230" />
+			<Item15 cruisingSpeed="N0440" cruisingLevel="F240" route="KBIRA1B KBIRA V334 NEDOS/N0462F340 UV334 TBK UG869 DERIV/N0460F360 UG869 DOPEL DCT DEC DCT LUNAM DCT UPDUT DCT CORSI DCT OKROK DCT AKUTI DCT TORTU DCT ERTEV DCT SRN DCT ABESI DCT LOKTA DCT TEDGO DCT HAREM DCT LOHRE Z850 ADEMI T854 DOMUX DOMUX2X" />
+			<Item16 arrivalAirport="EDDL" estimatedFlightTime="0235" alternateAirport="EHBK" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/240715 REG/TSINC EET/LIRR0045 LFFF0106 LIMM0122 LSAS0143 EDUU0155 EDVV0222 EDGG0226 SEL/KSEF CODE/02A1A2 OPR/LBT PER/C">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>240715</DOF>
+				<REG>TSINC</REG>
+				<EET>LIRR0045 LFFF0106 LIMM0122 LSAS0143 EDUU0155 EDVV0222 EDGG0226</EET>
+				<SEL>KSEF</SEL>
+				<CODE>02A1A2</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

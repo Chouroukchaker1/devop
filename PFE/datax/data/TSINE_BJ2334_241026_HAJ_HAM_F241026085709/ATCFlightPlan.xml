@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP1" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-10-26T08:57:03" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-10-26" scheduledTimeOfDeparture="2024-10-26T09:15:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>LBT2334</FlightIdentifier>
+				<FlightNumber airlineIATACode="BJ" number="2334">
+					<CommercialFlightNumber>BJ2334</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>EDDV</AirportICAOCode>
+				<AirportIATACode>HAJ</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>EDDH</AirportICAOCode>
+				<AirportIATACode>HAM</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSINE">
+			<AircraftModel>
+				<AircraftICAOType>A320</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF EUCHZMFP EUCBZMFP</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>(FPL-LBT2334-IN</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>-A320/M-SDFGHIJ1LORVWY/LB1</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-EDDV0915</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-N0406F210 CEL6S CEL Q282 DIRBO T902 RARUP RARUP2D</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>-EDDH0023 EDDV EDDW</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/241026 REG/TSINE SEL/KQEJ CODE/02A1A4</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>OPR/LBT PER/C)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="EUCHZMFP EUCBZMFP" />
+		<Originator address="DTMBLBTO" />
+		<Items>
+			<Item7 aTCCallsign="LBT2334" />
+			<Item8 flightRules="I" typeOfFlight="N" />
+			<Item9 typeOfAircraft="A320" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDFGHIJ1LORVWY/LB1" />
+			<Item13 departureAirport="EDDV" departureTime="0915" />
+			<Item15 cruisingSpeed="N0406" cruisingLevel="F210" route="CEL6S CEL Q282 DIRBO T902 RARUP RARUP2D" />
+			<Item16 arrivalAirport="EDDH" estimatedFlightTime="0023" alternateAirport="EDDV" secondAlternateAirport="EDDW" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/241026 REG/TSINE SEL/KQEJ CODE/02A1A4 OPR/LBT PER/C">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>241026</DOF>
+				<REG>TSINE</REG>
+				<SEL>KQEJ</SEL>
+				<CODE>02A1A4</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

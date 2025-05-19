@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP6" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-10-28T14:07:27" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-10-28" scheduledTimeOfDeparture="2024-10-28T18:35:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>LBT521</FlightIdentifier>
+				<FlightNumber airlineIATACode="BJ" number=" 521">
+					<CommercialFlightNumber>BJ521</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>LFPG</AirportICAOCode>
+				<AirportIATACode>CDG</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>DTTA</AirportICAOCode>
+				<AirportIATACode>TUN</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSINL">
+			<AircraftModel>
+				<AircraftICAOType>A20N</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF EUCHZMFP EUCBZMFP</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>AD DTTCZQZX DTTCZRZX DTTAZAZX DTTAZPZX DTTAZTZX</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>(FPL-LBT521-IS</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-A20N/M-SDE2FGHIJ1LORVWY/LB1G1</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-LFPG1835</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>-N0448F350 LATRA5H LATRA DCT LAMUT DCT UTUVA DCT TITVA DCT NOQAS</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>UM728 KOLON/N0444F370 DCT LOKDU DCT PELOS DCT IPROM DCT KOVAS DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>CAR DCT NOLSI UA868 MEDAR DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="10">
+			<Text>-DTTA0157 DTNH</Text>
+		</Paragraph>
+		<Paragraph sequence="11">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/241028 REG/TSINL EET/LIRR0118 DTTC0147</Text>
+		</Paragraph>
+		<Paragraph sequence="12">
+			<Text>SEL/MPER CODE/02A1AB OPR/LBT PER/C)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="EUCHZMFP EUCBZMFP" />
+		<Originator address="DTMBLBTO" />
+		<AdditionalAddressees addresses="DTTCZQZX DTTCZRZX DTTAZAZX DTTAZPZX DTTAZTZX" />
+		<Items>
+			<Item7 aTCCallsign="LBT521" />
+			<Item8 flightRules="I" typeOfFlight="S" />
+			<Item9 typeOfAircraft="A20N" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDE2FGHIJ1LORVWY/LB1G1" />
+			<Item13 departureAirport="LFPG" departureTime="1835" />
+			<Item15 cruisingSpeed="N0448" cruisingLevel="F350" route="LATRA5H LATRA DCT LAMUT DCT UTUVA DCT TITVA DCT NOQAS UM728 KOLON/N0444F370 DCT LOKDU DCT PELOS DCT IPROM DCT KOVAS DCT CAR DCT NOLSI UA868 MEDAR DCT" />
+			<Item16 arrivalAirport="DTTA" estimatedFlightTime="0157" alternateAirport="DTNH" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/241028 REG/TSINL EET/LIRR0118 DTTC0147 SEL/MPER CODE/02A1AB OPR/LBT PER/C">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>241028</DOF>
+				<REG>TSINL</REG>
+				<EET>LIRR0118 DTTC0147</EET>
+				<SEL>MPER</SEL>
+				<CODE>02A1AB</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

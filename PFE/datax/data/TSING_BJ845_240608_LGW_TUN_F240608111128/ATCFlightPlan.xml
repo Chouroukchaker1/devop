@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP2" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-06-08T11:11:18" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-06-08" scheduledTimeOfDeparture="2024-06-08T18:30:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>LBT845</FlightIdentifier>
+				<FlightNumber airlineIATACode="BJ" number=" 845">
+					<CommercialFlightNumber>BJ845</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>EGKK</AirportICAOCode>
+				<AirportIATACode>LGW</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>DTTA</AirportICAOCode>
+				<AirportIATACode>TUN</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSING">
+			<AircraftModel>
+				<AircraftICAOType>A320</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF EUCHZMFP EUCBZMFP</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>AD DTTCZQZX DTTCZRZX DTTAZAZX DTTAZPZX DTTAZTZX</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>(FPL-LBT845-IS</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-A320/M-SDFGIJ1LORVWY/LB1</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-EGKK1830</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>-N0448F370 BOGNA1M BOGNA L612 XAMAB UL612 VEULE DCT DEKOD UN857</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>DISAK DCT DIRMO DCT ETAMO DCT ADEKA DCT MOKDI DCT MEN DCT BADAM</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>DCT FJR UM731 AMFAC DCT BATIV DCT PELOS DCT IPROM DCT CAR DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="10">
+			<Text>NOLSI UA868 MEDAR DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="11">
+			<Text>-DTTA0220 DTNH</Text>
+		</Paragraph>
+		<Paragraph sequence="12">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/240608 REG/TSING EET/LFFF0012 LIRR0143</Text>
+		</Paragraph>
+		<Paragraph sequence="13">
+			<Text>DTTC0211 SEL/HPAE CODE/02A1A6 OPR/LBT PER/C)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="EUCHZMFP EUCBZMFP DTTAZAZX DTTAZPZX DTTAZTZX" />
+		<Originator address="DTMBLBTO" />
+		<AdditionalAddressees addresses="DTTCZQZX DTTCZRZX DTTAZAZX DTTAZPZX DTTAZTZX" />
+		<Items>
+			<Item7 aTCCallsign="LBT845" />
+			<Item8 flightRules="I" typeOfFlight="S" />
+			<Item9 typeOfAircraft="A320" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDFGIJ1LORVWY/LB1" />
+			<Item13 departureAirport="EGKK" departureTime="1830" />
+			<Item15 cruisingSpeed="N0448" cruisingLevel="F370" route="BOGNA1M BOGNA L612 XAMAB UL612 VEULE DCT DEKOD UN857 DISAK DCT DIRMO DCT ETAMO DCT ADEKA DCT MOKDI DCT MEN DCT BADAM DCT FJR UM731 AMFAC DCT BATIV DCT PELOS DCT IPROM DCT CAR DCT NOLSI UA868 MEDAR DCT" />
+			<Item16 arrivalAirport="DTTA" estimatedFlightTime="0220" alternateAirport="DTNH" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/240608 REG/TSING EET/LFFF0012 LIRR0143 DTTC0211 SEL/HPAE CODE/02A1A6 OPR/LBT PER/C">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>240608</DOF>
+				<REG>TSING</REG>
+				<EET>LFFF0012 LIRR0143 DTTC0211</EET>
+				<SEL>HPAE</SEL>
+				<CODE>02A1A6</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP8" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-05-02T00:40:56" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-05-02" scheduledTimeOfDeparture="2024-05-02T02:00:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>LBT7404</FlightIdentifier>
+				<FlightNumber airlineIATACode="BJ" number="7404">
+					<CommercialFlightNumber>BJ7404</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>DTMB</AirportICAOCode>
+				<AirportIATACode>MIR</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>EPWA</AirportICAOCode>
+				<AirportIATACode>WAW</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSING">
+			<AircraftModel>
+				<AircraftICAOType>A320</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF DTMBZPZX DTMBZTZX DTTCZQZX DTTCZRZX EUCHZMFP EUCBZMFP</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>(FPL-LBT7404-IN</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>-A320/M-SDFGIJ1LORVWY/LB1</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-DTMB0200</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-N0451F380 SORAB1A SORAB UM735 BABLO DCT MEGAN DCT GIANO DCT ALAXI</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>DCT ATRUP/N0452F370 DCT LAPNA DCT LEDVA/N0449F390 DCT NETIR DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>USALO DCT KOTEK M866 LOGDA DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>-EPWA0222 EPPO</Text>
+		</Paragraph>
+		<Paragraph sequence="10">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/240502 REG/TSING EET/LIRR0014 LIBB0057</Text>
+		</Paragraph>
+		<Paragraph sequence="11">
+			<Text>LIMM0107 LDZO0109 LJLA0122 LOVV0132 LKAA0149 EPWW0202 SEL/HPAE</Text>
+		</Paragraph>
+		<Paragraph sequence="12">
+			<Text>CODE/02A1A6 OPR/LBT PER/C)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="DTMBZPZX DTMBZTZX EUCHZMFP EUCBZMFP DTTCZQZX DTTCZRZX" />
+		<Originator address="DTMBLBTO" />
+		<Items>
+			<Item7 aTCCallsign="LBT7404" />
+			<Item8 flightRules="I" typeOfFlight="N" />
+			<Item9 typeOfAircraft="A320" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDFGIJ1LORVWY/LB1" />
+			<Item13 departureAirport="DTMB" departureTime="0200" />
+			<Item15 cruisingSpeed="N0451" cruisingLevel="F380" route="SORAB1A SORAB UM735 BABLO DCT MEGAN DCT GIANO DCT ALAXI DCT ATRUP/N0452F370 DCT LAPNA DCT LEDVA/N0449F390 DCT NETIR DCT USALO DCT KOTEK M866 LOGDA DCT" />
+			<Item16 arrivalAirport="EPWA" estimatedFlightTime="0222" alternateAirport="EPPO" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/240502 REG/TSING EET/LIRR0014 LIBB0057 LIMM0107 LDZO0109 LJLA0122 LOVV0132 LKAA0149 EPWW0202 SEL/HPAE CODE/02A1A6 OPR/LBT PER/C">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>240502</DOF>
+				<REG>TSING</REG>
+				<EET>LIRR0014 LIBB0057 LIMM0107 LDZO0109 LJLA0122 LOVV0132 LKAA0149 EPWW0202</EET>
+				<SEL>HPAE</SEL>
+				<CODE>02A1A6</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

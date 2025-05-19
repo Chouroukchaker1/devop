@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EFUSUB xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://aeec.aviation-ia.net/633 EFF.xsd" state="New" fullPackage="true">
+<M633Header versionNumber="3" timestamp="2024-11-16T04:23:24+00:00"/>
+<M633SupplementaryHeader>
+<Flight flightOriginDate="2024-11-16" scheduledTimeOfDeparture="2024-11-16T11:20:00Z"><FlightIdentification><FlightIdentifier>LBT845</FlightIdentifier><FlightNumber airlineIATACode = "BJ" number = "845"><CommercialFlightNumber>BJ845</CommercialFlightNumber></FlightNumber></FlightIdentification><DepartureAirport><AirportICAOCode>EGKK</AirportICAOCode><AirportIATACode>LGW</AirportIATACode></DepartureAirport><ArrivalAirport><AirportICAOCode>DTTA</AirportICAOCode><AirportIATACode>TUN</AirportIATACode></ArrivalAirport></Flight><Aircraft aircraftRegistration="TSINL"><AircraftModel><AircraftICAOType>A20N</AircraftICAOType></AircraftModel></Aircraft>
+</M633SupplementaryHeader>
+<SubFolder title="_Root_Folder_">
+<SubFolder title="Crew Info">
+<Topic name="CrewInfo/Additional"/>
+<Document authorProfile="dispatcher" captainOnly="0" mandatory="1" originalDateTime="2024-11-16T04:23:24+00:00" priority="0" status="None" title="Crew Info" transferPending="0" updateDateTime="2024-11-16T04:23:24+00:00" id="file1" file="CrewAdditionalInfo.txt" type="text/plain">
+  <Topic name="CrewInfo/Additional"/>
+</Document>
+</SubFolder>
+<SubFolder title="Crew Alert">
+<Topic name="CrewInfo/Alert"/>
+<Document authorProfile="dispatcher" captainOnly="0" mandatory="1" Constraint="Check" originalDateTime="2024-11-16T04:23:24+00:00" priority="0" status="None" title="Crew Alert" transferPending="0" updateDateTime="2024-11-16T04:23:24+00:00" id="file2" file="CrewAlert.txt" type="text/plain">
+  <Topic name="CrewInfo/Alert"/>
+</Document>
+</SubFolder>
+<SubFolder title="NOTAM">
+<Topic name="NOTAM"/>
+<Topic name="NOTAM/Text/Validity"/>
+<Document authorProfile="dispatcher" captainOnly="0" mandatory="0" originalDateTime="2024-11-16T04:23:24+00:00" priority="0" status="None" title="Digital NOTAMs" transferPending="0" updateDateTime="2024-11-16T04:23:24+00:00" id="file3" file="NOTAM.xml" type="text/xml">
+  <Topic name="NOTAM"/>
+</Document>
+<Document authorProfile="dispatcher" captainOnly="0" mandatory="0" originalDateTime="2024-11-16T04:23:24+00:00" priority="0" status="None" title="NOTAM Validity" transferPending="0" updateDateTime="2024-11-16T04:23:24+00:00" id="file4" file="NotamValidity.txt" type="text/plain">
+  <Topic name="NOTAM/Text/Validity"/>
+</Document>
+</SubFolder>
+<SubFolder title="Weather">
+<SubFolder title="General">
+</SubFolder>
+<SubFolder title="Airports">
+<Topic name="Weather/Airport"/>
+<Document authorProfile="dispatcher" captainOnly="0" mandatory="0" originalDateTime="2024-11-16T04:23:24+00:00" priority="0" status="None" title="Digital Airport Weather Data" transferPending="0" updateDateTime="2024-11-16T04:23:24+00:00" id="file5" file="AirportWeather.xml" type="text/xml">
+  <Topic name="Weather/Airport"/>
+</Document>
+</SubFolder>
+<SubFolder title="Significant Weather">
+<Topic name="Weather/Chart/SigWX/MED LON FIX/161200"/>
+<Document authorProfile="dispatcher" captainOnly="0" mandatory="0" originalDateTime="2024-11-16T04:23:24+00:00" priority="0" status="None" title="SIGWX_MED_LON_FIX_161200" transferPending="0" updateDateTime="2024-11-16T04:23:24+00:00" id="file6" file="SIGWX_MED_LON_FIX_1612.GIF" type="image/gif">
+  <Topic name="Weather/Chart/SigWX/MED LON FIX/161200"/>
+</Document>
+</SubFolder>
+<SubFolder title="Satellite Images">
+<Topic name="Weather/Chart/Central Atlantic/160400"/>
+<Topic name="Weather/Chart/Europe/160410"/>
+<Topic name="Weather/Chart/Atlantic/160410"/>
+<Document authorProfile="dispatcher" captainOnly="0" mandatory="1" originalDateTime="2024-11-16T04:23:24+00:00" priority="0" status="None" title="Central Atlantic 1731729600" transferPending="0" updateDateTime="2024-11-16T04:23:24+00:00" id="file7" file="20243210400_mosaic-ir_108_006.jpeg" type="image/jpeg">
+  <Topic name="Weather/Chart/Central Atlantic/160400"/>
+</Document>
+<Document authorProfile="dispatcher" captainOnly="0" mandatory="1" originalDateTime="2024-11-16T04:23:24+00:00" priority="0" status="None" title="Europe 1731730200" transferPending="0" updateDateTime="2024-11-16T04:23:24+00:00" id="file8" file="20243210410_mosaic-ir_108_001.jpeg" type="image/jpeg">
+  <Topic name="Weather/Chart/Europe/160410"/>
+</Document>
+<Document authorProfile="dispatcher" captainOnly="0" mandatory="1" originalDateTime="2024-11-16T04:23:24+00:00" priority="0" status="None" title="Atlantic 1731730200" transferPending="0" updateDateTime="2024-11-16T04:23:24+00:00" id="file9" file="20243210410_mosaic-ir_108_004.jpeg" type="image/jpeg">
+  <Topic name="Weather/Chart/Atlantic/160410"/>
+</Document>
+</SubFolder>
+<SubFolder title="Upper Wind">
+<Topic name="Weather/Chart/350"/>
+<Topic name="Weather/Chart/390"/>
+<Topic name="Weather/Chart/430"/>
+<Document authorProfile="dispatcher" captainOnly="0" mandatory="0" originalDateTime="2024-11-16T04:23:24+00:00" priority="0" status="None" title="FL350" transferPending="0" updateDateTime="2024-11-16T04:23:24+00:00" id="file10" file="UAD_FL350.GIF" type="image/gif">
+  <Topic name="Weather/Chart/350"/>
+</Document>
+<Document authorProfile="dispatcher" captainOnly="0" mandatory="0" originalDateTime="2024-11-16T04:23:24+00:00" priority="0" status="None" title="FL390" transferPending="0" updateDateTime="2024-11-16T04:23:24+00:00" id="file11" file="UAD_FL390.GIF" type="image/gif">
+  <Topic name="Weather/Chart/390"/>
+</Document>
+<Document authorProfile="dispatcher" captainOnly="0" mandatory="0" originalDateTime="2024-11-16T04:23:24+00:00" priority="0" status="None" title="FL430" transferPending="0" updateDateTime="2024-11-16T04:23:24+00:00" id="file12" file="UAD_FL430.GIF" type="image/gif">
+  <Topic name="Weather/Chart/430"/>
+</Document>
+</SubFolder>
+<SubFolder title="Vertical Profile">
+<Topic name="Weather/Chart/Profile"/>
+<Document authorProfile="dispatcher" captainOnly="0" mandatory="0" originalDateTime="2024-11-16T04:23:24+00:00" priority="0" status="None" title="Vertical Profile" transferPending="0" updateDateTime="2024-11-16T04:23:24+00:00" id="file13" file="VerticalProfile.GIF" type="image/gif">
+  <Topic name="Weather/Chart/Profile"/>
+</Document>
+</SubFolder>
+</SubFolder>
+<SubFolder title="Flight Plan">
+<Topic name="FlightPlan/Operational"/>
+<Topic name="FlightPlan/ATCICAO"/>
+<Topic name="AirportData"/>
+<Topic name="AirspaceData"/>
+<Topic name="UpperAirData"/>
+<Document changed="New" authorProfile="dispatcher" captainOnly="0" mandatory="1" displayModel="standardLayout" originalDateTime="2024-11-16T04:23:24+00:00" priority="0" status="None" title="Digital Flight Plan" transferPending="0" updateDateTime="2024-11-16T04:23:24+00:00" id="file14" file="OFP.xml" type="text/xml">
+  <Topic name="FlightPlan/Operational"/>
+</Document>
+<Document changed="New" authorProfile="dispatcher" captainOnly="0" mandatory="1" displayModel="ATCFlightPlan" originalDateTime="2024-11-16T04:23:24+00:00" priority="0" status="None" title="Digital ATC Flight Plan" transferPending="0" updateDateTime="2024-11-16T04:23:24+00:00" id="file15" file="ATCFlightPlan.xml" type="text/xml">
+  <Topic name="FlightPlan/ATCICAO"/>
+</Document>
+<Document changed="New" authorProfile="dispatcher" captainOnly="0" mandatory="1" originalDateTime="2024-11-16T04:23:24+00:00" priority="0" status="None" title="Digital Airport Data" transferPending="0" updateDateTime="2024-11-16T04:23:24+00:00" id="file16" file="AirportData.xml" type="text/xml">
+  <Topic name="AirportData"/>
+</Document>
+<Document changed="New" authorProfile="dispatcher" captainOnly="0" mandatory="1" originalDateTime="2024-11-16T04:23:24+00:00" priority="0" status="None" title="Digital Airspace Data" transferPending="0" updateDateTime="2024-11-16T04:23:24+00:00" id="file17" file="AirspaceData.xml" type="text/xml">
+  <Topic name="AirspaceData"/>
+</Document>
+<Document changed="New" authorProfile="dispatcher" captainOnly="0" mandatory="1" originalDateTime="2024-11-16T04:23:24+00:00" priority="0" status="None" title="Digital Upper Air Data" transferPending="0" updateDateTime="2024-11-16T04:23:24+00:00" id="file18" file="UpperWindData.xml" type="text/xml">
+  <Topic name="UpperAirData"/>
+</Document>
+</SubFolder>
+<SubFolder title="Paper Flight Plan">
+<Topic name="FlightPlan/Text/NominalFlight"/>
+<Document changed="New" authorProfile="dispatcher" captainOnly="0" mandatory="0" originalDateTime="2024-11-16T04:23:24+00:00" priority="0" status="None" title="Paper flight plan" transferPending="0" updateDateTime="2024-11-16T04:23:24+00:00" id="file19" file="PaperFlightPlan.pdf" type="application/pdf">
+  <Topic name="FlightPlan/Text/NominalFlight"/>
+</Document>
+</SubFolder>
+<SubFolder title="RAIM Briefing">
+<Topic name="RAIM Outages"/>
+<Document authorProfile="dispatcher" captainOnly="0" mandatory="0" originalDateTime="2024-11-16T04:23:24+00:00" priority="0" status="None" title="Digital RAIM Data" transferPending="0" updateDateTime="2024-11-16T04:23:24+00:00" id="file20" file="RaimOutages.xml" type="text/xml">
+  <Topic name="RAIM Outages"/>
+</Document>
+</SubFolder>
+</SubFolder>
+</EFUSUB>

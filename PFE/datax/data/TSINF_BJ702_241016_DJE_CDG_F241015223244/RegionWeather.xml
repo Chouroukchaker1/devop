@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RegionWeatherBriefing creationTime="2024-10-15T22:32:44" fullPackage="true" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://aeec.aviation-ia.net/633 RegionWeatherBriefing.xsd">
+    <M633Header timestamp="2024-10-15T22:32:44" versionNumber="3"/>
+    <M633SupplementaryHeader>
+        <Flight flightOriginDate="2024-10-16" scheduledTimeOfDeparture="2024-10-16T02:30:00Z">
+            <FlightIdentification>
+                <FlightIdentifier>LBT702</FlightIdentifier>
+                <FlightNumber airlineIATACode="BJ" number="702">
+                    <CommercialFlightNumber>BJ702</CommercialFlightNumber>
+                </FlightNumber>
+            </FlightIdentification>
+            <DepartureAirport>
+                <AirportICAOCode>DTTJ</AirportICAOCode>
+                <AirportIATACode>DJE</AirportIATACode>
+            </DepartureAirport>
+            <ArrivalAirport>
+                <AirportICAOCode>LFPG</AirportICAOCode>
+                <AirportIATACode>CDG</AirportIATACode>
+            </ArrivalAirport>
+        </Flight>
+        <Aircraft aircraftRegistration="TSINF">
+            <AircraftModel>
+                <AircraftICAOType>A320</AircraftICAOType>
+            </AircraftModel>
+        </Aircraft>
+    </M633SupplementaryHeader>
+    <RegionWeathers>
+        <RegionWeather issuer="LIMM" type="AIRMET" startValidTime="2024-10-16T02:00:00" endValidTime="2024-10-16T06:00:00" observationTime="2024-10-15T19:02:00" sequence="1">
+            <RegionWeatherText>
+                <Paragraph sequence="1">
+                    <Text>AIRMET 23 VALID 160200/160600 LIIB- LIMM MILANO FIR</Text>
+                </Paragraph>
+                <Paragraph sequence="2">
+                    <Text>MOD ICE FCST SW OF LINE N4611 E00720 - N4308 E01100</Text>
+                </Paragraph>
+                <Paragraph sequence="3">
+                    <Text>ABV FL130 STNR WKN=</Text>
+                </Paragraph>
+            </RegionWeatherText>
+            <Location>
+                <Airspaces>
+                    <Airspace airspaceICAOCode="LIMM">
+                        <AirspaceName>MILANO FIR</AirspaceName>
+                    </Airspace>
+                </Airspaces>
+            </Location>
+        </RegionWeather>
+        <RegionWeather issuer="LIMM" type="AIRMET" startValidTime="2024-10-16T02:00:00" endValidTime="2024-10-16T06:00:00" observationTime="2024-10-15T18:51:00" sequence="2">
+            <RegionWeatherText>
+                <Paragraph sequence="1">
+                    <Text>AIRMET 22 VALID 160200/160600 LIIB- LIMM MILANO FIR</Text>
+                </Paragraph>
+                <Paragraph sequence="2">
+                    <Text>MOD TURB FCST SW OF LINE N4611 E00720 - N4308 E01100</Text>
+                </Paragraph>
+                <Paragraph sequence="3">
+                    <Text>FL080/120 STNR WKN=</Text>
+                </Paragraph>
+            </RegionWeatherText>
+            <Location>
+                <Airspaces>
+                    <Airspace airspaceICAOCode="LIMM">
+                        <AirspaceName>MILANO FIR</AirspaceName>
+                    </Airspace>
+                </Airspaces>
+            </Location>
+        </RegionWeather>
+    </RegionWeathers>
+</RegionWeatherBriefing>

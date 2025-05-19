@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP7" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-08-29T00:00:40" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-08-28" scheduledTimeOfDeparture="2024-08-29T02:25:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>LBT7246</FlightIdentifier>
+				<FlightNumber airlineIATACode="BJ" number="7246">
+					<CommercialFlightNumber>BJ7246</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>DTTJ</AirportICAOCode>
+				<AirportIATACode>DJE</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>LJLJ</AirportICAOCode>
+				<AirportIATACode>LJU</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSINC">
+			<AircraftModel>
+				<AircraftICAOType>A320</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF DTTJZAZX DTTJZPZX DTTJZTZX EUCHZMFP EUCBZMFP DTTCZQZX DTTCZRZX</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>(FPL-LBT7246-IN</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>-A320/M-SDFGHIJ1LORVWY/LB1</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-DTTJ0250</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-N0456F360 DCT JBA UM735 BABLO DCT MEGAN DCT GIANO DCT TIBER DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>NIKOL DCT ILB ILB2L</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>-LJLJ0146 LOWK</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/240829 REG/TSINC EET/LIRR0028 LIMM0124</Text>
+		</Paragraph>
+		<Paragraph sequence="10">
+			<Text>LDZO0130 LJLA0142 SEL/KSEF CODE/02A1A2 OPR/LBT PER/C)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="DTTJZAZX DTTJZPZX DTTJZTZX EUCHZMFP EUCBZMFP DTTCZQZX DTTCZRZX" />
+		<Originator address="DTMBLBTO" />
+		<Items>
+			<Item7 aTCCallsign="LBT7246" />
+			<Item8 flightRules="I" typeOfFlight="N" />
+			<Item9 typeOfAircraft="A320" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDFGHIJ1LORVWY/LB1" />
+			<Item13 departureAirport="DTTJ" departureTime="0250" />
+			<Item15 cruisingSpeed="N0456" cruisingLevel="F360" route="DCT JBA UM735 BABLO DCT MEGAN DCT GIANO DCT TIBER DCT NIKOL DCT ILB ILB2L" />
+			<Item16 arrivalAirport="LJLJ" estimatedFlightTime="0146" alternateAirport="LOWK" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/240829 REG/TSINC EET/LIRR0028 LIMM0124 LDZO0130 LJLA0142 SEL/KSEF CODE/02A1A2 OPR/LBT PER/C">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>240829</DOF>
+				<REG>TSINC</REG>
+				<EET>LIRR0028 LIMM0124 LDZO0130 LJLA0142</EET>
+				<SEL>KSEF</SEL>
+				<CODE>02A1A2</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

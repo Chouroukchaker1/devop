@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP1" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-08-26T17:33:38" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-08-26" scheduledTimeOfDeparture="2024-08-26T19:50:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>LBT624</FlightIdentifier>
+				<FlightNumber airlineIATACode="BJ" number=" 624">
+					<CommercialFlightNumber>BJ624</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>DTTA</AirportICAOCode>
+				<AirportIATACode>TUN</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>LEMD</AirportICAOCode>
+				<AirportIATACode>MAD</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSINK">
+			<AircraftModel>
+				<AircraftICAOType>A320</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF DTTAZAZX DTTAZPZX DTTAZTZX DTTCZQZX DTTCZRZX DAAAZQZX DAAAZQZR</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>EUCHZMFP EUCBZMFP</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>(FPL-LBT624-IS</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-A320/M-SDFGHIJ1LORVWY/LB1</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-DTTA2030</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>-N0455F360 DCT TUC A411 KEMIR UA411 MORJA/N0455F360 UA411 ANB UM134</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>LUXUR/N0457F350 DCT GENIO DCT XARON DCT OLMIR DCT NINES M134 VLC</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>N733 CLS/N0460F330 N733 PRADO</Text>
+		</Paragraph>
+		<Paragraph sequence="10">
+			<Text>-LEMD0143 LEVC</Text>
+		</Paragraph>
+		<Paragraph sequence="11">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/240826 REG/TSINK EET/DAAA0016 LECB0053</Text>
+		</Paragraph>
+		<Paragraph sequence="12">
+			<Text>LECM0125 SEL/KRCQ CODE/02A1AA OPR/LBT PER/C)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="DTTAZAZX DTTAZPZX DTTAZTZX EUCHZMFP EUCBZMFP DTTCZQZX DTTCZRZX DAAAZQZX DAAAZQZR" />
+		<Originator address="DTMBLBTO" />
+		<Items>
+			<Item7 aTCCallsign="LBT624" />
+			<Item8 flightRules="I" typeOfFlight="S" />
+			<Item9 typeOfAircraft="A320" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDFGHIJ1LORVWY/LB1" />
+			<Item13 departureAirport="DTTA" departureTime="2030" />
+			<Item15 cruisingSpeed="N0455" cruisingLevel="F360" route="DCT TUC A411 KEMIR UA411 MORJA/N0455F360 UA411 ANB UM134 LUXUR/N0457F350 DCT GENIO DCT XARON DCT OLMIR DCT NINES M134 VLC N733 CLS/N0460F330 N733 PRADO" />
+			<Item16 arrivalAirport="LEMD" estimatedFlightTime="0143" alternateAirport="LEVC" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/240826 REG/TSINK EET/DAAA0016 LECB0053 LECM0125 SEL/KRCQ CODE/02A1AA OPR/LBT PER/C">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>240826</DOF>
+				<REG>TSINK</REG>
+				<EET>DAAA0016 LECB0053 LECM0125</EET>
+				<SEL>KRCQ</SEL>
+				<CODE>02A1AA</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

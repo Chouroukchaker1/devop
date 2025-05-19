@@ -1,0 +1,94 @@
+.fuel-prediction-container {
+    max-width: 1200px;
+  }
+  
+  .card {
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .card-header {
+    font-weight: 500;
+  }
+  
+  .prediction-plot {
+    max-width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .results-table {
+    font-size: 0.9rem;
+  }
+  
+  .sortable-header {
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .sortable-header:hover {
+    background-color: #f8f9fa;
+  }
+  
+  .sortable-header i {
+    margin-left: 5px;
+  }
+  
+  /* Custom scrollbar for table */
+  .table-responsive {
+    max-height: 600px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+  }
+  
+  .table-responsive::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .table-responsive::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  .table-responsive::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+  }
+  
+  .table-responsive::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  
+  /* Alert styling */
+  .alert {
+    border-radius: 6px;
+  }
+  
+  /* Progress bars */
+  .progress {
+    height: 8px;
+    border-radius: 4px;
+  }
+  
+  /* Accordion styling */
+  .accordion-button:not(.collapsed) {
+    background-color: rgba(13, 110, 253, 0.1);
+    color: #0d6efd;
+  }
+  
+  /* Badge styling */
+  .badge {
+    font-weight: 500;
+    font-size: 0.85rem;
+    padding: 0.35em 0.65em;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .results-table {
+      font-size: 0.8rem;
+    }
+    
+    .card-body {
+      padding: 1rem;
+    }
+  }

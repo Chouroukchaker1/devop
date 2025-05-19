@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AirportData creationTime="2024-12-20T18:52:16" flightPlanId="OFP1" fullPackage="true" xsi:schemaLocation="http://aeec.aviation-ia.net/633 AirportData.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<M633Header timestamp="2024-12-20T18:52:15Z" versionNumber="3"/> 
+<M633SupplementaryHeader>
+    <Flight flightOriginDate="2024-12-21Z" scheduledTimeOfDeparture="2024-12-21T01:25:00Z">
+        <FlightIdentification>
+            <FlightIdentifier>DAH6232</FlightIdentifier>
+                <FlightNumber airlineIATACode="AH" number="6232" >
+                    <CommercialFlightNumber>AH6232</CommercialFlightNumber>
+                </FlightNumber>
+             </FlightIdentification>
+        <DepartureAirport airportFunction="DepartureAirport" airportName="TAMENGHASSET/AGUENAR-HADJ BEY">
+            <AirportICAOCode>DAAT</AirportICAOCode>
+            <AirportIATACode>TMR</AirportIATACode>
+        </DepartureAirport>
+        <ArrivalAirport airportFunction="ArrivalAirport" airportName="DJANET/TISKA">
+            <AirportICAOCode>DAAJ</AirportICAOCode>
+            <AirportIATACode>DJG</AirportIATACode>
+        </ArrivalAirport>
+    </Flight>
+    <Aircraft aircraftRegistration="TSINK" >
+        <AircraftModel airlineSpecificSubType="1.15">
+            <AircraftICAOType>A320</AircraftICAOType>
+        </AircraftModel>
+    </Aircraft>
+</M633SupplementaryHeader>
+    <Airport>
+        <AirportIdentification airportFunction="DepartureAirport" airportName="TAMENGHASSET/AGUENAR-HADJ BEY">
+            <AirportICAOCode>DAAT</AirportICAOCode>
+            <AirportIATACode>TMR</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="20"> 
+            <Approach procedureName="TKOF">
+                <RequiredHorizontalVisibility unit="m">250</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">0</RequiredVerticalVisibility>  
+            </Approach>
+            <Elevation unit="ft">4518</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">4518</Elevation>
+        <AirportReferencePoint><Coordinates latitude="82120" longitude="19623">N2248.7 E00527.1</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT01H</LocalTimeOffsetToUTC>
+    </Airport>
+    <Airport>
+        <AirportIdentification airportFunction="ArrivalAirport" airportName="DJANET/TISKA">
+            <AirportICAOCode>DAAJ</AirportICAOCode>
+            <AirportIATACode>DJG</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="30"> 
+            <Approach procedureName="CIRC LOC@12">
+                <RequiredHorizontalVisibility unit="m">3700</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">705</RequiredVerticalVisibility>
+            </Approach>
+            <Elevation unit="ft">3169</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">3169</Elevation>
+        <AirportReferencePoint><Coordinates latitude="87455" longitude="34027">N2417.6 E00927.1</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT01H</LocalTimeOffsetToUTC>
+    </Airport>
+    <Airport>
+        <AirportIdentification airportFunction="PrimaryArrivalAlternateAirport" airportName="TAMENGHASSET/AGUENAR-HADJ BEY">
+            <AirportICAOCode>DAAT</AirportICAOCode>
+            <AirportIATACode>TMR</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="20">
+            <Approach procedureName="LOC+VORDME">
+                <RequiredHorizontalVisibility unit="m">3200</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">600</RequiredVerticalVisibility>
+            </Approach>
+            <Elevation unit="ft">4518</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">4518</Elevation>
+        <AirportReferencePoint><Coordinates latitude="82120" longitude="19623">N2248.7 E00527.1</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT01H</LocalTimeOffsetToUTC>
+    </Airport>
+    <Airport>
+        <AirportIdentification airportFunction="ArrivalAlternateAirport" airportName="ZARZAITINE/IN AMENAS">
+            <AirportICAOCode>DAUZ</AirportICAOCode>
+            <AirportIATACode>IAM</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="23">
+            <Approach procedureName="VORDME">
+                <RequiredHorizontalVisibility unit="m">3400</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">650</RequiredVerticalVisibility>
+            </Approach>
+            <Elevation unit="ft">1841</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">1844</Elevation>
+        <AirportReferencePoint><Coordinates latitude="100985" longitude="34714">N2803.1 E00938.6</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT01H</LocalTimeOffsetToUTC>
+    </Airport>
+</AirportData>

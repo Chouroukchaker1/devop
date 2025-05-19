@@ -1,0 +1,53 @@
+/* Structure de la page pour maintenir le footer en bas */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Hauteur minimale de la page */
+}
+
+.content {
+  padding-bottom: 70px;
+  /* Prend tout l'espace disponible pour pousser le footer en bas */
+}
+
+/* Styles du footer */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f8f9fa;
+  color: #124384;
+  width: 100%;
+  height: 60px; /* Hauteur fixe du footer */
+  position: relative; /* Changé de absolute à relative */
+  margin-top: auto; /* Pousse le footer vers le bas */
+ 
+}
+
+/* Style pour la section contact */
+.contact-info {
+  display: flex;
+  gap: 15px;
+  font-size: 0.9rem;
+}
+
+.contact-info span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.email-link {
+  color: #124384;
+  text-decoration: none;
+}
+
+.email-link:hover {
+  text-decoration: underline;
+}
+/* Pour les pages avec beaucoup de contenu comme SchedulerHistory */
+.scheduler-history-container .footer {
+  position: static; /* Permet au footer de suivre le flux normal */
+  margin-top: 20px; /* Espace entre le contenu et le footer */
+}

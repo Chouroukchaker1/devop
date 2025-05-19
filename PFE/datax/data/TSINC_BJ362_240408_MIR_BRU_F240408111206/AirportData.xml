@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AirportData creationTime="2024-04-08T11:11:59" flightPlanId="OFP9" fullPackage="true" xsi:schemaLocation="http://aeec.aviation-ia.net/633 AirportData.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<M633Header timestamp="2024-04-08T11:11:58Z" versionNumber="3"/> 
+<M633SupplementaryHeader>
+    <Flight flightOriginDate="2024-04-08Z" scheduledTimeOfDeparture="2024-04-08T14:00:00Z">
+        <FlightIdentification>
+            <FlightIdentifier>LBT362</FlightIdentifier>
+                <FlightNumber airlineIATACode="BJ" number="362" >
+                    <CommercialFlightNumber>BJ362</CommercialFlightNumber>
+                </FlightNumber>
+             </FlightIdentification>
+        <DepartureAirport airportFunction="DepartureAirport" airportName="MONASTIR/HABIB BOURGUIBA">
+            <AirportICAOCode>DTMB</AirportICAOCode>
+            <AirportIATACode>MIR</AirportIATACode>
+        </DepartureAirport>
+        <ArrivalAirport airportFunction="ArrivalAirport" airportName="BRUSSELS/BRUSSELS NATIONAL">
+            <AirportICAOCode>EBBR</AirportICAOCode>
+            <AirportIATACode>BRU</AirportIATACode>
+        </ArrivalAirport>
+    </Flight>
+    <Aircraft aircraftRegistration="TSINC" >
+        <AircraftModel airlineSpecificSubType="5.89">
+            <AircraftICAOType>A320</AircraftICAOType>
+        </AircraftModel>
+    </Aircraft>
+</M633SupplementaryHeader>
+    <Airport>
+        <AirportIdentification airportFunction="DepartureAirport" airportName="MONASTIR/HABIB BOURGUIBA">
+            <AirportICAOCode>DTMB</AirportICAOCode>
+            <AirportIATACode>MIR</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="07"> 
+            <Approach procedureName="TKOF">
+                <RequiredHorizontalVisibility unit="m">250</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">0</RequiredVerticalVisibility>  
+            </Approach>
+            <Elevation unit="ft">8</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">9</Elevation>
+        <AirportReferencePoint><Coordinates latitude="128729" longitude="38717">N3545.5 E01045.3</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT01H</LocalTimeOffsetToUTC>
+    </Airport>
+    <Airport>
+        <AirportIdentification airportFunction="ArrivalAirport" airportName="BRUSSELS/BRUSSELS NATIONAL">
+            <AirportICAOCode>EBBR</AirportICAOCode>
+            <AirportIATACode>BRU</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="07L">
+            <Approach procedureName="VORDME">
+                <RequiredHorizontalVisibility unit="m">3300</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">530</RequiredVerticalVisibility>
+            </Approach>
+            <Elevation unit="ft">121</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">175</Elevation>
+        <AirportReferencePoint><Coordinates latitude="183245" longitude="16144">N5054.1 E00429.1</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT02H</LocalTimeOffsetToUTC>
+    </Airport>
+    <Airport>
+        <AirportIdentification airportFunction="ArrivalAlternateAirport" airportName="LILLE/LESQUIN">
+            <AirportICAOCode>LFQQ</AirportICAOCode>
+            <AirportIATACode>LIL</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="26">
+            <Approach procedureName="CAT1+VOR">
+                <RequiredHorizontalVisibility unit="m">550</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">0</RequiredVerticalVisibility>
+            </Approach>
+            <Elevation unit="ft">135</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">157</Elevation>
+        <AirportReferencePoint><Coordinates latitude="182028" longitude="11113">N5033.8 E00305.2</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT02H</LocalTimeOffsetToUTC>
+    </Airport>
+    <Airport>
+        <AirportIdentification airportFunction="PrimaryArrivalAlternateAirport" airportName="MAASTRICHT/AACHEN">
+            <AirportICAOCode>EHBK</AirportICAOCode>
+            <AirportIATACode>MST</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="21">
+            <Approach procedureName="LOC+DME">
+                <RequiredHorizontalVisibility unit="m">800</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">340</RequiredVerticalVisibility>
+            </Approach>
+            <Elevation unit="ft">371</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">375</Elevation>
+        <AirportReferencePoint><Coordinates latitude="183297" longitude="20797">N5055.0 E00546.6</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT02H</LocalTimeOffsetToUTC>
+    </Airport>
+    <Airport>
+        <AirportIdentification airportFunction="ArrivalAlternateAirport" airportName="LIEGE">
+            <AirportICAOCode>EBLG</AirportICAOCode>
+            <AirportIATACode>LGG</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="04R">
+            <Approach procedureName="CAT1DME">
+                <RequiredHorizontalVisibility unit="m">550</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">0</RequiredVerticalVisibility>
+            </Approach>
+            <Elevation unit="ft">644</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">651</Elevation>
+        <AirportReferencePoint><Coordinates latitude="182291" longitude="19594">N5038.2 E00526.6</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT02H</LocalTimeOffsetToUTC>
+    </Airport>
+    <Airport>
+        <AirportIdentification airportFunction="ArrivalAlternateAirport" airportName="OOSTENDE-BRUGGE/OOSTENDE">
+            <AirportICAOCode>EBOS</AirportICAOCode>
+            <AirportIATACode>OST</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="08">
+            <Approach procedureName="LOCDME">
+                <RequiredHorizontalVisibility unit="m">1500</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">470</RequiredVerticalVisibility>
+            </Approach>
+            <Elevation unit="ft">7</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">7</Elevation>
+        <AirportReferencePoint><Coordinates latitude="184316" longitude="10304">N5111.9 E00251.7</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT02H</LocalTimeOffsetToUTC>
+    </Airport>
+</AirportData>

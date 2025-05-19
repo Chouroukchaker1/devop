@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP7" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-11-30T04:23:20" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-11-30" scheduledTimeOfDeparture="2024-11-30T11:25:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>LBT2641</FlightIdentifier>
+				<FlightNumber airlineIATACode="BJ" number="2641">
+					<CommercialFlightNumber>BJ2641</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>EDDL</AirportICAOCode>
+				<AirportIATACode>DUS</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>DTTJ</AirportICAOCode>
+				<AirportIATACode>DJE</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSINE">
+			<AircraftModel>
+				<AircraftICAOType>A320</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF EUCHZMFP EUCBZMFP</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>AD DTTCZQZX DTTCZRZX DTTJZAZX DTTJZPZX DTTJZTZX</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>(FPL-LBT2641-IS</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-A320/M-SDFGHIJ1LORVWY/LB1</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-EDDL1125</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>-N0443F370 DODEN1T DODEN Y852 TUSUK DCT ULNOK L607 ABUKA DCT UTABA</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>DCT BEMKI DCT ELMEM DCT GIRIS DCT DIKEM DCT VIC DCT KOPER DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>LUMAV DCT AMTEL DCT PININ DCT TUNEX UG737 CBN UG727 SFX A411 BISKO</Text>
+		</Paragraph>
+		<Paragraph sequence="10">
+			<Text>DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="11">
+			<Text>-DTTJ0223 DTMB</Text>
+		</Paragraph>
+		<Paragraph sequence="12">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/241130 REG/TSINE EET/EDUU0011 LOVV0042</Text>
+		</Paragraph>
+		<Paragraph sequence="13">
+			<Text>LIMM0047 LIRR0111 DTTC0154 SEL/KQEJ CODE/02A1A4 OPR/LBT PER/C)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="EUCHZMFP EUCBZMFP" />
+		<Originator address="DTMBLBTO" />
+		<AdditionalAddressees addresses="DTTCZQZX DTTCZRZX DTTJZAZX DTTJZPZX DTTJZTZX" />
+		<Items>
+			<Item7 aTCCallsign="LBT2641" />
+			<Item8 flightRules="I" typeOfFlight="S" />
+			<Item9 typeOfAircraft="A320" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDFGHIJ1LORVWY/LB1" />
+			<Item13 departureAirport="EDDL" departureTime="1125" />
+			<Item15 cruisingSpeed="N0443" cruisingLevel="F370" route="DODEN1T DODEN Y852 TUSUK DCT ULNOK L607 ABUKA DCT UTABA DCT BEMKI DCT ELMEM DCT GIRIS DCT DIKEM DCT VIC DCT KOPER DCT LUMAV DCT AMTEL DCT PININ DCT TUNEX UG737 CBN UG727 SFX A411 BISKO DCT" />
+			<Item16 arrivalAirport="DTTJ" estimatedFlightTime="0223" alternateAirport="DTMB" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/241130 REG/TSINE EET/EDUU0011 LOVV0042 LIMM0047 LIRR0111 DTTC0154 SEL/KQEJ CODE/02A1A4 OPR/LBT PER/C">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>241130</DOF>
+				<REG>TSINE</REG>
+				<EET>EDUU0011 LOVV0042 LIMM0047 LIRR0111 DTTC0154</EET>
+				<SEL>KQEJ</SEL>
+				<CODE>02A1A4</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

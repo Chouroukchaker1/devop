@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP17" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-06-15T08:53:27" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-06-15" scheduledTimeOfDeparture="2024-06-15T14:30:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>LBT757</FlightIdentifier>
+				<FlightNumber airlineIATACode="BJ" number=" 757">
+					<CommercialFlightNumber>BJ757</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>LFQQ</AirportICAOCode>
+				<AirportIATACode>LIL</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>DTTA</AirportICAOCode>
+				<AirportIATACode>TUN</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSIND">
+			<AircraftModel>
+				<AircraftICAOType>A320</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF EUCHZMFP EUCBZMFP</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>AD DTTCZQZX DTTCZRZX DTTAZAZX DTTAZPZX DTTAZTZX</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>(FPL-LBT757-IS</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-A320/M-SDFGHIJ1LORVWY/LB1</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-LFQQ1430</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>-N0454F290 CMB6Z CMB B3 VERMA UM728 RESMI UN857 DISAK/N0456F370 DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>DIRMO DCT ETAMO DCT ADEKA DCT MOKDI DCT MEN DCT BADAM DCT FJR</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>UM731 AMFAC DCT BATIV DCT PELOS DCT IPROM DCT CAR DCT NOLSI UA868</Text>
+		</Paragraph>
+		<Paragraph sequence="10">
+			<Text>MEDAR DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="11">
+			<Text>-DTTA0210 DTNH</Text>
+		</Paragraph>
+		<Paragraph sequence="12">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/240615 REG/TSIND EET/LIRR0133 DTTC0200</Text>
+		</Paragraph>
+		<Paragraph sequence="13">
+			<Text>SEL/LPBR CODE/02A1A3 OPR/LBT PER/C)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="EUCHZMFP EUCBZMFP DTTAZAZX DTTAZPZX DTTAZTZX" />
+		<Originator address="DTMBLBTO" />
+		<AdditionalAddressees addresses="DTTCZQZX DTTCZRZX DTTAZAZX DTTAZPZX DTTAZTZX" />
+		<Items>
+			<Item7 aTCCallsign="LBT757" />
+			<Item8 flightRules="I" typeOfFlight="S" />
+			<Item9 typeOfAircraft="A320" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDFGHIJ1LORVWY/LB1" />
+			<Item13 departureAirport="LFQQ" departureTime="1430" />
+			<Item15 cruisingSpeed="N0454" cruisingLevel="F290" route="CMB6Z CMB B3 VERMA UM728 RESMI UN857 DISAK/N0456F370 DCT DIRMO DCT ETAMO DCT ADEKA DCT MOKDI DCT MEN DCT BADAM DCT FJR UM731 AMFAC DCT BATIV DCT PELOS DCT IPROM DCT CAR DCT NOLSI UA868 MEDAR DCT" />
+			<Item16 arrivalAirport="DTTA" estimatedFlightTime="0210" alternateAirport="DTNH" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/240615 REG/TSIND EET/LIRR0133 DTTC0200 SEL/LPBR CODE/02A1A3 OPR/LBT PER/C">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>240615</DOF>
+				<REG>TSIND</REG>
+				<EET>LIRR0133 DTTC0200</EET>
+				<SEL>LPBR</SEL>
+				<CODE>02A1A3</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

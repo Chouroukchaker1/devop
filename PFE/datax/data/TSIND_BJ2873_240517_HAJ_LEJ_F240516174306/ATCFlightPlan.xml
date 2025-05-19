@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP2" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-05-16T17:42:59" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-05-17" scheduledTimeOfDeparture="2024-05-17T09:10:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>LBT2873</FlightIdentifier>
+				<FlightNumber airlineIATACode="BJ" number="2873">
+					<CommercialFlightNumber>BJ2873</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>EDDV</AirportICAOCode>
+				<AirportIATACode>HAJ</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>EDDP</AirportICAOCode>
+				<AirportIATACode>LEJ</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSIND">
+			<AircraftModel>
+				<AircraftICAOType>A320</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF EUCHZMFP EUCBZMFP</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>(FPL-LBT2873-IN</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>-A320/M-SDFGHIJ1LORVWY/LB1</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-EDDV0910</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-N0415F210 POVEL2H POVEL Z94 KENIG T959 KOJEC KOJEC1R</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>-EDDP0019 EDDC</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/240517 REG/TSIND EET/EDMM0012 SEL/LPBR</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>CODE/02A1A3 OPR/LBT PER/C)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="EUCHZMFP EUCBZMFP" />
+		<Originator address="DTMBLBTO" />
+		<Items>
+			<Item7 aTCCallsign="LBT2873" />
+			<Item8 flightRules="I" typeOfFlight="N" />
+			<Item9 typeOfAircraft="A320" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDFGHIJ1LORVWY/LB1" />
+			<Item13 departureAirport="EDDV" departureTime="0910" />
+			<Item15 cruisingSpeed="N0415" cruisingLevel="F210" route="POVEL2H POVEL Z94 KENIG T959 KOJEC KOJEC1R" />
+			<Item16 arrivalAirport="EDDP" estimatedFlightTime="0019" alternateAirport="EDDC" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/240517 REG/TSIND EET/EDMM0012 SEL/LPBR CODE/02A1A3 OPR/LBT PER/C">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>240517</DOF>
+				<REG>TSIND</REG>
+				<EET>EDMM0012</EET>
+				<SEL>LPBR</SEL>
+				<CODE>02A1A3</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

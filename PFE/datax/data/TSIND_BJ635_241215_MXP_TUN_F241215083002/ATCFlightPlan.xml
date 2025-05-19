@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP4" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-12-15T08:29:57" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-12-15" scheduledTimeOfDeparture="2024-12-15T14:25:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>LBT635</FlightIdentifier>
+				<FlightNumber airlineIATACode="BJ" number=" 635">
+					<CommercialFlightNumber>BJ635</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>LIMC</AirportICAOCode>
+				<AirportIATACode>MXP</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>DTTA</AirportICAOCode>
+				<AirportIATACode>TUN</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSIND">
+			<AircraftModel>
+				<AircraftICAOType>A320</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF EUCHZMFP EUCBZMFP</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>AD DTTCZQZX DTTCZRZX DTTAZAZX DTTAZPZX DTTAZTZX</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>(FPL-LBT635-IS</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-A320/M-SDFGHIJ1LORVWY/LB1</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-LIMC1425</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>-N0443F350 ROBAS5Y ROBAS DCT TINKU DCT ELKAP DCT NEMBO DCT TINTO</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>DCT QUENN DCT NOLSI A868 MEDAR DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>-DTTA0116 DTNH</Text>
+		</Paragraph>
+		<Paragraph sequence="10">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/241215 REG/TSIND EET/LIRR0024 DTTC0107</Text>
+		</Paragraph>
+		<Paragraph sequence="11">
+			<Text>SEL/LPBR CODE/02A1A3 OPR/LBT PER/C)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="EUCHZMFP EUCBZMFP" />
+		<Originator address="DTMBLBTO" />
+		<AdditionalAddressees addresses="DTTCZQZX DTTCZRZX DTTAZAZX DTTAZPZX DTTAZTZX" />
+		<Items>
+			<Item7 aTCCallsign="LBT635" />
+			<Item8 flightRules="I" typeOfFlight="S" />
+			<Item9 typeOfAircraft="A320" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDFGHIJ1LORVWY/LB1" />
+			<Item13 departureAirport="LIMC" departureTime="1425" />
+			<Item15 cruisingSpeed="N0443" cruisingLevel="F350" route="ROBAS5Y ROBAS DCT TINKU DCT ELKAP DCT NEMBO DCT TINTO DCT QUENN DCT NOLSI A868 MEDAR DCT" />
+			<Item16 arrivalAirport="DTTA" estimatedFlightTime="0116" alternateAirport="DTNH" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/241215 REG/TSIND EET/LIRR0024 DTTC0107 SEL/LPBR CODE/02A1A3 OPR/LBT PER/C">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>241215</DOF>
+				<REG>TSIND</REG>
+				<EET>LIRR0024 DTTC0107</EET>
+				<SEL>LPBR</SEL>
+				<CODE>02A1A3</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

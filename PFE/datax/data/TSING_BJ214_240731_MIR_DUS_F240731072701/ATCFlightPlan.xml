@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP9" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-07-31T07:26:53" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-07-31" scheduledTimeOfDeparture="2024-07-31T10:15:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>LBT214</FlightIdentifier>
+				<FlightNumber airlineIATACode="BJ" number=" 214">
+					<CommercialFlightNumber>BJ214</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>DTMB</AirportICAOCode>
+				<AirportIATACode>MIR</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>EDDL</AirportICAOCode>
+				<AirportIATACode>DUS</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSING">
+			<AircraftModel>
+				<AircraftICAOType>A320</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF DTMBZPZX DTMBZTZX DTTCZQZX DTTCZRZX EUCHZMFP EUCBZMFP</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>(FPL-LBT214-IN</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>-A320/M-SDFGIJ1LORVWY/LB1</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-DTMB1015</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-N0440F240 LARBI1B LARBI A411 TUC/N0463F360 UM733 OSMAR DCT PIRIX</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>DCT UPDUT DCT CORSI DCT OMEDA DCT MERLU DCT PIGOS UM733 BARSO</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>UM622 IRMAR DCT KINES DCT VANAS DCT MOBLO DCT UBIMA DCT GILIR DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>PENDU DCT IXILU DCT GIVOR/N0452F320 DCT SORAL DCT IBERA DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="10">
+			<Text>DIK/N0448F310 N853 ARCKY T853 NVO T857 BIKMU BIKMU1X</Text>
+		</Paragraph>
+		<Paragraph sequence="11">
+			<Text>-EDDL0218 EHBK</Text>
+		</Paragraph>
+		<Paragraph sequence="12">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/240731 REG/TSING EET/LIRR0026 LFFF0054</Text>
+		</Paragraph>
+		<Paragraph sequence="13">
+			<Text>LIMM0127 LFFF0128 LSAS0139 LFFF0142 EBUR0203 EDUU0207 EBUR0208</Text>
+		</Paragraph>
+		<Paragraph sequence="14">
+			<Text>EDGG0212 SEL/HPAE CODE/02A1A6 OPR/LBT PER/C)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="DTMBZPZX DTMBZTZX EUCHZMFP EUCBZMFP DTTCZQZX DTTCZRZX" />
+		<Originator address="DTMBLBTO" />
+		<Items>
+			<Item7 aTCCallsign="LBT214" />
+			<Item8 flightRules="I" typeOfFlight="N" />
+			<Item9 typeOfAircraft="A320" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDFGIJ1LORVWY/LB1" />
+			<Item13 departureAirport="DTMB" departureTime="1015" />
+			<Item15 cruisingSpeed="N0440" cruisingLevel="F240" route="LARBI1B LARBI A411 TUC/N0463F360 UM733 OSMAR DCT PIRIX DCT UPDUT DCT CORSI DCT OMEDA DCT MERLU DCT PIGOS UM733 BARSO UM622 IRMAR DCT KINES DCT VANAS DCT MOBLO DCT UBIMA DCT GILIR DCT PENDU DCT IXILU DCT GIVOR/N0452F320 DCT SORAL DCT IBERA DCT DIK/N0448F310 N853 ARCKY T853 NVO T857 BIKMU BIKMU1X" />
+			<Item16 arrivalAirport="EDDL" estimatedFlightTime="0218" alternateAirport="EHBK" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/240731 REG/TSING EET/LIRR0026 LFFF0054 LIMM0127 LFFF0128 LSAS0139 LFFF0142 EBUR0203 EDUU0207 EBUR0208 EDGG0212 SEL/HPAE CODE/02A1A6 OPR/LBT PER/C">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>240731</DOF>
+				<REG>TSING</REG>
+				<EET>LIRR0026 LFFF0054 LIMM0127 LFFF0128 LSAS0139 LFFF0142 EBUR0203 EDUU0207 EBUR0208 EDGG0212</EET>
+				<SEL>HPAE</SEL>
+				<CODE>02A1A6</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

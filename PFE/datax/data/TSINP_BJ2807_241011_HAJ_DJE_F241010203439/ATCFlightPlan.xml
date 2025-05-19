@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP2" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-10-10T20:34:31" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-10-11" scheduledTimeOfDeparture="2024-10-11T08:50:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>LBT2807</FlightIdentifier>
+				<FlightNumber airlineIATACode="BJ" number="2807">
+					<CommercialFlightNumber>BJ2807</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>EDDV</AirportICAOCode>
+				<AirportIATACode>HAJ</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>DTTJ</AirportICAOCode>
+				<AirportIATACode>DJE</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSINP">
+			<AircraftModel>
+				<AircraftICAOType>A320</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF EUCHZMFP EUCBZMFP</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>AD DTTCZQZX DTTCZRZX DTTJZAZX DTTJZPZX DTTJZTZX</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>(FPL-LBT2807-IN</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-A320/M-SDFGHIJ1LORVWY/LB1</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-EDDV0850</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>-N0454F350 WERRA3S WERRA P605 ELNAT DCT OSBIT DCT DINKU M867 XERUM</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>DCT BAVAX Z106 MANAL M736 LIZUM N503 LIKDA DCT BAKOR DCT VESAL DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>VIC DCT KOPER DCT LUMAV/N0456F370 DCT AMTEL DCT PININ DCT TUNEX</Text>
+		</Paragraph>
+		<Paragraph sequence="10">
+			<Text>UG737 CBN UG727 SFX A411 BISKO DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="11">
+			<Text>-DTTJ0237 DTMB</Text>
+		</Paragraph>
+		<Paragraph sequence="12">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/241011 REG/TSINP EET/EDVV0012 EDUU0013</Text>
+		</Paragraph>
+		<Paragraph sequence="13">
+			<Text>LOVV0045 LIMM0050 LIRR0117 DTTC0207 SEL/PRKM CODE/02A1AF OPR/LBT</Text>
+		</Paragraph>
+		<Paragraph sequence="14">
+			<Text>PER/C)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="EUCHZMFP EUCBZMFP" />
+		<Originator address="DTMBLBTO" />
+		<AdditionalAddressees addresses="DTTCZQZX DTTCZRZX DTTJZAZX DTTJZPZX DTTJZTZX" />
+		<Items>
+			<Item7 aTCCallsign="LBT2807" />
+			<Item8 flightRules="I" typeOfFlight="N" />
+			<Item9 typeOfAircraft="A320" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDFGHIJ1LORVWY/LB1" />
+			<Item13 departureAirport="EDDV" departureTime="0850" />
+			<Item15 cruisingSpeed="N0454" cruisingLevel="F350" route="WERRA3S WERRA P605 ELNAT DCT OSBIT DCT DINKU M867 XERUM DCT BAVAX Z106 MANAL M736 LIZUM N503 LIKDA DCT BAKOR DCT VESAL DCT VIC DCT KOPER DCT LUMAV/N0456F370 DCT AMTEL DCT PININ DCT TUNEX UG737 CBN UG727 SFX A411 BISKO DCT" />
+			<Item16 arrivalAirport="DTTJ" estimatedFlightTime="0237" alternateAirport="DTMB" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/241011 REG/TSINP EET/EDVV0012 EDUU0013 LOVV0045 LIMM0050 LIRR0117 DTTC0207 SEL/PRKM CODE/02A1AF OPR/LBT PER/C">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>241011</DOF>
+				<REG>TSINP</REG>
+				<EET>EDVV0012 EDUU0013 LOVV0045 LIMM0050 LIRR0117 DTTC0207</EET>
+				<SEL>PRKM</SEL>
+				<CODE>02A1AF</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>

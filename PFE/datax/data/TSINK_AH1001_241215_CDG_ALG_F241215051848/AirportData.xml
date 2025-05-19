@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AirportData creationTime="2024-12-15T05:18:42" flightPlanId="OFP5" fullPackage="true" xsi:schemaLocation="http://aeec.aviation-ia.net/633 AirportData.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<M633Header timestamp="2024-12-15T05:18:41Z" versionNumber="3"/> 
+<M633SupplementaryHeader>
+    <Flight flightOriginDate="2024-12-15Z" scheduledTimeOfDeparture="2024-12-15T13:30:00Z">
+        <FlightIdentification>
+            <FlightIdentifier>DAH1001</FlightIdentifier>
+                <FlightNumber airlineIATACode="AH" number="1001" >
+                    <CommercialFlightNumber>AH1001</CommercialFlightNumber>
+                </FlightNumber>
+             </FlightIdentification>
+        <DepartureAirport airportFunction="DepartureAirport" airportName="PARIS/CHARLES DE GAULLE">
+            <AirportICAOCode>LFPG</AirportICAOCode>
+            <AirportIATACode>CDG</AirportIATACode>
+        </DepartureAirport>
+        <ArrivalAirport airportFunction="ArrivalAirport" airportName="ALGER/HOUARI BOUMEDIENE">
+            <AirportICAOCode>DAAG</AirportICAOCode>
+            <AirportIATACode>ALG</AirportIATACode>
+        </ArrivalAirport>
+    </Flight>
+    <Aircraft aircraftRegistration="TSINK" >
+        <AircraftModel airlineSpecificSubType="1.14">
+            <AircraftICAOType>A320</AircraftICAOType>
+        </AircraftModel>
+    </Aircraft>
+</M633SupplementaryHeader>
+    <Airport>
+        <AirportIdentification airportFunction="DepartureAirport" airportName="PARIS/CHARLES DE GAULLE">
+            <AirportICAOCode>LFPG</AirportICAOCode>
+            <AirportIATACode>CDG</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="08L">
+            <Approach procedureName="TKOF">
+                <RequiredHorizontalVisibility unit="m">150</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">0</RequiredVerticalVisibility>  
+            </Approach>
+            <Elevation unit="ft">338</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">392</Elevation>
+        <AirportReferencePoint><Coordinates latitude="176435" longitude="9172">N4900.6 E00232.9</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT01H</LocalTimeOffsetToUTC>
+    </Airport>
+    <Airport>
+        <AirportIdentification airportFunction="ArrivalAirport" airportName="ALGER/HOUARI BOUMEDIENE">
+            <AirportICAOCode>DAAG</AirportICAOCode>
+            <AirportIATACode>ALG</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="09"> 
+            <Approach procedureName="CAT1+VORDME+NDB">
+                <RequiredHorizontalVisibility unit="m">800</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">0</RequiredVerticalVisibility>
+            </Approach>
+            <Elevation unit="ft">56</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">82</Elevation> 
+        <AirportReferencePoint><Coordinates latitude="132100" longitude="11581">N3641.7 E00313.0</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT01H</LocalTimeOffsetToUTC>
+    </Airport>
+    <Airport>
+        <AirportIdentification airportFunction="PrimaryArrivalAlternateAirport" airportName="ORAN/AHMED BENBELLA">
+            <AirportICAOCode>DAOO</AirportICAOCode>
+            <AirportIATACode>ORN</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="07L">
+            <Approach procedureName="VORDME">
+                <RequiredHorizontalVisibility unit="m">3400</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">630</RequiredVerticalVisibility>
+            </Approach>
+            <Elevation unit="ft">299</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">299</Elevation>
+        <AirportReferencePoint><Coordinates latitude="128258" longitude="-2201">N3537.6 W00036.7</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT01H</LocalTimeOffsetToUTC>
+    </Airport>
+    <Airport>
+        <AirportIdentification airportFunction="ArrivalAlternateAirport" airportName="CONSTANTINE/MOHAMED BOUDIAF">
+            <AirportICAOCode>DABC</AirportICAOCode>
+            <AirportIATACode>CZL</AirportIATACode>
+        </AirportIdentification>
+        <Runway runwayIdentifier="34">
+            <Approach procedureName="LOC+VORDME">
+                <RequiredHorizontalVisibility unit="m">2800</RequiredHorizontalVisibility>
+                <RequiredVerticalVisibility unit="ft">495</RequiredVerticalVisibility>
+            </Approach>
+            <Elevation unit="ft">2316</Elevation>
+            <ApprovedForRegularOperation>true</ApprovedForRegularOperation>
+        </Runway>
+        <Elevation unit="ft">2316</Elevation>
+        <AirportReferencePoint><Coordinates latitude="130627" longitude="23829">N3617.1 E00637.2</Coordinates></AirportReferencePoint>
+        <RequiredFlightCrewQualification>E</RequiredFlightCrewQualification>
+        <LocalTimeOffsetToUTC positive="true">PT01H</LocalTimeOffsetToUTC>
+    </Airport>
+</AirportData>

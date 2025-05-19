@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FlightPlanAtcIcao flightPlanId="OFP7" xsi:schemaLocation="http://aeec.aviation-ia.net/633 FlightPlanAtcIcao.xsd" xmlns="http://aeec.aviation-ia.net/633" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<M633Header timestamp="2024-09-23T07:00:02" versionNumber="3" />
+	<M633SupplementaryHeader>
+		<Flight flightOriginDate="2024-09-23" scheduledTimeOfDeparture="2024-09-23T12:25:00Z">
+			<FlightIdentification>
+				<FlightIdentifier>LBT135</FlightIdentifier>
+				<FlightNumber airlineIATACode="BJ" number=" 135">
+					<CommercialFlightNumber>BJ135</CommercialFlightNumber>
+				</FlightNumber>
+			</FlightIdentification>
+			<DepartureAirport>
+				<AirportICAOCode>LFSB</AirportICAOCode>
+				<AirportIATACode>BSL</AirportIATACode>
+			</DepartureAirport>
+			<ArrivalAirport>
+				<AirportICAOCode>DTTJ</AirportICAOCode>
+				<AirportIATACode>DJE</AirportIATACode>
+			</ArrivalAirport>
+		</Flight>
+		<Aircraft aircraftRegistration="TSING">
+			<AircraftModel>
+				<AircraftICAOType>A320</AircraftICAOType>
+			</AircraftModel>
+		</Aircraft>
+	</M633SupplementaryHeader>
+	<AtcMessageText>
+		<Paragraph sequence="1">
+			<Text>FF EUCHZMFP EUCBZMFP</Text>
+		</Paragraph>
+		<Paragraph sequence="2">
+			<Text>DTMBLBTO</Text>
+		</Paragraph>
+		<Paragraph sequence="3">
+			<Text>AD DTTCZQZX DTTCZRZX DTTJZAZX DTTJZPZX DTTJZTZX</Text>
+		</Paragraph>
+		<Paragraph sequence="4">
+			<Text>(FPL-LBT135-IS</Text>
+		</Paragraph>
+		<Paragraph sequence="5">
+			<Text>-A320/M-SDFGIJ1LORVWY/LB1</Text>
+		</Paragraph>
+		<Paragraph sequence="6">
+			<Text>-LFSB1225</Text>
+		</Paragraph>
+		<Paragraph sequence="7">
+			<Text>-N0452F370 MOROK7N MOROK T14 GILIR DCT TUROM DCT MILPA DCT KOGAS</Text>
+		</Paragraph>
+		<Paragraph sequence="8">
+			<Text>DCT VEVAR UM623 KOLON DCT OMARD DCT VAREK DCT LOKDU DCT PELOS DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="9">
+			<Text>IPROM DCT SODIO DCT LUNAM DCT OSMAR UA725 TUC UA411 SFX A411 BISKO</Text>
+		</Paragraph>
+		<Paragraph sequence="10">
+			<Text>DCT</Text>
+		</Paragraph>
+		<Paragraph sequence="11">
+			<Text>-DTTJ0208 DTTX</Text>
+		</Paragraph>
+		<Paragraph sequence="12">
+			<Text>-PBN/B1D1O1S2 COM/CPDLC DOF/240923 REG/TSING EET/LFFF0008 LSAS0021</Text>
+		</Paragraph>
+		<Paragraph sequence="13">
+			<Text>LFFF0022 LIMM0031 LFFF0035 LIMM0036 LFFF0039 LIRR0107 DTTC0132</Text>
+		</Paragraph>
+		<Paragraph sequence="14">
+			<Text>SEL/HPAE CODE/02A1A6 OPR/LBT PER/C)</Text>
+		</Paragraph>
+	</AtcMessageText>
+	<AtcMessageDetails messageType="FPL" messagePriority="FF">
+		<Addressees addresses="EUCHZMFP EUCBZMFP" />
+		<Originator address="DTMBLBTO" />
+		<AdditionalAddressees addresses="DTTCZQZX DTTCZRZX DTTJZAZX DTTJZPZX DTTJZTZX" />
+		<Items>
+			<Item7 aTCCallsign="LBT135" />
+			<Item8 flightRules="I" typeOfFlight="S" />
+			<Item9 typeOfAircraft="A320" wakeTurbulence="M" />
+			<Item10 aircraftEquipment="SDFGIJ1LORVWY/LB1" />
+			<Item13 departureAirport="LFSB" departureTime="1225" />
+			<Item15 cruisingSpeed="N0452" cruisingLevel="F370" route="MOROK7N MOROK T14 GILIR DCT TUROM DCT MILPA DCT KOGAS DCT VEVAR UM623 KOLON DCT OMARD DCT VAREK DCT LOKDU DCT PELOS DCT IPROM DCT SODIO DCT LUNAM DCT OSMAR UA725 TUC UA411 SFX A411 BISKO DCT" />
+			<Item16 arrivalAirport="DTTJ" estimatedFlightTime="0208" alternateAirport="DTTX" />
+			<Item18 otherInformation="PBN/B1D1O1S2 COM/CPDLC DOF/240923 REG/TSING EET/LFFF0008 LSAS0021 LFFF0022 LIMM0031 LFFF0035 LIMM0036 LFFF0039 LIRR0107 DTTC0132 SEL/HPAE CODE/02A1A6 OPR/LBT PER/C">
+				<PBN>B1D1O1S2</PBN>
+				<COM>CPDLC</COM>
+				<DOF>240923</DOF>
+				<REG>TSING</REG>
+				<EET>LFFF0008 LSAS0021 LFFF0022 LIMM0031 LFFF0035 LIMM0036 LFFF0039 LIRR0107 DTTC0132</EET>
+				<SEL>HPAE</SEL>
+				<CODE>02A1A6</CODE>
+				<OPR>LBT</OPR>
+				<PER>C</PER>
+			</Item18>
+		</Items>
+	</AtcMessageDetails>
+</FlightPlanAtcIcao>
