@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Cloner le dépôt') {
             steps {
-                git url: 'https://github.com/Chouroukchaker1/devop.git', credentialsId: 'github-token'
+                git branch: 'main', url: 'https://github.com/Chouroukchaker1/devop.git', credentialsId: 'github-token'
             }
         }
 
