@@ -4,7 +4,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 checkout([$class: 'GitSCM',
-                          branches: [[name: '*/main']], // Replace 'main' with your branch
+                          branches: [[name: '*/main']], // Replace 'main' with your branch name
                           userRemoteConfigs: [[url: 'https://github.com/Chouroukchaker1/devop.git']]])
             }
         }
@@ -12,7 +12,7 @@ pipeline {
             steps {
                 script {
                     if (!fileExists('docker-compose.yml')) {
-                        error "❌ Le fichier docker-compose.yml est introuvable."
+                        error "❌ Le fichier docker-compose.yml est introuvable. Assure-toi qu'il est bien présent à la racine du dépôt."
                     } else {
                         echo "✅ docker-compose.yml trouvé !"
                     }
