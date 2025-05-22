@@ -3,6 +3,8 @@ const DataScheduler = require('../services/scheduler.js'); // Importer DataSched
 const scheduler = new DataScheduler();
 // Récupérer tous les paramètres
 exports.getSettings = async (req, res) => {
+  console.log('📥 Route GET /api/user-settings appelée');
+
   try {
     let settings = await UserSettings.findOne({ userId: req.user._id });
 
@@ -13,6 +15,7 @@ exports.getSettings = async (req, res) => {
 
     res.json({ success: true, settings });
   } catch (error) {
+    console.error('❌ Erreur route GET /api/user-settings :', error);
     handleError(res, error, 'Erreur lors de la récupération des paramètres utilisateur');
   }
 };
@@ -121,7 +124,7 @@ exports.toggleNotifications = async (req, res) => {
 
     const settings = await UserSettings.findOneAndUpdate(
       { userId: req.user._id },
-      { 'notifications.enable': enable },
+      { 'notifications.enabled': enable },
       { new: true, upsert: true }
     );
 
@@ -142,7 +145,8 @@ exports.getNotificationStatus = async (req, res) => {
 
     res.json({
       success: true,
-      notificationsEnabled: settings?.notifications?.enable ?? true
+       notificationsEnabled: settings?.notifications?.enabled ?? true
+
     });
   } catch (error) {
     handleError(res, error, 'Erreur lors de la lecture du statut des notifications');
@@ -332,4 +336,5 @@ exports.getAllowedNotificationTypes = async (req, res) => {
     });
   }
 };
+
 

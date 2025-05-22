@@ -36,7 +36,7 @@ const Dashboard = () => {
             setLoading(true);
             try {
                 // Fetch fuel data
-                const fuelResponse = await axios.get('http://localhost:3000/api/feuldata', axiosConfig);
+                const fuelResponse = await axios.get('http://localhost:8080/api/feuldata', axiosConfig);
                 if (fuelResponse.data.success) {
                     // Map the fuel API data to match the expected dashboard format
                     const mappedFuelData = fuelResponse.data.data.map(fuel => ({
@@ -69,7 +69,7 @@ const Dashboard = () => {
                 }
 
                 // Fetch flight data
-                const flightResponse = await axios.get('http://localhost:3000/api/flightData', axiosConfig);
+                const flightResponse = await axios.get('http://localhost:8080/api/flightData', axiosConfig);
                 // Ensure flightResponse.data is an array
                 let flightDataArray = [];
                 if (Array.isArray(flightResponse.data)) {

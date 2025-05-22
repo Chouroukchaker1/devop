@@ -18,9 +18,9 @@ class DataScheduler {
     this.cronJobs = [];
     // Chemins des fichiers de données corrigés
     this.dataFilePaths = {
-      fuel_data: process.env.FUEL_DATA_PATH || 'C:/Users/lenovo/Desktop/PFE/datax/data/all_fuel_data.xlsx',
-      flight_data: process.env.FLIGHT_DATA_PATH || 'C:/Users/lenovo/Desktop/PFE/sample_data/dataRaportProcessed.xlsx', // Corrigé : FLIGHT_DATA_PATH
-      merged_data: process.env.MERGED_DATA_PATH || 'C:/Users/lenovo/Desktop/PFE/megred_data.xlsx'
+      fuel_data: process.env.FUEL_DATA_PATH || path.join(__dirname, '..', 'datax', 'data', 'all_fuel_data.xlsx'),
+      flight_data: process.env.FLIGHT_DATA_PATH || path.join(__dirname, '..', 'sample_data', 'dataRaportProcessed.xlsx'),
+      merged_data: process.env.MERGED_DATA_PATH || path.join(__dirname, '..', 'megred_data.xlsx')
     };
     this.pythonCommand = process.platform === 'win32' ? 'py' : 'python3';
     this.previousRecordCounts = {

@@ -255,9 +255,9 @@ def merge_fuel_and_flight_data(fuel_data_path, flight_data_path, output_file):
 
 if __name__ == "__main__":
     # Chemins des fichiers
-    fuel_data_path = 'C:/Users/lenovo/Desktop/PFE/datax/data/all_fuel_data.xlsx'
-    flight_data_path = 'C:/Users/lenovo/Desktop/PFE/sample_data/dataRaportProcessed.xlsx'
-    output_file = 'C:/Users/lenovo/Desktop/PFE/merged_data.xlsx'
+    fuel_data_path = fuel_data_path = '/app/datax/data/all_fuel_data.xlsx'
+    flight_data_path = '/app/sample_data/dataRaportProcessed.xlsx'
+    output_file = '/app/merged_data.xlsx'
 
     # Exécuter la fusion
     result = merge_fuel_and_flight_data(fuel_data_path, flight_data_path, output_file)

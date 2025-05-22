@@ -50,7 +50,7 @@ const FuelPrediction = () => {
     try {
       const token = localStorage.getItem('token') || 'dummy-token';
       const response = await axios.post(
-        'http://localhost:3000/api/predict',
+        'http://localhost:8080/api/predict',
         formData,
         {
           headers: {
@@ -83,7 +83,7 @@ const FuelPrediction = () => {
     try {
       const token = localStorage.getItem('token') || 'dummy-token';
       const response = await axios.post(
-        'http://localhost:3000/api/predict-fuel',
+        'http://localhost:8080/api/predict-fuel',
         {},
         {
           headers: { Authorization: `Bearer ${token}` },
@@ -113,7 +113,7 @@ const FuelPrediction = () => {
 
     try {
       const token = localStorage.getItem('token') || 'dummy-token';
-      const response = await axios.get('http://localhost:3000/api/download/prediction-results', {
+      const response = await axios.get('http://localhost:8080/api/download/prediction-results', {
         headers: { Authorization: `Bearer ${token}` },
         responseType: 'blob',
       });

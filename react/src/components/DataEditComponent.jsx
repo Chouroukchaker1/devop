@@ -128,7 +128,7 @@ const DataEditComponent = () => {
     setError(null);
     try {
       const response = await axios.get(
-        `http://localhost:3000/api/data/json/${dataType}`,
+        `http://localhost:8080/api/data/json/${dataType}`,
         axiosConfig
       );
       if (response.data.success) {
@@ -155,7 +155,7 @@ const DataEditComponent = () => {
     setError(null);
     try {
       const response = await axios.get(
-        `http://localhost:3000/api/edit/${dataType}`,
+        `http://localhost:8080/api/edit/${dataType}`,
         {
           ...axiosConfig,
           params: {
@@ -219,14 +219,14 @@ const DataEditComponent = () => {
       }
 
       console.log('Sending PUT request:', {
-        url: `http://localhost:3000/api/edit/${dataType}`,
+        url: `http://localhost:8080/api/edit/${dataType}`,
         flightNumber,
         dateOfFlight,
         updatedData
       });
 
       const response = await axios.put(
-        `http://localhost:3000/api/edit/${dataType}`,
+        `http://localhost:8080/api/edit/${dataType}`,
         updatedData,
         {
           ...axiosConfig,

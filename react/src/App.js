@@ -92,7 +92,7 @@ const App = () => {
     if (isAuthenticated) {
       const fetchUserSettings = async () => {
         try {
-          const response = await axios.get('/api/user/settings');
+          const response = await axios.get('/api/user-settings');
           if (response.data.success && response.data.settings?.dataViewer?.darkMode !== undefined) {
             const userPrefersDark = response.data.settings.dataViewer.darkMode;
             setIsDarkMode(userPrefersDark);

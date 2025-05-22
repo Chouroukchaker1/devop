@@ -5,7 +5,7 @@ import { FaSave, FaBell, FaSync, FaDatabase, FaEnvelope } from 'react-icons/fa';
 import { useNotifications } from '../contexts/NotificationContext';
 
 const api = axios.create({
-  baseURL: 'http://localhost:3000', // Adjust to your backend port
+  baseURL: 'http://localhost:8080', // Adjust to your backend port
   withCredentials: true
 });
 

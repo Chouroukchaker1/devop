@@ -290,7 +290,7 @@ def process_xml_files(parent_directory):
         return json.dumps({'success': False, 'message': f"Aucun fichier XML trouvé dans {parent_directory}"})
 
 # Définir le répertoire parent
-parent_directory = "C:/Users/lenovo/Desktop/PFE/datax/data"
+parent_directory = "/app/datax/data"
 
 # Exécuter le script
 result = process_xml_files(parent_directory)

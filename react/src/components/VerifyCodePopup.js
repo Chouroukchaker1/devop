@@ -27,7 +27,7 @@ const VerifyCodePopup = ({ show, onClose, onVerifySuccess, email, username, user
 
     try {
       console.log('Envoi de la requête de vérification:', requestData);
-      const response = await fetch('http://localhost:3000/api/auth/verify-reset-code', {
+      const response = await fetch('http://localhost:8080/api/auth/verify-reset-code', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(requestData),

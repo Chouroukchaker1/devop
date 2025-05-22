@@ -2,70 +2,78 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import { io } from 'socket.io-client';
 import { useAuth } from './AuthContext';
-import api from '../services/api';
+import { api } from '../services/api'; // ✅ corrige ton import ici
 
 const NotificationContext = createContext();
 
 export const NotificationProvider = ({ children }) => {
   const [notifications, setNotifications] = useState([]);
   const [unreadCount, setUnreadCount] = useState(0);
-  const { user } = useAuth();
+  const { user, token } = useAuth();
   const [socket, setSocket] = useState(null);
 
   useEffect(() => {
-    if (user) {
-      // Connecter le socket
-      const newSocket = io(process.env.REACT_APP_API_URL, {
-        withCredentials: true
-      });
-      setSocket(newSocket);
+    if (!user || !token) return;
 
-      // S'abonner aux notifications
-      newSocket.emit('subscribeToNotifications', user._id);
+    // ✅ Connexion WebSocket AVEC le token JWT
+    const newSocket = io('http://localhost:8080', {
+      path: '/socket.io',
+      transports: ['websocket'],
+      auth: { token }, // Le token JWT est passé ici
+      reconnection: true,
+      reconnectionAttempts: 5,
+      reconnectionDelay: 1000,
+    });
 
-      // Écouter les nouvelles notifications
-      newSocket.on('newNotification', (notification) => {
-        setNotifications(prev => [notification, ...prev]);
-        setUnreadCount(prev => prev + 1);
-        
-        // Afficher une notification toast
-        if (Notification.permission === 'granted') {
-          new Notification(notification.title, {
-            body: notification.message
-          });
-        }
-      });
+    setSocket(newSocket);
 
-      return () => {
-        newSocket.disconnect();
-      };
-    }
-  }, [user]);
+    // ✅ Gérer les événements
+    newSocket.on('connect', () => {
+      console.log('🟢 WebSocket connecté avec ID :', newSocket.id);
+    });
+
+    newSocket.on('connect_error', (err) => {
+      console.error('❌ Erreur WebSocket :', err.message);
+    });
+
+    newSocket.on('notification', (notification) => {
+      setNotifications((prev) => [notification, ...prev]);
+      setUnreadCount((prev) => prev + 1);
+
+      // ✅ Affichage local via Notification API
+      if ('Notification' in window && Notification.permission === 'granted') {
+        new Notification(notification.title || 'Nouvelle notification', {
+          body: notification.message || '',
+        });
+      }
+    });
+
+    return () => {
+      newSocket.disconnect();
+    };
+  }, [user, token]);
 
   useEffect(() => {
-    if (user) {
-      // Charger les notifications initiales
-      const fetchNotifications = async () => {
-        try {
-          const response = await api.get('/notifications');
-          setNotifications(response.data.notifications);
-          
-          // Compter les non lues
-          const count = response.data.notifications.filter(n => !n.read).length;
-          setUnreadCount(count);
-        } catch (error) {
-          console.error('Error fetching notifications:', error);
-        }
-      };
-      
-      fetchNotifications();
-      
-      // Demander la permission pour les notifications
-      if ('Notification' in window && Notification.permission !== 'granted') {
-        Notification.requestPermission();
+    if (!token) return;
+
+    const fetchNotifications = async () => {
+      try {
+        const response = await api.get('/notifications');
+        const data = response.data.notifications || [];
+        setNotifications(data);
+        setUnreadCount(data.filter(n => !n.read).length);
+      } catch (err) {
+        console.error('Erreur chargement notifications :', err);
       }
+    };
+
+    fetchNotifications();
+
+    // Demander permission browser
+    if ('Notification' in window && Notification.permission !== 'granted') {
+      Notification.requestPermission();
     }
-  }, [user]);
+  }, [token]);
 
   const markAsRead = async (id) => {
     try {
@@ -73,16 +81,14 @@ export const NotificationProvider = ({ children }) => {
       setNotifications(prev => 
         prev.map(n => n._id === id ? { ...n, read: true } : n)
       );
-      setUnreadCount(prev => prev - 1);
+      setUnreadCount(prev => Math.max(0, prev - 1));
     } catch (error) {
-      console.error('Error marking notification as read:', error);
+      console.error('Erreur marquage notification :', error);
     }
   };
 
   return (
-    <NotificationContext.Provider 
-      value={{ notifications, unreadCount, markAsRead }}
-    >
+    <NotificationContext.Provider value={{ notifications, unreadCount, markAsRead }}>
       {children}
     </NotificationContext.Provider>
   );

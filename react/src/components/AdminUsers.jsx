@@ -24,7 +24,7 @@ const AllowedNotificationManager = ({ userId, onClose }) => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    axios.get('http://localhost:3000/api/auth/getUsers', {
+    axios.get('http://localhost:8080/api/auth/getUsers', {
       headers: {
         Authorization: `Bearer ${localStorage.getItem('token')}`
       }
@@ -60,7 +60,7 @@ const AllowedNotificationManager = ({ userId, onClose }) => {
 
     setLoading(true);
     try {
-      await axios.put('http://localhost:3000/api/userSettings/notifications/allowed-types', {
+      await axios.put('http://localhost:8080/api/userSettings/notifications/allowed-types', {
         userId: selectedUserId,
         allowedNotificationTypes: selectedTypes
       }, {
@@ -148,7 +148,7 @@ const AdminUsers = () => {
     const fetchUsersAndSettings = async () => {
       try {
         // Fetch users
-        const userResponse = await axios.get('http://localhost:3000/api/auth/getUsers', {
+        const userResponse = await axios.get('http://localhost:8080/api/auth/getUsers', {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
           },
@@ -161,7 +161,7 @@ const AdminUsers = () => {
         const usersWithSettings = await Promise.all(
           fetchedUsers.map(async (user) => {
             try {
-              const settingsResponse = await axios.get(`http://localhost:3000/api/userSettings/notifications/${user._id}`, {
+              const settingsResponse = await axios.get(`http://localhost:8080/api/userSettings/notifications/${user._id}`, {
                 headers: {
                   Authorization: `Bearer ${localStorage.getItem('token')}`,
                 },
@@ -196,7 +196,7 @@ const AdminUsers = () => {
 
   const handleDelete = async (userId) => {
     try {
-      await axios.delete('http://localhost:3000/api/auth/delete-user', {
+      await axios.delete('http://localhost:8080/api/auth/delete-user', {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
         data: { userId },
       });
@@ -235,7 +235,7 @@ const AdminUsers = () => {
 
   const handleSaveUpdate = async () => {
     try {
-      await axios.put('http://localhost:3000/api/auth/update-user', {
+      await axios.put('http://localhost:8080/api/auth/update-user', {
         userId: userToUpdate._id,
         username: newUsername,
         email: newEmail,
@@ -250,7 +250,7 @@ const AdminUsers = () => {
           : user
       ));
 
-      await axios.post('http://localhost:3000/api/notifications/send', {
+      await axios.post('http://localhost:8080/api/notifications/send', {
         userId: userToUpdate._id,
         type: 'success',
         message: 'Votre profil a été mis à jour avec succès.',
@@ -292,7 +292,7 @@ const AdminUsers = () => {
 
     setAddUserLoading(true);
     try {
-      const response = await axios.post('http://localhost:3000/api/auth/register', {
+      const response = await axios.post('http://localhost:8080/api/auth/register', {
         username: newUser.username,
         email: newUser.email,
         password: newUser.password,

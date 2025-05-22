@@ -17,7 +17,7 @@ const ForgotPasswordPopup = ({ show, onClose, onEmailSubmit }) => {
     setSuccessMessage('');
 
     try {
-      const response = await fetch('http://localhost:3000/api/auth/forgot-password', {
+      const response = await fetch('http://localhost:8080/api/auth/forgot-password', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, username }),
@@ -93,7 +93,7 @@ const ResetCodePopup = ({ show, onClose, onCodeSubmit, email }) => {
     setSuccessMessage('');
 
     try {
-      const response = await fetch('http://localhost:3000/api/auth/verify-reset-code', {
+      const response = await fetch('http://localhost:8080/api/auth/verify-reset-code', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, code }),
@@ -166,7 +166,7 @@ const NewPasswordPopup = ({ show, onClose, resetToken }) => {
     }
 
     try {
-      const response = await fetch('http://localhost:3000/api/auth/reset-password', {
+      const response = await fetch('http://localhost:8080/api/auth/reset-password', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ resetToken, newPassword }),
@@ -243,7 +243,7 @@ const VerificationCodePopup = ({ show, onClose, onSubmit, userId }) => {
     setSuccessMessage('');
 
     try {
-      const response = await fetch('http://localhost:3000/api/auth/verify-code', {
+      const response = await fetch('http://localhost:8080/api/auth/verify-code', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ userId, code }),
@@ -335,7 +335,7 @@ const SignInPage = ({ onSignInSuccess }) => {
     setSuccessMessage('');
 
     try {
-      const response = await fetch('http://localhost:3000/api/auth/login', {
+      const response = await fetch('http://localhost:8080/api/auth/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, password }),

@@ -23,10 +23,10 @@ const CO2Prediction = () => {
     setAvgError(null);
 
     try {
-      const response = await axios.post('http://localhost:3000/api/predict-co2');
+      const response = await axios.post('http://localhost:8080/api/predict-co2');
       if (response.data.success) {
         setPredictionData(response.data.comparison);
-        setPlotUrl(response.data.plotUrl ? `http://localhost:3000${response.data.plotUrl}` : null);
+        setPlotUrl(response.data.plotUrl ? `http://localhost:8080${response.data.plotUrl}` : null);
         setTotalEmissions(response.data.total_emissions_kg);
         setAvgError(response.data.average_prediction_error_percent);
       } else {

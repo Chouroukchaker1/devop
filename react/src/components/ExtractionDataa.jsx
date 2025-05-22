@@ -4,7 +4,6 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import './ExtractionDataa.css';
 import { jwtDecode } from "jwt-decode";
 
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
@@ -25,8 +24,12 @@ const Modal = ({
   newRecords = [],
   dataType = '',
   isAuthorized = false,
+  fuelData = [],
+  flightData = [],
+  onShowLinkedData,
 }) => {
   const [editModal, setEditModal] = useState(null);
+  const [editingCell, setEditingCell] = useState({ rowIndex: null, columnKey: null });
 
   const handleEditClick = (record) => {
     setEditModal({
@@ -52,6 +55,51 @@ const Modal = ({
       );
       onCompleteData(editModal.record, editModal.updatedData, updatedProcessedData);
       setEditModal(null);
+    }
+  };
+
+  // ✅ Corrected: Function to check if a record has a matching record with proper trimming and string conversion
+  const hasMatchingRecord = (record, targetData, isFuelToFlight) => {
+    console.log("Comparing with record:", record);
+    console.log("Target data sample:", targetData[0]);
+    if (isFuelToFlight) {
+      return targetData.some(
+        (flight) =>
+          String(flight['Date of operation (UTC)']).trim() === String(record['Date of Flight']).trim() &&
+          String(flight['Departure Time/ Block-off time (UTC)']).trim() === String(record['Time of Departure']).trim() &&
+          String(flight['Flight ID']).trim() === String(record['Flight Number']).trim() &&
+          String(flight['Departing Airport ICAO Code']).trim() === String(record['DepartureAirport']).trim()
+      );
+    } else {
+      return targetData.some(
+        (fuel) =>
+          String(fuel['Date of Flight']).trim() === String(record['Date of operation (UTC)']).trim() &&
+          String(fuel['Time of Departure']).trim() === String(record['Departure Time/ Block-off time (UTC)']).trim() &&
+          String(fuel['Flight Number']).trim() === String(record['Flight ID']).trim() &&
+          String(fuel['DepartureAirport']).trim() === String(record['Departing Airport ICAO Code']).trim()
+      );
+    }
+  };
+
+  // ✅ Corrected: Function to get the matching record with proper trimming and string conversion
+  const getMatchingRecord = (record, targetData, isFuelToFlight) => {
+    console.log("🔍 Trying to find matching record...");
+    if (isFuelToFlight) {
+      return targetData.find(
+        (flight) =>
+          String(flight['Date of operation (UTC)']).trim() === String(record['Date of Flight']).trim() &&
+          String(flight['Departure Time/ Block-off time (UTC)']).trim() === String(record['Time of Departure']).trim() &&
+          String(flight['Flight ID']).trim() === String(record['Flight Number']).trim() &&
+          String(flight['Departing Airport ICAO Code']).trim() === String(record['DepartureAirport']).trim()
+      );
+    } else {
+      return targetData.find(
+        (fuel) =>
+          String(fuel['Date of Flight']).trim() === String(record['Date of operation (UTC)']).trim() &&
+          String(fuel['Time of Departure']).trim() === String(record['Departure Time/ Block-off time (UTC)']).trim() &&
+          String(fuel['Flight Number']).trim() === String(record['Flight ID']).trim() &&
+          String(fuel['DepartureAirport']).trim() === String(record['Departing Airport ICAO Code']).trim()
+      );
     }
   };
 
@@ -116,32 +164,83 @@ const Modal = ({
                     const isNew = newRecords.includes(identifier);
                     return (
                       <tr key={index}>
-                        {COLUMNS.map((column) => (
-                          <td
-                            key={`${column.key}-${index}`}
-                            style={{
-                              backgroundColor:
-                                missingField === column.key &&
-                                flight[column.key] === missingValue
-                                  ? '#ffcccc'
-                                  : 'transparent',
-                            }}
-                          >
-                            {(flight[column.key] === 'N/A' ? '' : flight[column.key]) || ''}
-                          </td>
-                        ))}
-                        <td className="actions-cell">
-  {isAuthorized && (
-    <button
-      onClick={() => handleEditClick(flight)}
-      className="btn btn-sm btn-primary"
-    >
-      <i className="fas fa-edit"></i> Edit
-    </button>
-  )}
-  {isNew && <span className="new-label">Nouveau</span>}
-</td>
+                        {COLUMNS.map((column) => {
+                          // ✅ Corrected: Extended isLinkableColumn to include more columns
+                          const isLinkableColumn = [
+                            'Flight Number',
+                            'Flight ID',
+                            'Date of Flight',
+                            'Date of operation (UTC)',
+                            'DepartureAirport',
+                            'Departing Airport ICAO Code',
+                          ].includes(column.key);
+                          const hasLink = isLinkableColumn && (
+                            (dataType === 'fuel' && hasMatchingRecord(flight, flightData, true)) ||
+                            (dataType === 'flight' && hasMatchingRecord(flight, fuelData, false))
+                          );
 
+                          return (
+                            <td
+                              key={`${column.key}-${index}`}
+                              onClick={() => isAuthorized && setEditingCell({ rowIndex: index, columnKey: column.key })}
+                              style={{
+                                cursor: isAuthorized ? 'pointer' : 'default',
+                                backgroundColor:
+                                  missingField === column.key && flight[column.key] === missingValue
+                                    ? '#ffcccc'
+                                    : 'transparent',
+                              }}
+                            >
+                              {editingCell.rowIndex === index && editingCell.columnKey === column.key ? (
+                                <input
+                                  type="text"
+                                  className="form-control"
+                                  value={flight[column.key] || ''}
+                                  onChange={(e) => {
+                                    const updatedRow = { ...flight, [column.key]: e.target.value };
+                                    const updatedData = [...processedData];
+                                    updatedData[index] = updatedRow;
+                                    onCompleteData(flight, { [column.key]: e.target.value }, updatedData);
+                                  }}
+                                  onKeyDown={(e) => {
+                                    if (e.key === 'Enter') {
+                                      setEditingCell({ rowIndex: null, columnKey: null });
+                                    }
+                                  }}
+                                  onBlur={() => setEditingCell({ rowIndex: null, columnKey: null })}
+                                  autoFocus
+                                />
+                              ) : hasLink ? (
+                                <a
+                                  href="#"
+                                  onClick={(e) => {
+                                    e.preventDefault();
+                                    const matchingRecord = getMatchingRecord(flight, dataType === 'fuel' ? flightData : fuelData, dataType === 'fuel');
+                                    if (matchingRecord) {
+                                      onShowLinkedData(dataType === 'fuel' ? 'flight' : 'fuel', matchingRecord);
+                                    }
+                                  }}
+                                  style={{ color: '#007bff', textDecoration: 'underline' }}
+                                >
+                                  {(flight[column.key] === 'N/A' ? '' : flight[column.key]) || ''}
+                                </a>
+                              ) : (
+                                (flight[column.key] === 'N/A' ? '' : flight[column.key]) || ''
+                              )}
+                            </td>
+                          );
+                        })}
+                        <td className="actions-cell">
+                          {isAuthorized && (
+                            <button
+                              onClick={() => handleEditClick(flight)}
+                              className="btn btn-sm btn-primary"
+                            >
+                              <i className="fas fa-edit"></i> Edit
+                            </button>
+                          )}
+                          {isNew && <span className="new-label">Nouveau</span>}
+                        </td>
                       </tr>
                     );
                   })}
@@ -153,26 +252,25 @@ const Modal = ({
           </div>
         )}
         {!editModal && (
-           <div className="modal-footer">
-  {showTable && onDownload && (
-    <button onClick={onDownload} className="btn btn-info me-2">
-      <i className="fas fa-download"></i> Download as Excel
-    </button>
-  )}
-  {isAuthorized && (
-    <>
-      <button onClick={onReject || onClose} className="btn btn-danger">
-        <i className="fas fa-times-circle"></i> Refuser
-      </button>
-      {showAcceptButton && onAccept && (
-        <button onClick={onAccept} className="btn btn-success">
-          <i className="fas fa-check-circle"></i> Valider
-        </button>
-      )}
-    </>
-  )}
-</div>
-
+          <div className="modal-footer">
+            {showTable && onDownload && (
+              <button onClick={onDownload} className="btn btn-info me-2">
+                <i className="fas fa-download"></i> Download as Excel
+              </button>
+            )}
+            {isAuthorized && (
+              <>
+                <button onClick={onReject || onClose} className="btn btn-danger">
+                  <i className="fas fa-times-circle"></i> Refuser
+                </button>
+                {showAcceptButton && onAccept && (
+                  <button onClick={onAccept} className="btn btn-success">
+                    <i className="fas fa-check-circle"></i> Valider
+                  </button>
+                )}
+              </>
+            )}
+          </div>
         )}
       </div>
     </div>
@@ -229,7 +327,7 @@ const FuelDashboard = () => {
     { key: 'DiscretionaryFuel', label: 'Discretionary Fuel' },
     { key: 'ExtraFuel', label: 'ExtraFuel' },
     { key: 'Reason', label: 'Reason' },
-    { key: 'TankeringCategory belum ada di sini', label: 'Economic tankering category in the flight plan' },
+    { key: 'TankeringCategory', label: 'Economic tankering category in the flight plan' },
     { key: 'AlternateFuel', label: 'AlternateFuel' },
     { key: 'AlternateArrivalAirport', label: 'Alternate Arrival Airport' },
     { key: 'FOB', label: 'FOB' },
@@ -296,7 +394,6 @@ const FuelDashboard = () => {
       columns.forEach((column) => {
         let value = item[column.label] || item[column.key];
       
-        // 🎯 Normalisation du champ carbone
         if (column.key === 'CarbonEmission' || column.key === 'carbonEmission') {
           value = item['Carbon Emission (kg)'] || item['CarbonEmission'] || item['carbonEmission'] || 0;
         }
@@ -308,14 +405,12 @@ const FuelDashboard = () => {
           column.key === 'Arrival Time/ Block-on Time(UTC)'
         ) {
           if (typeof value === 'number') {
-            // 🧮 Conversion Excel number → heure (ex: 43925.117 → "02:48:00")
             const excelDate = new Date(Math.round((value - 25569) * 86400 * 1000));
             const hours = excelDate.getUTCHours().toString().padStart(2, '0');
             const minutes = excelDate.getUTCMinutes().toString().padStart(2, '0');
             const seconds = excelDate.getUTCSeconds().toString().padStart(2, '0');
             transformedItem[column.key] = `${hours}:${minutes}:${seconds}`;
           } else if (typeof value === 'string' && value.includes(' ')) {
-            // 🕑 Si c'est déjà une chaîne "04/04/2020 02:48:00"
             transformedItem[column.key] = value.split(' ')[1];
           } else {
             transformedItem[column.key] = value;
@@ -328,12 +423,9 @@ const FuelDashboard = () => {
         }
       });
       
-      // ✅ S'assurer que carbonEmission est bien défini
       if (!transformedItem.hasOwnProperty('carbonEmission') && transformedItem.hasOwnProperty('CarbonEmission')) {
         transformedItem.carbonEmission = transformedItem.CarbonEmission;
       }
-      
-      
       
       return transformedItem;
     });
@@ -345,7 +437,7 @@ const FuelDashboard = () => {
 
     try {
       const response = await axios.get(
-        `http://localhost:3000/api/data/excel/${dataType}`,
+        `http://localhost:8080/api/data/excel/${dataType}`,
         {
           ...axiosConfig,
           responseType: 'blob',
@@ -372,13 +464,61 @@ const FuelDashboard = () => {
     }
   };
 
+  const handleShowLinkedData = (targetDataType, matchingRecord) => {
+    if (targetDataType === 'fuel') {
+      const processedData = transformData([matchingRecord], FUEL_COLUMNS);
+      setActiveModal({
+        title: 'Fuel Consumption Data',
+        content: 'Displaying linked fuel consumption details.',
+        showTable: true,
+        processedData: processedData,
+        COLUMNS: FUEL_COLUMNS,
+        missingField: null,
+        missingValue: null,
+        onCompleteData: (record, updatedData, updatedProcessedData) =>
+          handleCompleteData(record, updatedData, 'fuel', updatedProcessedData),
+        onAccept: () => handleAcceptData('fuel', processedData),
+        onReject: () => handleRejectData('fuel'),
+        onDownload: () => handleDownloadExcel('fuel'),
+        showAcceptButton: true,
+        newRecords: newRecords.fuel,
+        dataType: 'fuel',
+        fuelData,
+        flightData,
+        onShowLinkedData: handleShowLinkedData,
+      });
+    } else if (targetDataType === 'flight') {
+      const processedData = transformData([matchingRecord], FLIGHT_COLUMNS);
+      setActiveModal({
+        title: 'Flight Data',
+        content: 'Displaying linked flight details.',
+        showTable: true,
+        processedData: processedData,
+        COLUMNS: FLIGHT_COLUMNS,
+        missingField: null,
+        missingValue: null,
+        onCompleteData: (record, updatedData, updatedProcessedData) =>
+          handleCompleteData(record, updatedData, 'flight', updatedProcessedData),
+        onAccept: () => handleAcceptData('flight', processedData),
+        onReject: () => handleRejectData('flight'),
+        onDownload: () => handleDownloadExcel('flight'),
+        showAcceptButton: true,
+        newRecords: newRecords.flight,
+        dataType: 'flight',
+        fuelData,
+        flightData,
+        onShowLinkedData: handleShowLinkedData,
+      });
+    }
+  };
+
   const handleCheckNewData = async () => {
     setLoading(true);
     setError(null);
     setSuccessMessage('');
 
     try {
-      const response = await axios.get('http://localhost:3000/api/scheduler/check-new-data', axiosConfig);
+      const response = await axios.get('http://localhost:8080/api/scheduler/check-new-data', axiosConfig);
 
       if (response.data.success) {
         const report = response.data.data;
@@ -417,6 +557,9 @@ const FuelDashboard = () => {
               showAcceptButton: true,
               newRecords: newFuelIdentifiers,
               dataType: 'fuel',
+              fuelData,
+              flightData,
+              onShowLinkedData: handleShowLinkedData,
             });
           } else if (flightNewRecords > 0) {
             const processedFlightData = transformData(flightNewData, FLIGHT_COLUMNS);
@@ -441,6 +584,9 @@ const FuelDashboard = () => {
               showAcceptButton: true,
               newRecords: newFlightIdentifiers,
               dataType: 'flight',
+              fuelData,
+              flightData,
+              onShowLinkedData: handleShowLinkedData,
             });
           }
         } else {
@@ -466,7 +612,7 @@ const FuelDashboard = () => {
 
     const fetchFuelListData = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/api/feuldata', axiosConfig);
+        const response = await axios.get('http://localhost:8080/api/feuldata', axiosConfig);
         if (response.data.success) {
           setFuelListData(response.data.data);
         } else {
@@ -481,7 +627,7 @@ const FuelDashboard = () => {
 
     const fetchFlightListData = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/api/flightdata', axiosConfig);
+        const response = await axios.get('http://localhost:8080/api/flightdata', axiosConfig);
         if (response.data.success) {
           setFlightListData(response.data.data);
         } else {
@@ -493,6 +639,10 @@ const FuelDashboard = () => {
         setTimeout(() => setError(''), 5000);
       }
     };
+
+    // ✅ Added: Console logs to verify data loading
+    console.log("fuelData", fuelData);
+    console.log("flightData", flightData);
 
     fetchFuelListData();
     fetchFlightListData();
@@ -529,7 +679,7 @@ const FuelDashboard = () => {
     setSuccessMessage('');
 
     try {
-      const response = await axios.get('http://localhost:3000/api/data/json/fuel', axiosConfig);
+      const response = await axios.get('http://localhost:8080/api/data/json/fuel', axiosConfig);
 
       if (response.data.success) {
         const fileData = response.data.data;
@@ -563,6 +713,9 @@ const FuelDashboard = () => {
           showAcceptButton: true,
           newRecords: newRecords.fuel,
           dataType: 'fuel',
+          fuelData,
+          flightData,
+          onShowLinkedData: handleShowLinkedData,
         });
       } else {
         throw new Error(response.data.message || 'Failed to retrieve fuel data');
@@ -594,7 +747,7 @@ const FuelDashboard = () => {
     setSuccessMessage('');
 
     try {
-      const response = await axios.get('http://localhost:3000/api/data/json/flight', axiosConfig);
+      const response = await axios.get('http://localhost:8080/api/data/json/flight', axiosConfig);
 
       if (response.data.success) {
         const fileData = response.data.data;
@@ -628,6 +781,9 @@ const FuelDashboard = () => {
           showAcceptButton: true,
           newRecords: newRecords.flight,
           dataType: 'flight',
+          fuelData,
+          flightData,
+          onShowLinkedData: handleShowLinkedData,
         });
       } else {
         throw new Error(response.data.message || 'Failed to retrieve flight data');
@@ -653,7 +809,7 @@ const FuelDashboard = () => {
     }
 
     try {
-      const response = await axios.get('http://localhost:3000/api/data/json/merged', axiosConfig);
+      const response = await axios.get('http://localhost:8080/api/data/json/merged', axiosConfig);
 
       if (response.data.success) {
         const fileData = response.data.data;
@@ -722,6 +878,9 @@ const FuelDashboard = () => {
       showAcceptButton: false,
       newRecords: newRecords.merged,
       dataType: 'merged',
+      fuelData,
+      flightData,
+      onShowLinkedData: handleShowLinkedData,
     });
   };
 
@@ -739,7 +898,7 @@ const FuelDashboard = () => {
       }
 
       const response = await axios.put(
-        `http://localhost:3000/api/edit/${type}`,
+        `http://localhost:8080/api/edit/${type}`,
         updatedData,
         {
           ...axiosConfig,
@@ -765,6 +924,9 @@ const FuelDashboard = () => {
             ...prev,
             processedData: updatedProcessedData,
             newRecords: newRecords.fuel,
+            fuelData,
+            flightData,
+            onShowLinkedData: handleShowLinkedData,
           }));
         } else if (type === 'flight') {
           setFlightData(updatedProcessedData);
@@ -772,6 +934,9 @@ const FuelDashboard = () => {
             ...prev,
             processedData: updatedProcessedData,
             newRecords: newRecords.flight,
+            fuelData,
+            flightData,
+            onShowLinkedData: handleShowLinkedData,
           }));
         } else if (type === 'merged') {
           setMergedData(updatedProcessedData);
@@ -779,6 +944,9 @@ const FuelDashboard = () => {
             ...prev,
             processedData: updatedProcessedData,
             newRecords: newRecords.merged,
+            fuelData,
+            flightData,
+            onShowLinkedData: handleShowLinkedData,
           }));
         }
       } else {
@@ -800,7 +968,7 @@ const FuelDashboard = () => {
     try {
       console.log(`Initiating data transfer for type: ${type}`);
       const response = await axios.post(
-        'http://localhost:3000/api/transfer/extract-and-transfer-new-data',
+        'http://localhost:8080/api/transfer/extract-and-transfer-new-data',
         {
           dataType: type,
           records: records,
@@ -816,7 +984,6 @@ const FuelDashboard = () => {
         );
         setIsDataValidated(true);
 
-        // Keep the modal open to allow further interaction
         setFuelData(type === 'fuel' ? records : fuelData);
         setFlightData(type === 'flight' ? records : flightData);
         setNewRecords((prev) => ({ ...prev, [type]: [] }));
@@ -851,12 +1018,12 @@ const FuelDashboard = () => {
       const token = localStorage.getItem('token');
       const decoded = jwtDecode(token);
       console.log("🧾 Token décodé :", decoded); 
-       const userId = decoded?.userId || decoded?.id || decoded?._id;
+      const userId = decoded?.userId || decoded?.id || decoded?._id;
   
       const response = await axios.post(
-        'http://localhost:3000/api/notifications/send',
+        'http://localhost:8080/api/notifications/send',
         {
-          userId, // ✅ maintenant inclus
+          userId,
           type: 'importation_data_refusée',
           message: `Les données ${type} ont été refusées.`,
           metadata: { dataType: type },
@@ -882,7 +1049,6 @@ const FuelDashboard = () => {
       setLoading(false);
     }
   };
-  
 
   const actionItems = [
     {
@@ -1033,7 +1199,9 @@ const FuelDashboard = () => {
           newRecords={activeModal.newRecords}
           dataType={activeModal.dataType}
           isAuthorized={isAuthorized}
-
+          fuelData={fuelData}
+          flightData={flightData}
+          onShowLinkedData={handleShowLinkedData}
         />
       )}
     </div>

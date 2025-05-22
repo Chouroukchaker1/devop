@@ -43,7 +43,7 @@ const ExtractionData: React.FC = () => {
     setColumns([]);
 
     try {
-      const response = await axios.post<ApiResponse>("http://localhost:3000/api/run-python");
+      const response = await axios.post<ApiResponse>("http://localhost:8080/api/run-python");
 
       if (response.data.success) {
         // Le script3 contient les données fusionnées dans son message

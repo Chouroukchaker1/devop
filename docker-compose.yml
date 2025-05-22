@@ -1,20 +1,57 @@
+version: "3.8"
+
 services:
-  backend:
-    build:
-      context: ./PFE
-    container_name: backend-app
-    ports:
-      - "3000:3000"
+  mongodb:
+    image: mongo:4.4
+    container_name: mongodb
+    restart: always
     environment:
-      - NODE_ENV=development
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: admin123
+    ports:
+      - "27017:27017"
+    networks:
+      - devop-net
+
+  mongo-seed:
+    build: ./PFE/seed
+    depends_on:
+      - mongodb
+    networks:
+      - devop-net
+
+  backend:
+    build: ./PFE
+    container_name: devop-backend
+    ports:
+      - "8080:3000"
+      
+    env_file:
+      - ./PFE/.env
+    environment:
+      - TZ=Africa/Tunis  
+    depends_on:
+      - mongodb
     volumes:
-      - ./PFE:/app
+      - ./PFE/datax:/app/datax
+      - ./PFE/sample_data:/app/sample_data
+      - ./PFE/scripts:/app/scripts
+      - ./PFE/extraction.py:/app/extraction.py
+      - ./PFE/uploads:/app/uploads  
+       
+    networks:
+      - devop-net
 
   frontend:
-    build:
-      context: ./react
-    container_name: frontend-app
+    build: ./react
+    container_name: devop-frontend
     ports:
       - "3001:80"
-    volumes:
-      - ./react:/app
+    depends_on:
+      - backend
+    networks:
+      - devop-net
+
+networks:
+  devop-net:
+    driver: bridge

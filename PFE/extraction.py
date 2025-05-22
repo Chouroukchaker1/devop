@@ -103,8 +103,8 @@ def process_flight_data(file_path, output_file):
 
 # --- Lancement ---
 if __name__ == "__main__":
-    input_file = 'C:/Users/lenovo/Desktop/PFE/sample_data/dataRaport.xlsx'
-    output_file = 'C:/Users/lenovo/Desktop/PFE/sample_data/dataRaportProcessed.xlsx'
+    input_file = '/app/sample_data/dataRaport.xlsx'
+    output_file = '/app/sample_data/dataRaportProcessed.xlsx'
 
     result = process_flight_data(input_file, output_file)
 

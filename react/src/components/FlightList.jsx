@@ -206,7 +206,7 @@ const FlightList = () => {
   const fetchFlights = async () => {
     setLoading(true);
     try {
-      const response = await axios.get('http://localhost:3000/api/flightData', axiosConfig);
+      const response = await axios.get('http://localhost:8080/api/flightData', axiosConfig);
       if (response.data.success) {
         setFlights(response.data.data);
       } else {
@@ -298,13 +298,13 @@ const FlightList = () => {
       let response;
       if (currentFlight) {
         response = await axios.put(
-          `http://localhost:3000/api/flightData/${currentFlight._id}`,
+          `http://localhost:8080/api/flightData/${currentFlight._id}`,
           [numericFormData], // Keep array for consistency with backend validation
           axiosConfig
         );
       } else {
         response = await axios.post(
-          'http://localhost:3000/api/flightData',
+          'http://localhost:8080/api/flightData',
           [numericFormData], // Keep array for consistency with backend validation
           axiosConfig
         );
@@ -335,7 +335,7 @@ const FlightList = () => {
 
     try {
       const response = await axios.delete(
-        `http://localhost:3000/api/flightData/${flightToDelete._id}`,
+        `http://localhost:8080/api/flightData/${flightToDelete._id}`,
         axiosConfig
       );
 

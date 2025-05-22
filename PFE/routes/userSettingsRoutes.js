@@ -67,7 +67,7 @@ router.patch('/', async (req, res) => {
 
     const settings = await UserSettings.findOneAndUpdate(
       { userId: req.user._id },
-      { $set: updates },
+       { 'notifications.enabled': enable },
       { new: true, upsert: true }
     );
 

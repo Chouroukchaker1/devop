@@ -9,9 +9,10 @@ const Notification = require('../models/Notification');
 const editDataRouter = express.Router();
 
 // Excel file paths
-const FUEL_DATA_PATH = 'C:/Users/lenovo/Desktop/PFE/datax/data/all_fuel_data.xlsx';
-const FLIGHT_DATA_PATH = 'C:/Users/lenovo/Desktop/PFE/sample_data/dataRaportProcessed.xlsx';
-const MERGED_DATA_PATH = 'C:/Users/lenovo/Desktop/PFE/megred_data.xlsx';
+const FUEL_DATA_PATH = '/app/datax/data/all_fuel_data.xlsx';
+const FLIGHT_DATA_PATH = '/app/sample_data/dataRaportProcessed.xlsx';
+const MERGED_DATA_PATH = '/app/merged_data.xlsx';
+
 
 // Helper to read Excel file
 const readExcelFile = (filePath) => {

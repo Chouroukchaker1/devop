@@ -9,7 +9,7 @@ import Profile from './Profile';
 import './SettingsPage.css';
 
 const api = axios.create({
-  baseURL: 'http://localhost:3000',
+  baseURL: 'http://localhost:8080',
   withCredentials: true,
 });
 
@@ -304,16 +304,50 @@ const SettingsPage = () => {
         </Card.Header>
         <Card.Body>
           <Form.Group className="mb-3">
-            <Form.Check
-              type="switch"
-              id="notifications-enable"
-              label="Activer les notifications"
-              checked={settings.notifications.enable}
-              onChange={(e) => {
-                handleChange('notifications', 'enable', e.target.checked);
-                saveSettings('notifications');
-              }}
-            />
+             <Form.Label className="me-2">Notifications :</Form.Label>
+<Button
+  variant={settings.notifications.enable ? "success" : "outline-success"}
+  className="me-2"
+  onClick={async () => {
+    handleChange('notifications', 'enable', true);
+    try {
+      const res = await api.patch('/api/user-settings/notifications/toggle', { enable: true });
+      if (res.data.success) {
+        setSaveStatus({ show: true, message: res.data.message, variant: 'success' });
+      }
+    } catch (error) {
+      setSaveStatus({
+        show: true,
+        message: error.response?.data?.message || 'Erreur lors de l\'activation des notifications',
+        variant: 'danger',
+      });
+    }
+  }}
+>
+  ✅ Activer
+</Button>
+
+<Button
+  variant={!settings.notifications.enable ? "danger" : "outline-danger"}
+  onClick={async () => {
+    handleChange('notifications', 'enable', false);
+    try {
+      const res = await api.patch('/api/user-settings/notifications/toggle', { enable: false });
+      if (res.data.success) {
+        setSaveStatus({ show: true, message: res.data.message, variant: 'success' });
+      }
+    } catch (error) {
+      setSaveStatus({
+        show: true,
+        message: error.response?.data?.message || 'Erreur lors de la désactivation des notifications',
+        variant: 'danger',
+      });
+    }
+  }}
+>
+  ❌ Désactiver
+</Button>
+
           </Form.Group>
         </Card.Body>
       </Card>

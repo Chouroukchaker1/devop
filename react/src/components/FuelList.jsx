@@ -221,7 +221,7 @@ const FuelList = () => {
   const fetchFuelData = async () => {
     setLoading(true);
     try {
-      const response = await axios.get('http://localhost:3000/api/feuldata', axiosConfig);
+      const response = await axios.get('http://localhost:8080/api/feuldata', axiosConfig);
       if (response.data.success) {
         // Normalize carbonEmission to handle case variations and missing values
         const normalizedData = response.data.data.map((item) => ({
@@ -399,13 +399,13 @@ const FuelList = () => {
       let response;
       if (currentFuel) {
         response = await axios.put(
-          `http://localhost:3000/api/feuldata/${currentFuel._id}`,
+          `http://localhost:8080/api/feuldata/${currentFuel._id}`,
           dataToSubmit,
           axiosConfig
         );
       } else {
         response = await axios.post(
-          'http://localhost:3000/api/feuldata',
+          'http://localhost:8080/api/feuldata',
           dataToSubmit,
           axiosConfig
         );
@@ -442,7 +442,7 @@ const FuelList = () => {
 
     try {
       const response = await axios.delete(
-        `http://localhost:3000/api/feuldata/${fuelToDelete._id}`,
+        `http://localhost:8080/api/feuldata/${fuelToDelete._id}`,
         axiosConfig
       );
 

@@ -29,18 +29,17 @@ const rolePermissions = {
   consultant: ['access_data', 'generate_reports']
 };
 
-// Assigner les permissions en fonction du rôle
-UserSchema.pre('save', function(next) {
+UserSchema.pre('save', async function(next) {
+  // Assignation des permissions
   if (this.isModified('role')) {
     this.permissions = rolePermissions[this.role] || [];
   }
-  next();
-});
 
-// Hasher le mot de passe avant de sauvegarder
-UserSchema.pre('save', async function(next) {
-  if (!this.isModified('password')) return next();
-  this.password = await bcrypt.hash(this.password, 10);
+  // Hash du mot de passe
+  if (this.isModified('password')) {
+    this.password = await bcrypt.hash(this.password, 10);
+  }
+
   next();
 });
 

@@ -45,7 +45,7 @@ const SchedulerHistory: React.FC = () => {
       if (startDate) params.append('startDate', startDate);
       if (endDate) params.append('endDate', endDate);
 
-      const response = await axios.get('http://localhost:3000/api/scheduler/history', {
+      const response = await axios.get('http://localhost:8080/api/scheduler/history', {
         params,
         headers: { 
           Authorization: `Bearer ${token}`,

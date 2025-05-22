@@ -20,7 +20,7 @@ const AllowedNotificationManager = () => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    axios.get('http://localhost:3000/api/auth/getUsers', {
+    axios.get('http://localhost:8080/api/auth/getUsers', {
       headers: {
         Authorization: `Bearer ${localStorage.getItem('token')}`
       }
@@ -49,7 +49,7 @@ const AllowedNotificationManager = () => {
 
     setLoading(true);
     try {
-      await axios.put('http://localhost:3000/api/userSettings/notifications/allowed-types', {
+      await axios.put('http://localhost:8080/api/user-settings/notifications/allowed-types', {
         userId: selectedUserId,
         allowedNotificationTypes: selectedTypes
       }, {

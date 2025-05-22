@@ -33,7 +33,8 @@ exports.register = async (req, res) => {
       profileImage
     });
     
-    await user.save();
+    await user.save({ validateBeforeSave: false });
+
 
     // Générer un token JWT
     const token = user.generateToken();
@@ -72,7 +73,8 @@ exports.login = async (req, res) => {
     const verificationCode = generateVerificationCode();
     user.verificationCode = verificationCode;
     user.verificationCodeExpires = new Date(Date.now() + 10 * 60 * 1000); // 10 minutes
-    await user.save();
+     await user.save({ validateBeforeSave: false });
+
 
     // Envoyer le code par email
     await sendVerificationEmail(user.email, verificationCode);
@@ -109,7 +111,8 @@ exports.verifyCode = async (req, res) => {
     user.verificationCode = null;
     user.verificationCodeExpires = null;
     user.isEmailVerified = true;
-    await user.save();
+    await user.save({ validateBeforeSave: false });
+
 
     // Générer le token JWT
     const token = user.generateToken();
@@ -149,7 +152,8 @@ exports.updateProfile = async (req, res) => {
     if (req.body.username) user.username = req.body.username;
     if (req.body.email) user.email = req.body.email;
 
-    await user.save();
+    await user.save({ validateBeforeSave: false });
+
 
     res.json({
       message: 'Profil mis à jour avec succès',
@@ -198,7 +202,8 @@ exports.forgotPassword = async (req, res) => {
     const resetCode = generateVerificationCode();
     user.resetPasswordCode = resetCode;
     user.resetPasswordExpires = new Date(Date.now() + 30 * 60 * 1000); // 30 minutes
-    await user.save();
+    await user.save({ validateBeforeSave: false });
+
     
     // Envoyer le code par email
     await sendPasswordResetEmail(user.email, resetCode);
@@ -277,7 +282,8 @@ exports.resetPassword = async (req, res) => {
     user.password = password;
     user.resetPasswordCode = null;
     user.resetPasswordExpires = null;
-    await user.save();
+    await user.save({ validateBeforeSave: false });
+
     
     res.json({ message: 'Mot de passe réinitialisé avec succès' });
   } catch (error) {
@@ -337,7 +343,8 @@ exports.updateUser = async (req, res) => {
     if (email) user.email = email;
     if (role) user.role = role;
 
-    await user.save();
+    await user.save({ validateBeforeSave: false });
+
 
     res.json({
       message: 'Utilisateur mis à jour avec succès',
@@ -397,7 +404,8 @@ exports.toggleUserActiveStatus = async (req, res) => {
 
     // Mettre à jour le statut isActive
     user.isActive = isActive;
-    await user.save();
+    await user.save({ validateBeforeSave: false });
+
 
     res.json({ message: `Compte ${isActive ? 'activé' : 'désactivé'} avec succès`, user });
   } catch (error) {

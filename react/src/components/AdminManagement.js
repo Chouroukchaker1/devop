@@ -23,7 +23,7 @@ const AdminManagement = () => {
     setLoading(true);
     setError(null);
     try {
-      const response = await axios.get('http://localhost:3000/api/auth/getUsers', {
+      const response = await axios.get('http://localhost:8080/api/auth/getUsers', {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`,
         },
@@ -67,7 +67,7 @@ const AdminManagement = () => {
     try {
       const token = localStorage.getItem('token');
       await axios.post(
-        'http://localhost:3000/api/auth/register',
+        'http://localhost:8080/api/auth/register',
         formData,
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -94,7 +94,7 @@ const AdminManagement = () => {
     setLoading(true);
     setError(null);
     try {
-      await axios.delete('http://localhost:3000/api/auth/delete-user', {
+      await axios.delete('http://localhost:8080/api/auth/delete-user', {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`,
         },
@@ -132,7 +132,7 @@ const AdminManagement = () => {
 
   const handleSaveUpdate = async () => {
     try {
-      await axios.put('http://localhost:3000/api/auth/update-user', {
+      await axios.put('http://localhost:8080/api/auth/update-user', {
         userId: userToUpdate._id,
         username: newUsername,
         email: newEmail,

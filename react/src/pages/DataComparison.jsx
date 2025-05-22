@@ -70,7 +70,7 @@ const DataComparison = ({ onFuelDataImported, onFlightDataImported }) => {
 
   const fetchFlightDataFromDB = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/api/flightdata', axiosConfig);
+      const response = await axios.get('http://localhost:8080/api/flightdata', axiosConfig);
       if (response.data.success) {
         setFlightDataFromDB(response.data.data);
       }
@@ -83,7 +83,7 @@ const DataComparison = ({ onFuelDataImported, onFlightDataImported }) => {
 
   const fetchFuelDataFromDB = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/api/fueldata', axiosConfig);
+      const response = await axios.get('http://localhost:8080/api/fueldata', axiosConfig);
       if (response.data.success) {
         setFuelDataFromDB(response.data.data);
       }
@@ -123,7 +123,7 @@ const DataComparison = ({ onFuelDataImported, onFlightDataImported }) => {
     try {
       const endpoint = `excel/${dataType}`;
       const response = await axios.get(
-        `http://localhost:3000/api/data/${endpoint}`,
+        `http://localhost:8080/api/data/${endpoint}`,
         { ...axiosConfig, responseType: 'arraybuffer' }
       );
 
@@ -192,7 +192,7 @@ const DataComparison = ({ onFuelDataImported, onFlightDataImported }) => {
       const filename = `${dataType}_data.xlsx`;
 
       const response = await axios.get(
-        `http://localhost:3000/api/data/${endpoint}`,
+        `http://localhost:8080/api/data/${endpoint}`,
         { ...axiosConfig, responseType: 'blob' }
       );
 
@@ -224,7 +224,7 @@ const DataComparison = ({ onFuelDataImported, onFlightDataImported }) => {
     try {
       const endpoint = dataType === 'flight' ? 'flightdata/import' : 'fueldata/import';
       const response = await axios.post(
-        `http://localhost:3000/api/${endpoint}`,
+        `http://localhost:8080/api/${endpoint}`,
         data,
         axiosConfig
       );

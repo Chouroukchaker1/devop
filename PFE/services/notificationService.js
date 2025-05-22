@@ -16,7 +16,8 @@ class NotificationService {
     // Vérifier les préférences utilisateur (facultatif)
     const userSettings = await UserSettings.findOne({ userId });
         //  Vérifier si les notifications sont complètement désactivées
-        if (userSettings?.notifications?.enable === false) {
+         if (userSettings?.notifications?.enabled === false)
+ {
           return null; // Ne pas créer si notifications désactivées globalement
         }
     

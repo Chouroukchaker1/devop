@@ -9,10 +9,13 @@ import { io } from 'socket.io-client';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Modal, Button, Input, Select } from 'antd';
+import { useRef } from 'react';
+
 const { Option } = Select;
+ // 🔁 stocke la socket de manière persistante
 
 const UserNavbar = ({ handleLogout }) => {
-  const [profileImage, setProfileImage] = useState('/default-avatar.png');
+  const [profileImage, setProfileImage] = useState('/assets/m.png');
   const [notifications, setNotifications] = useState([]);
   const [unreadCount, setUnreadCount] = useState(0);
   const [isSchedulerRunning, setIsSchedulerRunning] = useState(false);
@@ -21,7 +24,9 @@ const UserNavbar = ({ handleLogout }) => {
   const [notifTargetUsername, setNotifTargetUsername] = useState('');
   const [notifType, setNotifType] = useState('system');
   const [notifMessage, setNotifMessage] = useState('');
-  const [username, setUsername] = useState(localStorage.getItem('username') || 'Utilisateur'); // Initialize with localStorage or fallback
+  const [username, setUsername] = useState(localStorage.getItem('username') || 'Utilisateur');
+
+  const socketRef = useRef(null); // ✅ CORRECTEMENT DÉCLARÉ ICI
 
   const userRole = localStorage.getItem('userRole');
   const navigate = useNavigate();
@@ -40,10 +45,10 @@ const UserNavbar = ({ handleLogout }) => {
   ];
 
   const getProfileImageUrl = (imagePath) => {
-    if (!imagePath) return '/default-avatar.png';
+    if (!imagePath) return '/assets/m.png';
     return imagePath.startsWith('http') 
       ? imagePath 
-      : `http://localhost:3000${imagePath.startsWith('/') ? '' : '/'}${imagePath}`;
+      : `http://localhost:8080${imagePath.startsWith('/') ? '' : '/'}${imagePath}`;
   };
 
   useEffect(() => {
@@ -55,7 +60,7 @@ const UserNavbar = ({ handleLogout }) => {
           return;
         }
 
-        const response = await axios.get('http://localhost:3000/api/auth/profile', {
+        const response = await axios.get('http://localhost:8080/api/auth/profile', {
           headers: { Authorization: `Bearer ${token}` }
         });
 
@@ -103,7 +108,7 @@ const UserNavbar = ({ handleLogout }) => {
 
     const fetchNotifications = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/api/notifications', {
+        const response = await axios.get('http://localhost:8080/api/notifications', {
           headers: { Authorization: `Bearer ${token}` }
         });
         
@@ -125,54 +130,72 @@ const UserNavbar = ({ handleLogout }) => {
   }, []);
 
   useEffect(() => {
-    const token = localStorage.getItem('token');
-    if (!token) return;
-  
-    const socket = io('http://localhost:3000', {
-      auth: { token },
-      reconnection: true,
-      reconnectionAttempts: 5,
-      reconnectionDelay: 1000
-    });
-  
-    socket.on('connect', () => {
-      console.log('🟢 Connecté au serveur WebSocket avec l\'ID :', socket.id);
-    });
-  
-    socket.on('disconnect', () => {
-      console.log('🔴 Déconnecté du WebSocket');
-    });
-  
-    socket.on('notification', (data) => {
-      console.log('🔔 Notification reçue :', data);
-      const formatted = {
-        _id: data._id || Date.now().toString(),
-        message: data.message || 'Nouvelle notification',
-        type: data.type || 'system',
-        read: false,
-        createdAt: new Date().toISOString(),
-        metadata: data.metadata || {}
-      };
-  
-      setNotifications((prev) => [formatted, ...prev]);
-      setUnreadCount((prev) => prev + 1);
-      setShowNotifications(true);
-  
-      toast.info(`🔔 ${formatted.message}`, {
-        position: 'top-right',
-        autoClose: 4000
-      });
-    });
-  
-    return () => {
-      socket.disconnect();
+  const token = localStorage.getItem('token');
+  console.log("🔑 Token récupéré pour WebSocket :", token);
+
+   if (!token) {
+  console.warn("⛔ Aucun token JWT disponible pour WebSocket.");
+  return;
+}
+if (socketRef.current) return;
+
+
+   socketRef.current = io(process.env.REACT_APP_SOCKET_URL, {
+  path: '/socket.io',
+  transports: ['websocket'],
+  auth: {
+    token: localStorage.getItem('token')
+  },
+  reconnection: true,
+  reconnectionAttempts: 5,
+  reconnectionDelay: 1000,
+});
+
+
+   socketRef.current.on('connect', () => {
+  console.log('🟢 WebSocket connecté avec l’ID:', socketRef.current.id);
+});
+
+socketRef.current.on('connect_error', (err) => {
+  console.error('❌ Erreur de connexion WebSocket:', err.message);
+});
+
+
+  socketRef.current.on('notification', (data) => {
+    console.log('🔔 Notification reçue', data);
+    const formatted = {
+      _id: data._id || Date.now().toString(),
+      message: data.message || 'Nouvelle notification',
+      type: data.type || 'system',
+      read: false,
+      createdAt: new Date().toISOString(),
+      metadata: data.metadata || {}
     };
-  }, []);
+
+    setNotifications((prev) => [formatted, ...prev]);
+    setUnreadCount((prev) => prev + 1);
+    setShowNotifications(true);
+
+    toast.info(`🔔 ${formatted.message}`, {
+      position: 'top-right',
+      autoClose: 4000,
+    });
+  });
+
+  return () => {
+    if (socketRef.current) {
+      socketRef.current.disconnect();
+      socketRef.current = null;
+    }
+  };
+}, []);
+
+
   
   const markAsRead = async (id) => {
     try {
       await axios.put(
-        `http://localhost:3000/api/notifications/${id}/read`,
+        `http://localhost:8080/api/notifications/${id}/read`,
         {},
         { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } }
       );
@@ -198,7 +221,7 @@ const UserNavbar = ({ handleLogout }) => {
     try {
       setIsSchedulerRunning(true);
       const response = await axios.post(
-        `http://localhost:3000/api/trigger-update`,
+        `http://localhost:8080/api/trigger-update`,
         {},
         { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } }
       );
@@ -455,7 +478,7 @@ const UserNavbar = ({ handleLogout }) => {
                           }}
                           onError={(e) => {
                             e.target.onerror = null;
-                            e.target.src = '/default-avatar.png';
+                            e.target.src = '/assets/m.png';
                           }}
                         />
                         <span>Bonjour, {username}</span>
@@ -493,7 +516,7 @@ const UserNavbar = ({ handleLogout }) => {
               type="primary"
               onClick={async () => {
                 try {
-                  await axios.post('http://localhost:3000/api/notifications/send', {
+                  await axios.post('http://localhost:8080/api/notifications/send', {
                     username: notifTargetUsername,
                     type: notifType,
                     message: notifMessage,

@@ -3,7 +3,7 @@ import React from 'react';
 const DownloadFiles = () => {
   const downloadFile = async (fileName) => {
     try {
-      const response = await fetch(`http://localhost:3000/api/download/${fileName}`);
+      const response = await fetch(`http://localhost:8080/api/download/${fileName}`);
       
       if (!response.ok) {
         throw new Error('Erreur lors du téléchargement du fichier');

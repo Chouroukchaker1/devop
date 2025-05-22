@@ -25,6 +25,8 @@ const io = socket.init(server);
 io.use((socket, next) => {
   const token = socket.handshake.auth.token;
   if (!token) return next(new Error("Authentication error"));
+  console.log("🔐 Tentative de connexion socket avec token:", token);
+
 
   try {
     const payload = jwt.verify(token, process.env.JWT_SECRET);
@@ -45,7 +47,8 @@ io.on('connection', (socket) => {
 
 app.set('io', io);
 
-const uploadsDir = path.join(__dirname, 'Uploads');
+const uploadsDir = path.join(__dirname, 'uploads'); // <-- minuscule
+
 const outputDir = path.join(__dirname, 'output');
 const scriptsDir = path.join(__dirname, 'scripts');
 [uploadsDir, outputDir, scriptsDir].forEach(dir => {
@@ -76,7 +79,7 @@ app.use(cors({
 app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ extended: true, limit: '50mb' }));
 
-app.use('/Uploads', express.static(uploadsDir, {
+app.use('/uploads', express.static(uploadsDir, {
   setHeaders: (res) => {
     res.set('Access-Control-Allow-Origin', '*');
     res.set('Cross-Origin-Resource-Policy', 'cross-origin');
@@ -296,7 +299,7 @@ console.log('✅ Route /api/transfer chargée');
 const missingDataRoutes = require('./routes/donnesmanquanteroute');
 app.use('/api/missing-data', missingDataRoutes);
 console.log('✅ Route /api/missing-data chargée');
-const powerbiRoutes = require('./routes/powerBIRoutes');
+const powerbiRoutes = require('./routes/powerbiRoutes');
 app.use('/api/powerbi', powerbiRoutes);
 console.log('Route/api/powerbi Loaded');
 
@@ -480,9 +483,10 @@ app.use((err, req, res, next) => {
   });
 });
 
-  server.listen(3000, () => {
-  console.log('Serveur démarré sur le port 3000');
+   server.listen(3000, '0.0.0.0', () => {
+  console.log('✅ Serveur WebSocket prêt sur 0.0.0.0:3000');
 });
+
 
 
 

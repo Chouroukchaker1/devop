@@ -16,7 +16,7 @@ const ForgotPasswordPopup = ({ show, onClose, onEmailSubmit }) => {
     setSuccessMessage('');
 
     try {
-      const response = await fetch('http://localhost:3000/api/auth/forgot-password', {
+      const response = await fetch('http://localhost:8080/api/auth/forgot-password', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email }),
@@ -83,7 +83,7 @@ const ResetCodePopup = ({ show, onClose, onCodeSubmit, userId }) => {
     setSuccessMessage('');
 
     try {
-      const response = await fetch('http://localhost:3000/api/auth/verify-reset-code', {
+      const response = await fetch('http://localhost:8080/api/auth/verify-reset-code', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ userId, code }),
@@ -156,7 +156,7 @@ const NewPasswordPopup = ({ show, onClose, tempToken, userId }) => {
     }
 
     try {
-      const response = await fetch('http://localhost:3000/api/auth/reset-password', {
+      const response = await fetch('http://localhost:8080/api/auth/reset-password', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ userId, password, tempToken }),
@@ -233,7 +233,7 @@ const VerificationCodePopup = ({ show, onClose, onSubmit, userId }) => {
     setSuccessMessage('');
 
     try {
-      const response = await fetch('http://localhost:3000/api/auth/verify-code', {
+      const response = await fetch('http://localhost:8080/api/auth/verify-code', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ userId, code }),
@@ -324,7 +324,7 @@ const SignInPage = ({ onSignInSuccess }) => {
     setSuccessMessage('');
 
     try {
-      const response = await fetch('http://localhost:3000/api/auth/login', {
+      const response = await fetch('http://localhost:8080/api/auth/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, password }),
@@ -353,8 +353,19 @@ const SignInPage = ({ onSignInSuccess }) => {
         }
 
         setTimeout(() => {
-          navigate('/profile');
-        }, 2000);
+  const role = data.role;
+  if (role === 'fueldatamaster') {
+    navigate('/dashboard');
+  } else if (role === 'admin') {
+    navigate('/dashboard');
+  } else if (role === 'fueluser') {
+    navigate('/dashboard');
+  } else if (role === 'consultant') {
+    navigate('/dashboard');
+  } else {
+    navigate('/profile');
+  }
+}, 2000);
       } else {
         setServerError(data.message || 'Erreur : réponse inattendue de l\'API.');
       }

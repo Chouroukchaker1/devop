@@ -10,45 +10,59 @@ export const NotificationProvider = ({ children }) => {
   const [notificationsEnabled, setNotificationsEnabled] = useState(true);
 
   useEffect(() => {
-    // Charger les notifications et les paramètres utilisateur au montage du composant
     const fetchData = async () => {
       try {
-        // Charger les paramètres utilisateur
-        const settingsResponse = await axios.get('/api/userSettings');
+        const token = localStorage.getItem('token');
+        if (!token) return;
+
+        // Charger les paramètres utilisateur avec Authorization
+        const settingsResponse = await axios.get('http://localhost:8080/api/user-settings', {
+          headers: { Authorization: `Bearer ${token}` }
+        });
+
         if (settingsResponse.data.success) {
           setNotificationsEnabled(settingsResponse.data.settings.notifications.enable);
         }
-        
-        // Charger les notifications uniquement si elles sont activées
+
+        // Charger les notifications si activées
         if (settingsResponse.data.settings.notifications.enable) {
-          const notificationsResponse = await axios.get('/api/notifications');
-          setNotifications(notificationsResponse.data);
-          setUnreadCount(notificationsResponse.data.filter(n => !n.read).length);
+          const notificationsResponse = await axios.get('http://localhost:8080/api/notifications', {
+            headers: { Authorization: `Bearer ${token}` }
+          });
+
+          const data = notificationsResponse.data.notifications || [];
+          setNotifications(data);
+          setUnreadCount(data.filter(n => !n.read).length);
         }
-        
+
         setLoading(false);
       } catch (error) {
         console.error('Error fetching notifications data:', error);
         setLoading(false);
       }
     };
-    
+
     fetchData();
-    
-    // Configurer un rafraîchissement périodique
+
     const interval = setInterval(() => {
       if (notificationsEnabled) {
         fetchData();
       }
-    }, 60000); // Rafraîchir toutes les minutes
-    
+    }, 60000);
+
     return () => clearInterval(interval);
   }, [notificationsEnabled]);
 
   const markAsRead = async (id) => {
     try {
-      await axios.put(`/api/notifications/${id}/read`);
-      setNotifications(prev => 
+      const token = localStorage.getItem('token');
+      await axios.put(
+        `http://localhost:8080/api/notifications/${id}/read`,
+        {},
+        { headers: { Authorization: `Bearer ${token}` } }
+      );
+
+      setNotifications(prev =>
         prev.map(n => n._id === id ? { ...n, read: true } : n)
       );
       setUnreadCount(prev => Math.max(0, prev - 1));
@@ -59,17 +73,22 @@ export const NotificationProvider = ({ children }) => {
 
   const toggleNotifications = async (enabled) => {
     try {
-      // Correction de la route pour correspondre à celle du backend
-      await axios.patch('/api/userSettings/notifications/toggle', {
-        enable: enabled
-      });
+      const token = localStorage.getItem('token');
+      await axios.patch(
+        'http://localhost:8080/api/user-settings/notifications/toggle',
+        { enable: enabled },
+        { headers: { Authorization: `Bearer ${token}` } }
+      );
+
       setNotificationsEnabled(enabled);
-      
-      // Si on active les notifications, recharger les données
+
       if (enabled) {
-        const response = await axios.get('/api/notifications');
-        setNotifications(response.data);
-        setUnreadCount(response.data.filter(n => !n.read).length);
+        const response = await axios.get('http://localhost:8080/api/notifications', {
+          headers: { Authorization: `Bearer ${token}` }
+        });
+        const data = response.data.notifications || [];
+        setNotifications(data);
+        setUnreadCount(data.filter(n => !n.read).length);
       }
     } catch (error) {
       console.error('Error toggling notifications:', error);
