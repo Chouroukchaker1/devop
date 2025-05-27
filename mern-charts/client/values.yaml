@@ -21,3 +21,13 @@ ingress:
       paths:
         - path: /
   tls: []
+
+serviceAccount:
+  create: true
+  name: ""
+
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 5
+  targetCPUUtilizationPercentage: 80
