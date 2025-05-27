@@ -2,8 +2,13 @@ const express = require('express');
 const fs = require('fs');
 const path = require('path');
 const xlsx = require('xlsx');
+const { exec } = require('child_process');
+const util = require('util');
 const { authMiddleware } = require('../middlewares/authMiddleware');
 const Notification = require('../models/Notification');
+
+// Promisify exec for async/await
+const execPromise = util.promisify(exec);
 
 // Create router
 const editDataRouter = express.Router();
@@ -11,13 +16,12 @@ const editDataRouter = express.Router();
 // Excel file paths
 const FUEL_DATA_PATH = '/app/datax/data/all_fuel_data.xlsx';
 const FLIGHT_DATA_PATH = '/app/sample_data/dataRaportProcessed.xlsx';
-const MERGED_DATA_PATH = '/app/merged_data.xlsx';
-
+const MERGED_DATA_PATH = '/app/output/merged_data.xlsx';
 
 // Helper to read Excel file
 const readExcelFile = (filePath) => {
   if (!fs.existsSync(filePath)) {
-    throw new Error(`File ${filePath} does not exist`);
+    throw new Error(`Le fichier n'a pas été trouvé à l'emplacement : ${filePath}`);
   }
   const workbook = xlsx.readFile(filePath);
   return {
@@ -82,10 +86,21 @@ editDataRouter.get('/:dataType', authMiddleware, async (req, res) => {
         break;
       case 'merged':
         filePath = MERGED_DATA_PATH;
+        // Check if merged file exists; if not, run Python merge script
+        if (!fs.existsSync(filePath)) {
+          console.log('Merged file not found, running Python merge script...');
+          try {
+            await execPromise(`python3 /app/merge_script.py`);
+            console.log('Python merge script executed successfully');
+          } catch (error) {
+            throw new Error(`Failed to generate merged file: ${error.message}`);
+          }
+        }
         break;
     }
 
     // Read Excel file
+    console.log(`Attempting to read file at: ${filePath}`);
     const { sheet } = readExcelFile(filePath);
 
     // Find record
@@ -102,6 +117,36 @@ editDataRouter.get('/:dataType', authMiddleware, async (req, res) => {
   } catch (error) {
     console.error(`Error retrieving record: ${error.message}`);
     res.status(500).json({ success: false, message: error.message });
+  }
+});
+
+// Route to get all merged data (for /api/data/json/merged)
+editDataRouter.get('/json/merged', authMiddleware, async (req, res) => {
+  try {
+    console.log(`GET /api/edit/json/merged`);
+
+    // Check if merged file exists; if not, run Python merge script
+    if (!fs.existsSync(MERGED_DATA_PATH)) {
+      console.log('Merged file not found, running Python merge script...');
+      try {
+        await execPromise(`python3 /app/merge_script.py`);
+        console.log('Python merge script executed successfully');
+      } catch (error) {
+        throw new Error(`Failed to generate merged file: ${error.message}`);
+      }
+    }
+
+    // Read Excel file
+    console.log(`Attempting to read file at: ${MERGED_DATA_PATH}`);
+    const { sheet } = readExcelFile(MERGED_DATA_PATH);
+
+    res.json({ success: true, data: sheet });
+  } catch (error) {
+    console.error(`Error retrieving merged data: ${error.message}`);
+    res.status(500).json({ 
+      success: false, 
+      message: `Erreur lors de la lecture des données merged: ${error.message}` 
+    });
   }
 });
 
@@ -135,10 +180,21 @@ editDataRouter.put('/:dataType', authMiddleware, async (req, res) => {
         break;
       case 'merged':
         filePath = MERGED_DATA_PATH;
+        // Check if merged file exists; if not, run Python merge script
+        if (!fs.existsSync(filePath)) {
+          console.log('Merged file not found, running Python merge script...');
+          try {
+            await execPromise(`python3 /app/merge_script.py`);
+            console.log('Python merge script executed successfully');
+          } catch (error) {
+            throw new Error(`Failed to generate merged file: ${error.message}`);
+          }
+        }
         break;
     }
 
     // Read Excel file
+    console.log(`Attempting to read file at: ${filePath}`);
     const { sheet } = readExcelFile(filePath);
 
     // Find record index
@@ -204,10 +260,21 @@ editDataRouter.put('/:dataType/bulk', authMiddleware, async (req, res) => {
         break;
       case 'merged':
         filePath = MERGED_DATA_PATH;
+        // Check if merged file exists; if not, run Python merge script
+        if (!fs.existsSync(filePath)) {
+          console.log('Merged file not found, running Python merge script...');
+          try {
+            await execPromise(`python3 /app/merge_script.py`);
+            console.log('Python merge script executed successfully');
+          } catch (error) {
+            throw new Error(`Failed to generate merged file: ${error.message}`);
+          }
+        }
         break;
     }
 
     // Read Excel file
+    console.log(`Attempting to read file at: ${filePath}`);
     const { sheet } = readExcelFile(filePath);
     
     // Apply conditions (if provided)

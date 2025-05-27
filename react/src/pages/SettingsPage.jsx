@@ -9,7 +9,7 @@ import Profile from './Profile';
 import './SettingsPage.css';
 
 const api = axios.create({
-  baseURL: 'http://localhost:8080',
+  baseURL: 'http://localhost:8082',
   withCredentials: true,
 });
 
@@ -41,7 +41,7 @@ const SettingsPage = () => {
       hours: [],
       days: [],
       months: [],
-      weekdays: []
+      weekdays: [],
     },
     dataViewer: { defaultFormat: 'json' },
   });
@@ -74,7 +74,7 @@ const SettingsPage = () => {
               hours: settingsResponse.data.settings.schedulerConfig?.hours ?? [],
               days: settingsResponse.data.settings.schedulerConfig?.days ?? [],
               months: settingsResponse.data.settings.schedulerConfig?.months ?? [],
-              weekdays: settingsResponse.data.settings.schedulerConfig?.weekdays ?? []
+              weekdays: settingsResponse.data.settings.schedulerConfig?.weekdays ?? [],
             },
             dataViewer: {
               defaultFormat: settingsResponse.data.settings.dataViewer?.defaultFormat ?? 'json',
@@ -113,7 +113,7 @@ const SettingsPage = () => {
         userId,
         isActive: !currentStatus,
       });
-      setUsers(users.map(user =>
+      setUsers(users.map((user) =>
         user._id === userId ? { ...user, isActive: !currentStatus } : user
       ));
       setSaveStatus({
@@ -142,7 +142,7 @@ const SettingsPage = () => {
           dataViewer: settings.dataViewer,
         });
       } else if (section === 'schedulerConfig') {
-        response = await api.patch('/api/user-settings', {
+        response = await api.put('/api/user-settings/scheduler', {
           schedulerConfig: {
             ...settings.schedulerConfig,
             startDate: settings.schedulerConfig.startDate
@@ -152,7 +152,7 @@ const SettingsPage = () => {
         });
       }
       if (response.data.success) {
-        setSaveStatus({ show: true, message: 'Paramètres enregistrés avec succès', variant: 'success' });
+        setSaveStatus({ show: true, message: response.data.message || 'Paramètres enregistrés avec succès', variant: 'success' });
         setTimeout(() => setSaveStatus((prev) => ({ ...prev, show: false })), 3000);
       }
     } catch (error) {
@@ -177,7 +177,7 @@ const SettingsPage = () => {
             enabled: response.data.settings.schedulerConfig.enabled,
           },
         }));
-        setSaveStatus({ show: true, message: 'Statut du planificateur mis à jour', variant: 'success' });
+        setSaveStatus({ show: true, message: response.data.message || 'Statut du planificateur mis à jour', variant: 'success' });
         setTimeout(() => setSaveStatus((prev) => ({ ...prev, show: false })), 3000);
       }
     } catch (error) {
@@ -245,19 +245,19 @@ const SettingsPage = () => {
     const format = selectedFormat;
     setDownloadStatus(`Téléchargement ${format} en cours...`);
     setDownloadError('');
-    
+
     try {
       const response = await api.get(`/api/data/${format}/${dataType}`, {
         responseType: 'blob',
         headers: {
-          'Accept': getContentType(format),
-        }
+          Accept: getContentType(format),
+        },
       });
-      
+
       const filename = `${dataType}_données.${getFileExtension(format)}`;
       const blob = new Blob([response.data], { type: getContentType(format) });
       saveAs(blob, filename);
-      
+
       setDownloadStatus(`${format.toUpperCase()} téléchargé avec succès !`);
       setTimeout(() => setDownloadStatus(''), 3000);
       setShowFormatModal(false);
@@ -304,103 +304,102 @@ const SettingsPage = () => {
         </Card.Header>
         <Card.Body>
           <Form.Group className="mb-3">
-             <Form.Label className="me-2">Notifications :</Form.Label>
-<Button
-  variant={settings.notifications.enable ? "success" : "outline-success"}
-  className="me-2"
-  onClick={async () => {
-    handleChange('notifications', 'enable', true);
-    try {
-      const res = await api.patch('/api/user-settings/notifications/toggle', { enable: true });
-      if (res.data.success) {
-        setSaveStatus({ show: true, message: res.data.message, variant: 'success' });
-      }
-    } catch (error) {
-      setSaveStatus({
-        show: true,
-        message: error.response?.data?.message || 'Erreur lors de l\'activation des notifications',
-        variant: 'danger',
-      });
-    }
-  }}
->
-  ✅ Activer
-</Button>
+            <Form.Label className="me-2">Notifications :</Form.Label>
+            <Button
+              variant={settings.notifications.enable ? 'success' : 'outline-success'}
+              className="me-2"
+              onClick={async () => {
+                handleChange('notifications', 'enable', true);
+                try {
+                  const res = await api.patch('/api/user-settings/notifications/toggle', { enable: true });
+                  if (res.data.success) {
+                    setSaveStatus({ show: true, message: res.data.message, variant: 'success' });
+                  }
+                } catch (error) {
+                  setSaveStatus({
+                    show: true,
+                    message: error.response?.data?.message || "Erreur lors de l'activation des notifications",
+                    variant: 'danger',
+                  });
+                }
+              }}
+            >
+              ✅ Activer
+            </Button>
 
-<Button
-  variant={!settings.notifications.enable ? "danger" : "outline-danger"}
-  onClick={async () => {
-    handleChange('notifications', 'enable', false);
-    try {
-      const res = await api.patch('/api/user-settings/notifications/toggle', { enable: false });
-      if (res.data.success) {
-        setSaveStatus({ show: true, message: res.data.message, variant: 'success' });
-      }
-    } catch (error) {
-      setSaveStatus({
-        show: true,
-        message: error.response?.data?.message || 'Erreur lors de la désactivation des notifications',
-        variant: 'danger',
-      });
-    }
-  }}
->
-  ❌ Désactiver
-</Button>
-
+            <Button
+              variant={!settings.notifications.enable ? 'danger' : 'outline-danger'}
+              onClick={async () => {
+                handleChange('notifications', 'enable', false);
+                try {
+                  const res = await api.patch('/api/user-settings/notifications/toggle', { enable: false });
+                  if (res.data.success) {
+                    setSaveStatus({ show: true, message: res.data.message, variant: 'success' });
+                  }
+                } catch (error) {
+                  setSaveStatus({
+                    show: true,
+                    message: error.response?.data?.message || 'Erreur lors de la désactivation des notifications',
+                    variant: 'danger',
+                  });
+                }
+              }}
+            >
+              ❌ Désactiver
+            </Button>
           </Form.Group>
         </Card.Body>
       </Card>
 
-       {['admin', 'fueldatamaster', 'fueluser'].includes(userRole) && (
-  <Card className="mb-4 shadow-sm scheduler-card">
-    <Card.Header className="bg-gradient-primary text-white d-flex align-items-center">
-      <FaClock className="me-2" /> Configuration du planificateur
-    </Card.Header>
-    <Card.Body>
-      <Form.Group className="mb-3">
-        <Form.Check
-          type="switch"
-          id="scheduler-enabled"
-          label="Activer le planificateur"
-          checked={settings.schedulerConfig.enabled}
-          onChange={toggleScheduler}
-        />
-      </Form.Group>
+      {['admin', 'fueldatamaster', 'fueluser'].includes(userRole) && (
+        <Card className="mb-4 shadow-sm scheduler-card">
+          <Card.Header className="bg-gradient-primary text-white d-flex align-items-center">
+            <FaClock className="me-2" /> Configuration du planificateur
+          </Card.Header>
+          <Card.Body>
+            <Form.Group className="mb-3">
+              <Form.Check
+                type="switch"
+                id="scheduler-enabled"
+                label="Activer le planificateur"
+                checked={settings.schedulerConfig.enabled}
+                onChange={toggleScheduler}
+              />
+            </Form.Group>
 
-      <Form.Group className="mb-3">
-        <Form.Label>Date et heure de début (facultatif)</Form.Label>
-        <div className="date-picker-container">
-          <DatePicker
-            selected={settings.schedulerConfig.startDate}
-            onChange={handleDateTimeChange}
-            showTimeSelect
-            timeFormat="h:mm aa"
-            timeIntervals={15}
-            dateFormat="yyyy-MM-dd h:mm aa"
-            minDate={new Date()}
-            className="form-control date-picker"
-            placeholderText="Sélectionner une date et une heure"
-          />
-          <Button
-            variant="outline-secondary"
-            size="sm"
-            className="mt-2 clear-date-btn"
-            onClick={() => handleChange('schedulerConfig', 'startDate', null)}
-          >
-            Effacer la date et l'heure
-          </Button>
-        </div>
-      </Form.Group>
+            <Form.Group className="mb-3">
+              <Form.Label>Date et heure de début (facultatif)</Form.Label>
+              <div className="date-picker-container">
+                <DatePicker
+                  selected={settings.schedulerConfig.startDate}
+                  onChange={handleDateTimeChange}
+                  showTimeSelect
+                  timeFormat="h:mm aa"
+                  timeIntervals={15}
+                  dateFormat="yyyy-MM-dd h:mm aa"
+                  minDate={new Date()}
+                  className="form-control date-picker"
+                  placeholderText="Sélectionner une date et une heure"
+                />
+                <Button
+                  variant="outline-secondary"
+                  size="sm"
+                  className="mt-2 clear-date-btn"
+                  onClick={() => handleChange('schedulerConfig', 'startDate', null)}
+                >
+                  Effacer la date et l'heure
+                </Button>
+              </div>
+            </Form.Group>
 
-      <div className="d-flex justify-content-end mt-3">
-        <Button variant="primary" onClick={() => saveSettings('schedulerConfig')}>
-          <FaSave className="me-2" /> Enregistrer le planificateur
-        </Button>
-      </div>
-    </Card.Body>
-  </Card>
-)}
+            <div className="d-flex justify-content-end mt-3">
+              <Button variant="primary" onClick={() => saveSettings('schedulerConfig')}>
+                <FaSave className="me-2" /> Enregistrer le planificateur
+              </Button>
+            </div>
+          </Card.Body>
+        </Card>
+      )}
 
       <Card className="mb-4 shadow-sm">
         <Card.Header className="bg-gradient-primary text-white">Format des données</Card.Header>
@@ -416,19 +415,24 @@ const SettingsPage = () => {
         </Card.Body>
       </Card>
 
-       {(userRole === 'admin' || userRole === 'fueldatamaster') && (
-  <Card className="mb-4 shadow-sm">
-    <Card.Header className="bg-gradient-primary text-white d-flex align-items-center">
-      <FaUsers className="me-2" /> Gestion des utilisateurs
-    </Card.Header>
-    <Card.Body>
-      <Button variant="primary" onClick={() => { setShowUsersModal(true); fetchUsers(); }}>
-        Gérer les comptes utilisateurs
-      </Button>
-    </Card.Body>
-  </Card>
-)}
-
+      {(userRole === 'admin' || userRole === 'fueldatamaster') && (
+        <Card className="mb-4 shadow-sm">
+          <Card.Header className="bg-gradient-primary text-white d-flex align-items-center">
+            <FaUsers className="me-2" /> Gestion des utilisateurs
+          </Card.Header>
+          <Card.Body>
+            <Button
+              variant="primary"
+              onClick={() => {
+                setShowUsersModal(true);
+                fetchUsers();
+              }}
+            >
+              Gérer les comptes utilisateurs
+            </Button>
+          </Card.Body>
+        </Card>
+      )}
 
       <Card className="mb-4 shadow-sm">
         <Card.Header className="bg-gradient-primary text-white d-flex align-items-center">
@@ -482,11 +486,7 @@ const SettingsPage = () => {
                   {label}
                 </Button>
               ))}
-              <Button
-                variant="outline-danger"
-                onClick={() => setSelectedFormat(null)}
-                className="mt-2"
-              >
+              <Button variant="outline-danger" onClick={() => setSelectedFormat(null)} className="mt-2">
                 Retour
               </Button>
             </div>
@@ -510,7 +510,7 @@ const SettingsPage = () => {
               </tr>
             </thead>
             <tbody>
-              {users.map(user => (
+              {users.map((user) => (
                 <tr key={user._id}>
                   <td>{user.username}</td>
                   <td>{user.email}</td>

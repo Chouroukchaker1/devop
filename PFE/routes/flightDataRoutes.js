@@ -51,5 +51,6 @@ router.delete(
   flightDataController.deleteFlightData
 );
 
+
 module.exports = router;
 module.exports.flightDataValidation = flightDataValidation;

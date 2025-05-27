@@ -14,7 +14,7 @@ const PowerBIDashboard = () => {
     setLoading(true);
     setError('');
     try {
-      const response = await axios.get('http://localhost:8080/api/powerbi/token');
+      const response = await axios.get('http://localhost:8082/api/powerbi/token');
       const { accessToken, reportId, workspaceId } = response.data;
 
       const url = `https://app.powerbi.com/reportEmbed?reportId=${reportId}&groupId=${workspaceId}&autoAuth=true&ctid=${process.env.REACT_APP_TENANT_ID}`;

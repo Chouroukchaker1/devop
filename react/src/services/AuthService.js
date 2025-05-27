@@ -14,7 +14,7 @@ export default class AuthService {
   
     static async refreshToken() {
       try {
-        const response = await fetch('http://localhost:8080/api/auth/refresh-token', {
+        const response = await fetch('http://localhost:8082/api/auth/refresh-token', {
           method: 'POST',
           headers: this.getAuthHeader()
         });

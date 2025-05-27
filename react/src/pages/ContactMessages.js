@@ -13,7 +13,7 @@ const ContactMessages = () => {
       setError(null);
       
       const token = localStorage.getItem('token');
-      const response = await axios.get('http://localhost:8080/api/contact', {
+      const response = await axios.get('http://localhost:8082/api/contact', {
         headers: {
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'application/json'

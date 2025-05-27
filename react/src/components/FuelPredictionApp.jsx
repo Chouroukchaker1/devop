@@ -29,7 +29,7 @@ function PredictionForm() {
     setResult(null);
     setLoading(true);
     try {
-      const response = await axios.post('http://localhost:8080/api/predict', {
+      const response = await axios.post('http://localhost:8082/api/predict', {
         departureCountry,
         arrivalCountry
       });

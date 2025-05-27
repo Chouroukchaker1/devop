@@ -16,7 +16,7 @@ export const NotificationProvider = ({ children }) => {
         if (!token) return;
 
         // Charger les paramètres utilisateur avec Authorization
-        const settingsResponse = await axios.get('http://localhost:8080/api/user-settings', {
+        const settingsResponse = await axios.get('http://localhost:8082/api/user-settings', {
           headers: { Authorization: `Bearer ${token}` }
         });
 
@@ -26,7 +26,7 @@ export const NotificationProvider = ({ children }) => {
 
         // Charger les notifications si activées
         if (settingsResponse.data.settings.notifications.enable) {
-          const notificationsResponse = await axios.get('http://localhost:8080/api/notifications', {
+          const notificationsResponse = await axios.get('http://localhost:8082/api/notifications', {
             headers: { Authorization: `Bearer ${token}` }
           });
 
@@ -57,7 +57,7 @@ export const NotificationProvider = ({ children }) => {
     try {
       const token = localStorage.getItem('token');
       await axios.put(
-        `http://localhost:8080/api/notifications/${id}/read`,
+        `http://localhost:8082/api/notifications/${id}/read`,
         {},
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -75,7 +75,7 @@ export const NotificationProvider = ({ children }) => {
     try {
       const token = localStorage.getItem('token');
       await axios.patch(
-        'http://localhost:8080/api/user-settings/notifications/toggle',
+        'http://localhost:8082/api/user-settings/notifications/toggle',
         { enable: enabled },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -83,7 +83,7 @@ export const NotificationProvider = ({ children }) => {
       setNotificationsEnabled(enabled);
 
       if (enabled) {
-        const response = await axios.get('http://localhost:8080/api/notifications', {
+        const response = await axios.get('http://localhost:8082/api/notifications', {
           headers: { Authorization: `Bearer ${token}` }
         });
         const data = response.data.notifications || [];

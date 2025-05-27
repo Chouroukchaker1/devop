@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useLocation, useNavigate } from 'react-router-dom';
 import './ExtractionDataa.css';
-import { jwtDecode } from "jwt-decode";
-
+import { jwtDecode } from 'jwt-decode';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
@@ -58,48 +57,58 @@ const Modal = ({
     }
   };
 
-  // ✅ Corrected: Function to check if a record has a matching record with proper trimming and string conversion
   const hasMatchingRecord = (record, targetData, isFuelToFlight) => {
-    console.log("Comparing with record:", record);
-    console.log("Target data sample:", targetData[0]);
-    if (isFuelToFlight) {
-      return targetData.some(
-        (flight) =>
-          String(flight['Date of operation (UTC)']).trim() === String(record['Date of Flight']).trim() &&
-          String(flight['Departure Time/ Block-off time (UTC)']).trim() === String(record['Time of Departure']).trim() &&
-          String(flight['Flight ID']).trim() === String(record['Flight Number']).trim() &&
-          String(flight['Departing Airport ICAO Code']).trim() === String(record['DepartureAirport']).trim()
-      );
-    } else {
-      return targetData.some(
-        (fuel) =>
-          String(fuel['Date of Flight']).trim() === String(record['Date of operation (UTC)']).trim() &&
-          String(fuel['Time of Departure']).trim() === String(record['Departure Time/ Block-off time (UTC)']).trim() &&
-          String(fuel['Flight Number']).trim() === String(record['Flight ID']).trim() &&
-          String(fuel['DepartureAirport']).trim() === String(record['Departing Airport ICAO Code']).trim()
-      );
+    console.log('Comparing record:', record);
+    console.log('Target data sample:', targetData[0]);
+    if (!record || !targetData?.length) return false;
+    try {
+      if (isFuelToFlight) {
+        return targetData.some(
+          (flight) =>
+            String(flight['Date of operation (UTC)'] || '').trim() === String(record['Date of Flight'] || '').trim() &&
+            String(flight['Departure Time/ Block-off time (UTC)'] || '').trim() === String(record['Time of Departure'] || '').trim() &&
+            String(flight['Flight ID'] || '').trim() === String(record['Flight Number'] || '').trim() &&
+            String(flight['Departing Airport ICAO Code'] || '').trim() === String(record['DepartureAirport'] || '').trim()
+        );
+      } else {
+        return targetData.some(
+          (fuel) =>
+            String(fuel['Date of Flight'] || '').trim() === String(record['Date of operation (UTC)'] || '').trim() &&
+            String(fuel['Time of Departure'] || '').trim() === String(record['Departure Time/ Block-off time (UTC)'] || '').trim() &&
+            String(fuel['Flight Number'] || '').trim() === String(record['Flight ID'] || '').trim() &&
+            String(fuel['DepartureAirport'] || '').trim() === String(record['Departing Airport ICAO Code'] || '').trim()
+        );
+      }
+    } catch (error) {
+      console.error('Error in hasMatchingRecord:', error);
+      return false;
     }
   };
 
-  // ✅ Corrected: Function to get the matching record with proper trimming and string conversion
   const getMatchingRecord = (record, targetData, isFuelToFlight) => {
-    console.log("🔍 Trying to find matching record...");
-    if (isFuelToFlight) {
-      return targetData.find(
-        (flight) =>
-          String(flight['Date of operation (UTC)']).trim() === String(record['Date of Flight']).trim() &&
-          String(flight['Departure Time/ Block-off time (UTC)']).trim() === String(record['Time of Departure']).trim() &&
-          String(flight['Flight ID']).trim() === String(record['Flight Number']).trim() &&
-          String(flight['Departing Airport ICAO Code']).trim() === String(record['DepartureAirport']).trim()
-      );
-    } else {
-      return targetData.find(
-        (fuel) =>
-          String(fuel['Date of Flight']).trim() === String(record['Date of operation (UTC)']).trim() &&
-          String(fuel['Time of Departure']).trim() === String(record['Departure Time/ Block-off time (UTC)']).trim() &&
-          String(fuel['Flight Number']).trim() === String(record['Flight ID']).trim() &&
-          String(fuel['DepartureAirport']).trim() === String(record['Departing Airport ICAO Code']).trim()
-      );
+    console.log('🔍 Finding matching record for:', record);
+    if (!record || !targetData?.length) return null;
+    try {
+      if (isFuelToFlight) {
+        return targetData.find(
+          (flight) =>
+            String(flight['Date of operation (UTC)'] || '').trim() === String(record['Date of Flight'] || '').trim() &&
+            String(flight['Departure Time/ Block-off time (UTC)'] || '').trim() === String(record['Time of Departure'] || '').trim() &&
+            String(flight['Flight ID'] || '').trim() === String(record['Flight Number'] || '').trim() &&
+            String(flight['Departing Airport ICAO Code'] || '').trim() === String(record['DepartureAirport'] || '').trim()
+        );
+      } else {
+        return targetData.find(
+          (fuel) =>
+            String(fuel['Date of Flight'] || '').trim() === String(record['Date of operation (UTC)'] || '').trim() &&
+            String(fuel['Time of Departure'] || '').trim() === String(record['Departure Time/ Block-off time (UTC)'] || '').trim() &&
+            String(fuel['Flight Number'] || '').trim() === String(record['Flight ID'] || '').trim() &&
+            String(fuel['DepartureAirport'] || '').trim() === String(record['Departing Airport ICAO Code'] || '').trim()
+        );
+      }
+    } catch (error) {
+      console.error('Error in getMatchingRecord:', error);
+      return null;
     }
   };
 
@@ -165,7 +174,6 @@ const Modal = ({
                     return (
                       <tr key={index}>
                         {COLUMNS.map((column) => {
-                          // ✅ Corrected: Extended isLinkableColumn to include more columns
                           const isLinkableColumn = [
                             'Flight Number',
                             'Flight ID',
@@ -322,16 +330,16 @@ const FuelDashboard = () => {
     { key: 'TripFuel', label: 'TripFuel' },
     { key: 'ContingencyFuel', label: 'ContingencyFuel' },
     { key: 'BlockFuel', label: 'BlockFuel' },
-    { key: 'FinalReserveFuel', label: 'FinalReserveFuel' },
-    { key: 'AdditionalFuel', label: 'Additional Fuel (tonnes)' },
-    { key: 'DiscretionaryFuel', label: 'Discretionary Fuel' },
-    { key: 'ExtraFuel', label: 'ExtraFuel' },
+    { key: 'FinalReserve', label: 'FinalReserveFuel' },
+    { key: 'Additional Fuel (tonnes)', label: 'Additional Fuel (tonnes)' },
+    { key: 'Discretionary Fuel', label: 'Discretionary Fuel' },
+    { key: 'Extra Fuel', label: 'ExtraFuel' },
     { key: 'Reason', label: 'Reason' },
-    { key: 'TankeringCategory', label: 'Economic tankering category in the flight plan' },
+    { key: 'Economic tankering category in the flight plan', label: 'TankeringCategory' },
     { key: 'AlternateFuel', label: 'AlternateFuel' },
-    { key: 'AlternateArrivalAirport', label: 'Alternate Arrival Airport' },
+    { key: 'Alternate Arrival Airport', label: 'Alternate Arrival Airport' },
     { key: 'FOB', label: 'FOB' },
-    { key: 'carbonEmission', label: 'Carbon Emission (kg)' },
+    { key: 'Carbon Emission (kg)', label: 'Carbon Emission (kg)' },
   ];
 
   const FLIGHT_COLUMNS = [
@@ -347,8 +355,8 @@ const FuelDashboard = () => {
     { key: 'Arrival Time/ Block-on Time(UTC)', label: 'Arrival Time/ Block-on Time(UTC)' },
     { key: 'Uplift Volume (Litres)', label: 'Uplift Volume (Litres)' },
     { key: 'Uplift density', label: 'Uplift density' },
-    { key: 'Block On (tonnes)', label: 'Block On (tonnes)' },
     { key: 'Block Off (tonnes)', label: 'Block Off (tonnes)' },
+    { key: 'Block On (tonnes)', label: 'Block On (tonnes)' },
   ];
 
   const MERGED_COLUMNS = [
@@ -361,26 +369,27 @@ const FuelDashboard = () => {
     { key: 'DepartureAirport', label: 'DepartureAirport' },
     { key: 'ArrivalAirport', label: 'ArrivalAirport' },
     { key: 'Time of Departure', label: 'Time of Departure' },
-    { key: 'Arrival Time/ Block-on Time(UTC)', label: 'Arrival Time/ Block-on Time(UTC)' },
+    { key: 'Arrival Time/ Block-on Time (UTC)', label: 'Arrival Time/ Block-on Time (UTC)' },
     { key: 'TaxiFuel', label: 'TaxiFuel' },
     { key: 'TripFuel', label: 'TripFuel' },
     { key: 'Uplift Volume (Litres)', label: 'Uplift Volume (Litres)' },
     { key: 'Uplift density', label: 'Uplift density' },
     { key: 'ContingencyFuel', label: 'ContingencyFuel' },
     { key: 'AlternateFuel', label: 'AlternateFuel' },
-    { key: 'FinalReserveFuel', label: 'FinalReserveFuel' },
-    { key: 'DiscretionaryFuel', label: 'Discretionary Fuel' },
-    { key: 'ExtraFuel', label: 'ExtraFuel' },
-    { key: 'AdditionalFuel', label: 'Additional Fuel (tonnes)' },
+    { key: 'FinalReserve', label: 'FinalReserveFuel' },
+    { key: 'Discretionary Fuel', label: 'Discretionary Fuel' },
+    { key: 'Extra Fuel', label: 'ExtraFuel' },
+    { key: 'Additional Fuel (tonnes)', label: 'Additional Fuel (tonnes)' },
+    { key: 'Fuel for other safety rules (tonnes)', label: 'Fuel for other safety rules (tonnes)' },
     { key: 'Reason', label: 'Reason' },
-    { key: 'TankeringCategory', label: 'Economic tankering category in the flight plan' },
+    { key: 'Economic tankering category in the flight plan', label: 'TankeringCategory' },
     { key: 'Block Off (tonnes)', label: 'Block Off (tonnes)' },
     { key: 'Block On (tonnes)', label: 'Block On (tonnes)' },
     { key: 'BlockFuel', label: 'BlockFuel' },
-    { key: 'AlternateArrivalAirport', label: 'Alternate Arrival Airport' },
+    { key: 'Alternate Arrival Airport', label: 'Alternate Arrival Airport' },
     { key: 'FOB', label: 'FOB' },
-    { key: 'CompleteData', label: 'CompleteData' },
-    { key: 'CarbonEmission', label: 'Carbon Emission (kg)' },
+    { key: 'Data_Complete', label: 'CompleteData' },
+    { key: 'Carbon Emission (kg)', label: 'Carbon Emission (kg)' },
   ];
 
   const transformData = (rawData, columns) => {
@@ -388,21 +397,18 @@ const FuelDashboard = () => {
       console.error('Invalid data format:', rawData);
       return [];
     }
-    
+
     return rawData.map((item) => {
+      if (!item) return {};
       let transformedItem = {};
       columns.forEach((column) => {
         let value = item[column.label] || item[column.key];
-      
-        if (column.key === 'CarbonEmission' || column.key === 'carbonEmission') {
-          value = item['Carbon Emission (kg)'] || item['CarbonEmission'] || item['carbonEmission'] || 0;
-        }
-      
         if (value === null || value === undefined || value === '') {
           transformedItem[column.key] = '';
         } else if (
           column.key === 'Departure Time/ Block-off time (UTC)' ||
-          column.key === 'Arrival Time/ Block-on Time(UTC)'
+          column.key === 'Arrival Time/ Block-on Time (UTC)' ||
+          column.key === 'Time of Departure'
         ) {
           if (typeof value === 'number') {
             const excelDate = new Date(Math.round((value - 25569) * 86400 * 1000));
@@ -411,9 +417,9 @@ const FuelDashboard = () => {
             const seconds = excelDate.getUTCSeconds().toString().padStart(2, '0');
             transformedItem[column.key] = `${hours}:${minutes}:${seconds}`;
           } else if (typeof value === 'string' && value.includes(' ')) {
-            transformedItem[column.key] = value.split(' ')[1];
+            transformedItem[column.key] = value.split(' ')[1] || value;
           } else {
-            transformedItem[column.key] = value;
+            transformedItem[column.key] = String(value).trim();
           }
         } else if (typeof value === 'number') {
           transformedItem[column.key] = Number(value.toFixed(3));
@@ -422,13 +428,8 @@ const FuelDashboard = () => {
           transformedItem[column.key] = stringValue === 'N/A' ? '' : stringValue;
         }
       });
-      
-      if (!transformedItem.hasOwnProperty('carbonEmission') && transformedItem.hasOwnProperty('CarbonEmission')) {
-        transformedItem.carbonEmission = transformedItem.CarbonEmission;
-      }
-      
       return transformedItem;
-    });
+    }).filter(item => Object.keys(item).length > 0);
   };
 
   const handleDownloadExcel = async (dataType) => {
@@ -437,13 +438,14 @@ const FuelDashboard = () => {
 
     try {
       const response = await axios.get(
-        `http://localhost:8080/api/data/excel/${dataType}`,
+        `http://localhost:8082/api/data/excel/${dataType}`,
         {
           ...axiosConfig,
           responseType: 'blob',
         }
       );
 
+      console.log(`Downloaded ${dataType} data successfully`);
       const url = window.URL.createObjectURL(new Blob([response.data]));
       const link = document.createElement('a');
       link.href = url;
@@ -457,7 +459,7 @@ const FuelDashboard = () => {
       setTimeout(() => setSuccessMessage(''), 3000);
     } catch (err) {
       console.error(`Error downloading ${dataType} data:`, err);
-      setError(`Error downloading ${dataType} data: ${err.message}`);
+      setError(`Error downloading ${dataType} data: ${err.response?.data?.message || err.message}`);
       setTimeout(() => setError(''), 5000);
     } finally {
       setLoading(false);
@@ -465,51 +467,33 @@ const FuelDashboard = () => {
   };
 
   const handleShowLinkedData = (targetDataType, matchingRecord) => {
-    if (targetDataType === 'fuel') {
-      const processedData = transformData([matchingRecord], FUEL_COLUMNS);
-      setActiveModal({
-        title: 'Fuel Consumption Data',
-        content: 'Displaying linked fuel consumption details.',
-        showTable: true,
-        processedData: processedData,
-        COLUMNS: FUEL_COLUMNS,
-        missingField: null,
-        missingValue: null,
-        onCompleteData: (record, updatedData, updatedProcessedData) =>
-          handleCompleteData(record, updatedData, 'fuel', updatedProcessedData),
-        onAccept: () => handleAcceptData('fuel', processedData),
-        onReject: () => handleRejectData('fuel'),
-        onDownload: () => handleDownloadExcel('fuel'),
-        showAcceptButton: true,
-        newRecords: newRecords.fuel,
-        dataType: 'fuel',
-        fuelData,
-        flightData,
-        onShowLinkedData: handleShowLinkedData,
-      });
-    } else if (targetDataType === 'flight') {
-      const processedData = transformData([matchingRecord], FLIGHT_COLUMNS);
-      setActiveModal({
-        title: 'Flight Data',
-        content: 'Displaying linked flight details.',
-        showTable: true,
-        processedData: processedData,
-        COLUMNS: FLIGHT_COLUMNS,
-        missingField: null,
-        missingValue: null,
-        onCompleteData: (record, updatedData, updatedProcessedData) =>
-          handleCompleteData(record, updatedData, 'flight', updatedProcessedData),
-        onAccept: () => handleAcceptData('flight', processedData),
-        onReject: () => handleRejectData('flight'),
-        onDownload: () => handleDownloadExcel('flight'),
-        showAcceptButton: true,
-        newRecords: newRecords.flight,
-        dataType: 'flight',
-        fuelData,
-        flightData,
-        onShowLinkedData: handleShowLinkedData,
-      });
+    if (!matchingRecord) {
+      setError('No matching record found');
+      setTimeout(() => setError(''), 5000);
+      return;
     }
+    const processedData = transformData([matchingRecord], targetDataType === 'fuel' ? FUEL_COLUMNS : FLIGHT_COLUMNS);
+    setActiveModal({
+      title: targetDataType === 'fuel' ? 'Fuel Consumption Data' : 'Flight Data',
+      content: `Displaying linked ${targetDataType} details.`,
+      showTable: true,
+      processedData,
+      COLUMNS: targetDataType === 'fuel' ? FUEL_COLUMNS : FLIGHT_COLUMNS,
+      missingField: null,
+      missingValue: null,
+      onCompleteData: (record, updatedData, updatedProcessedData) =>
+        handleCompleteData(record, updatedData, targetDataType, updatedProcessedData),
+      onAccept: () => handleAcceptData(targetDataType, processedData),
+      onReject: () => handleRejectData(targetDataType),
+      onDownload: () => handleDownloadExcel(targetDataType),
+      showAcceptButton: true,
+      newRecords: newRecords[targetDataType] || [],
+      dataType: targetDataType,
+      fuelData,
+      flightData,
+      onShowLinkedData: handleShowLinkedData, // Pass the function here
+      isAuthorized,
+    });
   };
 
   const handleCheckNewData = async () => {
@@ -518,7 +502,8 @@ const FuelDashboard = () => {
     setSuccessMessage('');
 
     try {
-      const response = await axios.get('http://localhost:8080/api/scheduler/check-new-data', axiosConfig);
+      const response = await axios.get('http://localhost:8082/api/scheduler/check-new-data', axiosConfig);
+      console.log('Check new data response:', response.data);
 
       if (response.data.success) {
         const report = response.data.data;
@@ -536,7 +521,7 @@ const FuelDashboard = () => {
 
           if (fuelNewRecords > 0) {
             const processedFuelData = transformData(fuelNewData, FUEL_COLUMNS);
-            const newFuelIdentifiers = processedFuelData.map((item) => item['Flight Number']);
+            const newFuelIdentifiers = processedFuelData.map((item) => item['Flight Number']).filter(id => id);
             setNewRecords((prev) => ({
               ...prev,
               fuel: [...new Set([...prev.fuel, ...newFuelIdentifiers])],
@@ -559,11 +544,12 @@ const FuelDashboard = () => {
               dataType: 'fuel',
               fuelData,
               flightData,
-              onShowLinkedData: handleShowLinkedData,
+              onShowLinkedData: handleShowLinkedData, // Pass the function here
+              isAuthorized,
             });
           } else if (flightNewRecords > 0) {
             const processedFlightData = transformData(flightNewData, FLIGHT_COLUMNS);
-            const newFlightIdentifiers = processedFlightData.map((item) => item['Flight ID']);
+            const newFlightIdentifiers = processedFlightData.map((item) => item['Flight ID']).filter(id => id);
             setNewRecords((prev) => ({
               ...prev,
               flight: [...new Set([...prev.flight, ...newFlightIdentifiers])],
@@ -586,7 +572,8 @@ const FuelDashboard = () => {
               dataType: 'flight',
               fuelData,
               flightData,
-              onShowLinkedData: handleShowLinkedData,
+              onShowLinkedData: handleShowLinkedData, // Pass the function here
+              isAuthorized,
             });
           }
         } else {
@@ -600,7 +587,7 @@ const FuelDashboard = () => {
       }
     } catch (err) {
       console.error('Erreur lors de la vérification des nouvelles données:', err);
-      setError('Erreur lors de la vérification des nouvelles données : ' + err.message);
+      setError('Erreur lors de la vérification des nouvelles données : ' + (err.response?.data?.message || err.message));
       setTimeout(() => setError(''), 5000);
     } finally {
       setLoading(false);
@@ -612,37 +599,35 @@ const FuelDashboard = () => {
 
     const fetchFuelListData = async () => {
       try {
-        const response = await axios.get('http://localhost:8080/api/feuldata', axiosConfig);
+        const response = await axios.get('http://localhost:8082/api/feuldata', axiosConfig);
+        console.log('Fuel list data response:', response.data);
         if (response.data.success) {
           setFuelListData(response.data.data);
         } else {
-          throw new Error('Failed to fetch fuel list data');
+          throw new Error(response.data.message || 'Failed to fetch fuel list data');
         }
       } catch (err) {
-        console.error('Error fetching FuelList data:', err);
-        setError('Error fetching FuelList data: ' + err.message);
+        console.error('Error fetching fuel list data:', err);
+        setError('Error fetching fuel list data: ' + (err.response?.data?.message || err.message));
         setTimeout(() => setError(''), 5000);
       }
     };
 
     const fetchFlightListData = async () => {
       try {
-        const response = await axios.get('http://localhost:8080/api/flightdata', axiosConfig);
+        const response = await axios.get('http://localhost:8082/api/flightdata', axiosConfig);
+        console.log('Flight list data response:', response.data);
         if (response.data.success) {
           setFlightListData(response.data.data);
         } else {
-          throw new Error('Failed to fetch flight list data');
+          throw new Error(response.data.message || 'Failed to fetch flight list data');
         }
       } catch (err) {
-        console.error('Error fetching FlightList data:', err);
-        setError('Error fetching FlightList data: ' + err.message);
+        console.error('Error fetching flight list data:', err);
+        setError('Error fetching flight list data: ' + (err.response?.data?.message || err.message));
         setTimeout(() => setError(''), 5000);
       }
     };
-
-    // ✅ Added: Console logs to verify data loading
-    console.log("fuelData", fuelData);
-    console.log("flightData", flightData);
 
     fetchFuelListData();
     fetchFlightListData();
@@ -679,29 +664,30 @@ const FuelDashboard = () => {
     setSuccessMessage('');
 
     try {
-      const response = await axios.get('http://localhost:8080/api/data/json/fuel', axiosConfig);
+      const response = await axios.get('http://localhost:8082/api/data/json/fuel', axiosConfig);
+      console.log('Fuel data response:', response.data);
 
       if (response.data.success) {
         const fileData = response.data.data;
         const processedData = transformData(fileData, FUEL_COLUMNS);
-        const existingIdentifiers = fuelData.map((item) => item['Flight Number']);
+        const existingIdentifiers = fuelData.map((item) => item['Flight Number']).filter(id => id);
         const newIdentifiers = processedData
           .filter((item) => !existingIdentifiers.includes(item['Flight Number']))
-          .map((item) => item['Flight Number']);
+          .map((item) => item['Flight Number'])
+          .filter(id => id);
         setNewRecords((prev) => ({
           ...prev,
           fuel: [...new Set([...prev.fuel, ...newIdentifiers])],
         }));
         setFuelData(processedData);
         setSuccessMessage('Fuel consumption data loaded successfully');
-
         setTimeout(() => setSuccessMessage(''), 3000);
 
         setActiveModal({
           title: 'Fuel Consumption Data',
           content: 'Displaying fuel consumption details.',
           showTable: true,
-          processedData: processedData,
+          processedData,
           COLUMNS: FUEL_COLUMNS,
           missingField: dataType === 'fuel' ? fieldName : null,
           missingValue: dataType === 'fuel' ? missingValue : null,
@@ -715,7 +701,8 @@ const FuelDashboard = () => {
           dataType: 'fuel',
           fuelData,
           flightData,
-          onShowLinkedData: handleShowLinkedData,
+          onShowLinkedData: handleShowLinkedData, // Pass the function here
+          isAuthorized,
         });
       } else {
         throw new Error(response.data.message || 'Failed to retrieve fuel data');
@@ -747,29 +734,30 @@ const FuelDashboard = () => {
     setSuccessMessage('');
 
     try {
-      const response = await axios.get('http://localhost:8080/api/data/json/flight', axiosConfig);
+      const response = await axios.get('http://localhost:8082/api/data/json/flight', axiosConfig);
+      console.log('Flight data response:', response.data);
 
       if (response.data.success) {
         const fileData = response.data.data;
         const processedData = transformData(fileData, FLIGHT_COLUMNS);
-        const existingIdentifiers = flightData.map((item) => item['Flight ID']);
+        const existingIdentifiers = flightData.map((item) => item['Flight ID']).filter(id => id);
         const newIdentifiers = processedData
           .filter((item) => !existingIdentifiers.includes(item['Flight ID']))
-          .map((item) => item['Flight ID']);
+          .map((item) => item['Flight ID'])
+          .filter(id => id);
         setNewRecords((prev) => ({
           ...prev,
           flight: [...new Set([...prev.flight, ...newIdentifiers])],
         }));
         setFlightData(processedData);
         setSuccessMessage('Flight data loaded successfully');
-
         setTimeout(() => setSuccessMessage(''), 3000);
 
         setActiveModal({
           title: 'Flight Data',
           content: 'Displaying flight details.',
           showTable: true,
-          processedData: processedData,
+          processedData,
           COLUMNS: FLIGHT_COLUMNS,
           missingField: dataType === 'flight' ? fieldName : null,
           missingValue: dataType === 'flight' ? missingValue : null,
@@ -783,7 +771,8 @@ const FuelDashboard = () => {
           dataType: 'flight',
           fuelData,
           flightData,
-          onShowLinkedData: handleShowLinkedData,
+          onShowLinkedData: handleShowLinkedData, // Pass the function here
+          isAuthorized,
         });
       } else {
         throw new Error(response.data.message || 'Failed to retrieve flight data');
@@ -809,28 +798,22 @@ const FuelDashboard = () => {
     }
 
     try {
-      const response = await axios.get('http://localhost:8080/api/data/json/merged', axiosConfig);
+      const response = await axios.get('http://localhost:8082/api/edit/json/merged', axiosConfig);
+      console.log('Merged data response:', response.data);
 
       if (response.data.success) {
         const fileData = response.data.data;
         const processedData = transformData(fileData, MERGED_COLUMNS);
-        const existingIdentifiers = mergedData.map((item) => item['Flight Number']);
+        const existingIdentifiers = mergedData.map((item) => item['Flight Number']).filter(id => id);
         const newIdentifiers = processedData
           .filter((item) => !existingIdentifiers.includes(item['Flight Number']))
-          .map((item) => item['Flight Number']);
+          .map((item) => item['Flight Number'])
+          .filter(id => id);
         setNewRecords((prev) => ({
           ...prev,
           merged: [...new Set([...prev.merged, ...newIdentifiers])],
         }));
-        setMergedData((prev) => {
-          const combinedData = [...prev];
-          processedData.forEach((newItem) => {
-            if (!existingIdentifiers.includes(newItem['Flight Number'])) {
-              combinedData.push(newItem);
-            }
-          });
-          return combinedData;
-        });
+        setMergedData(processedData);
         if (!silent) {
           setSuccessMessage('Carbon footprint analysis loaded successfully');
           setTimeout(() => setSuccessMessage(''), 3000);
@@ -842,6 +825,12 @@ const FuelDashboard = () => {
       console.error('Error loading merged data:', err);
       setError('Error loading merged data: ' + (err.response?.data?.message || err.message));
       setTimeout(() => setError(''), 5000);
+      if (!silent) {
+        setActiveModal({
+          title: 'Error',
+          content: 'Failed to load merged data: ' + (err.response?.data?.message || err.message),
+        });
+      }
     } finally {
       setLoading(false);
     }
@@ -880,7 +869,8 @@ const FuelDashboard = () => {
       dataType: 'merged',
       fuelData,
       flightData,
-      onShowLinkedData: handleShowLinkedData,
+      onShowLinkedData: handleShowLinkedData, // Pass the function here
+      isAuthorized,
     });
   };
 
@@ -898,57 +888,61 @@ const FuelDashboard = () => {
       }
 
       const response = await axios.put(
-        `http://localhost:8080/api/edit/${type}`,
+        `http://localhost:8082/api/edit/${type}`,
         updatedData,
         {
           ...axiosConfig,
           params: {
             flightNumber: identifier,
-            dateOfFlight: dateOfFlight,
+            dateOfFlight,
           },
         }
       );
+      console.log('Update response:', response.data);
 
       if (response.data.success) {
         setSuccessMessage('Row updated successfully');
         setTimeout(() => setSuccessMessage(''), 3000);
 
-        setNewRecords((prev) => ({
-          ...prev,
-          [type]: [...new Set([...prev[type], identifier])],
-        }));
-
         if (type === 'fuel') {
           setFuelData(updatedProcessedData);
-          setActiveModal((prev) => ({
+          setActiveModal((prev) => prev ? ({
             ...prev,
             processedData: updatedProcessedData,
             newRecords: newRecords.fuel,
-            fuelData,
+            fuelData: updatedProcessedData,
             flightData,
-            onShowLinkedData: handleShowLinkedData,
-          }));
+            onShowLinkedData: handleShowLinkedData, // Pass the function here
+            isAuthorized,
+          }) : null);
         } else if (type === 'flight') {
           setFlightData(updatedProcessedData);
-          setActiveModal((prev) => ({
+          setActiveModal((prev) => prev ? ({
             ...prev,
             processedData: updatedProcessedData,
             newRecords: newRecords.flight,
             fuelData,
-            flightData,
-            onShowLinkedData: handleShowLinkedData,
-          }));
+            flightData: updatedProcessedData,
+            onShowLinkedData: handleShowLinkedData, // Pass the function here
+            isAuthorized,
+          }) : null);
         } else if (type === 'merged') {
           setMergedData(updatedProcessedData);
-          setActiveModal((prev) => ({
+          setActiveModal((prev) => prev ? ({
             ...prev,
             processedData: updatedProcessedData,
             newRecords: newRecords.merged,
             fuelData,
             flightData,
-            onShowLinkedData: handleShowLinkedData,
-          }));
+            onShowLinkedData: handleShowLinkedData, // Pass the function here
+            isAuthorized,
+          }) : null);
         }
+
+        setNewRecords((prev) => ({
+          ...prev,
+          [type]: [...new Set([...prev[type], identifier])].filter(id => id),
+        }));
       } else {
         throw new Error(response.data.message || 'Failed to update row');
       }
@@ -966,34 +960,35 @@ const FuelDashboard = () => {
     setError(null);
 
     try {
-      console.log(`Initiating data transfer for type: ${type}`);
+      console.log(`Initiating data transfer for type: ${type}`, records);
       const response = await axios.post(
-        'http://localhost:8080/api/transfer/extract-and-transfer-new-data',
+        'http://localhost:8082/api/transfer/extract-and-transfer-new-data',
         {
           dataType: type,
-          records: records,
+          records,
         },
         axiosConfig
       );
-
-      console.log('API response:', response.data);
+      console.log('Transfer response:', response.data);
 
       if (response.data.success) {
         setSuccessMessage(
-          `Données ${type} transférées avec succès ! ${response.data.count} records`
+          `Données ${type} transférées avec succès ! ${response.data.count || records.length} records`
         );
         setIsDataValidated(true);
 
-        setFuelData(type === 'fuel' ? records : fuelData);
-        setFlightData(type === 'flight' ? records : flightData);
-        setNewRecords((prev) => ({ ...prev, [type]: [] }));
-
         if (type === 'fuel') {
+          setFuelData(records);
           navigate('/fuel-data');
         } else if (type === 'flight') {
+          setFlightData(records);
           navigate('/flight-list');
+        } else if (type === 'merged') {
+          setMergedData(records);
         }
 
+        setNewRecords((prev) => ({ ...prev, [type]: [] }));
+        setActiveModal(null);
         setTimeout(() => setSuccessMessage(''), 5000);
       } else {
         throw new Error(response.data.message || `Échec du transfert des données ${type}`);
@@ -1001,8 +996,7 @@ const FuelDashboard = () => {
     } catch (err) {
       console.error('Erreur lors de la validation :', err);
       setError(
-        err.response?.data?.message ||
-          `Échec de la validation des données ${type} : ${err.message}`
+        `Échec de la validation des données ${type} : ${err.response?.data?.message || err.message}`
       );
       setTimeout(() => setError(''), 5000);
     } finally {
@@ -1013,15 +1007,15 @@ const FuelDashboard = () => {
   const handleRejectData = async (type) => {
     setLoading(true);
     setError(null);
-  
+
     try {
       const token = localStorage.getItem('token');
       const decoded = jwtDecode(token);
-      console.log("🧾 Token décodé :", decoded); 
+      console.log('🧾 Token décodé :', decoded);
       const userId = decoded?.userId || decoded?.id || decoded?._id;
-  
+
       const response = await axios.post(
-        'http://localhost:8080/api/notifications/send',
+        'http://localhost:8082/api/notifications/send',
         {
           userId,
           type: 'importation_data_refusée',
@@ -1030,17 +1024,17 @@ const FuelDashboard = () => {
         },
         axiosConfig
       );
-  
+      console.log('Reject notification response:', response.data);
+
       if (response.data.success) {
         setSuccessMessage(`${type.charAt(0).toUpperCase() + type.slice(1)} data rejected and notification sent`);
+        setTimeout(() => {
+          setSuccessMessage('');
+          setActiveModal(null);
+        }, 2000);
       } else {
         throw new Error(response.data.message || 'Failed to send rejection notification');
       }
-  
-      setTimeout(() => {
-        setSuccessMessage('');
-        setActiveModal(null);
-      }, 2000);
     } catch (err) {
       console.error('Error sending rejection notification:', err);
       setError('Error sending rejection notification: ' + (err.response?.data?.message || err.message));
@@ -1057,8 +1051,7 @@ const FuelDashboard = () => {
         <>
           <i className="fas fa-gas-pump"></i>
           <span>
-            <strong>Voir Données Carburant :</strong> Explorez les détails de la
-            consommation de carburant.
+            <strong>Voir Données Carburant :</strong> Explorez les détails de la consommation de carburant.
           </span>
         </>
       ),
@@ -1070,8 +1063,7 @@ const FuelDashboard = () => {
         <>
           <i className="fas fa-plane"></i>
           <span>
-            <strong>Voir Données Vol :</strong> Accédez aux enregistrements des
-            opérations de vol.
+            <strong>Voir Données Vol :</strong> Accédez aux enregistrements des opérations de vol.
           </span>
         </>
       ),
@@ -1083,8 +1075,7 @@ const FuelDashboard = () => {
         <>
           <i className="fas fa-leaf"></i>
           <span>
-            <strong>Voir Données Fusionnées :</strong> Analysez les données
-            combinées pour des insights sur l'empreinte carbone.
+            <strong>Voir Données Fusionnées :</strong> Analysez les données combinées pour des insights sur l Ascendant l'empreinte carbone.
           </span>
         </>
       ),
@@ -1111,8 +1102,7 @@ const FuelDashboard = () => {
           <header className="carbon-header">
             <h1>Suivi de l'Émission de Carbone & Consommation Fuel</h1>
             <p>
-              Suivez les émissions de l'aviation et optimisez la consommation de carburant
-              pour un avenir durable.
+              Suivez les émissions de l'aviation et optimisez la consommation de carburant pour un avenir durable.
             </p>
           </header>
 
@@ -1147,9 +1137,7 @@ const FuelDashboard = () => {
             <div className="welcome-section">
               <h2>Surveillez l'Impact de l'Aviation</h2>
               <p>
-                Bienvenue sur votre plateforme de suivi carbone. Cliquez sur les options
-                ci-dessous pour analyser la consommation de carburant, les détails des vols
-                et les données combinées pour une vision complète des émissions carbone.
+                Bienvenue sur votre plateforme de suivi carbone. Cliquez sur les options ci-dessous pour analyser la consommation de carburant, les détails des vols et les données combinées pour une vision complète des émissions carbone.
               </p>
               <div className="row justify-content-center mt-4">
                 {actionItems.map((item) => (
@@ -1196,12 +1184,12 @@ const FuelDashboard = () => {
           onCompleteData={activeModal.onCompleteData}
           onDownload={activeModal.onDownload}
           showAcceptButton={activeModal.showAcceptButton}
-          newRecords={activeModal.newRecords}
+          newRecords={activeModal.newRecords || []}
           dataType={activeModal.dataType}
           isAuthorized={isAuthorized}
           fuelData={fuelData}
           flightData={flightData}
-          onShowLinkedData={handleShowLinkedData}
+          onShowLinkedData={handleShowLinkedData} // Pass the function here
         />
       )}
     </div>

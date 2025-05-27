@@ -8,7 +8,7 @@ const router = express.Router();
 
 // Chemins des fichiers
 const FUEL_DATA_PATH = 'C:/Users/lenovo/Desktop/PFE/datax/data/all_fuel_data.xlsx';
-const MERGED_DATA_PATH = 'C:/Users/lenovo/Desktop/PFE/megred_data.xlsx';
+const MERGED_DATA_PATH = 'C:/Users/lenovo/Desktop/PFE/output/merged_data.xlsx/';
 const FLIGHT_DATA_PATH = 'C:/Users/lenovo/Desktop/PFE/sample_data/dataRaportProcessed.xlsx';
 
 // Helper pour lire les fichiers Excel

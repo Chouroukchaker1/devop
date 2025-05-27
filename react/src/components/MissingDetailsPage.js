@@ -12,7 +12,7 @@ const MissingFuelPage = () => {
   useEffect(() => {
     const fetchMissingFuelData = async () => {
       try {
-        const res = await axios.get('http://localhost:8080/api/missing-data/missing-fuel');
+        const res = await axios.get('http://localhost:8082/api/missing-data/missing-fuel');
         if (res.data.success) {
           setMissingRows(res.data.rows);
         } else {

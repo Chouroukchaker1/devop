@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: process.env.REACT_APP_API_URL || 'http://localhost:8080/api'
+  baseURL: process.env.REACT_APP_API_URL || 'http://localhost:8082/api'
 });
 
 // Ajoute le token à chaque requête si présent

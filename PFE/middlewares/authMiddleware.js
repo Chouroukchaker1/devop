@@ -6,6 +6,7 @@ const authMiddleware = async (req, res, next) => {
   try {
     const token = req.header('Authorization')?.replace('Bearer ', '');
     if (!token) return res.status(401).json({ message: 'Aucun token fourni' });
+
     console.log("🔐 Token reçu :", token);
 
     const decoded = jwt.verify(token, jwtConfig.secret);
@@ -18,8 +19,13 @@ const authMiddleware = async (req, res, next) => {
     next();
   } catch (error) {
     console.error("❌ Erreur de JWT :", error); 
+
+    if (error.name === 'TokenExpiredError') {
+      return res.status(401).json({ message: 'Token expiré. Veuillez vous reconnecter.' });
+    }
+
     res.status(401).json({ message: 'Authentification invalide' });
   }
 };
 
-module.exports = { authMiddleware }; 
+module.exports = { authMiddleware };

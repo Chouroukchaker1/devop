@@ -252,7 +252,7 @@ const FlightDataTransfer = () => {
       });
 
       const response = await axios.post(
-        'http://localhost:8080/api/transfer/flight',
+        'http://localhost:8082/api/transfer/flight',
         formattedData,
         {
           headers: {

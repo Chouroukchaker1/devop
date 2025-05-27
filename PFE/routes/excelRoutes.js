@@ -22,7 +22,7 @@ router.get('/download/all_fuel_data', (req, res) => {
 
 // Route pour télécharger le fichier merged_data.xlsx
 router.get('/download/megred-data', (req, res) => {
-  const filePath = 'C:/Users/lenovo/Desktop/PFE/megred_data.xlsx'; // Spécifiez le chemin du fichier
+  const filePath = 'C:/Users/lenovo/Desktop/PFE/output/merged_data.xlsx'; // Spécifiez le chemin du fichier
   if (fs.existsSync(filePath)) {
     res.download(filePath, 'megred_data.xlsx', (err) => {
       if (err) {

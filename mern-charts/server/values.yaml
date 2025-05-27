@@ -1,0 +1,15 @@
+replicaCount : 3
+image :
+repository : [ username ]/ mern - server
+tag : latest
+pullPolicy : IfNotPresent
+service :
+type : ClusterIP
+port : 5000
+env :
+- name : MONGO_URI
+value : mongodb :// mongodb :27017/ mern - app
+- name : PORT
+value : "5000"
+ingress :
+enabled : false

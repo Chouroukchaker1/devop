@@ -23,37 +23,63 @@ def is_valid_excel_file(file_path):
 def normalize_date_format(date_str):
     """Convertit une date en chaîne au format JJ/MM/AAAA pour assurer une comparaison correcte."""
     try:
-        if pd.isna(date_str):
+        if pd.isna(date_str) or not str(date_str).strip():
             return ""
         date_str = str(date_str).strip()
-        if not date_str:
-            return ""
         # Formats de date possibles
         for fmt in ['%Y-%m-%d', '%d/%m/%Y', '%Y-%m-%d %H:%M:%S', '%d/%m/%Y %H:%M:%S']:
             try:
-                return pd.to_datetime(date_str, format=fmt).strftime('%d/%m/%Y')
-            except ValueError:
+                return pd.to_datetime(date_str, format=fmt, errors='coerce').strftime('%d/%m/%Y')
+            except (ValueError, TypeError):
                 continue
-        # Si la date est un format Excel (nombre de jours depuis 1899-12-30)
+        # Si la date est un nombre Excel
         try:
             return pd.to_datetime(float(date_str), unit='D', origin='1899-12-30').strftime('%d/%m/%Y')
-        except ValueError:
+        except (ValueError, TypeError):
             pass
-        print(f"Erreur de conversion de date : {date_str}")
-        return date_str
+        return date_str  # Retourne la chaîne telle quelle si non convertible
     except Exception as e:
         print(f"Erreur de conversion de date : {date_str}, {e}")
         return date_str
 
+def normalize_time_format(time_str):
+    """Extrait l'heure au format HH:MM:SS à partir d'une chaîne de temps ou datetime."""
+    try:
+        if pd.isna(time_str) or not str(time_str).strip():
+            return ""
+        time_str = str(time_str).strip()
+        # Formats de temps possibles
+        for fmt in ['%H:%M:%S', '%Y-%m-%d %H:%M:%S', '%d/%m/%Y %H:%M:%S']:
+            try:
+                return pd.to_datetime(time_str, format=fmt, errors='coerce').strftime('%H:%M:%S')
+            except (ValueError, TypeError):
+                continue
+        return time_str  # Retourne la chaîne telle quelle si non convertible
+    except Exception as e:
+        print(f"Erreur de conversion de temps : {time_str}, {e}")
+        return time_str
+
 def clean_flight_number(flight_id):
-    """Extrait les chiffres d'un identifiant de vol pour la normalisation."""
+    """Normalise l'identifiant de vol en préservant les zéros initiaux."""
     try:
         if pd.isna(flight_id):
             return ""
-        return ''.join(filter(str.isdigit, str(flight_id)))
+        return str(flight_id).strip()  # Conserver la chaîne telle quelle
     except Exception as e:
         print(f"Erreur lors du nettoyage de Flight Number : {flight_id}, {e}")
         return str(flight_id)
+
+def check_data_completeness(row, columns_to_compare):
+    """Vérifie si les données des colonnes spécifiées sont identiques entre fuel et flight."""
+    for col in columns_to_compare:
+        flight_col = f"{col}_flight"
+        fuel_col = f"{col}_fuel"
+        if flight_col in row.index and fuel_col in row.index:
+            if pd.isna(row[flight_col]) and pd.isna(row[fuel_col]):
+                continue
+            if str(row[flight_col]).strip() != str(row[fuel_col]).strip():
+                return False
+    return True
 
 def merge_fuel_and_flight_data(fuel_data_path, flight_data_path, output_file):
     try:
@@ -90,13 +116,10 @@ def merge_fuel_and_flight_data(fuel_data_path, flight_data_path, output_file):
         max_retries = 5
         retry_delay = 2  # secondes
 
-        fuel_df = None
-        flight_df = None
-
         # Charger fuel_data_path
         for attempt in range(max_retries):
             try:
-                fuel_df = pd.read_excel(fuel_data_path, engine='openpyxl')
+                fuel_df = pd.read_excel(fuel_data_path, engine='openpyxl', dtype={'Flight Number': str, 'Date of Flight': str, 'Time of Departure': str})
                 print(f"DEBUG: Fichier {fuel_data_path} lu avec succès.")
                 break
             except Exception as e:
@@ -111,7 +134,7 @@ def merge_fuel_and_flight_data(fuel_data_path, flight_data_path, output_file):
         # Charger flight_data_path
         for attempt in range(max_retries):
             try:
-                flight_df = pd.read_excel(flight_data_path, engine='openpyxl')
+                flight_df = pd.read_excel(flight_data_path, engine='openpyxl', dtype={'Flight ID': str, 'Date of operation (UTC)': str, 'Departure Time/ Block-off time (UTC)': str})
                 print(f"DEBUG: Fichier {flight_data_path} lu avec succès.")
                 break
             except Exception as e:
@@ -145,7 +168,9 @@ def merge_fuel_and_flight_data(fuel_data_path, flight_data_path, output_file):
                 df['Flight Number'] = df['Flight Number'].apply(clean_flight_number).astype(str)
             if 'Date of Flight' in df.columns:
                 df['Date of Flight'] = df['Date of Flight'].apply(normalize_date_format)
-            for col in ['Time of Departure', 'ArrivalAirport', 'DepartureAirport']:
+            if 'Time of Departure' in df.columns:
+                df['Time of Departure'] = df['Time of Departure'].apply(normalize_time_format)
+            for col in ['ArrivalAirport', 'DepartureAirport']:
                 if col in df.columns:
                     df[col] = df[col].astype(str).fillna('')
 
@@ -170,6 +195,10 @@ def merge_fuel_and_flight_data(fuel_data_path, flight_data_path, output_file):
             suffixes=('_flight', '_fuel')
         )
 
+        # Vérifier la complétude des données
+        columns_to_compare = ['Flight Number', 'Date of Flight', 'Time of Departure', 'ArrivalAirport', 'DepartureAirport']
+        merged_df['Data_Complete'] = merged_df.apply(lambda row: check_data_completeness(row, columns_to_compare), axis=1)
+
         # Gérer les colonnes dupliquées
         for col in ['DepartureAirport', 'ArrivalAirport', 'Time of Departure']:
             flight_col = f"{col}_flight"
@@ -182,9 +211,6 @@ def merge_fuel_and_flight_data(fuel_data_path, flight_data_path, output_file):
             elif fuel_col in merged_df.columns:
                 merged_df.rename(columns={fuel_col: col}, inplace=True)
 
-        # Ajouter un indicateur d'intégrité des données
-        merged_df['CompleteData'] = ~merged_df.isnull().any(axis=1)
-
         # Définir l'ordre des colonnes souhaité
         ordered_columns = [
             'Date of Flight', 'AC registration', 'Flight Number', 'ICAO Call sign', 'AC Type',
@@ -194,7 +220,8 @@ def merge_fuel_and_flight_data(fuel_data_path, flight_data_path, output_file):
             'Additional Fuel (tonnes)', 'Discretionary Fuel', 'Extra Fuel',
             'Fuel for other safety rules (tonnes)', 'Reason',
             'Economic tankering category in the flight plan', 'Block Off (tonnes)',
-            'Block On (tonnes)', 'BlockFuel', 'Alternate Arrival Airport', 'FOB', 'CompleteData'
+            'Block On (tonnes)', 'BlockFuel', 'Alternate Arrival Airport', 'FOB',
+            'Air Distance (NM)', 'Carbon Emission (kg)', 'Data_Complete'
         ]
 
         # Créer la liste des colonnes finales
@@ -209,15 +236,14 @@ def merge_fuel_and_flight_data(fuel_data_path, flight_data_path, output_file):
             'TaxiFuel', 'TripFuel', 'Uplift Volume (Litres)', 'Uplift density', 'ContingencyFuel',
             'AlternateFuel', 'FinalReserve', 'Additional Fuel (tonnes)', 'Discretionary Fuel',
             'Extra Fuel', 'Fuel for other safety rules (tonnes)', 'Block Off (tonnes)',
-            'Block On (tonnes)', 'BlockFuel', 'FOB'
+            'Block On (tonnes)', 'BlockFuel', 'FOB', 'Air Distance (NM)', 'Carbon Emission (kg)'
         ]
         for col in numeric_columns:
             if col in merged_df.columns:
                 merged_df[col] = pd.to_numeric(merged_df[col], errors='coerce').round(3)
 
-        # Supprimer les lignes où toutes les colonnes (sauf CompleteData) sont NaN
-        data_columns = [col for col in merged_df.columns if col != 'CompleteData']
-        merged_df = merged_df.dropna(how='all', subset=data_columns)
+        # Supprimer les lignes où toutes les colonnes sont NaN
+        merged_df = merged_df.dropna(how='all')
 
         # Créer le répertoire de sortie si nécessaire
         os.makedirs(os.path.dirname(output_file), exist_ok=True)
@@ -230,8 +256,8 @@ def merge_fuel_and_flight_data(fuel_data_path, flight_data_path, output_file):
         print(f"📁 Fichier de sortie créé : {output_file}")
         print("\n📊 Statistiques de fusion :")
         print(f"➡️ Nombre total d'enregistrements : {len(merged_df)}")
-        print(f"✔️ Enregistrements complets : {merged_df['CompleteData'].sum()}")
-        print(f"⚠️ Enregistrements incomplets : {len(merged_df) - merged_df['CompleteData'].sum()}")
+        print(f"➡️ Enregistrements complets : {merged_df['Data_Complete'].sum()}")
+        print(f"➡️ Enregistrements incomplets : {len(merged_df) - merged_df['Data_Complete'].sum()}")
 
         print("\n🔍 Aperçu des données fusionnées :")
         print(merged_df.head())
@@ -241,8 +267,8 @@ def merge_fuel_and_flight_data(fuel_data_path, flight_data_path, output_file):
             "message": f"Fusion terminée avec succès : {output_file}",
             "stats": {
                 "total_records": len(merged_df),
-                "complete_records": int(merged_df['CompleteData'].sum()),
-                "incomplete_records": len(merged_df) - merged_df['CompleteData'].sum()
+                "complete_records": int(merged_df['Data_Complete'].sum()),
+                "incomplete_records": len(merged_df) - int(merged_df['Data_Complete'].sum())
             }
         })
 
@@ -257,7 +283,7 @@ if __name__ == "__main__":
     # Chemins des fichiers
     fuel_data_path = fuel_data_path = '/app/datax/data/all_fuel_data.xlsx'
     flight_data_path = '/app/sample_data/dataRaportProcessed.xlsx'
-    output_file = '/app/merged_data.xlsx'
+    output_file = '/app/output/merged_data.xlsx'
 
     # Exécuter la fusion
     result = merge_fuel_and_flight_data(fuel_data_path, flight_data_path, output_file)

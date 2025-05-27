@@ -4,164 +4,6 @@ import { FaEdit, FaTrash, FaPlus, FaSyncAlt, FaPlane } from 'react-icons/fa';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-// Custom CSS for FlightList (unchanged)
-const customStyles = `
-  .flight-management-container {
-    padding: 1.5rem;
-    background-color: #f8f9fa;
-    min-height: 100vh;
-  }
-  
-  .page-title {
-    color: #2c3e50;
-    margin-bottom: 1.5rem;
-    font-weight: 600;
-    border-bottom: 2px solid #3498db;
-    padding-bottom: 0.5rem;
-    display: flex;
-    align-items: center;
-  }
-  
-  .page-title-icon {
-    margin-right: 0.75rem;
-    color: #3498db;
-  }
-  
-  .flight-table-card {
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    margin-bottom: 2rem;
-    overflow: hidden;
-  }
-  
-  .flights-table {
-    margin-bottom: 0;
-  }
-  
-  .flights-table thead {
-    background-color: #3498db;
-    color: white;
-  }
-  
-  .flights-table thead th {
-    font-weight: 500;
-    border-bottom: none;
-    text-align: center;
-    vertical-align: middle;
-    padding: 0.75rem;
-  }
-  
-  .flights-table tbody tr:hover {
-    background-color: rgba(52, 152, 219, 0.05);
-  }
-  
-  .flights-table td {
-    vertical-align: middle;
-    font-size: 0.9rem;
-    text-align: center;
-  }
-  
-  .actions-cell {
-    white-space: nowrap;
-    width: 120px;
-  }
-  
-  .action-btn {
-    padding: 0.25rem 0.5rem;
-    font-size: 1rem;
-  }
-  
-  .actions-container {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-    flex-wrap: wrap;
-  }
-  
-  .add-flight-btn {
-    background-color: #2ecc71;
-    border-color: #2ecc71;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  
-  .add-flight-btn:hover {
-    background-color: #27ae60;
-    border-color: #27ae60;
-  }
-  
-  .refresh-btn {
-    background-color: #3498db;
-    border-color: #3498db;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  
-  .refresh-btn:hover {
-    background-color: #2980b9;
-    border-color: #2980b9;
-  }
-  
-  .success-alert {
-    animation: fadeOut 5s forwards;
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1050;
-    min-width: 300px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    border-left: 4px solid #2ecc71;
-  }
-  
-  .error-alert {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1050;
-    min-width: 300px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    border-left: 4px solid #e74c3c;
-  }
-  
-  .no-data-message {
-    text-align: center;
-    padding: 2rem;
-    color: #6c757d;
-  }
-  
-  @keyframes fadeOut {
-    0% { opacity: 1; }
-    70% { opacity: 1; }
-    100% { opacity: 0; visibility: hidden; }
-  }
-  
-  .modal-header {
-    background-color: #3498db;
-    color: white;
-    border-bottom: none;
-  }
-  
-  .modal-title {
-    font-weight: 600;
-  }
-  
-  .btn-close {
-    filter: brightness(0) invert(1);
-  }
-  
-  .flight-id-cell {
-    font-weight: 600;
-  }
-  
-  .form-label {
-    font-weight: 500;
-    color: #2c3e50;
-  }
-`;
-
 const FlightList = () => {
   const [flights, setFlights] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -192,6 +34,10 @@ const FlightList = () => {
   const token = localStorage.getItem('token');
   const userRole = localStorage.getItem('userRole');
 
+  // Debug userRole to ensure it's correctly retrieved
+  console.log('User Role:', userRole);
+  console.log('Token:', token ? 'Present' : 'Missing');
+
   const axiosConfig = {
     headers: {
       'Content-Type': 'application/json',
@@ -206,7 +52,7 @@ const FlightList = () => {
   const fetchFlights = async () => {
     setLoading(true);
     try {
-      const response = await axios.get('http://localhost:8080/api/flightData', axiosConfig);
+      const response = await axios.get('http://localhost:8082/api/flightData', axiosConfig);
       if (response.data.success) {
         setFlights(response.data.data);
       } else {
@@ -214,6 +60,7 @@ const FlightList = () => {
       }
     } catch (err) {
       setError('Erreur serveur: ' + (err.response?.data?.message || err.message));
+      console.error('Fetch Flights Error:', err.response?.data || err);
     } finally {
       setLoading(false);
     }
@@ -276,12 +123,17 @@ const FlightList = () => {
     e.preventDefault();
     setFormError('');
 
-    // Ensure all required fields are filled and format data correctly
+    // Validate ICAO Call Sign
+    if (formData.icaoCallSign.toUpperCase().trim().length !== 7) {
+      setFormError('ICAO Call Sign doit contenir exactement 7 caractères');
+      return;
+    }
+
     const numericFormData = {
       dateOfOperationUTC: formData.dateOfOperationUTC,
       acRegistration: formData.acRegistration,
       flightID: formData.flightID,
-      icaoCallSign: formData.icaoCallSign,
+      icaoCallSign: formData.icaoCallSign.toUpperCase().trim(),
       acType: formData.acType,
       flightType: formData.flightType,
       departingAirportICAOCode: formData.departingAirportICAOCode,
@@ -298,14 +150,14 @@ const FlightList = () => {
       let response;
       if (currentFlight) {
         response = await axios.put(
-          `http://localhost:8080/api/flightData/${currentFlight._id}`,
-          [numericFormData], // Keep array for consistency with backend validation
+          `http://localhost:8082/api/flightData/${currentFlight._id}`,
+          [numericFormData],
           axiosConfig
         );
       } else {
         response = await axios.post(
-          'http://localhost:8080/api/flightData',
-          [numericFormData], // Keep array for consistency with backend validation
+          'http://localhost:8082/api/flightData',
+          [numericFormData],
           axiosConfig
         );
       }
@@ -319,9 +171,9 @@ const FlightList = () => {
         setFormError(response.data.message || 'Une erreur est survenue');
       }
     } catch (err) {
-      // Provide detailed error message from backend if available
       const errorMessage = err.response?.data?.message || err.message;
       setFormError(`Erreur: ${errorMessage}`);
+      console.error('Submit Error:', err.response?.data || err);
     }
   };
 
@@ -335,7 +187,7 @@ const FlightList = () => {
 
     try {
       const response = await axios.delete(
-        `http://localhost:8080/api/flightData/${flightToDelete._id}`,
+        `http://localhost:8082/api/flightData/${flightToDelete._id}`,
         axiosConfig
       );
 
@@ -349,12 +201,146 @@ const FlightList = () => {
       }
     } catch (err) {
       setError('Erreur: ' + (err.response?.data?.message || err.message));
+      console.error('Delete Error:', err.response?.data || err);
     }
   };
 
+  const allowedRoles = ['admin', 'fueldatamaster', 'fueluser'];
+
   return (
     <>
-      <style>{customStyles}</style>
+      <style>{`
+        .flight-management-container {
+          padding: 1.5rem;
+          background-color: #f8f9fa;
+          min-height: 100vh;
+        }
+        .page-title {
+          color: #2c3e50;
+          margin-bottom: 1.5rem;
+          font-weight: 600;
+          border-bottom: 2px solid #3498db;
+          padding-bottom: 0.5rem;
+          display: flex;
+          align-items: center;
+        }
+        .page-title-icon {
+          margin-right: 0.75rem;
+          color: #3498db;
+        }
+        .flight-table-card {
+          border: none;
+          border-radius: 10px;
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+          margin-bottom: 2rem;
+          overflow: hidden;
+        }
+        .flights-table {
+          margin-bottom: 0;
+        }
+        .flights-table thead {
+          background-color: #3498db;
+          color: white;
+        }
+        .flights-table thead th {
+          font-weight: 500;
+          border-bottom: none;
+          text-align: center;
+          vertical-align: middle;
+          padding: 0.75rem;
+        }
+        .flights-table tbody tr:hover {
+          background-color: rgba(52, 152, 219, 0.05);
+        }
+        .flights-table td {
+          vertical-align: middle;
+          font-size: 0.9rem;
+          text-align: center;
+        }
+        .actions-cell {
+          white-space: nowrap;
+          width: 120px;
+        }
+        .action-btn {
+          padding: 0.25rem 0.5rem;
+          font-size: 1rem;
+        }
+        .actions-container {
+          display: flex;
+          gap: 1rem;
+          margin-bottom: 1.5rem;
+          flex-wrap: wrap;
+        }
+        .add-flight-btn {
+          background-color: #2ecc71;
+          border-color: #2ecc71;
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+        }
+        .add-flight-btn:hover {
+          background-color: #27ae60;
+          border-color: #27ae60;
+        }
+        .refresh-btn {
+          background-color: #3498db;
+          border-color: #3498db;
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+        }
+        .refresh-btn:hover {
+          background-color: #2980b9;
+          border-color: #2980b9;
+        }
+        .success-alert {
+          animation: fadeOut 5s forwards;
+          position: fixed;
+          top: 20px;
+          right: 20px;
+          z-index: 1050;
+          min-width: 300px;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+          border-left: 4px solid #2ecc71;
+        }
+        .error-alert {
+          position: fixed;
+          top: 20px;
+          right: 20px;
+          z-index: 1050;
+          min-width: 300px;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+          border-left: 4px solid #e74c3c;
+        }
+        .no-data-message {
+          text-align: center;
+          padding: 2rem;
+          color: #6c757d;
+        }
+        @keyframes fadeOut {
+          0% { opacity: 1; }
+          70% { opacity: 1; }
+          100% { opacity: 0; visibility: hidden; }
+        }
+        .modal-header {
+          background-color: #3498db;
+          color: white;
+          border-bottom: none;
+        }
+        .modal-title {
+          font-weight: 600;
+        }
+        .btn-close {
+          filter: brightness(0) invert(1);
+        }
+        .flight-id-cell {
+          font-weight: 600;
+        }
+        .form-label {
+          font-weight: 500;
+          color: #2c3e50;
+        }
+      `}</style>
 
       <div className="flight-management-container">
         <h1 className="page-title">
@@ -382,7 +368,7 @@ const FlightList = () => {
         )}
 
         <div className="actions-container">
-          {(userRole === 'admin' || userRole === 'responsablevol') && (
+          {allowedRoles.includes(userRole) && (
             <Button
               variant="primary"
               className="add-flight-btn"
@@ -453,26 +439,27 @@ const FlightList = () => {
                         <td>{flight.blockOnTonnes}</td>
                         <td>{flight.blockOffTonnes}</td>
                         <td className="actions-cell">
-                          <Button
-                            variant="outline-primary"
-                            size="sm"
-                            className="action-btn me-1"
-                            onClick={() => handleEditFlight(flight)}
-                            disabled={!(userRole === 'admin' || userRole === 'responsablevol')}
-                            title="Modifier"
-                          >
-                            <FaEdit />
-                          </Button>
-                          {userRole === 'admin' && (
-                            <Button
-                              variant="outline-danger"
-                              size="sm"
-                              className="action-btn"
-                              onClick={() => confirmDelete(flight)}
-                              title="Supprimer"
-                            >
-                              <FaTrash />
-                            </Button>
+                          {allowedRoles.includes(userRole) && (
+                            <>
+                              <Button
+                                variant="outline-primary"
+                                size="sm"
+                                className="action-btn me-1"
+                                onClick={() => handleEditFlight(flight)}
+                                title="Modifier"
+                              >
+                                <FaEdit />
+                              </Button>
+                              <Button
+                                variant="outline-danger"
+                                size="sm"
+                                className="action-btn"
+                                onClick={() => confirmDelete(flight)}
+                                title="Supprimer"
+                              >
+                                <FaTrash />
+                              </Button>
+                            </>
                           )}
                         </td>
                       </tr>

@@ -4,7 +4,7 @@ import { FaEdit, FaTrash, FaPlus, FaSyncAlt, FaPlane } from 'react-icons/fa';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-// Add custom CSS
+// Custom CSS (unchanged)
 const customStyles = `
   .fuel-management-container {
     padding: 1.5rem;
@@ -62,8 +62,8 @@ const customStyles = `
     font-size: 0.9rem;
     text-align: center;
     white-space: nowrap;
-    color: #000000; /* Black color for all values */
-    font-weight: 400; /* Uniform font weight (not bold) */
+    color: #000000;
+    font-weight: 400;
   }
   
   .actions-cell {
@@ -113,7 +113,7 @@ const customStyles = `
     animation: fadeOut 5s forwards;
     position: fixed;
     top: 20px;
-    right: 20px;
+    right: #20px;
     z-index: 1050;
     min-width: 300px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -138,7 +138,7 @@ const customStyles = `
   
   @keyframes fadeOut {
     0% { opacity: 1; }
-    70% { opacity: 1; } 
+    70% { opacity: 1; }
     100% { opacity: 0; visibility: hidden; }
   }
   
@@ -205,7 +205,9 @@ const FuelList = () => {
   const [fuelToDelete, setFuelToDelete] = useState(null);
 
   const token = localStorage.getItem('token');
-  const userRole = localStorage.getItem('userRole');
+  const rawUserRole = localStorage.getItem('userRole');
+  const userRole = rawUserRole ? rawUserRole.toLowerCase().trim() : null; // Normalize role
+  console.log('userRole:', userRole); // Debug: Verify userRole value
 
   const axiosConfig = {
     headers: {
@@ -214,6 +216,9 @@ const FuelList = () => {
     }
   };
 
+  // Define allowed roles for add, edit, and delete actions
+  const allowedRoles = ['admin', 'fueldatamaster', 'fueluser'];
+
   useEffect(() => {
     fetchFuelData();
   }, []);
@@ -221,7 +226,7 @@ const FuelList = () => {
   const fetchFuelData = async () => {
     setLoading(true);
     try {
-      const response = await axios.get('http://localhost:8080/api/feuldata', axiosConfig);
+      const response = await axios.get('http://localhost:8082/api/feuldata', axiosConfig);
       if (response.data.success) {
         // Normalize carbonEmission to handle case variations and missing values
         const normalizedData = response.data.data.map((item) => ({
@@ -308,7 +313,7 @@ const FuelList = () => {
       upliftVolume: fuel.upliftVolume?.toString() || '',
       upliftDensity: fuel.upliftDensity?.toString() || '',
       pilotId: fuel.pilotId || '',
-      carbonEmission: fuel.carbonEmission?.toString() || '' // Use normalized carbonEmission
+      carbonEmission: fuel.carbonEmission?.toString() || ''
     });
     setFormError('');
     setShowModal(true);
@@ -382,9 +387,7 @@ const FuelList = () => {
         discretionaryFuel: formData.discretionaryFuel ? parseFloat(formData.discretionaryFuel) : 0,
         extraFuel: formData.extraFuel ? parseFloat(formData.extraFuel) : 0,
         reason: formData.reason?.trim() || '',
-        economicTankeringCategory: formData.economicTankeringCategory
-
-?.trim() || '',
+        economicTankeringCategory: formData.economicTankeringCategory?.trim() || '',
         alternateFuel: formData.alternateFuel ? parseFloat(formData.alternateFuel) : 0,
         alternateArrivalAirport: formData.alternateArrivalAirport?.trim() || '',
         fob: formData.fob ? parseFloat(formData.fob) : 0,
@@ -399,13 +402,13 @@ const FuelList = () => {
       let response;
       if (currentFuel) {
         response = await axios.put(
-          `http://localhost:8080/api/feuldata/${currentFuel._id}`,
+          `http://localhost:8082/api/feuldata/${currentFuel._id}`,
           dataToSubmit,
           axiosConfig
         );
       } else {
         response = await axios.post(
-          'http://localhost:8080/api/feuldata',
+          'http://localhost:8082/api/feuldata',
           dataToSubmit,
           axiosConfig
         );
@@ -442,7 +445,7 @@ const FuelList = () => {
 
     try {
       const response = await axios.delete(
-        `http://localhost:8080/api/feuldata/${fuelToDelete._id}`,
+        `http://localhost:8082/api/feuldata/${fuelToDelete._id}`,
         axiosConfig
       );
 
@@ -461,7 +464,6 @@ const FuelList = () => {
 
   return (
     <>
-      {/* Inject custom CSS */}
       <style>{customStyles}</style>
       
       <div className="fuel-management-container">
@@ -490,7 +492,7 @@ const FuelList = () => {
         )}
 
         <div className="actions-container">
-          {(userRole === 'admin' || userRole === 'fueldatamaster' || userRole === 'fueluser') && (
+          {allowedRoles.includes(userRole) && (
             <Button
               variant="primary"
               className="add-fuel-btn"
@@ -571,19 +573,19 @@ const FuelList = () => {
                         <td>{fuel.alternateFuel}</td>
                         <td>{fuel.alternateArrivalAirport || ''}</td>
                         <td>{fuel.fob}</td>
-                        <td>{fuel.carbonEmission}</td> {/* Use normalized carbonEmission */}
+                        <td>{fuel.carbonEmission}</td>
                         <td className="actions-cell">
                           <Button
                             variant="outline-primary"
                             size="sm"
                             className="action-btn me-1"
                             onClick={() => handleEditFuel(fuel)}
-                            disabled={!(userRole === 'admin' || userRole === 'fueldatamaster' || userRole === 'fueluser')}
+                            disabled={!allowedRoles.includes(userRole)}
                             title="Edit"
                           >
                             <FaEdit />
                           </Button>
-                          {userRole === 'admin' && (
+                          {allowedRoles.includes(userRole) && (
                             <Button
                               variant="outline-danger"
                               size="sm"
@@ -604,7 +606,6 @@ const FuelList = () => {
           </Card.Body>
         </Card>
 
-        {/* Modal Form for Adding/Editing */}
         <Modal show={showModal} onHide={() => setShowModal(false)} size="xl">
           <Modal.Header closeButton>
             <Modal.Title>{currentFuel ? 'Edit Fuel Data' : 'Add Fuel Data'}</Modal.Title>
@@ -916,7 +917,6 @@ const FuelList = () => {
           </Modal.Body>
         </Modal>
 
-        {/* Delete Confirmation Modal */}
         <Modal show={showDeleteModal} onHide={() => setShowDeleteModal(false)}>
           <Modal.Header closeButton>
             <Modal.Title>Confirm Deletion</Modal.Title>

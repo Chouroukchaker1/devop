@@ -58,7 +58,7 @@ const SignUpPage = () => {
     if (profileImage) formData.append('profileImage', profileImage);
 
     try {
-      const response = await fetch("http://localhost:8080/api/auth/register", {
+      const response = await fetch("http://localhost:8082/api/auth/register", {
         method: "POST",
         headers: { "Accept": "application/json" },
         body: formData,

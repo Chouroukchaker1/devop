@@ -1,0 +1,19 @@
+replicaCount : 3
+image :
+repository : [ username ]/ mern - client
+tag : latest
+pullPolicy : IfNotPresent
+service :
+type : ClusterIP
+port : 3000
+env :
+- name : REACT_APP_SERVER_URL
+value : http :// server :5000
+ingress :
+enabled : true
+annotations : {}
+hosts :
+- host : mern - app . local
+paths :
+- path : /
+tls : []

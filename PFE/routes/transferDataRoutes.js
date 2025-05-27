@@ -19,7 +19,7 @@ const router = express.Router();
 // File paths (relative to project root)
 const FUEL_DATA_PATH = path.join(__dirname, '..', 'datax', 'data', 'all_fuel_data.xlsx');
 const FLIGHT_DATA_PATH = path.join(__dirname, '..', 'sample_data', 'dataRaportProcessed.xlsx');
-const MERGED_DATA_PATH = path.join(__dirname, '..', 'megred_data.xlsx');
+const MERGED_DATA_PATH = path.join(__dirname, '..','output','merged_data.xlsx');
 
 // Helper to read Excel file (with streaming for large files)
 const readExcelFile = async (filePath) => {
@@ -1081,7 +1081,7 @@ router.get('/download/all_fuel_data', authMiddleware, (req, res) => {
 router.get('/download/megred-data', authMiddleware, (req, res) => {
   const filePath = MERGED_DATA_PATH;
   if (fs.existsSync(filePath)) {
-    res.download(filePath, 'megred_data.xlsx', (err) => {
+    res.download(filePath, 'merged_data.xlsx', (err) => {
       if (err) {
         console.error('❌ Download error:', err.message);
         res.status(500).json({ success: false, message: 'Error downloading file.' });

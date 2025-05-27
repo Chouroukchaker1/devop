@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const { authMiddleware } = require('../middlewares/authMiddleware');
-const UserSettings = require('../models/UserSettings'); // Ajout de l'importation
+const UserSettings = require('../models/UserSettings');
 const {
   getSettings,
   updateNotifications,
@@ -30,7 +30,7 @@ router.patch('/', async (req, res) => {
     const updates = req.body;
     const scheduler = req.app.get('scheduler');
 
-    // Valider les données schedulerConfig si présentes
+    // Validate schedulerConfig if present
     if (updates.schedulerConfig) {
       const { enabled, hours, days, months, weekdays } = updates.schedulerConfig;
       if (enabled !== undefined && typeof enabled !== 'boolean') {
@@ -65,13 +65,34 @@ router.patch('/', async (req, res) => {
       }
     }
 
+    // Prepare update object for schedulerConfig
+    const updateFields = {};
+    if (updates.schedulerConfig) {
+      if (updates.schedulerConfig.enabled !== undefined) {
+        updateFields['schedulerConfig.enabled'] = updates.schedulerConfig.enabled;
+      }
+      if (updates.schedulerConfig.hours) {
+        updateFields['schedulerConfig.hours'] = updates.schedulerConfig.hours;
+      }
+      if (updates.schedulerConfig.days) {
+        updateFields['schedulerConfig.days'] = updates.schedulerConfig.days;
+      }
+      if (updates.schedulerConfig.months) {
+        updateFields['schedulerConfig.months'] = updates.schedulerConfig.months;
+      }
+      if (updates.schedulerConfig.weekdays) {
+        updateFields['schedulerConfig.weekdays'] = updates.schedulerConfig.weekdays;
+      }
+    }
+
+    // Update the settings
     const settings = await UserSettings.findOneAndUpdate(
       { userId: req.user._id },
-       { 'notifications.enabled': enable },
+      { $set: updateFields },
       { new: true, upsert: true }
     );
 
-    // Recharger dynamiquement les jobs après la mise à jour
+    // Reload scheduler configs dynamically if schedulerConfig is updated
     if (updates.schedulerConfig) {
       console.log('Rechargement des configurations du scheduler après mise à jour...');
       await scheduler.updateSchedulerConfigs();
@@ -87,10 +108,10 @@ router.patch('/', async (req, res) => {
     res.status(500).json({ success: false, message: 'Erreur serveur', error: error.message });
   }
 });
+
 const { getSettingsByUserId } = require('../controllers/userSettingsController');
 
 //router.get('/notifications/:userId', getSettingsByUserId); // pour AdminUsers
 router.get('/notifications/:userId', getAllowedNotificationTypes);
-
 
 module.exports = router;

@@ -20,7 +20,7 @@ class DataScheduler {
     this.dataFilePaths = {
       fuel_data: process.env.FUEL_DATA_PATH || path.join(__dirname, '..', 'datax', 'data', 'all_fuel_data.xlsx'),
       flight_data: process.env.FLIGHT_DATA_PATH || path.join(__dirname, '..', 'sample_data', 'dataRaportProcessed.xlsx'),
-      merged_data: process.env.MERGED_DATA_PATH || path.join(__dirname, '..', 'megred_data.xlsx')
+      merged_data: process.env.MERGED_DATA_PATH || path.join(__dirname, '..','output' ,'merged_data.xlsx')
     };
     this.pythonCommand = process.platform === 'win32' ? 'py' : 'python3';
     this.previousRecordCounts = {

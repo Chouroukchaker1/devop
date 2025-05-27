@@ -9,8 +9,7 @@ const generateVerificationCode = () => {
   return Math.floor(100000 + Math.random() * 900000).toString();
 };
 
- 
-// Dans la méthode register
+// Inscription
 exports.register = async (req, res) => {
   try {
     const { username, email, password, role } = req.body;
@@ -35,7 +34,6 @@ exports.register = async (req, res) => {
     
     await user.save({ validateBeforeSave: false });
 
-
     // Générer un token JWT
     const token = user.generateToken();
     res.status(201).json({ 
@@ -54,6 +52,7 @@ exports.register = async (req, res) => {
   }
 };
 
+// Connexion
 exports.login = async (req, res) => {
   try {
     const { username, password } = req.body;
@@ -73,8 +72,7 @@ exports.login = async (req, res) => {
     const verificationCode = generateVerificationCode();
     user.verificationCode = verificationCode;
     user.verificationCodeExpires = new Date(Date.now() + 10 * 60 * 1000); // 10 minutes
-     await user.save({ validateBeforeSave: false });
-
+    await user.save({ validateBeforeSave: false });
 
     // Envoyer le code par email
     await sendVerificationEmail(user.email, verificationCode);
@@ -89,6 +87,7 @@ exports.login = async (req, res) => {
   }
 };
 
+// Vérification du code
 exports.verifyCode = async (req, res) => {
   try {
     const { userId, code } = req.body;
@@ -113,7 +112,6 @@ exports.verifyCode = async (req, res) => {
     user.isEmailVerified = true;
     await user.save({ validateBeforeSave: false });
 
-
     // Générer le token JWT
     const token = user.generateToken();
     res.json({ 
@@ -126,17 +124,19 @@ exports.verifyCode = async (req, res) => {
   }
 };
 
+// Récupérer le profil
 exports.profile = async (req, res) => {
   res.json({ 
     user: {
       username: req.user.username,
       email: req.user.email,
       role: req.user.role,
-      profileImage: req.user.profileImage // Ajout de l'image dans la réponse
+      profileImage: req.user.profileImage
     }
   });
 };
 
+// Mettre à jour le profil
 exports.updateProfile = async (req, res) => {
   try {
     const user = await User.findById(req.user._id);
@@ -154,7 +154,6 @@ exports.updateProfile = async (req, res) => {
 
     await user.save({ validateBeforeSave: false });
 
-
     res.json({
       message: 'Profil mis à jour avec succès',
       user: {
@@ -169,6 +168,8 @@ exports.updateProfile = async (req, res) => {
     res.status(500).json({ message: 'Erreur lors de la mise à jour du profil', error: error.message });
   }
 };
+
+// Récupérer l'image de profil
 exports.getProfileImage = async (req, res) => {
   try {
     const user = await User.findById(req.user._id);
@@ -177,7 +178,7 @@ exports.getProfileImage = async (req, res) => {
     }
 
     // Construire l'URL complète
-    const imageUrl = `${req.protocol}://${req.get('host')}/uploads/${user.profileImage}`;
+    const imageUrl = `${req.protocol}://${req.get('host')}${user.profileImage}`;
     
     res.json({ 
       profileImage: imageUrl
@@ -189,6 +190,8 @@ exports.getProfileImage = async (req, res) => {
     });
   }
 };
+
+// Demande de réinitialisation de mot de passe
 exports.forgotPassword = async (req, res) => {
   try {
     const { email } = req.body;
@@ -204,7 +207,6 @@ exports.forgotPassword = async (req, res) => {
     user.resetPasswordExpires = new Date(Date.now() + 30 * 60 * 1000); // 30 minutes
     await user.save({ validateBeforeSave: false });
 
-    
     // Envoyer le code par email
     await sendPasswordResetEmail(user.email, resetCode);
     
@@ -220,6 +222,7 @@ exports.forgotPassword = async (req, res) => {
   }
 };
 
+// Vérification du code de réinitialisation
 exports.verifyResetCode = async (req, res) => {
   try {
     const { userId, code } = req.body;
@@ -257,6 +260,7 @@ exports.verifyResetCode = async (req, res) => {
   }
 };
 
+// Réinitialisation du mot de passe
 exports.resetPassword = async (req, res) => {
   try {
     const { userId, password, tempToken } = req.body;
@@ -284,7 +288,6 @@ exports.resetPassword = async (req, res) => {
     user.resetPasswordExpires = null;
     await user.save({ validateBeforeSave: false });
 
-    
     res.json({ message: 'Mot de passe réinitialisé avec succès' });
   } catch (error) {
     res.status(500).json({ 
@@ -293,7 +296,8 @@ exports.resetPassword = async (req, res) => {
     });
   }
 };
-// Ajouter une fonctionnalité pour gérer les consultants et fuelusers (admin)
+
+// Récupérer la liste des utilisateurs
 exports.getUsers = async (req, res) => {
   try {
     const requestingUser = req.user;
@@ -307,16 +311,13 @@ exports.getUsers = async (req, res) => {
       users = await User.find({ role: { $in: ['admin', 'consultant', 'fueluser'] } })
         .select('-password -verificationCode -resetPasswordCode');
     } else if (requestingUser.role === 'admin') {
-      // Modification ici pour exclure les admins de la liste retournée aux admins
       users = await User.find({ role: { $in: ['consultant', 'fueluser'] } })
         .select('-password -verificationCode -resetPasswordCode');
     } else {
       return res.status(403).json({ message: 'Accès non autorisé' });
     }
 
-    // Format standardisé de réponse
-    res.status(200).json({ users });  // Encapsulé dans un objet avec la clé "users"
-
+    res.status(200).json({ users });
   } catch (error) {
     console.error('Erreur getUsers:', error);
     res.status(500).json({ 
@@ -325,9 +326,12 @@ exports.getUsers = async (req, res) => {
     });
   }
 };
+
+// Mettre à jour un utilisateur
 exports.updateUser = async (req, res) => {
   try {
-    if (req.user.role !== 'admin') {
+    // Vérifier si l'utilisateur est admin ou fueldatamaster
+    if (!req.user || !['admin', 'fueldatamaster'].includes(req.user.role)) {
       return res.status(403).json({ message: 'Accès interdit' });
     }
 
@@ -344,7 +348,6 @@ exports.updateUser = async (req, res) => {
     if (role) user.role = role;
 
     await user.save({ validateBeforeSave: false });
-
 
     res.json({
       message: 'Utilisateur mis à jour avec succès',
@@ -364,30 +367,34 @@ exports.updateUser = async (req, res) => {
   }
 };
 
+// Supprimer un utilisateur
 exports.deleteUser = async (req, res) => {
   try {
-    // Vérifier si l'utilisateur est admin
-    console.log(req.user); // Debugging the user object
-    if (!req.user || req.user.role !== 'admin') {
+    // Vérifier si l'utilisateur est admin ou fueldatamaster
+    if (!req.user || !['admin', 'fueldatamaster'].includes(req.user.role)) {
       return res.status(403).json({ message: 'Accès interdit' });
     }
 
     const { userId } = req.body;
-    console.log('UserId:', userId); // Log userId
 
     const user = await User.findById(userId);
     if (!user) {
       return res.status(404).json({ message: 'Utilisateur non trouvé' });
     }
 
-    // Attempt to delete the user using deleteOne
+    // Supprimer l'utilisateur
     await user.deleteOne();
     res.json({ message: 'Utilisateur supprimé avec succès' });
   } catch (error) {
-    console.error('Error:', error); // Log the full error for debugging
-    res.status(500).json({ message: 'Erreur lors de la suppression de l\'utilisateur', error: error.message || error });
+    console.error('Erreur lors de la suppression de l\'utilisateur:', error);
+    res.status(500).json({ 
+      message: 'Erreur lors de la suppression de l\'utilisateur', 
+      error: error.message 
+    });
   }
 };
+
+// Activer/Désactiver un utilisateur
 exports.toggleUserActiveStatus = async (req, res) => {
   try {
     // Vérifier si l'utilisateur est admin ou fueldatamaster
@@ -405,7 +412,6 @@ exports.toggleUserActiveStatus = async (req, res) => {
     // Mettre à jour le statut isActive
     user.isActive = isActive;
     await user.save({ validateBeforeSave: false });
-
 
     res.json({ message: `Compte ${isActive ? 'activé' : 'désactivé'} avec succès`, user });
   } catch (error) {

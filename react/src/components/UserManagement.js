@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Table, Button, Spinner } from 'react-bootstrap';
 
 const api = axios.create({
-  baseURL: 'http://localhost:8080',
+  baseURL: 'http://localhost:8082',
   withCredentials: true,
 });
 

@@ -16,7 +16,7 @@ export const NotificationProvider = ({ children }) => {
     if (!user || !token) return;
 
     // ✅ Connexion WebSocket AVEC le token JWT
-    const newSocket = io('http://localhost:8080', {
+    const newSocket = io('http://localhost:8082', {
       path: '/socket.io',
       transports: ['websocket'],
       auth: { token }, // Le token JWT est passé ici

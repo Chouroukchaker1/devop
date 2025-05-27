@@ -7,7 +7,7 @@ import { saveAs } from 'file-saver';
 import './DataViewer.css';
 
 // Configuration d'axios avec la base URL
-const API_BASE_URL = 'http://localhost:8080'; // Ajustez selon votre port et domaine
+const API_BASE_URL = 'http://localhost:8082'; // Ajustez selon votre port et domaine
 const api = axios.create({
   baseURL: API_BASE_URL,
   headers: {

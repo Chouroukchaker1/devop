@@ -6,8 +6,9 @@ const fs = require('fs');
 const router = express.Router();
 
 // Chemins des fichiers
-const FLIGHT_DATA_PATH = 'C:/Users/lenovo/Desktop/PFE/sample_data/dataRaportProcessed.xlsx';
-const FUEL_DATA_PATH = 'C:/Users/lenovo/Desktop/PFE/datax/data/all_fuel_data.xlsx';
+const FLIGHT_DATA_PATH = '/app/sample_data/dataRaportProcessed.xlsx';
+const FUEL_DATA_PATH = '/app/datax/data/all_fuel_data.xlsx';
+  
 
 // Fonction pour lire un fichier Excel
 const readExcelFile = (filePath) => {

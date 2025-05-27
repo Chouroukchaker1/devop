@@ -25,7 +25,7 @@ const Profile = () => {
         }
 
         // Récupérer le profil et l'image en une seule requête
-        const profileResponse = await axios.get("http://localhost:8080/api/auth/profile", {
+        const profileResponse = await axios.get("http://localhost:8082/api/auth/profile", {
           headers: { Authorization: `Bearer ${token}` },
         });
 
@@ -41,7 +41,7 @@ const Profile = () => {
         if (userData.profileImage) {
           const imageUrl = userData.profileImage.startsWith('http') 
             ? userData.profileImage 
-            : `http://localhost:8080/uploads/${userData.profileImage}`;
+            : `http://localhost:8082/uploads/${userData.profileImage}`;
           setProfileImage(imageUrl);
         }
       } catch (err) {
@@ -96,7 +96,7 @@ const Profile = () => {
       }
 
       const response = await axios.put(
-        "http://localhost:8080/api/auth/profile", 
+        "http://localhost:8082/api/auth/profile", 
         formData, 
         {
           headers: {
@@ -114,7 +114,7 @@ const Profile = () => {
       if (updatedUserData.profileImage) {
         const imageUrl = updatedUserData.profileImage.startsWith('http') 
           ? updatedUserData.profileImage 
-          : `http://localhost:8080/uploads/${updatedUserData.profileImage}`;
+          : `http://localhost:8082/uploads/${updatedUserData.profileImage}`;
         setProfileImage(imageUrl);
       }
 
@@ -129,7 +129,7 @@ const Profile = () => {
       if (user?.profileImage) {
         const originalImageUrl = user.profileImage.startsWith('http') 
           ? user.profileImage 
-          : `http://localhost:8080/uploads/${user.profileImage}`;
+          : `http://localhost:8082/uploads/${user.profileImage}`;
         setProfileImage(originalImageUrl);
       }
     }
@@ -140,7 +140,7 @@ const Profile = () => {
     
     return user.profileImage.startsWith('http')
       ? user.profileImage
-      : `http://localhost:8080${user.profileImage}`;
+      : `http://localhost:8082${user.profileImage}`;
   };
   if (loading) {
     return (
@@ -230,7 +230,7 @@ const Profile = () => {
                   if (user.profileImage) {
                     const originalImageUrl = user.profileImage.startsWith('http') 
                       ? user.profileImage 
-                      : `http://localhost:8080/uploads/${user.profileImage}`;
+                      : `http://localhost:8082/uploads/${user.profileImage}`;
                     setProfileImage(originalImageUrl);
                   }
                 }}

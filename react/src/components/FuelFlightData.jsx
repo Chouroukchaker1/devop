@@ -10,7 +10,7 @@ const FuelFlightData = () => {
   // Fonction pour récupérer les données depuis l'API
   const fetchData = async () => {
     try {
-      const response = await axios.get('http://localhost:8080/api/fuel-flight-data');
+      const response = await axios.get('http://localhost:8082/api/fuel-flight-data');
       setData(response.data.datafuel_flight); // Mettre à jour l'état avec les données fusionnées
       setLoading(false); // Désactiver le chargement
     } catch (err) {

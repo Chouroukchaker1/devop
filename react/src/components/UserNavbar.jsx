@@ -48,7 +48,7 @@ const UserNavbar = ({ handleLogout }) => {
     if (!imagePath) return '/assets/m.png';
     return imagePath.startsWith('http') 
       ? imagePath 
-      : `http://localhost:8080${imagePath.startsWith('/') ? '' : '/'}${imagePath}`;
+      : `http://localhost:8082${imagePath.startsWith('/') ? '' : '/'}${imagePath}`;
   };
 
   useEffect(() => {
@@ -60,7 +60,7 @@ const UserNavbar = ({ handleLogout }) => {
           return;
         }
 
-        const response = await axios.get('http://localhost:8080/api/auth/profile', {
+        const response = await axios.get('http://localhost:8082/api/auth/profile', {
           headers: { Authorization: `Bearer ${token}` }
         });
 
@@ -108,7 +108,7 @@ const UserNavbar = ({ handleLogout }) => {
 
     const fetchNotifications = async () => {
       try {
-        const response = await axios.get('http://localhost:8080/api/notifications', {
+        const response = await axios.get('http://localhost:8082/api/notifications', {
           headers: { Authorization: `Bearer ${token}` }
         });
         
@@ -195,7 +195,7 @@ socketRef.current.on('connect_error', (err) => {
   const markAsRead = async (id) => {
     try {
       await axios.put(
-        `http://localhost:8080/api/notifications/${id}/read`,
+        `http://localhost:8082/api/notifications/${id}/read`,
         {},
         { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } }
       );
@@ -221,7 +221,7 @@ socketRef.current.on('connect_error', (err) => {
     try {
       setIsSchedulerRunning(true);
       const response = await axios.post(
-        `http://localhost:8080/api/trigger-update`,
+        `http://localhost:8082/api/trigger-update`,
         {},
         { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } }
       );
@@ -516,7 +516,7 @@ socketRef.current.on('connect_error', (err) => {
               type="primary"
               onClick={async () => {
                 try {
-                  await axios.post('http://localhost:8080/api/notifications/send', {
+                  await axios.post('http://localhost:8082/api/notifications/send', {
                     username: notifTargetUsername,
                     type: notifType,
                     message: notifMessage,

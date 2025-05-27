@@ -20,7 +20,7 @@ const FlightOptimization = () => {
     setTotalCO2Savings(null);
 
     try {
-      const response = await axios.post('http://localhost:8080/api/optimize-flight');
+      const response = await axios.post('http://localhost:8082/api/optimize-flight');
       if (response.data.success) {
         setOptimizationData(response.data.data.optimization_suggestions);
         setTotalFuelSavings(response.data.data.total_fuel_savings_potential_tonnes);
